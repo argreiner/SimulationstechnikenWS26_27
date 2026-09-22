@@ -5,6 +5,10 @@ nav_order: 2
 parent: Home
 ---
 
+<script type="text/javascript" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
 # Lineare Randwertprobleme
 
 ### Lernziele dieses Kapitels:
