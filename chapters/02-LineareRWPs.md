@@ -9,9 +9,9 @@ parent: Home
 
 ### Lernziele dieses Kapitels:
 - [ ] Numerische Lösung gewöhnlicher Differentialgleichungen
-- [ ] Randwertproblem d$vs Anfangswertproblem
+- [ ] Randwertproblem vs Anfangswertproblem
 
-## Anfangswertproblem vs Randwertproblem
+## Anfangswertproblem 
 
 Wir betrachten eine lineare Differentialgleichung $n$-ter Ordnung:
 $$L[y]=a_n(x)y^n(x)+a_{n-1}y^{n-1}(x)+\dots +a_1(x)y'(x)+a_0(x)y(x)=g(x),$$
