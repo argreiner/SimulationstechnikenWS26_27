@@ -1,26 +1,27 @@
 ---
 layout: default
-title: Einführung in die Simulation
+title: Einleitung
 nav_order: 1
 parent: Home
 ---
 
-# Einführung in die Simulation
+# Einleitung
 
-Willkommen zur Vorlesung **Simulationstechniken**. In diesem Kapitel betrachten wir...
+Die \emph{Simulation} beschäftigt sich mit der numerischen (computergestützten) Lösung von \emph{Modellen}.
+Es gibt unterschiedliche Klassen von Modellen. Modelle werden mathematisch üblicherweise mit Hilfe von \emph{Differentialgleichungen} 
+beschrieben. In diesen Fällen ist Simulation die numerische Lösung von gewöhnlichen oder partiellen Differentialgleichungen. 
+In dieser Lehrveranstaltung werden wir vornehmlich die Lösung von partiellen Differentialgleichungen mit Hilfe der 
+\emph{Methode der finiten Elemente} besprechen.
 
-## Was ist Simulation?
-Eine Simulation ist das Nachbilden eines realen oder gedachten Systems...
+
+## Modellbildung
+Ein Modell ist eine Nachbildung eines realen oder gedachten Systems.
 
 ### Lernziele dieses Kapitels:
 - [ ] Definition von Simulation verstehen.
 - [ ] Unterscheidung zwischen deterministischen und stochastischen Modellen.
 
-Hier ist die Konvertierung des Inhalts der Datei `Einleitung.tex` in Markdown. Ich habe die mathematischen Formeln in LaTeX-Notation beibehalten, da dies der Standard für Markdown-Dokumentationen (z. B. in Jekyll oder Obsidian) ist.
 
----
-
-# Einleitung
 
 ## Lineare Randwertprobleme
 Wir betrachten eine lineare Differentialgleichung $n$-ter Ordnung:
