@@ -1,7 +1,19 @@
 ---
+layout: default
 title: Home
-layout: home
+nav_order: 0
 ---
+
+# Simulationstechniken
+
+Dies ist die zentrale Dokumentation zur Vorlesung **Simulationstechniken**. 
+
+Nutzen Sie die Navigation auf der linken Seite, um durch die 15 Kapitel zu navigieren. 
+
+### Quick-Links
+- [Zum ersten Kapitel](chapters/01-einleitung.md)
+- [Glossar](#)
+- [Kontakt](#)
 
 This is a *bare-minimum* template to create a Jekyll site that uses the [Just the Docs] theme. You can easily set the created site to be published on [GitHub Pages] – the [README] file explains how to do that, along with other details.
 
