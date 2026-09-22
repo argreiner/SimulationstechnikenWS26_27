@@ -9,26 +9,31 @@ parent: Home
 
 ### Lernziele dieses Kapitels:
 - [ ] Numerische Lösung gewöhnlicher Differentialgleichungen
-- [ ] Randwertproblem vs Anfangswertproblem
+- [ ] Randwertproblem d$vs Anfangswertproblem
 
-
-
+## Anfangswertproblem vs Randwertproblem
 
 Wir betrachten eine lineare Differentialgleichung $n$-ter Ordnung:
 $$L[y]=a_n(x)y^n(x)+a_{n-1}y^{n-1}(x)+\dots +a_1(x)y'(x)+a_0(x)y(x)=g(x),$$
-wobei die $a_n(x), a_{n-1}, \dots, a_1(x), a_0(x), g(x)$ reelle, stetige Funktionen seien, die auf einem Intervall $x \in [a,b]$ erklärt sind. Desweiteren sei $a_n(x) \neq 0 \quad \forall x \in [a,b]$.
+wobei die $a_n(x), a_{n-1}, \dots, a_1(x), a_0(x), g(x)$ reelle, stetige
+Funktionen seien, die auf einem Intervall $x \in [a,b]$ erklärt sind.
+Desweiteren sei $a_n(x) \neq 0 \quad \forall x \in [a,b]$.
 
-In einem vorherigen Abschnitt definierten wir ein Anfangswertproblem für eine Gleichung wie $L[y]=g(x)$ durch:
-$L[y]=g(x); \quad y(a)=b_0, \quad y'(a)=b_1, \dots, y^{n-1}(a)=b_{n-1}$, mit $b_i \in \mathbb{R}$.
-Dieses Anfangswertproblem hat eine eindeutige Lösung.
+Wir definierten bereits ein Anfangswertproblem für eine
+Gleichung wie $L[y]=g(x)$ durch: $L[y]=g(x); \quad y(a)=b_0, \quad y'(a)=b_1,
+\dots, y^{n-1}(a)=b_{n-1}$, mit $b_i \in \mathbb{R}$.  Dieses
+Anfangswertproblem hat eine eindeutige Lösung.
+
+
+## Lineares Randwertproblem
 
 Bei linearen Randwertproblemen treten anstelle der Anfangsbedingungen die linearen Randbedingungen:
-$$\begin{align}
+\begin{align}
 U_1[y]&=\alpha_{10}y(a)+\alpha_{11}y'(a)+\dots+\alpha_{1n-1}y^{n-1}(a)+\beta_{10}y(b)+\beta_{11}y'(b)+\dots+\beta_{1n-1}y^{n-1}(b)=\gamma_1\\
 U_2[y]&=\alpha_{20}y(a)+\alpha_{21}y'(a)+\dots+\alpha_{2n-1}y^{n-1}(a)+\beta_{20}y(b)+\beta_{21}y'(b)+\dots+\beta_{2n-1}y^{n-1}(b)=\gamma_2\\
 &\dots\\
 U_n[y]&=\alpha_{n0}y(a)+\alpha_{n1}y'(a)+\dots+\alpha_{nn-1}y^{n-1}(a)+\beta_{n0}y(b)+\beta_{n1}y'(b)+\dots+\beta_{nn-1}y^{n-1}(b)=\gamma_n
-\end{align}$$
+\end{align}
 Wobei die Frage nach der Lösbarkeit komplexer ist.
 
 **Beispiel:**
