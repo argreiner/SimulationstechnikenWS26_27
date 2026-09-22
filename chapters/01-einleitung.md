@@ -7,11 +7,11 @@ parent: Home
 
 # Einleitung
 
-Die \emph{Simulation} beschäftigt sich mit der numerischen (computergestützten) Lösung von \emph{Modellen}.
-Es gibt unterschiedliche Klassen von Modellen. Modelle werden mathematisch üblicherweise mit Hilfe von \emph{Differentialgleichungen} 
+Die *Simulation* beschäftigt sich mit der numerischen (computergestützten) Lösung von *Modellen*.
+Es gibt unterschiedliche Klassen von Modellen. Modelle werden mathematisch üblicherweise mit Hilfe von *Differentialgleichungen* 
 beschrieben. In diesen Fällen ist Simulation die numerische Lösung von gewöhnlichen oder partiellen Differentialgleichungen. 
 In dieser Lehrveranstaltung werden wir vornehmlich die Lösung von partiellen Differentialgleichungen mit Hilfe der 
-\emph{Methode der finiten Elemente} besprechen.
+*Methode der finiten Elemente* besprechen.
 
 
 ## Modellbildung
