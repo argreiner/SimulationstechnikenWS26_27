@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Einleitung
-nav_order: 1
+nav_order: 2
 parent: Vorlesung
 ---
 
@@ -78,4 +78,4 @@ $$
 \frac{\partial P(x,t)}{\partial t}=D\frac{\partial^2 P(x,t)}{\partial x^2},
 $$ 
 
-die wohlbekannte Diffusionsgleichung.
+die wohlbekannte Diffusionsgleichung resultiert.

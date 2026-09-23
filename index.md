@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Vorlesung
+title: Simulationstechniken
 nav_order: 0
 ---
 
@@ -8,4 +8,3 @@ nav_order: 0
 
 Dies ist die zentrale Dokumentation zur Vorlesung **Simulationstechniken**. 
 
-Nutzen Sie die Navigation auf der linken Seite, um durch die 15 Kapitel zu navigieren. 
