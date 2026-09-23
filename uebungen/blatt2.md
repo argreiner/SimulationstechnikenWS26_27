@@ -2,7 +2,7 @@
 layout: default
 title: Lineares Randwertproblem
 nav_order: 22
-parent: Home
+parent: Übungen
 ---
 
 <script type="text/javascript" async

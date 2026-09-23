@@ -2,7 +2,7 @@
 layout: default
 title: Übung 1
 nav_order: 21
-parent: Home
+parent: Übungen
 ---
 
 <script type="text/javascript" async

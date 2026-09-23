@@ -2,7 +2,7 @@
 layout: default
 title: Lineare Randwertprobleme
 nav_order: 2
-parent: Home
+parent: Vorlesung
 ---
 
 <script type="text/javascript" async

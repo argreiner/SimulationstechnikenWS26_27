@@ -2,7 +2,7 @@
 layout: default
 title: Einleitung
 nav_order: 1
-parent: Home
+parent: Vorlesung
 ---
 
 <script type="text/javascript" async
