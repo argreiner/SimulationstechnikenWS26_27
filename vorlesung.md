@@ -2,7 +2,7 @@
 layout: default
 title: Vorlesung
 nav_order: 1
-parent: Home
+parent: Simulationstechniken
 ---
 
 # Skript zur Vorlesung
