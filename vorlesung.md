@@ -9,4 +9,3 @@ parent: Simulationstechniken
 
 Hier befindet sich das Skript zur Vorlesung Simulationstechniken
 
-Nutzen Sie die Navigation auf der linken Seite, um durch die 15 Kapitel zu navigieren. 
