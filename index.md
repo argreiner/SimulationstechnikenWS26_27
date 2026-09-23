@@ -2,7 +2,6 @@
 layout: default
 title: Simulationstechniken
 nav_order: 0
-parent: Home
 ---
 
 # Simulationstechniken
