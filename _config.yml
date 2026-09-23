@@ -6,3 +6,7 @@ url: https://argreiner.github.io/SimulationstechnikenWS26_27
 
 plugins:
   - jekyll-default-layout
+
+# Hier definierst du, dass die Navigation an der index.md beginnt
+nav_config:
+  max_sidemenu_items: 20
