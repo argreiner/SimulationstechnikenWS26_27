@@ -20,7 +20,7 @@ Wir schreiben
 $$ p=\frac{1}{2}+\varepsilon\quad\mbox{ und }\quad q=\frac{1}{2}-\varepsilon
 	\mbox{ ; mit }0\le|\varepsilon|\le\frac{1}{2}$$
 
-In den Grenzfällen $\tau\rightarrow 0$ und $h\rightarrow 0$ fordern wir 
+In den Grenzfällen $$\tau\rightarrow 0$$ und $$h\rightarrow 0$$ fordern wir 
 
 $$
 \lim_{h\rightarrow 0\atop \tau\rightarrow 0}\frac{h^2}{2\tau}=D \mbox{ and
