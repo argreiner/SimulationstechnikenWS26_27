@@ -39,10 +39,13 @@ Bei linearen Randwertproblemen treten anstelle der Anfangsbedingungen die
 linearen Randbedingungen:
 
 $$ \begin{aligned}
-U_1[y]&=\alpha_{10}y(a)+\alpha_{11}y'(a)+\dots+\alpha_{1n-1}y^{n-1}(a)+\beta_{10}y(b)+\beta_{11}y'(b)+\dots+\beta_{1n-1}y^{n-1}(b)=\gamma_1\\
-U_2[y]&=\alpha_{20}y(a)+\alpha_{21}y'(a)+\dots+\alpha_{2n-1}y^{n-1}(a)+\beta_{20}y(b)+\beta_{21}y'(b)+\dots+\beta_{2n-1}y^{n-1}(b)=\gamma_2\\
+U_1[y]&=\alpha_{10}y(a)+\alpha_{11}y'(a)+\dots+\alpha_{1n-1}y^{n-1}(a)
+       +\beta_{10}y(b)+\beta_{11}y'(b)+\dots+\beta_{1n-1}y^{n-1}(b)=\gamma_1\\
+U_2[y]&=\alpha_{20}y(a)+\alpha_{21}y'(a)+\dots+\alpha_{2n-1}y^{n-1}(a)
+       +\beta_{20}y(b)+\beta_{21}y'(b)+\dots+\beta_{2n-1}y^{n-1}(b)=\gamma_2\\
 &\dots\\
-U_n[y]&=\alpha_{n0}y(a)+\alpha_{n1}y'(a)+\dots+\alpha_{nn-1}y^{n-1}(a)+\beta_{n0}y(b)+\beta_{n1}y'(b)+\dots+\beta_{nn-1}y^{n-1}(b)=\gamma_n
+U_n[y]&=\alpha_{n0}y(a)+\alpha_{n1}y'(a)+\dots+\alpha_{nn-1}y^{n-1}(a)
+       +\beta_{n0}y(b)+\beta_{n1}y'(b)+\dots+\beta_{nn-1}y^{n-1}(b)=\gamma_n
 \end{aligned} $$
 
 Wobei die Frage nach der Lösbarkeit komplexer ist.
@@ -61,32 +64,62 @@ Wir betrachten drei unterschiedliche Fälle:
   da $$c_1=0$$ und $$c_1=\pi-1$$ gleichzeitig erfüllt sein müssten.
 
 ### Homogenisierung des Randwertproblems
-- Nehmen wir an, $$y_0(x)$$ sei eine spezielle Lösung der inhomogenen Differentialgleichung $$L[y]=g(x)$$. Dann kann das Randwertproblem:
+- Nehmen wir an, $$y_0(x)$$ sei eine spezielle Lösung der inhomogenen
+  Differentialgleichung $$L[y]=g(x)$$. Dann kann das Randwertproblem:
   $$L[y]=g(x), \quad U_1[y]=\gamma_1, \dots, U_n[y]=\gamma_n$$
   mit der Transformation $$\tilde{y}(x)=y(x)-y_0(x)$$ in das äquivalente Problem überführt werden:
   $$L[\tilde{y}]=0, \quad U_1[\tilde{y}]=\gamma_1-U_1[y_0], \dots, U_n[\tilde{y}]=\gamma_n-U_n[y_0]$$ (homogene DGL).
-- Ist $$u(x)$$ eine Funktion, die nur die Randbedingungen erfüllt ($$U_i[u]=\gamma_i$$), dann kann durch $$\tilde{y}(x)=y(x)-u(x)$$ überführt werden in:
+- Ist $$u(x)$$ eine Funktion, die nur die Randbedingungen erfüllt
+  ($$U_i[u]=\gamma_i$$), dann kann durch $$\tilde{y}(x)=y(x)-u(x)$$ überführt
+  werden in:
   $$L[\tilde{y}]=g(x)-L[u], \quad U_1[\tilde{y}]=0, \dots, U_n[\tilde{y}]=0$$ (homogene Randbedingungen).
 
 **Beispiele zur Homogenisierung:**
 - $$\tilde{y}=y-\sin(x)$$; $$\tilde{y}''(x)+\tilde{y}(x)=x$$; $$\tilde{y}(0)=\tilde{y}(\frac{\pi}{2})=0$$
-- $$\tilde{y}=y-\pi\sin(\frac{x}{2})$$; $$\tilde{y}''(x)+\tilde{y}(x)=x-\frac{3\pi}{4}\sin(\frac{x}{2})$$; $$\tilde{y}(0)=\tilde{y}(\pi)=0$$
+- $$\tilde{y}=y-\pi\sin(\frac{x}{2})$$;
+  $$\tilde{y}''(x)+\tilde{y}(x)=x-\frac{3\pi}{4}\sin(\frac{x}{2})$$;
+  $$\tilde{y}(0)=\tilde{y}(\pi)=0$$
 
 ### Lösbarkeit von Randwertproblemen
-Wir betrachten das homogenisierte Randwertproblem $$L[y]=h(x), \quad U_1[y]=0, \dots, U_n[y]=0$$.
-Für $$L[y]=0$$ bildet $$y_1(x), \dots, y_n(x)$$ das Fundamentalsystem. Die allgemeine Lösung $$y(x)=\sum c_i y_i(x)$$ muss die Randbedingungen erfüllen:
-$$c_1U_1[y_1] + \dots + c_nU_1[y_n] = 0$$
-...
-$$c_1U_n[y_1] + \dots + c_nU_n[y_n] = 0$$
-Damit die $$c_i$$ bestimmt werden können, muss die Koeffizientendeterminante des Systems betrachtet werden. Für $$L[y]=h(x)$$ wird die partikuläre Lösung $$y_p$$ addiert, wodurch sich die rechte Seite des Gleichungssystems zu $$-U_i[y_p]$$ ändert.
+Wir betrachten das homogenisierte Randwertproblem $$L[y]=h(x), \quad U_1[y]=0,
+\dots, U_n[y]=0$$.  Für $$L[y]=0$$ bildet $$y_1(x), \dots, y_n(x)$$ das
+Fundamentalsystem. Die allgemeine Lösung $$y(x)=\sum c_i y_i(x)$$ muss die
+Randbedingungen erfüllen: 
+$$ \begin{aligned}
+c_1U_1[y_1] + \dots + c_nU_1[y_n] &= 0\\
+...\\
+c_1U_n[y_1] + \dots + c_nU_n[y_n] &= 0
+\end{aligned} $$
+Damit die $$c_i$$ bestimmt werden können, muss die Koeffizientendeterminante
+des Systems betrachtet werden. Für $$L[y]=h(x)$$ wird die partikuläre Lösung
+$$y_p$$ addiert, wodurch sich die rechte Seite des Gleichungssystems zu
+$$-U_i[y_p]$$ ändert.
 
 ### Dirichlet'sche Randbedingungen
 Gegeben eine lineare DGL 2. Ordnung mit konstanten Koeffizienten:
 $$\frac{d^2y(x)}{dx^2}+a\frac{dy(x)}{dx}+by(x)=g(x)$$
-Exponentialansatz $$y(x)=e^{\lambda x}$$ führt zur charakteristischen Gleichung $$\lambda^2+a\lambda+b=0$$. Bei zwei Lösungen $$\lambda_1, \lambda_2$$ ergibt sich die allgemeine homogene Lösung:
+Exponentialansatz $$y(x)=e^{\lambda x}$$ führt zur charakteristischen Gleichung
+$$\lambda^2+a\lambda+b=0$$. Bei zwei Lösungen $$\lambda_1, \lambda_2$$ ergibt
+sich die allgemeine homogene Lösung:
+
 $$y(x)=c_1 e^{\lambda_1 x}+c_2 e^{\lambda_2 x}$$
+
 Für Randbedingungen $$y(0)=\alpha$$ und $$y(L)=\beta$$ ergibt sich das System:
-$$\begin{pmatrix}y_1(0)&y_2(0)\\ y_1(L)&y_2(L)\end{pmatrix} \begin{pmatrix}c_1\\ c_2\end{pmatrix} = \begin{pmatrix}\alpha \\ \beta\end{pmatrix}$$
+
+$$
+\begin{pmatrix}
+y_1(0)&y_2(0)\\ 
+y_1(L)&y_2(L)
+\end{pmatrix} 
+\begin{pmatrix}
+c_1\\ 
+c_2
+\end{pmatrix} = 
+\begin{pmatrix}
+\alpha \\ \beta
+\end{pmatrix}
+$$
+
 Falls $$g \neq 0$$, wird die partikuläre Lösung $$y_p(x)$$ überlagert, wobei $$y_p(x)$$ beispielsweise als:
 $$y_p(x)=e^{\lambda_2 x}\int_0^x e^{(\lambda_1-\lambda_2)\eta}\int_0^{\eta}e^{-\lambda_1 \xi}g(\xi)d\xi d\eta$$
 dargestellt werden kann.
