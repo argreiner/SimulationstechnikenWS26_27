@@ -34,7 +34,7 @@ in die lokale Bilanz hineinfällt.
   </figcaption>
 </figure>
  
-### ***Beispiel*** $$p=q=1/2$$
+### ***Beispiel***: Random walk 
 
 Wir nehmen an, das Teilchen springe zwangsläufig von einem Platz zum
 benachbarten in einem diskreten, endlichen und konstanten Zeitschritt $$\Delta
@@ -71,7 +71,7 @@ $$
 Dies beudeutet, daß nach dem Grenzübergang 
 
 $$ 
-\frac{\partial P(x,t)}{\partial t}=D\frac{\partial^2 P(x,t)}{\partial x^2}
+\frac{\partial P(x,t)}{\partial t}=D\frac{\partial^2 P(x,t)}{\partial x^2},
 $$ 
 
 die wohlbekannte Diffusionsgleichung.
