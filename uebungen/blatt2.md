@@ -37,4 +37,4 @@ $$\kappa T'(L) + K T(L) = K T_{außen}$$
 *(Wobei $h$ der Wärmeübergangskoeffizient ist).*
 
 ### 2. Lösung
-Skalierung auf $$L=1$$ und $$\kappa[W/(mK)]=1[W/(L\cdot T_{Raum}]=$$ und $$T_{Raum}=1$$
+Skalierung auf $$L=1$$ und $$\kappa[W/(mK)]=1[P/(L\cdot T_{Raum}]=$$ und $$T_{Raum}=1$$
