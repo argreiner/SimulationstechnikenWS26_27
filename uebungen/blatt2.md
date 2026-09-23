@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Übung2: Lineares Randwertproblem
+title: "Übung 2: Lineares Randwertproblem"
 nav_order: 22
 parent: Übungen
 ---
