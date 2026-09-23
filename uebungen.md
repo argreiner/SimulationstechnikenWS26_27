@@ -2,7 +2,7 @@
 layout: default
 title: Übungen
 nav_order: 20
-parent: Simulationstechniken
+parent: Home
 ---
 
 # Übungen
