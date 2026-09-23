@@ -2,6 +2,7 @@
 layout: default
 title: Vorlesung
 nav_order: 0
+parent: Home
 ---
 
 # Simulationstechniken
@@ -14,8 +15,4 @@ Nutzen Sie die Navigation auf der linken Seite, um durch die 15 Kapitel zu navig
 - [Kapitel 1](chapters/01-einleitung.md)
 - [Kapitel 2](chapters/02-LineareRWPs.md)
 
----
-layout: default
-title: Übungen
-nav_order: 0
----
+
