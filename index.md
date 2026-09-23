@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Home
+title: Vorlesung
 nav_order: 0
 ---
 
@@ -13,3 +13,9 @@ Nutzen Sie die Navigation auf der linken Seite, um durch die 15 Kapitel zu navig
 ### Quick-Links
 - [Kapitel 1](chapters/01-einleitung.md)
 - [Kapitel 2](chapters/02-LineareRWPs.md)
+
+---
+layout: default
+title: Übungen
+nav_order: 0
+---
