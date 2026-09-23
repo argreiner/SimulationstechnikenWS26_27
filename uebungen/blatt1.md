@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Übung 1: Random walk"
+title: RandomWalk
 nav_order: 21
 parent: Übungen
 ---
