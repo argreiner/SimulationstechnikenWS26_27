@@ -44,14 +44,14 @@ wobei $$K$$ der *Wärmeübergangskoeffizient* ist und
 $$T_a=0^\circ$$C$$=273.15K$$ die Außentmeperatur.
 
 ### 2. Aufgabe
-Wählen Sie die Wärmeleitfähigkeit der Raumluft zu $$\kappa=0.026[W/(mK)]$$, die
+Wählen Sie die Wärmeleitfähigkeit der Raumluft zu $$\kappa=0.026W/(mK)$$, die
 Länge des Raumes zu $$L=5m$$ und die Temperatur der Wand zu
-$$T_w=20^\circ$$C=293.15K$$.  
+$$T_w=20^\circ$$C$$=293.15K$$.  
 
-Skalieren Sie auf $$L=1[\ell]=1\cdot 5m$$ und $$\kappa=1[P/(L\cdot T_w]=0.026[W/(mK)]$$ und
+Skalieren Sie auf $$L=1[\ell]=1\cdot 5m$$ und $$\kappa=1[P/(L\cdot T_w]=0.026W/(mK)$$ und
 $$T_w=1[T]=293.15K$$, wobei $$[\ell]$$ die Längeneinheit, $$[T]$$ die Temperatureinheit
 und $$[P]$$ die Leistungseinheit ist. Damit haben wir $$T=\Theta\cdot T_w$$,
-$$x=\xi\cdot[\ell]$$. Damit wird die Leistung $$P= 0.026[W/(mK)]\cdot
+$$x=\xi\cdot[\ell]$$. Damit wird die Leistung $$P= 0.026W/(mK)\cdot
 [\ell]\cdot [T]$$ gmessen in Vielfachen $$1465.75$$W. 
 
 Somit lautet das Randwertproblem
