@@ -27,10 +27,10 @@ $$\kappa \frac{d^2T}{dx^2} = 0$$
 Hier ist $$a_2(x) = \kappa $$ die Wärmeleitfähigkeit der Raumluft, $$a_1=0, a_0=0$$ und $$g(x)=0$$.
 
 **Die Randbedingungen:**
-1.  **Dirichlet-Randbedingung bei $x=0$ (Innenwand):** Die Temperatur wird
+1.  **Dirichlet-Randbedingung bei $$x=0$$ (Innenwand):** Die Temperatur wird
     durch die Heizung im Raum konstant gehalten, $$T(0) = T_w$$
 
-2.  **Robin-Randbedingung bei $x=L$ (Fenster/Außenfläche):** Nach dem
+2.  **Robin-Randbedingung bei $$x=L$$ (Fenster/Außenfläche):** Nach dem
     **Newtonschen Abkühlungsgesetz** muss der Wärmestrom, der die Wand verlässt,
     gleich dem an die Außenluft abgegebenen Wärmestrom durch Konvektion sein.
 
