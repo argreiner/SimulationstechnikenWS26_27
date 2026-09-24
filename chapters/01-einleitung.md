@@ -28,10 +28,10 @@ besprechen.
 Ein Modell ist eine Nachbildung eines realen oder gedachten Systems.
 Wie ordnen zunächst die Modelle nach Längeskale und mathematischer Beschreibung:
 <figure>
-  <img src="{{ site.baseurl }}/figs/Scheme.png" alt="Simulationsschema">
-  <figcaption align="center">Abbildung 1.1: Die vertikale Anordnung der Kisten
-repräsentiert die Längenskale, welche auf der rechten Seite gezeigt ist. In
-den Kästen selbst stehen Simulationsmethode welche auf diesen Skalen Anwendung
+  <img src="{{ site.baseurl }}/figs/Extendedscheme.png" alt="Simulationsschema">
+  <figcaption align="center">Abbildung 1.1: Die vertikale Anordnung der Kästen
+repräsentiert die Längenskale, welche auf der rechten Seite gezeigt ist. In den
+Kästen selbst stehen Simulationsmethode welche auf diesen Skalen Anwendung
 finden. In dieser Lehrveranstaltung beschäftigen wir uns mit der
 Diskretisierung von Feldern und wählen einen spezifischen Anwendungsfall, der
 in die lokale Bilanz hineinfällt.
