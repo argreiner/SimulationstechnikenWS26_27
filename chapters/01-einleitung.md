@@ -75,9 +75,9 @@ auf diese werden aber in dieser Veranstaltung nicht näher eingegangen.
 ## Teilchenbetrachtung oder Kontinuum
 <figure>
   <img src="{{ site.baseurl }}/figs/continuity.png" alt="Kontinuitaet">
-  <figcaption align="center">Abbildung 1.2:  Teilchen künnen das Volumen V nur
+  <figcaption align="center">Abbildung 1.2:  Teilchen können das Volumen V nur
 durch die Seitenwände verlassen. Die Änderung der Teilchenzahl N über ein
-Zeitintervall $\tau$ ist daher durch die Anzahl der Teilchen gegeben, die durch
+Zeitintervall $$\tau$$ ist daher durch die Anzahl der Teilchen gegeben, die durch
 die Wände fließen. Hierzu brauchen wir die Teilchenströme j. Die Anzahl der
 Teilchen, welche durch eine Oberfläche fließen ist dann gegeben durch j Aτ ,
 wobei A die Fläche der Seitenwand ist. </figcaption>

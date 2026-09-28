@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Lineare Randwertprobleme
+title: Gleichungstypen
 nav_order: 3
 parent: Vorlesung
 ---
@@ -9,13 +9,16 @@ parent: Vorlesung
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
 </script>
 
-# Lineare Randwertprobleme
+# Gleichungstypen 
 
 ### Lernziele dieses Kapitels:
 - [ ] Numerische Lösung gewöhnlicher Differentialgleichungen
 - [ ] Randwertproblem vs Anfangswertproblem
+- [ ] Typen partieller Differentialgleichungen
 
-## Anfangswertproblem 
+
+## Lineare Randwertprobleme
+### Anfangswertproblem 
 
 Wir betrachten eine lineare Differentialgleichung $$n$$-ter Ordnung:
 
@@ -33,7 +36,7 @@ $$L[y]=g(x); \quad y(a)=b_0, \quad y'(a)=b_1,
 
 Dieses Anfangswertproblem hat eine eindeutige Lösung.
 
-## Lineares Randwertproblem
+### Lineares Randwertproblem
 
 Bei linearen Randwertproblemen treten anstelle der Anfangsbedingungen die
 linearen Randbedingungen:
@@ -125,19 +128,29 @@ $$y_p(x)=e^{\lambda_2 x}\int_0^x e^{(\lambda_1-\lambda_2)\eta}\int_0^{\eta}e^{-\
 dargestellt werden kann.
 
 ### Sturmsche Randbedingungen bei DGL 2. Ordnung
-Wir betrachten $$L[y]=a_2(x)y''(x)+a_1(x)y'(x)+a_0(x)y(x)=g(x)$$.
+Wir betrachten 
+$$L[y]=a_2(x)y''(x)+a_1(x)y'(x)+a_0(x)y(x)=g(x)$$.  
 Bei Sturmschen Randbedingungen tritt in jeder Bedingung nur eine Grenze auf:
-$$U_1[y]=\alpha_{10}y(a)+\alpha_{11}y'(a)=0, \quad U_2[y]=\beta_{20}y(b)+\beta_{21}y'(b)=0$$
-Die Lösung wird über die Greensche Funktion $$G(x, \xi)$$ dargestellt:
-$$y(x)=\int_a^b G(x,\xi)g(\xi)d\xi$$
-Dabei werden $$y_1(x)$$ und $$y_2(x)$$ gesucht, die jeweils nur $$U_1$$ bzw. $$U_2$$ erfüllen. Die Greensche Funktion ergibt sich zu:
-$$G(x,\xi)=\begin{cases} \frac{y_2(x)y_1(\xi)}{W(\xi)a_2(\xi)} & \text{für } a \le \xi \le x \le b \\ \frac{y_1(x)y_2(\xi)}{W(\xi)a_2(\xi)} & \text{für } a \le x \le \xi \le b \end{cases}$$
-mit der Wronski-Determinante $$W(x)=y_1(x)y'_2(x)-y'_1(x)y_2(x)$$.
+$$U_1[y]=\alpha_{10}y(a)+\alpha_{11}y'(a)=0, \quad
+U_2[y]=\beta_{20}y(b)+\beta_{21}y'(b)=0$$ 
+Die Lösung wird über die Greensche Funktion 
+$$G(x, \xi)$$ dargestellt: $$y(x)=\int_a^b G(x,\xi)g(\xi)d\xi$$ Dabei
+werden $$y_1(x)$$ und $$y_2(x)$$ gesucht, die jeweils nur $$U_1$$ bzw. $$U_2$$
+erfüllen. Die Greensche Funktion ergibt sich zu: 
+$$G(x,\xi)=\begin{cases}
+\frac{y_2(x)y_1(\xi)}{W(\xi)a_2(\xi)} & \text{für } a \le \xi \le x \le b \\
+\frac{y_1(x)y_2(\xi)}{W(\xi)a_2(\xi)} & \text{für } a \le x \le \xi \le b
+\end{cases}$$ 
+mit der Wronski-Determinante
+$$W(x)=y_1(x)y'_2(x)-y'_1(x)y_2(x)$$.
 
 ### Wärmeleitung als Beispiel
-Zeitabhängige Temperatur $$\theta(t,x)$$. Wärmestrom: $$j(t,x)=-\kappa \frac{\partial \theta}{\partial x}$$.
-Kontinuitätsgleichung: $$\frac{\partial \theta}{\partial t} + \frac{\partial j}{\partial x} = 0 \Rightarrow \frac{\partial \theta}{\partial t} = \kappa \frac{\partial^2 \theta}{\partial x^2}$$.
-Benötigt werden Anfangsbedingungen $$\theta(0,x)=\theta_0(x)$$ und Randbedingungen $$\theta_a$$ bei $$x=\{0,L\}$$.
+Zeitabhängige Temperatur $$\theta(t,x)$$. Wärmestrom: $$j(t,x)=-\kappa
+\frac{\partial \theta}{\partial x}$$.  Kontinuitätsgleichung: $$\frac{\partial
+\theta}{\partial t} + \frac{\partial j}{\partial x} = 0 \Rightarrow
+\frac{\partial \theta}{\partial t} = \kappa \frac{\partial^2 \theta}{\partial
+x^2}$$.  Benötigt werden Anfangsbedingungen $$\theta(0,x)=\theta_0(x)$$ und
+Randbedingungen $$\theta_a$$ bei $$x=\{0,L\}$$.
 
 Die allgemeine Form der Randbedingungen (Robin-Randbedingung) lautet:
 $$\kappa \frac{\partial \theta}{\partial x} + \sigma(\theta - \theta_a) = 0$$
