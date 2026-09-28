@@ -37,6 +37,51 @@ Diskretisierung von Feldern und wählen einen spezifischen Anwendungsfall, der
 in die lokale Bilanz hineinfällt.
   </figcaption>
 </figure>
+
+Die Abbildung 1.1 zeigt in der vertikalen Anordnung von
+\emph{Längenskalen} und deren Zuordnung zu verschiedenen Beschreibungsebenen.
+Auf der kürzesten Längenskala ist meist eine quantenmechanische Beschreibung
+notwendig. Dies bedeutet, wenn wir die Phänomene in \r{A} auflösen wollen,
+befinden wir uns auf der Beschreibungsebene der Quantenmechanik und alle
+zugrundeliegenden Modelle sind von quantenmechanischer Natur. D.h. wir haben es
+hier im nichtrelativistischen Fall mit der Schrödingergleichung zu tun. Diese
+ist in verschiedenen Methoden implementiert, wie z.B. der
+\emph{Dichtefunktionaltheorie}, einer Vielteilchenbeschreibung des
+quantenmechanischen elektronischen Systems. Bei dieser Art der
+Vielteilchenbeschreibung handelt es sich, im Gegensatz zur
+\emph{Molekulardynamik} als Methode auf einer grö{ß}eren Längenskala, nicht um
+eine Beschreibung von Punktteilchen, sondern um gekoppelte Felder, was den
+Aufwand im Vergleich zu einer reinen Punktmechanik wesentlich erhöht. In der
+Punktmechanik haben wir es mit drei Orts- und drei Geschwindigkeitsvariablen
+für jedes der $$n$$ wechselwirkenden Teilchen zu tun, während wir in einer
+quantenmechanischen Vielteilchenbeschreibung es mit einem Feld mit je drei $$n$$
+Ortsvariablen zu tun haben, nämlich $$\Psi(\v{r}_1,\v{r}_2,\dots,\v{r}_n;t)$$. 
+
+Auf der Ebene der semiklassischen und klassischen Mechanik, auch als kinetische
+Ebene bezeichnet, werden die Modelle entweder durch die Molekulardynamik
+beschrieben oder durch die Bewegungsgleichung der
+Einteilchen-Wahrscheinlichkeits\-dichte im Phasenraum $$f(\v{r},\v{p})$$ - mit
+den unabhängigen Variablen Ort $$\v{r}$$ und Impuls $$\v{p}$$. Im zweiten Fall
+haben wir eine Funktion $$f(\v{r}(t),\v{p}(t),t)$$ die von Ort, Impuls und der
+Zeit sowohl explizit, als auch implizit über $$\v{r}(t)$$ und $$\v{p}(t)$$ abhängt.
+Nehmen wir an, wir müssen $$f(\v{r}(t),\v{p}(t),t)$$ durch diskrete Stützstellen
+interpolieren.  Dies sind bei einer geringen Auflösung von 10 Punkten pro
+Variabler schon bereits 10.000.000 Interpolationspunkte. Dies ist vielleicht
+handhabbar, die Auflösung ist aber nicht besonders gut. Und daher ist dieses
+Unterfangen eher unnütz.  Wir wollen nicht verschweigen, dass es durchaus
+Methoden zur numerischen Lösung der beiden oben beschriebenen Probleme gibt,
+auf diese werden aber in dieser Veranstaltung nicht näher eingegangen.
+
+## Teilchenbetrachtung oder Kontinuum
+<figure>
+  <img src="{{ site.baseurl }}/figs/continuity.png" alt="Kontinuitaet">
+  <figcaption align="center">Abbildung 1.2:  Teilchen künnen das Volumen V nur
+durch die Seitenwände verlassen. Die Änderung der Teilchenzahl N über ein
+Zeitintervall $\tau$ ist daher durch die Anzahl der Teilchen gegeben, die durch
+die Wände fließen. Hierzu brauchen wir die Teilchenströme j. Die Anzahl der
+Teilchen, welche durch eine Oberfläche fließen ist dann gegeben durch j Aτ ,
+wobei A die Fläche der Seitenwand ist. </figcaption>
+</figure>
  
 ### ***Beispiel***: Random walk 
 
