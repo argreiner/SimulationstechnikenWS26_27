@@ -10,14 +10,17 @@ parent: Vorlesung
 </script>
 
 # Gleichungstypen 
-
+In diesem Kapitel knüpfen wir an die Veranstaltung Differentialgleichungen an.
+Dort wurden die gewöhnlichen Differentialgleichungen und Anfangswertprobleme
+ausführlich behandelt. Wir gehen nun über zu Randwertproblemen und machen uns
+weiterhin Gedanken über partielle Differentialgleichungen.
 ### Lernziele dieses Kapitels:
 - [ ] Numerische Lösung gewöhnlicher Differentialgleichungen
 - [ ] Randwertproblem vs Anfangswertproblem
 - [ ] Typen partieller Differentialgleichungen
 
 
-## Lineare Randwertprobleme
+## Lineare Randwertprobleme bei gwöhnlichen Differentialgleichungen
 ### Anfangswertproblem 
 
 Wir betrachten eine lineare Differentialgleichung $$n$$-ter Ordnung:
@@ -142,19 +145,39 @@ $$G(x,\xi)=\begin{cases}
 \frac{y_1(x)y_2(\xi)}{W(\xi)a_2(\xi)} & \text{für } a \le x \le \xi \le b
 \end{cases}$$ 
 mit der Wronski-Determinante
-$$W(x)=y_1(x)y'_2(x)-y'_1(x)y_2(x)$$.
+$$W(x)=y_1(x)y'_2(x)-y'_1(x)y_2(x)$$,
+die auf jeden Fall verschieden von Null ist, da $$y_1(x)$$ und $$y_2(x)$$ ein
+Fundamentalsystem von Lösungen bilden sollen.
 
-### Wärmeleitung als Beispiel
-Zeitabhängige Temperatur $$\theta(t,x)$$. Wärmestrom: $$j(t,x)=-\kappa
-\frac{\partial \theta}{\partial x}$$.  Kontinuitätsgleichung: $$\frac{\partial
-\theta}{\partial t} + \frac{\partial j}{\partial x} = 0 \Rightarrow
-\frac{\partial \theta}{\partial t} = \kappa \frac{\partial^2 \theta}{\partial
-x^2}$$.  Benötigt werden Anfangsbedingungen $$\theta(0,x)=\theta_0(x)$$ und
-Randbedingungen $$\theta_a$$ bei $$x=\{0,L\}$$.
+## Partielle differentialgleichungen
+Partielle Differentialgleichungen (PDGLs) sind Differentialgleichungen mit mehr
+als einer unabhängigen Variablen.  Als Beispiel stellen wir uns ein
+zeitabhängiges Wärmetransportproblem in einer Raumdimension vor. Dieses wird
+mit einer Diffusionsgleichung für die lokale Temperatur des Systems
+dargestellt. Die Temperatur wird daher als Funktion zweier unabhängiger
+Variablen, der Zeit $t$ und der r\"aumlichen Position $x$, dargestellt: $T(x,
+t)$. Die Zeitentwicklung der Temperatur ist gegeben durch
+$$
+\frac{\partial T(x,t)}{\partial t}=\kappa\frac{\partial^2 T(x,t)}{\partial x^2},
+\label{eq:heateq}
+$$
+wobei $\kappa$ den Wärmeleitungskoeffizienten bezeichnet. Diese Gleichung wurde
+von Joseph Fourier (*1768, $\dagger$1830) entwickelt, dem wir im Laufe dieser
+Veranstaltung wieder begegnen werden.
+
+Die unabhängigen Veränderlichen $$(t,x)$$. 
+Mit der Definition eines Wärmestroms $$j(t,x)=-\kappa \frac{\partial T}{\partial
+x}$$ erhalten wir eine Kontinuitätsgleichung $$\frac{\partial T}{\partial t} +
+\frac{\partial j}{\partial x} = 0 \Rightarrow \frac{\partial T}{\partial
+t} = \kappa \frac{\partial^2 T}{\partial x^2}$$.
+
+Um diese Gleichung lösen zu können benötigen wir 
+Anfangsbedingungen $$T(0,x)=\T_0(x)$$ und Randbedingungen $$T_a$$
+bei $$x=\{0,L\}$$.
 
 Die allgemeine Form der Randbedingungen (Robin-Randbedingung) lautet:
-$$\kappa \frac{\partial \theta}{\partial x} + \sigma(\theta - \theta_a) = 0$$
-$$\sigma$$ bezeichnet den Wärmeübergangskoeffizienten.
+$$\kappa \frac{\partial T}{\partial x} + \sigma(T - T_a) = 0$$
+$$\sigma$$ bezeichne den Wärmeübergangskoeffizienten.
 
 **Grenzfälle:**
 - $$\sigma=0$$: System vollständig isoliert $$\Rightarrow \frac{\partial \theta}{\partial x} = 0$$ (**Neumann-Randbedingung**).
