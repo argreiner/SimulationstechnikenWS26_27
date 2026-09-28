@@ -155,29 +155,31 @@ als einer unabhängigen Variablen.  Als Beispiel stellen wir uns ein
 zeitabhängiges Wärmetransportproblem in einer Raumdimension vor. Dieses wird
 mit einer Diffusionsgleichung für die lokale Temperatur des Systems
 dargestellt. Die Temperatur wird daher als Funktion zweier unabhängiger
-Variablen, der Zeit $t$ und der r\"aumlichen Position $x$, dargestellt: $T(x,
+Variablen, der Zeit $t$ und der räumlichen Position $x$, dargestellt: $T(x,
 t)$. Die Zeitentwicklung der Temperatur ist gegeben durch
 $$
 \frac{\partial T(x,t)}{\partial t}=\kappa\frac{\partial^2 T(x,t)}{\partial x^2},
 \label{eq:heateq}
 $$
 wobei $\kappa$ den Wärmeleitungskoeffizienten bezeichnet. Diese Gleichung wurde
-von Joseph Fourier (*1768, $\dagger$1830) entwickelt, dem wir im Laufe dieser
+von Joseph Fourier (*1768, $\dagger$1830) entwickelt, der wir im Laufe dieser
 Veranstaltung wieder begegnen werden.
 
-Die unabhängigen Veränderlichen $$(t,x)$$. 
-Mit der Definition eines Wärmestroms $$j(t,x)=-\kappa \frac{\partial T}{\partial
+Die unabhängigen Veränderlichen sind $$x$$ und $$t$$. 
+Mit der Definition eines Wärmestroms $$j(x,t)=-\kappa \frac{\partial T}{\partial
 x}$$ erhalten wir eine Kontinuitätsgleichung $$\frac{\partial T}{\partial t} +
 \frac{\partial j}{\partial x} = 0 \Rightarrow \frac{\partial T}{\partial
 t} = \kappa \frac{\partial^2 T}{\partial x^2}$$.
 
-Um diese Gleichung lösen zu können benötigen wir 
-Anfangsbedingungen $$T(0,x)=\T_0(x)$$ und Randbedingungen $$T_a$$
-bei $$x=\{0,L\}$$.
+Um diese Gleichung lösen zu können benötigen wir Anfangsbedingungen
+$$T(0,x)=\T_0(x)$$, die $$T$$ zu einem Startzeitpunkt auf dem ganzen
+Simulationsgebiet $$\Omega$$ festlegen und Randbedingungen $$T_a$$ die $$T$$
+auf dem Rand $$\Gamma(\Omega)$$ festlegen und in unserem Beispiel in einer
+Raumdimension bei $$x=\{0,L\}$$.
 
 Die allgemeine Form der Randbedingungen (Robin-Randbedingung) lautet:
 $$\kappa \frac{\partial T}{\partial x} + \sigma(T - T_a) = 0$$
-$$\sigma$$ bezeichne den Wärmeübergangskoeffizienten.
+$$\sigma$$ bezeichne den Wärmeübergangskoeffizienten nach außen.
 
 **Grenzfälle:**
 - $$\sigma=0$$: System vollständig isoliert $$\Rightarrow \frac{\partial \theta}{\partial x} = 0$$ (**Neumann-Randbedingung**).
