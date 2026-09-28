@@ -55,16 +55,16 @@ Aufwand im Vergleich zu einer reinen Punktmechanik wesentlich erhöht. In der
 Punktmechanik haben wir es mit drei Orts- und drei Geschwindigkeitsvariablen
 für jedes der $$n$$ wechselwirkenden Teilchen zu tun, während wir in einer
 quantenmechanischen Vielteilchenbeschreibung es mit einem Feld mit je drei $$n$$
-Ortsvariablen zu tun haben, nämlich $$\Psi(\v{r}_1,\v{r}_2,\dots,\v{r}_n;t)$$. 
+Ortsvariablen zu tun haben, nämlich $$\Psi(\vec{r}_1,\vec{r}_2,\dots,\vec{r}_n;t)$$. 
 
 Auf der Ebene der semiklassischen und klassischen Mechanik, auch als kinetische
 Ebene bezeichnet, werden die Modelle entweder durch die Molekulardynamik
 beschrieben oder durch die Bewegungsgleichung der
-Einteilchen-Wahrscheinlichkeits\-dichte im Phasenraum $$f(\v{r},\v{p})$$ - mit
-den unabhängigen Variablen Ort $$\v{r}$$ und Impuls $$\v{p}$$. Im zweiten Fall
-haben wir eine Funktion $$f(\v{r}(t),\v{p}(t),t)$$ die von Ort, Impuls und der
-Zeit sowohl explizit, als auch implizit über $$\v{r}(t)$$ und $$\v{p}(t)$$ abhängt.
-Nehmen wir an, wir müssen $$f(\v{r}(t),\v{p}(t),t)$$ durch diskrete Stützstellen
+Einteilchen-Wahrscheinlichkeits\-dichte im Phasenraum $$f(\vec{r},\vec{p})$$ - mit
+den unabhängigen Variablen Ort $$\vec{r}$$ und Impuls $$\vec{p}$$. Im zweiten Fall
+haben wir eine Funktion $$f(\vec{r}(t),\vec{p}(t),t)$$ die von Ort, Impuls und der
+Zeit sowohl explizit, als auch implizit über $$\vec{r}(t)$$ und $$\vec{p}(t)$$ abhängt.
+Nehmen wir an, wir müssen $$f(\vec{r}(t),\vec{p}(t),t)$$ durch diskrete Stützstellen
 interpolieren.  Dies sind bei einer geringen Auflösung von 10 Punkten pro
 Variabler schon bereits 10.000.000 Interpolationspunkte. Dies ist vielleicht
 handhabbar, die Auflösung ist aber nicht besonders gut. Und daher ist dieses
