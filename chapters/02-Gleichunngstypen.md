@@ -207,7 +207,7 @@ untersuchen.
 
 *N.B.:*
 
-In Gl.~\eqref{eq:PDE1Oquasi} wurde zur Illustration eine Darstellung mit zwei
+In der PDGL erster Ordnung wurde zur Illustration eine Darstellung mit zwei
 Variablen $$x$$ und $$t$$ gewählt. Allgemein können wir schreiben:
 
 $$
@@ -216,7 +216,7 @@ R(\{x_i\};u)
 $$
 
 Hier wurde als Notation $$u(\{x_i\})=u(x_0, x_1, x_2, \ldots)$$ genutzt, also die
-geschweiften Klammern bezeichnen alle Freiheitsgrade $$x_i$$.
+geschweiften Klammern bezeichnen alle Variablen $$x_i$$.
 
 Die partielle Differentialgleichung erster Ordnung können wir auf ein System
 von GDGLs transformieren. Dies wird die Methode der Charakteristiken genannt.
@@ -227,20 +227,23 @@ Systemen von GDGLs anwenden, die wir in der Vorlesung
 Wir gehen folgendermaßen vor:
 1. Zunächst parametrisieren wir die unabhängigen Veränderlichen mit einem Parameter $$s$$ gemäß $$x(s)$$ und $$t(s)$$.
 1. Wir bilden dann die *totale Ableitung* von $$u(x(s),t(s))$$ nach $$s$$
+   
    $$
-     \frac{\dif u(x(s),t(s))}{\dif s}=
-     \frac{\partial u(x(s),t(s))}{\partial x}\frac{\dif x(s)}{\dif s}+
-     \frac{\partial u(x(s),t(s))}{\partial t}\frac{\dif t(s)}{\dif s}.
+     \frac{\text{d} u(x(s),t(s))}{\text{d} s}=
+     \frac{\partial u(x(s),t(s))}{\partial x}\frac{\text{d} x(s)}{\text{d} s}+
+     \frac{\partial u(x(s),t(s))}{\partial t}\frac{\text{d} t(s)}{\text{d} s}.
    $$
 1. Durch den Vergleich der Koeffizienten der totalen
    Ableitung mit der PDGL sieht man,
    dass diese DGL genau dann gelöst wird, wenn
+
    $$ \begin{aligned}
         \frac{dx(s)}{ds}&=P(x,t,u),\label{eq:transode1}\\
         \frac{dt(s)}{ds}&=Q(x,t,u)\quad\text{und}\\
         \frac{du(s)}{ds} &= R(u(s)).\label{eq:transode3}
 	\end{aligned}
    $$
+
    erfüllt ist. Dies beschreibt die Lösung entlang bestimmter Kurven in der
    $$(x,t)$$-Ebene. 
 
@@ -262,21 +265,24 @@ obigem Rezept vor:
 1. Wir stellen nun die Frage, wie sich die Funktion $$u(x(s),t(s))$$ verhält.
    Diese Funktion beschreibt die Änderung eines Anfangswertes $$u(x(0),t(0))$$ mit
    der Variable $$s$$. Die totale Ableitung wird zu 
+
    $$ 
-	\frac{\dif u(x(s),t(s))}{\dif s}=\frac{\partial u}{\partial t}\frac{\dif t(s)}{\dif s}+\frac{\partial u}{\partial x}\frac{\dif x(s)}{\dif s}.
+	\frac{\text{d} u(x(s),t(s))}{\text{d} s}=\frac{\partial u}{\partial t}\frac{\text{d} t(s)}{\text{d} s}+\frac{\partial u}{\partial x}\frac{\text{d} x(s)}{\text{d} s}.
    $$
 1. Die totale Ableitung ist genau dann identisch zu der partiellen
    Differentialgleichung, die wir lösen wollen, wenn
+
    $$\begin{aligned}
-	\frac{\dif x(s)}{\dif s} &=c\quad\text{und} \\
-	\frac{\dif t(s)}{\dif s} &=1.
+	\frac{\text{d} x(s)}{\text{d} s} &=c\quad\text{und} \\
+	\frac{\text{d} t(s)}{\text{d} s} &=1.
    $$\end{aligned}
+
    In diesem Fall gilt
 
-	   $$ \frac{\dif u(s)}{\dif s} = 0$$
+	   $$ \frac{\text{d} u(s)}{\text{d} s} = 0$$
 1. Die allgemeinen Lösungen für die drei gewöhnlichen
-   Differentialgleichungen~\eqref{eq:transex1}-\eqref{eq:transex3} sind gegeben
-   durch
+   Differentialgleichungen sind gegeben durch
+
    $$\begin{aligned}
        x(s) &= cs + \text{const.},\\
        t(s) &= s + \text{const.}\quad\text{und}\\
