@@ -267,15 +267,18 @@ obigem Rezept vor:
    der Variable $$s$$. Die totale Ableitung wird zu 
 
    $$ 
-	\frac{\text{d} u(x(s),t(s))}{\text{d} s}=\frac{\partial u}{\partial t}\frac{\text{d} t(s)}{\text{d} s}+\frac{\partial u}{\partial x}\frac{\text{d} x(s)}{\text{d} s}.
+	\frac{\text{d} u(x(s),t(s))}{\text{d} s}=\frac{\partial u}{\partial t}\frac{\text{d} t(s)}{\text{d} s}
+                                                 +\frac{\partial u}{\partial x}\frac{\text{d} x(s)}{\text{d} s}.
    $$
 1. Die totale Ableitung ist genau dann identisch zu der partiellen
    Differentialgleichung, die wir lösen wollen, wenn
 
-   $$\begin{aligned}
+   $$
+     \begin{aligned}
 	\frac{\text{d} x(s)}{\text{d} s} &=c\quad\text{und} \\
 	\frac{\text{d} t(s)}{\text{d} s} &=1.
-   $$\end{aligned}
+     \end{aligned}
+   $$
 
    In diesem Fall gilt
 
@@ -283,11 +286,13 @@ obigem Rezept vor:
 1. Die allgemeinen Lösungen für die drei gewöhnlichen
    Differentialgleichungen sind gegeben durch
 
-   $$\begin{aligned}
+   $$
+     \begin{aligned}
        x(s) &= cs + \text{const.},\\
        t(s) &= s + \text{const.}\quad\text{und}\\
        u(s) &= \text{const.}
-   $$\end{aligned}
+     \end{aligned}
+   $$
 1. Mit den Anfangsbedingungen $$t(0)=0$$, $$x(0)=\xi $$ und $$u(x,t=0)=f(\xi)$$
    erhält man $$t=s$$, $$x=ct+\xi $$ und $$u=f(\xi)=f(x-ct)$$,
 
@@ -296,3 +301,243 @@ x-Richtung transportiert. Die Lösung für $$u$$ bleibt konstant, da die Ableitu
 von $$u$$ Null ist, also behält  $u$ den durch die Anfangsbedingung gegebenen
 Wert. Das Feld $$u(x,0)$$ wird also mit einer konstanten Geschwindigkeit $$c$$
 verschoben: $$u(x,t)=u(x-ct,0)$$.
+
+### Partielle Differentialgleichungen zweiter Ordnung
+
+Beispiele von PDGLs zweiter Ordnung sind die...
+- ...Wellengleichung:
+
+$$
+	\frac{\partial^2 u}{\partial t^2}-\frac{\partial^2 u}{\partial x^2}=0
+$$
+- ...Diffusionsgleichung (mit der wir uns hier näher beschäftigen werden):
+
+$$
+	\frac{\partial u}{\partial t}-\frac{\partial^2 u}{\partial x^2}=0
+$$
+- ...Laplacegleichung (die wir auch näher kennen lernen werden):
+
+$$
+	\frac{\partial^2 u}{\partial x^2}+\frac{\partial^2 u}{\partial y^2}=0
+$$
+
+Die zweite Ordnung bezieht sich hier auf die zweite Ableitung. Diese Beispiel
+sind für zwei Variablen formuliert, aber diese Differentialgleichungen können
+auch für mehr Freiheitsgrade aufgeschrieben werden.
+
+Für zwei Variablen lautet die allgemeine Form linearer PDGLs zweiter Ordnung,
+
+$$
+	a(x,y) \frac{\partial^2 u}{\partial x^2}+
+	b(x,y)\frac{\partial^2 u}{\partial x\partial y}+
+	c(x,y)\frac{\partial^2 u}{\partial y^2}=F\left(x,y;u,\frac{\partial u}{\partial x},\frac{\partial u}{\partial y}\right),
+$$
+
+wobei $$F$$ selbst natürlich auch linear in den Argumenten sein muss, wenn die
+gesamte Gleichung linear sein soll.  Wir nehmen nun eine Klassifizierung von
+PDGLs 2. Ordnung vor, stellen aber vorweg, dass diese Klassifizierung nicht
+erschöpfend ist und dass sie nur punktweise gilt. Letzteres heißt, dass die
+PDGL an unterschiedlichen Raumpunkten in eine andere Klassifizierung fallen
+kann.
+
+Wir nehmen zunächst an, dass $$F=0$$ und $$a$$, $$b$$, $$c$$ konstant seien. Dann erhalten wir:
+
+$$
+        a\frac{\partial^2 u}{\partial x^2}+b\frac{\partial^2 u}{\partial x\partial y}+
+        c\frac{\partial^2 u}{\partial y^2}=0.
+$$
+
+Wir schreiben diese Gleichung um als die quadratische Form
+
+$$
+    \begin{pmatrix}
+	    \partial/\partial x \\ \partial/\partial y
+	    \end{pmatrix}
+	    \cdot
+	    \begin{pmatrix}
+	    a & b/2 \\
+	    b/2 & c
+	    \end{pmatrix}
+        \cdot
+	    \begin{pmatrix}
+	    \partial/\partial x \\ \partial/\partial y
+	\end{pmatrix}
+	u
+	=
+    \nabla
+    \cdot
+    \t{C}
+    \cdot
+    \nabla
+    u
+	=0
+$$
+
+Die Koeffizientenmatrix $$\t{C}$$ können wir nun diagonalisieren. Dies für zu
+
+$$
+    \t{C} = \t{U} \cdot \begin{pmatrix} \lambda_1 & 0 \\ 0 & \lambda_2 \end{pmatrix}\cdot \t{U}^T,
+$$
+
+wobei $$\t{U}$$ auf Grund der Symmetrie von $$\t{C}$$ unitär ist, $$\t{U}^T
+\cdot\t{U}=\t{1}$$. Die geometrische Interpretation der Operation $$\t{U}$$ ist
+eine Rotation. Wir führen nun transformierte Koordinaten $$x'$$ und $$y'$$ ein, so
+dass
+
+$$
+    \nabla
+    =
+    \t{U}
+    \cdot
+    \nabla'
+$$
+
+mit $$\nabla'=(\partial/\partial x', \partial/\partial y')$$. Mit anderen
+Worten, die Transformationsmatrix ist gegeben als
+
+$$
+    \t{U} = \begin{pmatrix}
+    \partial x'/\partial x & \partial y'/\partial x \\
+    \partial x'/\partial y & \partial y'/\partial y
+    \end{pmatrix}.
+$$
+
+Damit erhalten wir
+
+$$
+    \lambda_1 \frac{\partial^2 u}{\partial x'^2} + \lambda_2 \frac{\partial^2 u}{\partial y'^2} = 0.
+    \label{eq:diag2nd}
+$$
+
+Wir haben die Koeffizienten der Differentialgleichung diagonalisiert. Für eine
+beliebige zweifach differenzierbare Funktion $f(z)$, ist
+
+$$
+u(x', y') = f\left(\sqrt{\lambda_2} x' + i\sqrt{\lambda_1} y'\right)
+$$
+
+die Lösung der PDGL.
+
+%Der analytische Ausdruck für die Eigenwerte lautet:
+%	\begin{equation}
+%		m_{1/2}=\frac{-b\pm\sqrt{b^2-4ac}}{2a}
+%		\label{eqnsol4m}
+%	\end{equation}
+
+Wir unterscheiden nun drei Fälle:
+- Der Fall $\det\t{C}=\lambda_1\lambda_2=ac-b^4/4=0$ mit $b\ne 0$ und $a\ne 0$
+  führt zu einer parabolischen PDGL. Diese PDGL heißt parabolisch, weil die
+  quadratische Form Gl.~\eqref{eq:quadform} bzw. \eqref{eq:diagquadform} eine
+  Parabel beschreibt. (Dies ist natürlich eine Analogie. Man muss die
+  Differentialoperatoren durch Koordinaten ersetzen damit diese funktioniert.)
+  Ohne Beschränkung der Allgemeinheit sei $\lambda_2=0$. Dann bekommen wir
+
+$$
+		\frac{\partial^2 u}{\partial x'^2}=0.
+$$
+
+  Dies ist die kanonische Form einer parabolischen PDGL.
+- Der Fall $\det\t{C}=\lambda_1 \lambda_2=ac-b^2/4>0$ führt zu einer
+  elliptischen PDGL. Diese PDGL heißt elliptisch, weil die quadratische Form
+  Gl.~\eqref{eq:quadform} bzw. \eqref{eq:diagquadform} für eine konstante rechte
+  Seite eine Ellipse beschreibt. (Für $\lambda_1=\lambda_2$ ist es ein Kreis.)
+  Wir formen nun die Gleichung für den elliptischen Fall auf eine standardisierte
+  Form um und führen die skalierten Koordinaten $x'=\sqrt{\lambda_1} x''$ und
+  $y'=\sqrt{\lambda_2} y''$ ein. Dann wird aus Gl.~\eqref{eq:diag2nd} die
+  kanonische elliptische PDGL
+
+	\begin{equation}
+		\frac{\partial^2 u}{\partial x''^2}+\frac{\partial^2 u}{\partial y''^2}=0.
+		\label{eqnelliptic}
+	\end{equation}
+
+	Die kanonische elliptische PDGL ist daher die Laplace-Gleichung, Gl.~\eqref{eqnelliptic} (hier im Zweidimensionalen). Lösungen der Laplace-Gleichung heißen \emph{harmonische Funktionen}.
+- Der Fall $\det\t{C}=\lambda_1\lambda_2=ac-b^2/4<0$ ergibt die so genannte
+  hyperbolische PDGL. Diese PDGL heißt hyperbolisch, weil die quadratische Form
+  Gl.~\eqref{eq:quadform} bzw. \eqref{eq:diagquadform} für eine konstante rechte
+  Seite eine Hyperbel beschreibt.
+  Ohne Beschränkung der Allgemeinheit fordern wir nun $\lambda_1>0$ und
+  $\lambda_2<0$. Dann können wir wieder skalierte Koordinaten
+  $x'=\sqrt{\lambda_1}x''$ und $y'=\sqrt{-\lambda_2}y''$ einführen, so dass
+
+  $$
+        \frac{\partial^2 u}{\partial x''^2} - \frac{\partial^2 u}{\partial y''^2}
+        =
+        \begin{pmatrix}
+            \partial u/\partial x'' \\
+            \partial u/\partial y''
+        \end{pmatrix}
+        \cdot
+        \begin{pmatrix}
+            1 & 0 \\
+            0 & -1
+        \end{pmatrix}
+        \cdot
+        \begin{pmatrix}
+            \partial u/\partial x'' \\
+            \partial u/\partial y''
+        \end{pmatrix}
+        =
+        0.
+  $$
+
+  Wir können nun durch eine weitere Koordinatentransformation, nämlich eine
+  Rotation um $45^\circ$, die Koeffizientenmatrix in Gl.~\eqref{eq:hyb} auf eine
+  Form bringen, in der die Diagonalelemente $0$ und die Nebendiagonalelemente $1$
+  sind. Dies ergibt die Differentialgleichung
+
+	$$
+		\frac{\partial^2 u}{\partial x''' \partial y'''}=0,
+	$$
+
+  wobei $x'''$ und $y'''$ die entsprechend rotierten Koordinaten sind.  Diese
+  Gleichung ist die kanonische Form einer hyperbolischen PDGL und äquivalent zu
+  Gl.~\eqref{eq:n2ndoconst} in den neuen Variablen $x'''$ und $y'''$.
+
+Für höherdimensionale Probleme müssen wir uns die Eigenwerte der
+Koeffizientenmatrix $\t{C}$ anschauen. Die PDGL heißt \emph{parabolisch}, wenn
+es einen Eigenwert gibt der verschwindet, aber alle anderen Eigenwerte entweder
+größer oder kleiner als Null sind. Die PDGL heißt \emph{elliptisch}, wenn alle
+Eigenwerte entweder größer Null oder kleiner Null sind. Die PDGL heißt
+\emph{hyperbolisch}, wenn es genau einen negativen Eigenwert gibt und alle
+anderen positiv sind oder es genau einen positiven Eigenwert gibt und alle
+anderen negativ sind. Es ist klar, dass für PDGLs mit mehr als zwei Variablen,
+diese drei Klassen von PDGLs nicht erschöpfend sind und es
+Koeffizientenmatrizen gibt, die aus diesem Klassifizierungschema fallen. Für
+Probleme mit genau zwei Variablen führt diese Klassifzierung zu den Bedingungen
+für die Determinanten der Koeffizientenmatrix die oben genannt wurden.
+
+Diese drei Typen linearer PDEs 2.\ Ordnung lassen sich für manche
+Problemstellungen auch analytisch lösen. Wir geben im Folgenden ein
+Beispiel hierzu.
+
+*Beispiel:* Die eindimensionale Wellengleichung
+
+$$
+	\frac{\partial^2 u}{\partial x^2}-\frac{1}{c^2}\frac{\partial^2 u}{\partial t^2}=0
+	\label{eqn1Dwaveeqn}
+$$
+
+durch Separation der Variablen. Dafür machen wir den Ansatz $u(x,t)=X(x)T(t)$, was zu
+
+$$
+	\frac{1}{X}\frac{\partial^2 X}{\partial x^2}=\frac{1}{c^2}\frac{1}{T}\frac{\partial^2 T}{\partial t^2}
+	\label{eqnseparate}
+$$
+
+führt.  In Gl.~\eqref{eqnseparate} hängt die linke Seite nur von der Variablen $x$ ab, während
+die rechte Seite nur von $t$ abhängt. Für beliebige $x$ und $t$ kann diese
+Gleichung nur erfüllt werden, wenn beide Seiten gleich einer Konstanten sind
+und wir erhalten somit
+
+$$
+        \frac{1}{X}\frac{\partial^2 X}{\partial x^2}=-k^2=\frac{1}{c^2}\frac{1}{T}\frac{\partial^2 T}{\partial t^2}\,\mathrm{.}
+$$
+
+Dies ergibt die folgenden zwei Gleichungen
+\[\frac{\partial^2 X}{\partial x^2}+k^2X=0\]
+mit der Lösung $X(x)=e^{\pm ikx}$ und
+\[\frac{\partial^2 T}{\partial t^2}+\omega^2T=0\]
+mit der Lösung $T(t)=e^{\pm i\omega t}$, wobei wir $\omega^2=c^2k^2$ gesetzt
+haben.  Dieses Beispiel braucht zur Ergänzung Anfangsbedingungen, damit wir
+eine Lösung finden können.
