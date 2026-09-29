@@ -310,11 +310,13 @@ Beispiele von PDGLs zweiter Ordnung sind die...
 $$
 	\frac{\partial^2 u}{\partial t^2}-\frac{\partial^2 u}{\partial x^2}=0
 $$
+
 - ...Diffusionsgleichung (mit der wir uns hier näher beschäftigen werden):
 
 $$
 	\frac{\partial u}{\partial t}-\frac{\partial^2 u}{\partial x^2}=0
 $$
+
 - ...Laplacegleichung (die wir auch näher kennen lernen werden):
 
 $$
@@ -366,28 +368,29 @@ $$
 	=
     \nabla
     \cdot
-    \t{C}
+    \mathbf{C}
     \cdot
     \nabla
     u
 	=0
 $$
 
-Die Koeffizientenmatrix $$\t{C}$$ können wir nun diagonalisieren. Dies für zu
+Die Koeffizientenmatrix $$\mathbf{C}$$ können wir nun diagonalisieren. Dies für zu
 
 $$
-    \t{C} = \t{U} \cdot \begin{pmatrix} \lambda_1 & 0 \\ 0 & \lambda_2 \end{pmatrix}\cdot \t{U}^T,
+    \mathbf{C} = \mathbf{U} \cdot \begin{pmatrix} \lambda_1 & 0 \\ 0 &
+\lambda_2 \end{pmatrix}\cdot \mathbf{U}^T,
 $$
 
-wobei $$\t{U}$$ auf Grund der Symmetrie von $$\t{C}$$ unitär ist, $$\t{U}^T
-\cdot\t{U}=\t{1}$$. Die geometrische Interpretation der Operation $$\t{U}$$ ist
+wobei $$\mathbf{U}$$ auf Grund der Symmetrie von $$\mathbf{C}$$ unitär ist, $$\mathbf{U}^T
+\cdot\mathbf{U}=\mathbb{1}$$. Die geometrische Interpretation der Operation $$\mathbf{U}$$ ist
 eine Rotation. Wir führen nun transformierte Koordinaten $$x'$$ und $$y'$$ ein, so
 dass
 
 $$
     \nabla
     =
-    \t{U}
+    \mathbf{U}
     \cdot
     \nabla'
 $$
@@ -396,7 +399,7 @@ mit $$\nabla'=(\partial/\partial x', \partial/\partial y')$$. Mit anderen
 Worten, die Transformationsmatrix ist gegeben als
 
 $$
-    \t{U} = \begin{pmatrix}
+    \mathbf{U} = \begin{pmatrix}
     \partial x'/\partial x & \partial y'/\partial x \\
     \partial x'/\partial y & \partial y'/\partial y
     \end{pmatrix}.
@@ -418,14 +421,8 @@ $$
 
 die Lösung der PDGL.
 
-%Der analytische Ausdruck für die Eigenwerte lautet:
-%	\begin{equation}
-%		m_{1/2}=\frac{-b\pm\sqrt{b^2-4ac}}{2a}
-%		\label{eqnsol4m}
-%	\end{equation}
-
 Wir unterscheiden nun drei Fälle:
-- Der Fall $\det\t{C}=\lambda_1\lambda_2=ac-b^4/4=0$ mit $b\ne 0$ und $a\ne 0$
+- Der Fall $\det\mathbf{C}=\lambda_1\lambda_2=ac-b^4/4=0$ mit $b\ne 0$ und $a\ne 0$
   führt zu einer parabolischen PDGL. Diese PDGL heißt parabolisch, weil die
   quadratische Form Gl.~\eqref{eq:quadform} bzw. \eqref{eq:diagquadform} eine
   Parabel beschreibt. (Dies ist natürlich eine Analogie. Man muss die
@@ -437,7 +434,7 @@ $$
 $$
 
   Dies ist die kanonische Form einer parabolischen PDGL.
-- Der Fall $\det\t{C}=\lambda_1 \lambda_2=ac-b^2/4>0$ führt zu einer
+- Der Fall $\det\mathbf{C}=\lambda_1 \lambda_2=ac-b^2/4>0$ führt zu einer
   elliptischen PDGL. Diese PDGL heißt elliptisch, weil die quadratische Form
   Gl.~\eqref{eq:quadform} bzw. \eqref{eq:diagquadform} für eine konstante rechte
   Seite eine Ellipse beschreibt. (Für $\lambda_1=\lambda_2$ ist es ein Kreis.)
@@ -451,8 +448,10 @@ $$
 		\label{eqnelliptic}
 	\end{equation}
 
-	Die kanonische elliptische PDGL ist daher die Laplace-Gleichung, Gl.~\eqref{eqnelliptic} (hier im Zweidimensionalen). Lösungen der Laplace-Gleichung heißen \emph{harmonische Funktionen}.
-- Der Fall $\det\t{C}=\lambda_1\lambda_2=ac-b^2/4<0$ ergibt die so genannte
+  Die kanonische elliptische PDGL ist daher die Laplace-Gleichung,
+  Gl.~\eqref{eqnelliptic} (hier im Zweidimensionalen). Lösungen der
+  Laplace-Gleichung heißen *harmonische Funktionen*.
+- Der Fall $\det\mathbf{C}=\lambda_1\lambda_2=ac-b^2/4<0$ ergibt die so genannte
   hyperbolische PDGL. Diese PDGL heißt hyperbolisch, weil die quadratische Form
   Gl.~\eqref{eq:quadform} bzw. \eqref{eq:diagquadform} für eine konstante rechte
   Seite eine Hyperbel beschreibt.
@@ -495,11 +494,11 @@ $$
   Gl.~\eqref{eq:n2ndoconst} in den neuen Variablen $x'''$ und $y'''$.
 
 Für höherdimensionale Probleme müssen wir uns die Eigenwerte der
-Koeffizientenmatrix $\t{C}$ anschauen. Die PDGL heißt \emph{parabolisch}, wenn
+Koeffizientenmatrix $\mathbf{C}$ anschauen. Die PDGL heißt *parabolisch*, wenn
 es einen Eigenwert gibt der verschwindet, aber alle anderen Eigenwerte entweder
-größer oder kleiner als Null sind. Die PDGL heißt \emph{elliptisch}, wenn alle
+größer oder kleiner als Null sind. Die PDGL heißt *elliptisch*, wenn alle
 Eigenwerte entweder größer Null oder kleiner Null sind. Die PDGL heißt
-\emph{hyperbolisch}, wenn es genau einen negativen Eigenwert gibt und alle
+*hyperbolisch*, wenn es genau einen negativen Eigenwert gibt und alle
 anderen positiv sind oder es genau einen positiven Eigenwert gibt und alle
 anderen negativ sind. Es ist klar, dass für PDGLs mit mehr als zwei Variablen,
 diese drei Klassen von PDGLs nicht erschöpfend sind und es
@@ -515,14 +514,13 @@ Beispiel hierzu.
 
 $$
 	\frac{\partial^2 u}{\partial x^2}-\frac{1}{c^2}\frac{\partial^2 u}{\partial t^2}=0
-	\label{eqn1Dwaveeqn}
 $$
 
 durch Separation der Variablen. Dafür machen wir den Ansatz $u(x,t)=X(x)T(t)$, was zu
 
 $$
-	\frac{1}{X}\frac{\partial^2 X}{\partial x^2}=\frac{1}{c^2}\frac{1}{T}\frac{\partial^2 T}{\partial t^2}
-	\label{eqnseparate}
+	\frac{1}{X}\frac{\partial^2 X}{\partial x^2}=
+           \frac{1}{c^2}\frac{1}{T}\frac{\partial^2 T}{\partial t^2}
 $$
 
 führt.  In Gl.~\eqref{eqnseparate} hängt die linke Seite nur von der Variablen $x$ ab, während
@@ -531,13 +529,18 @@ Gleichung nur erfüllt werden, wenn beide Seiten gleich einer Konstanten sind
 und wir erhalten somit
 
 $$
-        \frac{1}{X}\frac{\partial^2 X}{\partial x^2}=-k^2=\frac{1}{c^2}\frac{1}{T}\frac{\partial^2 T}{\partial t^2}\,\mathrm{.}
+        \frac{1}{X}\frac{\partial^2 X}{\partial x^2}=
+           -k^2=\frac{1}{c^2}\frac{1}{T}\frac{\partial^2 T}{\partial t^2}\,\mathrm{.}
 $$
 
 Dies ergibt die folgenden zwei Gleichungen
-\[\frac{\partial^2 X}{\partial x^2}+k^2X=0\]
+
+$$\frac{\partial^2 X}{\partial x^2}+k^2X=0$$
+
 mit der Lösung $X(x)=e^{\pm ikx}$ und
-\[\frac{\partial^2 T}{\partial t^2}+\omega^2T=0\]
+
+$$\frac{\partial^2 T}{\partial t^2}+\omega^2T=0$$
+
 mit der Lösung $T(t)=e^{\pm i\omega t}$, wobei wir $\omega^2=c^2k^2$ gesetzt
 haben.  Dieses Beispiel braucht zur Ergänzung Anfangsbedingungen, damit wir
 eine Lösung finden können.
