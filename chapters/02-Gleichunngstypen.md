@@ -91,11 +91,15 @@ Wir betrachten das homogenisierte Randwertproblem $$L[y]=h(x), \quad U_1[y]=0,
 \dots, U_n[y]=0$$.  Für $$L[y]=0$$ bildet $$y_1(x), \dots, y_n(x)$$ das
 Fundamentalsystem. Die allgemeine Lösung $$y(x)=\sum c_i y_i(x)$$ muss die
 Randbedingungen erfüllen: 
-$$ \begin{aligned}
+
+$$ 
+\begin{aligned}
 c_1U_1[y_1] + \dots + c_nU_1[y_n] &= 0\\
 ...\\
 c_1U_n[y_1] + \dots + c_nU_n[y_n] &= 0
-\end{aligned} $$
+\end{aligned} 
+$$
+
 Damit die $$c_i$$ bestimmt werden können, muss die Koeffizientendeterminante
 des Systems betrachtet werden. Für $$L[y]=h(x)$$ wird die partikuläre Lösung
 $$y_p$$ addiert, wodurch sich die rechte Seite des Gleichungssystems zu
@@ -155,14 +159,14 @@ als einer unabhängigen Variablen.  Als Beispiel stellen wir uns ein
 zeitabhängiges Wärmetransportproblem in einer Raumdimension vor. Dieses wird
 mit einer Diffusionsgleichung für die lokale Temperatur des Systems
 dargestellt. Die Temperatur wird daher als Funktion zweier unabhängiger
-Variablen, der Zeit $t$ und der räumlichen Position $x$, dargestellt: $T(x,
-t)$. Die Zeitentwicklung der Temperatur ist gegeben durch
+Variablen, der Zeit $$t$$ und der räumlichen Position $$x$$, dargestellt: $$T(x,
+t)$$. Die Zeitentwicklung der Temperatur ist gegeben durch
 $$
 \frac{\partial T(x,t)}{\partial t}=\kappa\frac{\partial^2 T(x,t)}{\partial x^2},
 \label{eq:heateq}
 $$
-wobei $\kappa$ den Wärmeleitungskoeffizienten bezeichnet. Diese Gleichung wurde
-von Joseph Fourier (*1768, $\dagger$1830) entwickelt, der wir im Laufe dieser
+wobei $$\kappa$$ den Wärmeleitungskoeffizienten bezeichnet. Diese Gleichung wurde
+von Joseph Fourier (*1768, $$\dagger$$1830) entwickelt, der wir im Laufe dieser
 Veranstaltung wieder begegnen werden.
 
 Die unabhängigen Veränderlichen sind $$x$$ und $$t$$. 
@@ -172,7 +176,7 @@ x}$$ erhalten wir eine Kontinuitätsgleichung $$\frac{\partial T}{\partial t} +
 t} = \kappa \frac{\partial^2 T}{\partial x^2}$$.
 
 Um diese Gleichung lösen zu können benötigen wir Anfangsbedingungen
-$$T(0,x)=\T_0(x)$$, die $$T$$ zu einem Startzeitpunkt auf dem ganzen
+$$T(0,x)=T_0(x)$$, die $$T$$ zu einem Startzeitpunkt auf dem ganzen
 Simulationsgebiet $$\Omega$$ festlegen und Randbedingungen $$T_a$$ die $$T$$
 auf dem Rand $$\Gamma(\Omega)$$ festlegen und in unserem Beispiel in einer
 Raumdimension bei $$x=\{0,L\}$$.
