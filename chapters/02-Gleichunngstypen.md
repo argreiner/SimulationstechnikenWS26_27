@@ -81,8 +81,9 @@ Wir betrachten drei unterschiedliche Fälle:
   $$L[\tilde{y}]=g(x)-L[u], \quad U_1[\tilde{y}]=0, \dots, U_n[\tilde{y}]=0$$ (homogene Randbedingungen).
 
 **Beispiele zur Homogenisierung:**
-- $$\tilde{y}=y-\sin(x)\rightarrow\tilde{y}''(x)+\tilde{y}(x)=x$$; $$\tilde{y}(0)=\tilde{y}(\frac{\pi}{2})=0$$
-- $$\tilde{y}=y-\pi\sin(\frac{x}{2})$$\rightarrow
+- $$\tilde{y}=y-\sin(x)\rightarrow\tilde{y}''(x)+\tilde{y}(x)=x$$; 
+  $$\tilde{y}(0)=\tilde{y}(\frac{\pi}{2})=0$$
+- $$\tilde{y}=y-\pi\sin(\frac{x}{2})\rightarrow
   \tilde{y}''(x)+\tilde{y}(x)=x-\frac{3\pi}{4}\sin(\frac{x}{2})$$;
   $$\tilde{y}(0)=\tilde{y}(\pi)=0$$
 
@@ -280,9 +281,7 @@ obigem Rezept vor:
      \end{aligned}
    $$
 
-   In diesem Fall gilt
-
-	   $$ \frac{\text{d} u(s)}{\text{d} s} = 0$$
+   In diesem Fall gilt $$\frac{\text{d} u(s)}{\text{d} s} = 0$$
 
 1. Die allgemeinen Lösungen für die drei gewöhnlichen
    Differentialgleichungen sind gegeben durch
