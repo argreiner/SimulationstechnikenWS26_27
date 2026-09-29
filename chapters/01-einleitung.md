@@ -39,17 +39,17 @@ in die lokale Bilanz hineinfällt.
 </figure>
 
 Die Abbildung 1.1 zeigt in der vertikalen Anordnung von
-\emph{Längenskalen} und deren Zuordnung zu verschiedenen Beschreibungsebenen.
+*Längenskalen* und deren Zuordnung zu verschiedenen Beschreibungsebenen.
 Auf der kürzesten Längenskala ist meist eine quantenmechanische Beschreibung
 notwendig. Dies bedeutet, wenn wir die Phänomene in \r{A} auflösen wollen,
 befinden wir uns auf der Beschreibungsebene der Quantenmechanik und alle
 zugrundeliegenden Modelle sind von quantenmechanischer Natur. D.h. wir haben es
 hier im nichtrelativistischen Fall mit der Schrödingergleichung zu tun. Diese
 ist in verschiedenen Methoden implementiert, wie z.B. der
-\emph{Dichtefunktionaltheorie}, einer Vielteilchenbeschreibung des
+*Dichtefunktionaltheorie*, einer Vielteilchenbeschreibung des
 quantenmechanischen elektronischen Systems. Bei dieser Art der
 Vielteilchenbeschreibung handelt es sich, im Gegensatz zur
-\emph{Molekulardynamik} als Methode auf einer grö{ß}eren Längenskala, nicht um
+*Molekulardynamik* als Methode auf einer grö{ß}eren Längenskala, nicht um
 eine Beschreibung von Punktteilchen, sondern um gekoppelte Felder, was den
 Aufwand im Vergleich zu einer reinen Punktmechanik wesentlich erhöht. In der
 Punktmechanik haben wir es mit drei Orts- und drei Geschwindigkeitsvariablen
