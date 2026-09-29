@@ -56,9 +56,9 @@ U_n[y]&=\alpha_{n0}y(a)+\alpha_{n1}y'(a)+\dots+\alpha_{nn-1}y^{n-1}(a)
 
 Wobei die Frage nach der Lösbarkeit komplexer ist.
 
-**Beispiel:**
+**Beispiel:** Randwertproblem 2. Ordnung
 
-Randwertproblem 2. Ordnung: $$L[y]=y''(x)+y(x)=x$$, mit der allgemeinen Lösung 
+Es sei $$L[y]=y''(x)+y(x)=x$$, mit der allgemeinen Lösung 
 $$y(x)=c_1\cos(x)+c_2\sin(x)+x$$, wobei $$c_1,c_2 \in \mathbb{R}$$.
 
 Wir betrachten drei unterschiedliche Fälle:
@@ -81,9 +81,9 @@ Wir betrachten drei unterschiedliche Fälle:
   $$L[\tilde{y}]=g(x)-L[u], \quad U_1[\tilde{y}]=0, \dots, U_n[\tilde{y}]=0$$ (homogene Randbedingungen).
 
 **Beispiele zur Homogenisierung:**
-- $$\tilde{y}=y-\sin(x)$$; $$\tilde{y}''(x)+\tilde{y}(x)=x$$; $$\tilde{y}(0)=\tilde{y}(\frac{\pi}{2})=0$$
-- $$\tilde{y}=y-\pi\sin(\frac{x}{2})$$;
-  $$\tilde{y}''(x)+\tilde{y}(x)=x-\frac{3\pi}{4}\sin(\frac{x}{2})$$;
+- $$\tilde{y}=y-\sin(x)\rightarrow\tilde{y}''(x)+\tilde{y}(x)=x$$; $$\tilde{y}(0)=\tilde{y}(\frac{\pi}{2})=0$$
+- $$\tilde{y}=y-\pi\sin(\frac{x}{2})$$\rightarrow
+  \tilde{y}''(x)+\tilde{y}(x)=x-\frac{3\pi}{4}\sin(\frac{x}{2})$$;
   $$\tilde{y}(0)=\tilde{y}(\pi)=0$$
 
 ### Lösbarkeit von Randwertproblemen
@@ -153,14 +153,16 @@ $$W(x)=y_1(x)y'_2(x)-y'_1(x)y_2(x)$$,
 die auf jeden Fall verschieden von Null ist, da $$y_1(x)$$ und $$y_2(x)$$ ein
 Fundamentalsystem von Lösungen bilden sollen.
 
-## Partielle differentialgleichungen
+## Partielle Differentialgleichungen
 Partielle Differentialgleichungen (PDGLs) sind Differentialgleichungen mit mehr
-als einer unabhängigen Variablen.  Als Beispiel stellen wir uns ein
-zeitabhängiges Wärmetransportproblem in einer Raumdimension vor. Dieses wird
-mit einer Diffusionsgleichung für die lokale Temperatur des Systems
-dargestellt. Die Temperatur wird daher als Funktion zweier unabhängiger
-Variablen, der Zeit $$t$$ und der räumlichen Position $$x$$, dargestellt: $$T(x,
-t)$$. Die Zeitentwicklung der Temperatur ist gegeben durch
+als einer unabhängigen Variablen.  
+
+**Beispiel:** Zeitabhängiges Wärmetransportproblem in einer Raumdimension  
+
+Dieses modellieren wir mit einer Diffusionsgleichung für die lokale Temperatur
+des Systems. Die Temperatur wird daher als Funktion zweier unabhängiger
+Variablen, der Zeit $$t$$ und der räumlichen Position $$x$$, dargestellt:
+$$T(x, t)$$. Die Zeitentwicklung der Temperatur ist gegeben durch
 $$
 \frac{\partial T(x,t)}{\partial t}=\kappa\frac{\partial^2 T(x,t)}{\partial x^2},
 \label{eq:heateq}
@@ -188,3 +190,103 @@ $$\sigma$$ bezeichne den Wärmeübergangskoeffizienten nach außen.
 **Grenzfälle:**
 - $$\sigma=0$$: System vollständig isoliert $$\Rightarrow \frac{\partial \theta}{\partial x} = 0$$ (**Neumann-Randbedingung**).
 - $$\sigma \gg \kappa$$: Temperatur am Rand ist fix $$\Rightarrow \theta = \theta_a$$ (**Dirichlet-Randbedingung**).
+
+### Partielle Differentialgleichungen erster Ordnung
+Quasilineare PDGLs erster Ordnung, also Gleichungen der Form
+
+$$
+   P(x,t;u)\frac{\partial u(x,t)}{\partial x}+
+Q(x,t;u)\frac{\partial u(x,t)}{\partial t}=
+R(x,t;u), \label{eq:PDE1Oquasi}
+$$
+
+für eine (unbekannte) Funktion $$u(x,t)$$ und der Anfangsbedingung
+$$u(x,t=0)=u_0(x)$$ können systematisch auf ein System gekoppelter GDGLs erster
+Ordnung zurückgeführt werden. Diese wichtige Eigenschaft wollen wir
+untersuchen.
+
+*N.B.:*
+
+In Gl.~\eqref{eq:PDE1Oquasi} wurde zur Illustration eine Darstellung mit zwei
+Variablen $$x$$ und $$t$$ gewählt. Allgemein können wir schreiben:
+
+$$
+\sum\limits_i P_i(\{x_i\};u)\frac{\partial u(\{x_i\})}{\partial x_i}=
+R(\{x_i\};u)
+$$
+
+Hier wurde als Notation $$u(\{x_i\})=u(x_0, x_1, x_2, \ldots)$$ genutzt, also die
+geschweiften Klammern bezeichnen alle Freiheitsgrade $$x_i$$.
+
+Die partielle Differentialgleichung erster Ordnung können wir auf ein System
+von GDGLs transformieren. Dies wird die Methode der Charakteristiken genannt.
+Wir können dann die Formalismen (analytisch oder numerisch) zur Lösung von
+Systemen von GDGLs anwenden, die wir in der Vorlesung
+``Differentialgleichungen'' kennengelernt haben.
+
+Wir gehen folgendermaßen vor:
+1. Zunächst parametrisieren wir die unabhängigen Veränderlichen mit einem Parameter $$s$$ gemäß $$x(s)$$ und $$t(s)$$.
+1. Wir bilden dann die *totale Ableitung* von $$u(x(s),t(s))$$ nach $$s$$
+   $$
+     \frac{\dif u(x(s),t(s))}{\dif s}=
+     \frac{\partial u(x(s),t(s))}{\partial x}\frac{\dif x(s)}{\dif s}+
+     \frac{\partial u(x(s),t(s))}{\partial t}\frac{\dif t(s)}{\dif s}.
+   $$
+1. Durch den Vergleich der Koeffizienten der totalen
+   Ableitung mit der PDGL sieht man,
+   dass diese DGL genau dann gelöst wird, wenn
+   $$ \begin{aligned}
+        \frac{dx(s)}{ds}&=P(x,t,u),\label{eq:transode1}\\
+        \frac{dt(s)}{ds}&=Q(x,t,u)\quad\text{und}\\
+        \frac{du(s)}{ds} &= R(u(s)).\label{eq:transode3}
+	\end{aligned}
+   $$
+   erfüllt ist. Dies beschreibt die Lösung entlang bestimmter Kurven in der
+   $$(x,t)$$-Ebene. 
+
+Wir haben damit die PDGL in einen Satz gekoppelter GDGLs erster Ordnung,
+umgewandelt.
+
+*Beispiel:* Die Transportgleichung
+
+$$
+\frac{\partial u(x,t)}{\partial t}+c\frac{\partial u(x,t)}{\partial x}=0
+$$
+
+mit der Anfangsbedingung $$u(x,t=0)=u_0(x)$$ soll gelöst werden. Wir gehen nach
+obigem Rezept vor:
+
+1. Wir parameterisieren die Variablen $$x$$ und $$t$$ mit Hilfe einer neuen
+   Variable $$s$$, also $$x(s)$$ und $$t(s)$$. Wir suchen nun nach einem Ausdruck, mit
+   dem wir $$x(s)$$ und $$t(s)$$ bestimmen können.
+1. Wir stellen nun die Frage, wie sich die Funktion $$u(x(s),t(s))$$ verhält.
+   Diese Funktion beschreibt die Änderung eines Anfangswertes $$u(x(0),t(0))$$ mit
+   der Variable $$s$$. Die totale Ableitung wird zu 
+   $$ 
+	\frac{\dif u(x(s),t(s))}{\dif s}=\frac{\partial u}{\partial t}\frac{\dif t(s)}{\dif s}+\frac{\partial u}{\partial x}\frac{\dif x(s)}{\dif s}.
+   $$
+1. Die totale Ableitung ist genau dann identisch zu der partiellen
+   Differentialgleichung, die wir lösen wollen, wenn
+   $$\begin{aligned}
+	\frac{\dif x(s)}{\dif s} &=c\quad\text{und} \\
+	\frac{\dif t(s)}{\dif s} &=1.
+   $$\end{aligned}
+   In diesem Fall gilt
+
+	   $$ \frac{\dif u(s)}{\dif s} = 0$$
+1. Die allgemeinen Lösungen für die drei gewöhnlichen
+   Differentialgleichungen~\eqref{eq:transex1}-\eqref{eq:transex3} sind gegeben
+   durch
+   $$\begin{aligned}
+       x(s) &= cs + \text{const.},\\
+       t(s) &= s + \text{const.}\quad\text{und}\\
+       u(s) &= \text{const.}
+   $$\end{aligned}
+1. Mit den Anfangsbedingungen $$t(0)=0$$, $$x(0)=\xi $$ und $$u(x,t=0)=f(\xi)$$
+   erhält man $$t=s$$, $$x=ct+\xi $$ und $$u=f(\xi)=f(x-ct)$$,
+
+Die Anfangsbedingung $$f(\xi)$$ wird mit der Geschwindigkeit $$c$$ in die positive
+x-Richtung transportiert. Die Lösung für $$u$$ bleibt konstant, da die Ableitung
+von $$u$$ Null ist, also behält  $u$ den durch die Anfangsbedingung gegebenen
+Wert. Das Feld $$u(x,0)$$ wird also mit einer konstanten Geschwindigkeit $$c$$
+verschoben: $$u(x,t)=u(x-ct,0)$$.
