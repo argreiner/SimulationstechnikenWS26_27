@@ -283,6 +283,7 @@ obigem Rezept vor:
    In diesem Fall gilt
 
 	   $$ \frac{\text{d} u(s)}{\text{d} s} = 0$$
+
 1. Die allgemeinen Lösungen für die drei gewöhnlichen
    Differentialgleichungen sind gegeben durch
 
@@ -332,7 +333,8 @@ Für zwei Variablen lautet die allgemeine Form linearer PDGLs zweiter Ordnung,
 $$
 	a(x,y) \frac{\partial^2 u}{\partial x^2}+
 	b(x,y)\frac{\partial^2 u}{\partial x\partial y}+
-	c(x,y)\frac{\partial^2 u}{\partial y^2}=F\left(x,y;u,\frac{\partial u}{\partial x},\frac{\partial u}{\partial y}\right),
+	c(x,y)\frac{\partial^2 u}{\partial y^2}=
+        F\left(x,y;u,\frac{\partial u}{\partial x},\frac{\partial u}{\partial y}\right),
 $$
 
 wobei $$F$$ selbst natürlich auch linear in den Argumenten sein muss, wenn die
@@ -342,7 +344,8 @@ erschöpfend ist und dass sie nur punktweise gilt. Letzteres heißt, dass die
 PDGL an unterschiedlichen Raumpunkten in eine andere Klassifizierung fallen
 kann.
 
-Wir nehmen zunächst an, dass $$F=0$$ und $$a$$, $$b$$, $$c$$ konstant seien. Dann erhalten wir:
+Wir nehmen zunächst an, dass $$F=0$$ und $$a$$, $$b$$, $$c$$ konstant seien.
+Dann erhalten wir:
 
 $$
         a\frac{\partial^2 u}{\partial x^2}+b\frac{\partial^2 u}{\partial x\partial y}+
@@ -382,10 +385,10 @@ $$
 \lambda_2 \end{pmatrix}\cdot \mathbf{U}^T,
 $$
 
-wobei $$\mathbf{U}$$ auf Grund der Symmetrie von $$\mathbf{C}$$ unitär ist, $$\mathbf{U}^T
-\cdot\mathbf{U}=\mathbb{1}$$. Die geometrische Interpretation der Operation $$\mathbf{U}$$ ist
-eine Rotation. Wir führen nun transformierte Koordinaten $$x'$$ und $$y'$$ ein, so
-dass
+wobei $$\mathbf{U}$$ auf Grund der Symmetrie von $$\mathbf{C}$$ unitär ist,
+$$\mathbf{U}^T \cdot\mathbf{U}=\mathbb{1}$$. Die geometrische Interpretation
+der Operation $$\mathbf{U}$$ ist eine Rotation. Wir führen nun transformierte
+Koordinaten $$x'$$ und $$y'$$ ein, so dass
 
 $$
     \nabla
@@ -409,11 +412,11 @@ Damit erhalten wir
 
 $$
     \lambda_1 \frac{\partial^2 u}{\partial x'^2} + \lambda_2 \frac{\partial^2 u}{\partial y'^2} = 0.
-    \label{eq:diag2nd}
+    \tag{2.20}\label{eq:diag2nd}
 $$
 
 Wir haben die Koeffizienten der Differentialgleichung diagonalisiert. Für eine
-beliebige zweifach differenzierbare Funktion $f(z)$, ist
+beliebige zweifach differenzierbare Funktion $$f(z)$$, ist
 
 $$
 u(x', y') = f\left(\sqrt{\lambda_2} x' + i\sqrt{\lambda_1} y'\right)
@@ -445,11 +448,11 @@ $$
 
 	\begin{equation}
 		\frac{\partial^2 u}{\partial x''^2}+\frac{\partial^2 u}{\partial y''^2}=0.
-		\label{eqnelliptic}
+		\tag{2.21}
 	\end{equation}
 
-  Die kanonische elliptische PDGL ist daher die Laplace-Gleichung,
-  Gl.~\eqref{eqnelliptic} (hier im Zweidimensionalen). Lösungen der
+  Die kanonische elliptische PDGL ist daher die Laplace-Gleichung (2.21) 
+  (hier im Zweidimensionalen). Lösungen der
   Laplace-Gleichung heißen *harmonische Funktionen*.
 - Der Fall $\det\mathbf{C}=\lambda_1\lambda_2=ac-b^2/4<0$ ergibt die so genannte
   hyperbolische PDGL. Diese PDGL heißt hyperbolisch, weil die quadratische Form
