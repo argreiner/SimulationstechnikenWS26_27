@@ -436,13 +436,15 @@ Wir unterscheiden nun drei Fälle:
   quadratische Form (2.32) bzw. (2.33) eine
   Parabel beschreibt. (Dies ist natürlich eine Analogie. Man muss die
   Differentialoperatoren durch Koordinaten ersetzen damit diese funktioniert.)
-  Ohne Beschränkung der Allgemeinheit sei $$\lambda_2=0$$. Dann bekommen wir
+  Ohne Beschränkung der Allgemeinheit sei $$\lambda_2=0$$. 
+
+    Dann bekommen wir
 
 $$
-		\frac{\partial^2 u}{\partial x^\prime^2}=0.
+		\frac{\partial^2 u}{\partial x^{\prime2}}=0.
 $$
 
-  Dies ist die kanonische Form einer parabolischen PDGL.
+    Dies ist die kanonische Form einer parabolischen PDGL.
 - Der Fall $$\det\mathbf{C}=\lambda_1 \lambda_2=ac-b^2/4>0$$ führt zu einer
   elliptischen PDGL. Diese PDGL heißt elliptisch, weil die quadratische Form
   (2.32) bzw. (2.33) für eine konstante rechte Seite eine Ellipse beschreibt.
@@ -461,13 +463,13 @@ $$
   Die kanonische elliptische PDGL ist daher die Laplace-Gleichung (2.39) 
   (hier im Zweidimensionalen). Lösungen der
   Laplace-Gleichung heißen *harmonische Funktionen*.
-- Der Fall $\det\mathbf{C}=\lambda_1\lambda_2=ac-b^2/4<0$ ergibt die so
+- Der Fall $$\det\mathbf{C}=\lambda_1\lambda_2=ac-b^2/4<0$$ ergibt die so
   genannte hyperbolische PDGL. Diese PDGL heißt hyperbolisch, weil die
   quadratische Form (2.32) bzw. (2.33) für eine konstante rechte Seite eine
   Hyperbel beschreibt.  Ohne Beschränkung der Allgemeinheit fordern wir nun
-  $\lambda_1>0$ und $\lambda_2<0$. Dann können wir wieder skalierte Koordinaten
-  $x^\prime=\sqrt{\lambda_1}x^{\prime\prime}$ und
-  $y^\prime=\sqrt{-\lambda_2}y^{\prime\prime}$ einführen, so dass
+  $$\lambda_1>0$$ und $$\lambda_2<0$$. Dann können wir wieder skalierte Koordinaten
+  $$x^\prime=\sqrt{\lambda_1}x^{\prime\prime}$$ und
+  $$y^\prime=\sqrt{-\lambda_2}y^{\prime\prime}$$ einführen, so dass
 
 $$
         \frac{\partial^2 u}{\partial x^{\prime\prime2}} - 
@@ -492,20 +494,20 @@ $$
   \tag{2.40}
 $$
 
-  Wir können nun durch eine weitere Koordinatentransformation, nämlich eine
-  Rotation um $$45^\circ$$, die Koeffizientenmatrix in (2.40) auf eine Form
-  bringen, in der die Diagonalelemente $$0$$ und die Nebendiagonalelemente $$1$$
-  sind. Dies ergibt die Differentialgleichung
+    Wir können nun durch eine weitere Koordinatentransformation, nämlich eine
+    Rotation um $$45^\circ$$, die Koeffizientenmatrix in (2.40) auf eine Form
+    bringen, in der die Diagonalelemente $$0$$ und die Nebendiagonalelemente $$1$$
+    sind. Dies ergibt die Differentialgleichung
 
 $$
 	\frac{\partial^2 u}{\partial x^{\prime\prime\prime} 
          \partial y^{\prime\prime\prime}}=0,
 $$
 
-  wobei $$x^{\prime\prime\prime}$$ und $$y^{\prime\prime\prime}$$ die
-  entsprechend rotierten Koordinaten sind.  Diese Gleichung ist die kanonische
-  Form einer hyperbolischen PDGL und äquivalent zu (2.31) in den neuen Variablen
-  $$x^{\prime\prime\prime}$$ und $$y^{\prime\prime\prime}$$.
+    wobei $$x^{\prime\prime\prime}$$ und $$y^{\prime\prime\prime}$$ die
+    entsprechend rotierten Koordinaten sind.  Diese Gleichung ist die kanonische
+    Form einer hyperbolischen PDGL und äquivalent zu (2.31) in den neuen Variablen
+    $$x^{\prime\prime\prime}$$ und $$y^{\prime\prime\prime}$$.
 
 Für höherdimensionale Probleme müssen wir uns die Eigenwerte der
 Koeffizientenmatrix $$\mathbf{C}$$ anschauen. Die PDGL heißt *parabolisch*, wenn
