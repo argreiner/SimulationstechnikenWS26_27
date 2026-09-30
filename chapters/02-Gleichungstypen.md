@@ -456,7 +456,7 @@ Wir unterscheiden nun drei Fälle:
 
   $$
     \frac{\partial^2 u}{\partial x^{\prime\prime2}}+
-    \frac{\partial^2 u}{\partial y^\prime\prime2}}=0.
+    \frac{\partial^2 u}{\partial y^{\prime\prime2}}=0.
     \tag{2.39}
   $$
 
