@@ -393,7 +393,7 @@ $$
 wobei $$\mathbf{U}$$ auf Grund der Symmetrie von $$\mathbf{C}$$ unitär ist,
 $$\mathbf{U}^T \cdot\mathbf{U}=\mathbb{1}$$. Die geometrische Interpretation
 der Operation $$\mathbf{U}$$ ist eine Rotation. Wir führen nun transformierte
-Koordinaten $$x^\prime$$ und $$y^prime$$ ein, so dass
+Koordinaten $$x^\prime$$ und $$y^\prime$$ ein, so dass
 
 $$
     \nabla
@@ -438,13 +438,13 @@ Wir unterscheiden nun drei Fälle:
   Differentialoperatoren durch Koordinaten ersetzen damit diese funktioniert.)
   Ohne Beschränkung der Allgemeinheit sei $$\lambda_2=0$$. 
 
-    Dann bekommen wir
+  Dann bekommen wir
 
-$$
-		\frac{\partial^2 u}{\partial x^{\prime2}}=0.
-$$
+  $$
+    \frac{\partial^2 u}{\partial x^{\prime2}}=0.
+  $$
 
-    Dies ist die kanonische Form einer parabolischen PDGL.
+  Dies ist die kanonische Form einer parabolischen PDGL.
 - Der Fall $$\det\mathbf{C}=\lambda_1 \lambda_2=ac-b^2/4>0$$ führt zu einer
   elliptischen PDGL. Diese PDGL heißt elliptisch, weil die quadratische Form
   (2.32) bzw. (2.33) für eine konstante rechte Seite eine Ellipse beschreibt.
@@ -454,11 +454,11 @@ $$
   $$y^\prime=\sqrt{\lambda_2} y^{\prime\prime}$$ ein. Dann wird aus (2.36) die
   kanonische elliptische PDGL
 
-	\begin{equation}
-		\frac{\partial^2 u}{\partial x^{\prime\prime2}}+
-                \frac{\partial^2 u}{\partial y^\prime\prime2}}=0.
-		\tag{2.39}
-	\end{equation}
+  $$
+    \frac{\partial^2 u}{\partial x^{\prime\prime2}}+
+    \frac{\partial^2 u}{\partial y^\prime\prime2}}=0.
+    \tag{2.39}
+  $$
 
   Die kanonische elliptische PDGL ist daher die Laplace-Gleichung (2.39) 
   (hier im Zweidimensionalen). Lösungen der
@@ -471,43 +471,43 @@ $$
   $$x^\prime=\sqrt{\lambda_1}x^{\prime\prime}$$ und
   $$y^\prime=\sqrt{-\lambda_2}y^{\prime\prime}$$ einführen, so dass
 
-$$
-        \frac{\partial^2 u}{\partial x^{\prime\prime2}} - 
-        \frac{\partial^2 u}{\partial y^{\prime\prime2}}
-        =
-        \begin{pmatrix}
-            \partial u/\partial x^{\prime\prime} \\
-            \partial u/\partial y^{\prime\prime}
-        \end{pmatrix}
-        \cdot
-        \begin{pmatrix}
-            1 & 0 \\
-            0 & -1
-        \end{pmatrix}
-        \cdot
-        \begin{pmatrix}
-            \partial u/\partial x^{\prime\prime} \\
-            \partial u/\partial y^{\prime\prime}
-        \end{pmatrix}
-        =
-        0.
+  $$
+  \frac{\partial^2 u}{\partial x^{\prime\prime2}} - 
+  \frac{\partial^2 u}{\partial y^{\prime\prime2}}
+  =
+  \begin{pmatrix}
+  \partial u/\partial x^{\prime\prime} \\
+  \partial u/\partial y^{\prime\prime}
+  \end{pmatrix}
+  \cdot
+  \begin{pmatrix}
+      1 & 0 \\
+      0 & -1
+  \end{pmatrix}
+  \cdot
+  \begin{pmatrix}
+      \partial u/\partial x^{\prime\prime} \\
+      \partial u/\partial y^{\prime\prime}
+  \end{pmatrix}
+  =
+  0.
   \tag{2.40}
+  $$
+
+  Wir können nun durch eine weitere Koordinatentransformation, nämlich eine
+  Rotation um $$45^\circ$$, die Koeffizientenmatrix in (2.40) auf eine Form
+  bringen, in der die Diagonalelemente $$0$$ und die Nebendiagonalelemente $$1$$
+  sind. Dies ergibt die Differentialgleichung
+
+$$
+  \frac{\partial^2 u}{\partial x^{\prime\prime\prime} 
+  \partial y^{\prime\prime\prime}}=0,
 $$
 
-    Wir können nun durch eine weitere Koordinatentransformation, nämlich eine
-    Rotation um $$45^\circ$$, die Koeffizientenmatrix in (2.40) auf eine Form
-    bringen, in der die Diagonalelemente $$0$$ und die Nebendiagonalelemente $$1$$
-    sind. Dies ergibt die Differentialgleichung
-
-$$
-	\frac{\partial^2 u}{\partial x^{\prime\prime\prime} 
-         \partial y^{\prime\prime\prime}}=0,
-$$
-
-    wobei $$x^{\prime\prime\prime}$$ und $$y^{\prime\prime\prime}$$ die
-    entsprechend rotierten Koordinaten sind.  Diese Gleichung ist die kanonische
-    Form einer hyperbolischen PDGL und äquivalent zu (2.31) in den neuen Variablen
-    $$x^{\prime\prime\prime}$$ und $$y^{\prime\prime\prime}$$.
+  wobei $$x^{\prime\prime\prime}$$ und $$y^{\prime\prime\prime}$$ die
+  entsprechend rotierten Koordinaten sind.  Diese Gleichung ist die kanonische
+  Form einer hyperbolischen PDGL und äquivalent zu (2.31) in den neuen Variablen
+  $$x^{\prime\prime\prime}$$ und $$y^{\prime\prime\prime}$$.
 
 Für höherdimensionale Probleme müssen wir uns die Eigenwerte der
 Koeffizientenmatrix $$\mathbf{C}$$ anschauen. Die PDGL heißt *parabolisch*, wenn
