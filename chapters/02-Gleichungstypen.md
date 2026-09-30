@@ -416,8 +416,8 @@ $$
 Die Gleichung (2.31) wird zu
 
 $$
-    \lambda_1 \frac{\partial^2 u}{\partial x^\prime^2} 
-    + \lambda_2 \frac{\partial^2 u}{\partial y^\prime^2} = 0.
+    \lambda_1 \frac{\partial^2 u}{\partial x^{\prime2}} 
+    + \lambda_2 \frac{\partial^2 u}{\partial y^{\prime2}} = 0.
     \tag{2.36}
 $$
 
@@ -453,8 +453,8 @@ $$
   kanonische elliptische PDGL
 
 	\begin{equation}
-		\frac{\partial^2 u}{\partial x^{\prime\prime}^2}+
-                \frac{\partial^2 u}{\partial y^\prime\prime}^2}=0.
+		\frac{\partial^2 u}{\partial x^{\prime\prime2}}+
+                \frac{\partial^2 u}{\partial y^\prime\prime2}}=0.
 		\tag{2.39}
 	\end{equation}
 
@@ -470,8 +470,8 @@ $$
   $y^\prime=\sqrt{-\lambda_2}y^{\prime\prime}$ einführen, so dass
 
 $$
-        \frac{\partial^2 u}{\partial x^{\prime\prime}^2} - 
-        \frac{\partial^2 u}{\partial y^{\prime\prime}^2}
+        \frac{\partial^2 u}{\partial x^{\prime\prime2}} - 
+        \frac{\partial^2 u}{\partial y^{\prime\prime2}}
         =
         \begin{pmatrix}
             \partial u/\partial x^{\prime\prime} \\
@@ -493,21 +493,22 @@ $$
 $$
 
   Wir können nun durch eine weitere Koordinatentransformation, nämlich eine
-  Rotation um $45^\circ$, die Koeffizientenmatrix in (2.40) auf eine Form
-  bringen, in der die Diagonalelemente $0$ und die Nebendiagonalelemente $1$
+  Rotation um $$45^\circ$$, die Koeffizientenmatrix in (2.40) auf eine Form
+  bringen, in der die Diagonalelemente $$0$$ und die Nebendiagonalelemente $$1$$
   sind. Dies ergibt die Differentialgleichung
 
 $$
-	\frac{\partial^2 u}{\partial x^{\prime\prime\prime} \partial y^{\prime\prime\prime}}=0,
+	\frac{\partial^2 u}{\partial x^{\prime\prime\prime} 
+         \partial y^{\prime\prime\prime}}=0,
 $$
 
-  wobei $x^{\prime\prime\prime}$ und $y^{\prime\prime\prime}$ die entsprechend
-  rotierten Koordinaten sind.  Diese
-  Gleichung ist die kanonische Form einer hyperbolischen PDGL und äquivalent zu
-  (2.31) in den neuen Variablen $x^{\prime\prime\prime}$ und $y^{\prime\prime\prime}$.
+  wobei $$x^{\prime\prime\prime}$$ und $$y^{\prime\prime\prime}$$ die
+  entsprechend rotierten Koordinaten sind.  Diese Gleichung ist die kanonische
+  Form einer hyperbolischen PDGL und äquivalent zu (2.31) in den neuen Variablen
+  $$x^{\prime\prime\prime}$$ und $$y^{\prime\prime\prime}$$.
 
 Für höherdimensionale Probleme müssen wir uns die Eigenwerte der
-Koeffizientenmatrix $\mathbf{C}$ anschauen. Die PDGL heißt *parabolisch*, wenn
+Koeffizientenmatrix $$\mathbf{C}$$ anschauen. Die PDGL heißt *parabolisch*, wenn
 es einen Eigenwert gibt der verschwindet, aber alle anderen Eigenwerte entweder
 größer oder kleiner als Null sind. Die PDGL heißt *elliptisch*, wenn alle
 Eigenwerte entweder größer Null oder kleiner Null sind. Die PDGL heißt
@@ -519,7 +520,7 @@ gibt, die aus diesem Klassifizierungschema fallen. Für Probleme mit genau zwei
 Variablen führt diese Klassifzierung zu den Bedingungen für die Determinanten
 der Koeffizientenmatrix die oben genannt wurden.
 
-Diese drei Typen linearer PDEs 2.\ Ordnung lassen sich für manche
+Diese drei Typen linearer PDEs 2. Ordnung lassen sich für manche
 Problemstellungen auch analytisch lösen. Wir geben im Folgenden ein Beispiel
 hierzu.
 
@@ -537,7 +538,7 @@ $$
   \tag{2.43}
 $$
 
-führt. In (2.43) hängt die linke Seite nur von der Variablen $x$ ab, während
+führt. In (2.43) hängt die linke Seite nur von der Variablen $$x$$ ab, während
 die rechte Seite nur von $$t$$ abhängt. Für beliebige $$x$$ und $$t$$ kann diese
 Gleichung nur erfüllt werden, wenn beide Seiten gleich einer Konstanten sind
 und wir erhalten somit
