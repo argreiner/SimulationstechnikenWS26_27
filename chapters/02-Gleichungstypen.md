@@ -25,7 +25,7 @@ weiterhin Gedanken über partielle Differentialgleichungen.
 
 Wir betrachten eine lineare Differentialgleichung $$n$$-ter Ordnung:
 
-$$L[y]=a_n(x)y^n(x)+a_{n-1}y^{n-1}(x)+\dots +a_1(x)y'(x)+a_0(x)y(x)=g(x),$$
+$$L[y]=a_n(x)y^n(x)+a_{n-1}y^{n-1}(x)+\dots +a_1(x)y^\prime(x)+a_0(x)y(x)=g(x),$$
 
 wobei die $$a_n(x), a_{n-1}, \dots, a_1(x), a_0(x), g(x)$$ reelle, stetige
 Funktionen seien, die auf einem Intervall $$x \in [a,b]$$ erklärt sind.
@@ -34,7 +34,7 @@ Desweiteren sei $$a_n(x) \neq 0 \quad \forall x \in [a,b]$$.
 Wir definierten bereits ein Anfangswertproblem für eine
 Gleichung wie $$L[y]=g(x)$$ durch: 
 
-$$L[y]=g(x); \quad y(a)=b_0, \quad y'(a)=b_1,
+$$L[y]=g(x); \quad y(a)=b_0, \quad y^\prime(a)=b_1,
 \dots, y^{n-1}(a)=b_{n-1}$$, mit $$b_i \in \mathbb{R}$$.
 
 Dieses Anfangswertproblem hat eine eindeutige Lösung.
@@ -45,20 +45,20 @@ Bei linearen Randwertproblemen treten anstelle der Anfangsbedingungen die
 linearen Randbedingungen:
 
 $$ \begin{aligned}
-U_1[y]&=\alpha_{10}y(a)+\alpha_{11}y'(a)+\dots+\alpha_{1n-1}y^{n-1}(a)
-       +\beta_{10}y(b)+\beta_{11}y'(b)+\dots+\beta_{1n-1}y^{n-1}(b)=\gamma_1\\
-U_2[y]&=\alpha_{20}y(a)+\alpha_{21}y'(a)+\dots+\alpha_{2n-1}y^{n-1}(a)
-       +\beta_{20}y(b)+\beta_{21}y'(b)+\dots+\beta_{2n-1}y^{n-1}(b)=\gamma_2\\
+U_1[y]&=\alpha_{10}y(a)+\alpha_{11}y^\prime(a)+\dots+\alpha_{1n-1}y^{n-1}(a)
+       +\beta_{10}y(b)+\beta_{11}y^\prime(b)+\dots+\beta_{1n-1}y^{n-1}(b)=\gamma_1\\
+U_2[y]&=\alpha_{20}y(a)+\alpha_{21}y^\prime(a)+\dots+\alpha_{2n-1}y^{n-1}(a)
+       +\beta_{20}y(b)+\beta_{21}y^\prime(b)+\dots+\beta_{2n-1}y^{n-1}(b)=\gamma_2\\
 &\dots\\
-U_n[y]&=\alpha_{n0}y(a)+\alpha_{n1}y'(a)+\dots+\alpha_{nn-1}y^{n-1}(a)
-       +\beta_{n0}y(b)+\beta_{n1}y'(b)+\dots+\beta_{nn-1}y^{n-1}(b)=\gamma_n
+U_n[y]&=\alpha_{n0}y(a)+\alpha_{n1}y^\prime(a)+\dots+\alpha_{nn-1}y^{n-1}(a)
+       +\beta_{n0}y(b)+\beta_{n1}y^\prime(b)+\dots+\beta_{nn-1}y^{n-1}(b)=\gamma_n
 \end{aligned} $$
 
 Wobei die Frage nach der Lösbarkeit komplexer ist.
 
 **Beispiel:** Randwertproblem 2. Ordnung
 
-Es sei $$L[y]=y''(x)+y(x)=x$$, mit der allgemeinen Lösung 
+Es sei $$L[y]=y^{\prime\prime}(x)+y(x)=x$$, mit der allgemeinen Lösung 
 $$y(x)=c_1\cos(x)+c_2\sin(x)+x$$, wobei $$c_1,c_2 \in \mathbb{R}$$.
 
 Wir betrachten drei unterschiedliche Fälle:
@@ -81,10 +81,10 @@ Wir betrachten drei unterschiedliche Fälle:
   $$L[\tilde{y}]=g(x)-L[u], \quad U_1[\tilde{y}]=0, \dots, U_n[\tilde{y}]=0$$ (homogene Randbedingungen).
 
 **Beispiele zur Homogenisierung:**
-- $$\tilde{y}=y-\sin(x)\rightarrow\tilde{y}''(x)+\tilde{y}(x)=x$$; 
+- $$\tilde{y}=y-\sin(x)\rightarrow\tilde{y}^{\prime\prime}(x)+\tilde{y}(x)=x$$; 
   $$\tilde{y}(0)=\tilde{y}(\frac{\pi}{2})=0$$
 - $$\tilde{y}=y-\pi\sin(\frac{x}{2})\rightarrow
-  \tilde{y}''(x)+\tilde{y}(x)=x-\frac{3\pi}{4}\sin(\frac{x}{2})$$;
+  \tilde{y}^{\prime\prime}(x)+\tilde{y}(x)=x-\frac{3\pi}{4}\sin(\frac{x}{2})$$;
   $$\tilde{y}(0)=\tilde{y}(\pi)=0$$
 
 ### Lösbarkeit von Randwertproblemen
@@ -137,10 +137,10 @@ dargestellt werden kann.
 
 ### Sturmsche Randbedingungen bei DGL 2. Ordnung
 Wir betrachten 
-$$L[y]=a_2(x)y''(x)+a_1(x)y'(x)+a_0(x)y(x)=g(x)$$.  
+$$L[y]=a_2(x)y^{\prime\prime}(x)+a_1(x)y^\prime(x)+a_0(x)y(x)=g(x)$$.  
 Bei Sturmschen Randbedingungen tritt in jeder Bedingung nur eine Grenze auf:
-$$U_1[y]=\alpha_{10}y(a)+\alpha_{11}y'(a)=0, \quad
-U_2[y]=\beta_{20}y(b)+\beta_{21}y'(b)=0$$ 
+$$U_1[y]=\alpha_{10}y(a)+\alpha_{11}y^\prime(a)=0, \quad
+U_2[y]=\beta_{20}y(b)+\beta_{21}y^\prime(b)=0$$ 
 Die Lösung wird über die Greensche Funktion 
 $$G(x, \xi)$$ dargestellt: $$y(x)=\int_a^b G(x,\xi)g(\xi)d\xi$$ Dabei
 werden $$y_1(x)$$ und $$y_2(x)$$ gesucht, die jeweils nur $$U_1$$ bzw. $$U_2$$
@@ -150,7 +150,7 @@ $$G(x,\xi)=\begin{cases}
 \frac{y_1(x)y_2(\xi)}{W(\xi)a_2(\xi)} & \text{für } a \le x \le \xi \le b
 \end{cases}$$ 
 mit der Wronski-Determinante
-$$W(x)=y_1(x)y'_2(x)-y'_1(x)y_2(x)$$,
+$$W(x)=y_1(x)y^\prime_2(x)-y^\prime_1(x)y_2(x)$$,
 die auf jeden Fall verschieden von Null ist, da $$y_1(x)$$ und $$y_2(x)$$ ein
 Fundamentalsystem von Lösungen bilden sollen.
 
@@ -352,8 +352,7 @@ Dann erhalten wir:
 
 $$
   a\frac{\partial^2 u}{\partial x^2}+b\frac{\partial^2 u}{\partial x\partial y}+
-  c\frac{\partial^2 u}{\partial y^2}=0.
-  \tag{2.31)
+  c\frac{\partial^2 u}{\partial y^2}=0 \tag{2.31)
 $$
 
 Wir schreiben diese Gleichung um als die quadratische Form
@@ -394,31 +393,31 @@ $$
 wobei $$\mathbf{U}$$ auf Grund der Symmetrie von $$\mathbf{C}$$ unitär ist,
 $$\mathbf{U}^T \cdot\mathbf{U}=\mathbb{1}$$. Die geometrische Interpretation
 der Operation $$\mathbf{U}$$ ist eine Rotation. Wir führen nun transformierte
-Koordinaten $$x'$$ und $$y'$$ ein, so dass
+Koordinaten $$x^\prime$$ und $$y^prime$$ ein, so dass
 
 $$
     \nabla
     =
     \mathbf{U}
     \cdot
-    \nabla'
+    \nabla^\prime
 $$
 
-mit $$\nabla'=(\partial/\partial x', \partial/\partial y')$$. Mit anderen
+mit $$\nabla^\prime\partial/\partial x^\prime, \partial/\partial y^\prime)$$. Mit anderen
 Worten, die Transformationsmatrix ist gegeben als
 
 $$
     \mathbf{U} = \begin{pmatrix}
-    \partial x'/\partial x & \partial y'/\partial x \\
-    \partial x'/\partial y & \partial y'/\partial y
+    \partial x^\prime/\partial x & \partial y^\prime/\partial x \\
+    \partial x^\prime/\partial y & \partial y^\prime/\partial y
     \end{pmatrix}.
 $$
 
 Die Gleichung (2.31) wird zu
 
 $$
-    \lambda_1 \frac{\partial^2 u}{\partial x'^2} 
-    + \lambda_2 \frac{\partial^2 u}{\partial y'^2} = 0.
+    \lambda_1 \frac{\partial^2 u}{\partial x^\prime^2} 
+    + \lambda_2 \frac{\partial^2 u}{\partial y^\prime^2} = 0.
     \tag{2.36}
 $$
 
@@ -426,7 +425,7 @@ Wir haben die Koeffizienten der Differentialgleichung diagonalisiert. Für eine
 beliebige zweifach differenzierbare Funktion $$f(z)$$, ist
 
 $$
-u(x', y') = f\left(\sqrt{\lambda_2} x' + i\sqrt{\lambda_1} y'\right)
+u(x^\prime, y^\prime) = f\left(\sqrt{\lambda_2} x^\prime + i\sqrt{\lambda_1} y\prime\right)
 $$
 
 die Lösung der (2.36).
@@ -440,7 +439,7 @@ Wir unterscheiden nun drei Fälle:
   Ohne Beschränkung der Allgemeinheit sei $$\lambda_2=0$$. Dann bekommen wir
 
 $$
-		\frac{\partial^2 u}{\partial x'^2}=0.
+		\frac{\partial^2 u}{\partial x^\prime^2}=0.
 $$
 
   Dies ist die kanonische Form einer parabolischen PDGL.
@@ -449,11 +448,13 @@ $$
   (2.32) bzw. (2.33) für eine konstante rechte Seite eine Ellipse beschreibt.
   (Für $$\lambda_1=\lambda_2$$ ist es ein Kreis.) Wir formen nun die Gleichung
   für den elliptischen Fall auf eine standardisierte Form um und führen die
-  skalierten Koordinaten $$x'=\sqrt{\lambda_1} x''$$ und $$y'=\sqrt{\lambda_2}
-  y''$$ ein. Dann wird aus (2.36) die kanonische elliptische PDGL
+  skalierten Koordinaten $$x^\prime=\sqrt{\lambda_1} x^{\prime\prime}$$ und
+  $$y^\prime=\sqrt{\lambda_2} y^{\prime\prime}$$ ein. Dann wird aus (2.36) die
+  kanonische elliptische PDGL
 
 	\begin{equation}
-		\frac{\partial^2 u}{\partial x''^2}+\frac{\partial^2 u}{\partial y''^2}=0.
+		\frac{\partial^2 u}{\partial x^{\prime\prime}^2}+
+                \frac{\partial^2 u}{\partial y^\prime\prime}^2}=0.
 		\tag{2.39}
 	\end{equation}
 
@@ -465,14 +466,16 @@ $$
   quadratische Form (2.32) bzw. (2.33) für eine konstante rechte Seite eine
   Hyperbel beschreibt.  Ohne Beschränkung der Allgemeinheit fordern wir nun
   $\lambda_1>0$ und $\lambda_2<0$. Dann können wir wieder skalierte Koordinaten
-  $x'=\sqrt{\lambda_1}x''$ und $y'=\sqrt{-\lambda_2}y''$ einführen, so dass
+  $x^\prime=\sqrt{\lambda_1}x^{\prime\prime}$ und
+  $y^\prime=\sqrt{-\lambda_2}y^{\prime\prime}$ einführen, so dass
 
 $$
-        \frac{\partial^2 u}{\partial x''^2} - \frac{\partial^2 u}{\partial y''^2}
+        \frac{\partial^2 u}{\partial x^{\prime\prime}^2} - 
+        \frac{\partial^2 u}{\partial y^{\prime\prime}^2}
         =
         \begin{pmatrix}
-            \partial u/\partial x'' \\
-            \partial u/\partial y''
+            \partial u/\partial x^{\prime\prime} \\
+            \partial u/\partial y^{\prime\prime}
         \end{pmatrix}
         \cdot
         \begin{pmatrix}
@@ -481,8 +484,8 @@ $$
         \end{pmatrix}
         \cdot
         \begin{pmatrix}
-            \partial u/\partial x'' \\
-            \partial u/\partial y''
+            \partial u/\partial x^{\prime\prime} \\
+            \partial u/\partial y^{\prime\prime}
         \end{pmatrix}
         =
         0.
@@ -495,12 +498,13 @@ $$
   sind. Dies ergibt die Differentialgleichung
 
 $$
-	\frac{\partial^2 u}{\partial x''' \partial y'''}=0,
+	\frac{\partial^2 u}{\partial x^{\prime\prime\prime} \partial y^{\prime\prime\prime}}=0,
 $$
 
-  wobei $x'''$ und $y'''$ die entsprechend rotierten Koordinaten sind.  Diese
+  wobei $x^{\prime\prime\prime}$ und $y^{\prime\prime\prime}$ die entsprechend
+  rotierten Koordinaten sind.  Diese
   Gleichung ist die kanonische Form einer hyperbolischen PDGL und äquivalent zu
-  (2.31) in den neuen Variablen $x'''$ und $y'''$.
+  (2.31) in den neuen Variablen $x^{\prime\prime\prime}$ und $y^{\prime\prime\prime}$.
 
 Für höherdimensionale Probleme müssen wir uns die Eigenwerte der
 Koeffizientenmatrix $\mathbf{C}$ anschauen. Die PDGL heißt *parabolisch*, wenn
