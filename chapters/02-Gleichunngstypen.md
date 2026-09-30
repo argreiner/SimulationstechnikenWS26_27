@@ -199,6 +199,7 @@ $$
    P(x,t;u)\frac{\partial u(x,t)}{\partial x}+
 Q(x,t;u)\frac{\partial u(x,t)}{\partial t}=
 R(x,t;u), \label{eq:PDE1Oquasi}
+\tag{2.13}
 $$
 
 für eine (unbekannte) Funktion $$u(x,t)$$ und der Anfangsbedingung
@@ -208,7 +209,7 @@ untersuchen.
 
 *N.B.:*
 
-In der PDGL erster Ordnung wurde zur Illustration eine Darstellung mit zwei
+In (2.13) wurde zur Illustration eine Darstellung mit zwei
 Variablen $$x$$ und $$t$$ gewählt. Allgemein können wir schreiben:
 
 $$
@@ -219,37 +220,38 @@ $$
 Hier wurde als Notation $$u(\{x_i\})=u(x_0, x_1, x_2, \ldots)$$ genutzt, also die
 geschweiften Klammern bezeichnen alle Variablen $$x_i$$.
 
-Die partielle Differentialgleichung erster Ordnung können wir auf ein System
-von GDGLs transformieren. Dies wird die Methode der Charakteristiken genannt.
-Wir können dann die Formalismen (analytisch oder numerisch) zur Lösung von
-Systemen von GDGLs anwenden, die wir in der Vorlesung
-``Differentialgleichungen'' kennengelernt haben.
+(2.13) können wir auf ein System von GDGLs transformieren. Dies wird die
+Methode der Charakteristiken genannt.  Wir können dann die Formalismen
+(analytisch oder numerisch) zur Lösung von Systemen von GDGLs anwenden, die wir
+in der Vorlesung *Differentialgleichungen* kennengelernt haben.
 
 Wir gehen folgendermaßen vor:
-1. Zunächst parametrisieren wir die unabhängigen Veränderlichen mit einem Parameter $$s$$ gemäß $$x(s)$$ und $$t(s)$$.
+1. Zunächst parametrisieren wir die unabhängigen Veränderlichen in (2.13) mit
+einem Parameter $$s$$ gemäß $$x(s)$$ und $$t(s)$$.
 1. Wir bilden dann die *totale Ableitung* von $$u(x(s),t(s))$$ nach $$s$$
    
    $$
      \frac{\text{d} u(x(s),t(s))}{\text{d} s}=
      \frac{\partial u(x(s),t(s))}{\partial x}\frac{\text{d} x(s)}{\text{d} s}+
      \frac{\partial u(x(s),t(s))}{\partial t}\frac{\text{d} t(s)}{\text{d} s}.
+     \tag{2.15}
    $$
 1. Durch den Vergleich der Koeffizienten der totalen
-   Ableitung mit der PDGL sieht man,
+   Ableitung (2.15) mit der PDGL (2.13) sieht man,
    dass diese DGL genau dann gelöst wird, wenn
 
    $$ \begin{aligned}
-        \frac{dx(s)}{ds}&=P(x,t,u),\label{eq:transode1}\\
-        \frac{dt(s)}{ds}&=Q(x,t,u)\quad\text{und}\\
-        \frac{du(s)}{ds} &= R(u(s)).\label{eq:transode3}
+        \frac{dx(s)}{ds}&=P(x,t,u),\label{eq:transode1}\tag{2.16}\\
+        \frac{dt(s)}{ds}&=Q(x,t,u)\quad\text{und}\tag{2.17}\\
+        \frac{du(s)}{ds} &= R(u(s))\tag{2.18}
 	\end{aligned}
    $$
 
    erfüllt ist. Dies beschreibt die Lösung entlang bestimmter Kurven in der
    $$(x,t)$$-Ebene. 
 
-Wir haben damit die PDGL in einen Satz gekoppelter GDGLs erster Ordnung,
-umgewandelt.
+Wir haben damit die PDGL in einen Satz gekoppelter GDGLs erster Ordnung
+(2.16-18) umgewandelt.
 
 *Beispiel:* Die Transportgleichung
 
@@ -281,7 +283,9 @@ obigem Rezept vor:
      \end{aligned}
    $$
 
-   In diesem Fall gilt $$\frac{\text{d} u(s)}{\text{d} s} = 0$$
+   In diesem Fall gilt 
+
+   $$\frac{\text{d} u(s)}{\text{d} s} = 0$$
 
 1. Die allgemeinen Lösungen für die drei gewöhnlichen
    Differentialgleichungen sind gegeben durch
@@ -347,8 +351,9 @@ Wir nehmen zunächst an, dass $$F=0$$ und $$a$$, $$b$$, $$c$$ konstant seien.
 Dann erhalten wir:
 
 $$
-        a\frac{\partial^2 u}{\partial x^2}+b\frac{\partial^2 u}{\partial x\partial y}+
-        c\frac{\partial^2 u}{\partial y^2}=0.
+  a\frac{\partial^2 u}{\partial x^2}+b\frac{\partial^2 u}{\partial x\partial y}+
+  c\frac{\partial^2 u}{\partial y^2}=0.
+  \tag{2.31)
 $$
 
 Wir schreiben diese Gleichung um als die quadratische Form
@@ -375,13 +380,15 @@ $$
     \nabla
     u
 	=0
+  \tag{2.32}
 $$
 
 Die Koeffizientenmatrix $$\mathbf{C}$$ können wir nun diagonalisieren. Dies für zu
 
 $$
     \mathbf{C} = \mathbf{U} \cdot \begin{pmatrix} \lambda_1 & 0 \\ 0 &
-\lambda_2 \end{pmatrix}\cdot \mathbf{U}^T,
+    \lambda_2 \end{pmatrix}\cdot \mathbf{U}^T,
+  \tag{2.33}
 $$
 
 wobei $$\mathbf{U}$$ auf Grund der Symmetrie von $$\mathbf{C}$$ unitär ist,
@@ -407,11 +414,12 @@ $$
     \end{pmatrix}.
 $$
 
-Damit erhalten wir
+Die Gleichung (2.31) wird zu
 
 $$
-    \lambda_1 \frac{\partial^2 u}{\partial x'^2} + \lambda_2 \frac{\partial^2 u}{\partial y'^2} = 0.
-    \tag{2.20}\label{eq:diag2nd}
+    \lambda_1 \frac{\partial^2 u}{\partial x'^2} 
+    + \lambda_2 \frac{\partial^2 u}{\partial y'^2} = 0.
+    \tag{2.36}
 $$
 
 Wir haben die Koeffizienten der Differentialgleichung diagonalisiert. Für eine
@@ -421,47 +429,45 @@ $$
 u(x', y') = f\left(\sqrt{\lambda_2} x' + i\sqrt{\lambda_1} y'\right)
 $$
 
-die Lösung der PDGL.
+die Lösung der (2.36).
 
 Wir unterscheiden nun drei Fälle:
-- Der Fall $\det\mathbf{C}=\lambda_1\lambda_2=ac-b^4/4=0$ mit $b\ne 0$ und $a\ne 0$
+- Der Fall $$\det\mathbf{C}=\lambda_1\lambda_2=ac-b^4/4=0$$ mit $$b\ne 0$$ und $$a\ne 0$$
   führt zu einer parabolischen PDGL. Diese PDGL heißt parabolisch, weil die
-  quadratische Form Gl.~\eqref{eq:quadform} bzw. \eqref{eq:diagquadform} eine
+  quadratische Form (2.32) bzw. (2.33) eine
   Parabel beschreibt. (Dies ist natürlich eine Analogie. Man muss die
   Differentialoperatoren durch Koordinaten ersetzen damit diese funktioniert.)
-  Ohne Beschränkung der Allgemeinheit sei $\lambda_2=0$. Dann bekommen wir
+  Ohne Beschränkung der Allgemeinheit sei $$\lambda_2=0$$. Dann bekommen wir
 
 $$
 		\frac{\partial^2 u}{\partial x'^2}=0.
 $$
 
   Dies ist die kanonische Form einer parabolischen PDGL.
-- Der Fall $\det\mathbf{C}=\lambda_1 \lambda_2=ac-b^2/4>0$ führt zu einer
+- Der Fall $$\det\mathbf{C}=\lambda_1 \lambda_2=ac-b^2/4>0$$ führt zu einer
   elliptischen PDGL. Diese PDGL heißt elliptisch, weil die quadratische Form
-  Gl.~\eqref{eq:quadform} bzw. \eqref{eq:diagquadform} für eine konstante rechte
-  Seite eine Ellipse beschreibt. (Für $\lambda_1=\lambda_2$ ist es ein Kreis.)
-  Wir formen nun die Gleichung für den elliptischen Fall auf eine standardisierte
-  Form um und führen die skalierten Koordinaten $x'=\sqrt{\lambda_1} x''$ und
-  $y'=\sqrt{\lambda_2} y''$ ein. Dann wird aus Gl.~\eqref{eq:diag2nd} die
-  kanonische elliptische PDGL
+  (2.32) bzw. (2.33) für eine konstante rechte Seite eine Ellipse beschreibt.
+  (Für $$\lambda_1=\lambda_2$$ ist es ein Kreis.) Wir formen nun die Gleichung
+  für den elliptischen Fall auf eine standardisierte Form um und führen die
+  skalierten Koordinaten $$x'=\sqrt{\lambda_1} x''$$ und $$y'=\sqrt{\lambda_2}
+  y''$$ ein. Dann wird aus (2.36) die kanonische elliptische PDGL
 
 	\begin{equation}
 		\frac{\partial^2 u}{\partial x''^2}+\frac{\partial^2 u}{\partial y''^2}=0.
-		\tag{2.21}
+		\tag{2.39}
 	\end{equation}
 
-  Die kanonische elliptische PDGL ist daher die Laplace-Gleichung (2.21) 
+  Die kanonische elliptische PDGL ist daher die Laplace-Gleichung (2.39) 
   (hier im Zweidimensionalen). Lösungen der
   Laplace-Gleichung heißen *harmonische Funktionen*.
-- Der Fall $\det\mathbf{C}=\lambda_1\lambda_2=ac-b^2/4<0$ ergibt die so genannte
-  hyperbolische PDGL. Diese PDGL heißt hyperbolisch, weil die quadratische Form
-  Gl.~\eqref{eq:quadform} bzw. \eqref{eq:diagquadform} für eine konstante rechte
-  Seite eine Hyperbel beschreibt.
-  Ohne Beschränkung der Allgemeinheit fordern wir nun $\lambda_1>0$ und
-  $\lambda_2<0$. Dann können wir wieder skalierte Koordinaten
+- Der Fall $\det\mathbf{C}=\lambda_1\lambda_2=ac-b^2/4<0$ ergibt die so
+  genannte hyperbolische PDGL. Diese PDGL heißt hyperbolisch, weil die
+  quadratische Form (2.32) bzw. (2.33) für eine konstante rechte Seite eine
+  Hyperbel beschreibt.  Ohne Beschränkung der Allgemeinheit fordern wir nun
+  $\lambda_1>0$ und $\lambda_2<0$. Dann können wir wieder skalierte Koordinaten
   $x'=\sqrt{\lambda_1}x''$ und $y'=\sqrt{-\lambda_2}y''$ einführen, so dass
 
-  $$
+$$
         \frac{\partial^2 u}{\partial x''^2} - \frac{\partial^2 u}{\partial y''^2}
         =
         \begin{pmatrix}
@@ -480,37 +486,38 @@ $$
         \end{pmatrix}
         =
         0.
-  $$
+  \tag{2.40}
+$$
 
   Wir können nun durch eine weitere Koordinatentransformation, nämlich eine
-  Rotation um $45^\circ$, die Koeffizientenmatrix in Gl.~\eqref{eq:hyb} auf eine
-  Form bringen, in der die Diagonalelemente $0$ und die Nebendiagonalelemente $1$
+  Rotation um $45^\circ$, die Koeffizientenmatrix in (2.40) auf eine Form
+  bringen, in der die Diagonalelemente $0$ und die Nebendiagonalelemente $1$
   sind. Dies ergibt die Differentialgleichung
 
-	$$
-		\frac{\partial^2 u}{\partial x''' \partial y'''}=0,
-	$$
+$$
+	\frac{\partial^2 u}{\partial x''' \partial y'''}=0,
+$$
 
   wobei $x'''$ und $y'''$ die entsprechend rotierten Koordinaten sind.  Diese
   Gleichung ist die kanonische Form einer hyperbolischen PDGL und äquivalent zu
-  Gl.~\eqref{eq:n2ndoconst} in den neuen Variablen $x'''$ und $y'''$.
+  (2.31) in den neuen Variablen $x'''$ und $y'''$.
 
 Für höherdimensionale Probleme müssen wir uns die Eigenwerte der
 Koeffizientenmatrix $\mathbf{C}$ anschauen. Die PDGL heißt *parabolisch*, wenn
 es einen Eigenwert gibt der verschwindet, aber alle anderen Eigenwerte entweder
 größer oder kleiner als Null sind. Die PDGL heißt *elliptisch*, wenn alle
 Eigenwerte entweder größer Null oder kleiner Null sind. Die PDGL heißt
-*hyperbolisch*, wenn es genau einen negativen Eigenwert gibt und alle
-anderen positiv sind oder es genau einen positiven Eigenwert gibt und alle
-anderen negativ sind. Es ist klar, dass für PDGLs mit mehr als zwei Variablen,
-diese drei Klassen von PDGLs nicht erschöpfend sind und es
-Koeffizientenmatrizen gibt, die aus diesem Klassifizierungschema fallen. Für
-Probleme mit genau zwei Variablen führt diese Klassifzierung zu den Bedingungen
-für die Determinanten der Koeffizientenmatrix die oben genannt wurden.
+*hyperbolisch*, wenn es genau einen negativen Eigenwert gibt und alle anderen
+positiv sind oder es genau einen positiven Eigenwert gibt und alle anderen
+negativ sind. Es ist klar, dass für PDGLs mit mehr als zwei Variablen, diese
+drei Klassen von PDGLs nicht erschöpfend sind und es Koeffizientenmatrizen
+gibt, die aus diesem Klassifizierungschema fallen. Für Probleme mit genau zwei
+Variablen führt diese Klassifzierung zu den Bedingungen für die Determinanten
+der Koeffizientenmatrix die oben genannt wurden.
 
 Diese drei Typen linearer PDEs 2.\ Ordnung lassen sich für manche
-Problemstellungen auch analytisch lösen. Wir geben im Folgenden ein
-Beispiel hierzu.
+Problemstellungen auch analytisch lösen. Wir geben im Folgenden ein Beispiel
+hierzu.
 
 *Beispiel:* Die eindimensionale Wellengleichung
 
@@ -523,10 +530,11 @@ durch Separation der Variablen. Dafür machen wir den Ansatz $u(x,t)=X(x)T(t)$, 
 $$
 	\frac{1}{X}\frac{\partial^2 X}{\partial x^2}=
            \frac{1}{c^2}\frac{1}{T}\frac{\partial^2 T}{\partial t^2}
+  \tag{2.43}
 $$
 
-führt.  In Gl.~\eqref{eqnseparate} hängt die linke Seite nur von der Variablen $x$ ab, während
-die rechte Seite nur von $t$ abhängt. Für beliebige $x$ und $t$ kann diese
+führt. In (2.43) hängt die linke Seite nur von der Variablen $x$ ab, während
+die rechte Seite nur von $$t$$ abhängt. Für beliebige $$x$$ und $$t$$ kann diese
 Gleichung nur erfüllt werden, wenn beide Seiten gleich einer Konstanten sind
 und wir erhalten somit
 
@@ -539,10 +547,10 @@ Dies ergibt die folgenden zwei Gleichungen
 
 $$\frac{\partial^2 X}{\partial x^2}+k^2X=0$$
 
-mit der Lösung $X(x)=e^{\pm ikx}$ und
+mit der Lösung $$X(x)=e^{\pm ikx}$$ und
 
 $$\frac{\partial^2 T}{\partial t^2}+\omega^2T=0$$
 
-mit der Lösung $T(t)=e^{\pm i\omega t}$, wobei wir $\omega^2=c^2k^2$ gesetzt
+mit der Lösung $$T(t)=e^{\pm i\omega t}$$, wobei wir $$\omega^2=c^2k^2$$ gesetzt
 haben.  Dieses Beispiel braucht zur Ergänzung Anfangsbedingungen, damit wir
 eine Lösung finden können.
