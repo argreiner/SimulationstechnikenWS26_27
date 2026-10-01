@@ -99,14 +99,15 @@ $$
 die wohlbekannte Diffusionsgleichung resultiert.
 
 ## Teilchenbetrachtung oder Kontinuum
+
 <figure>
   <img src="{{ site.baseurl }}/figs/continuity.png" alt="Kontinuitaet">
   <figcaption align="center">Abbildung 3.3:  Teilchen können das Volumen V nur
-durch die Seitenwände verlassen. Die Änderung der Teilchenzahl N über ein
-Zeitintervall $$\tau$$ ist daher durch die Anzahl der Teilchen gegeben, die durch
-die Wände fließen. Hierzu brauchen wir die Teilchenströme j. Die Anzahl der
-Teilchen, welche durch eine Oberfläche fließen ist dann gegeben durch j Aτ ,
-wobei A die Fläche der Seitenwand ist. 
+  durch die Seitenwände verlassen. Die Änderung der Teilchenzahl N über ein
+  Zeitintervall $$\tau$$ ist daher durch die Anzahl der Teilchen gegeben, die durch
+  die Wände fließen. Hierzu brauchen wir die Teilchenströme j. Die Anzahl der
+  Teilchen, welche durch eine Oberfläche fließen ist dann gegeben durch j Aτ ,
+  wobei A die Fläche der Seitenwand ist. 
 </figcaption>
 </figure>
  
@@ -130,12 +131,12 @@ können (siehe Abb.~\ref{fig:continuity}). Die Änderung dieser Teilchenzahl ist
 zum einen gegeben durch
 
 $$
-    \dot{N}
-    =
-    \frac{\partial}{\partial t} \int_V \dif^3r \, c(\v{r}, t)
-    =
-    \int_V \dif^3r \, \frac{\partial c}{\partial t}.
-    \label{eq:nchange}
+  \dot{N}
+  =
+  \frac{\partial}{\partial t} \int_V \dif^3r \, c(\v{r}, t)
+  =
+  \int_V \dif^3r \, \frac{\partial c}{\partial t}.
+  \label{eq:nchange}
 $$
 
 Die Änderung $\dot{N}$ muss aber auch durch die Anzahl der Partikel, die über
@@ -144,42 +145,31 @@ die Seitenwände abfließen, gegeben sein. Für einen Würfel
 
 $$
 \begin{aligned}
-    \dot{N}
-    =
-    &
-    -
-    j_{\text{rechts}} A_{\text{rechts}}
-    -
-    j_{\text{links}} A_{\text{links}}
-    \\
-    &
-    -
-    j_{\text{oben}} A_{\text{oben}}
-    -
-    j_{\text{unten}} A_{\text{unten}}
-    \\
-    &
-    -
-    j_{\text{vorne}} A_{\text{vorne}}
-    -
-    j_{\text{hinten}} A_{\text{hinten}}
+  \dot{N}
+  =
+  &
+  -
+  j_{\text{rechts}} A_{\text{rechts}}
+  -
+  j_{\text{links}} A_{\text{links}}
+  \\
+  &
+  -
+  j_{\text{oben}} A_{\text{oben}}
+  -
+  j_{\text{unten}} A_{\text{unten}}
+  \\
+  &
+  -
+  j_{\text{vorne}} A_{\text{vorne}}
+  -
+  j_{\text{hinten}} A_{\text{hinten}}
 \end{aligned}
     \label{eq:dotN}
 $$
 
 wenn die Wände klein genug sind, so dass $j$ nahezu konstant über $A$ ist. (Die
 Stromdichte $j$ hat die Einheit Anzahl Partikel/Zeit/Fläche.)
-
-<figure>
-  <img src="{{ site.baseurl }}/figs/Continuity.png" alt="Continuity">
-  <figcaption align="center">Abbildung 3.4 Teilchen können das Volumen $$V$$ nur
-  durch die Seitenwände verlassen. Die Änderung der Teilchenzahl $$N$$ über ein
-  Zeitintervall $$\tau$$ ist daher durch die Anzahl der Teilchen gegeben, die durch
-  die Wände fließen. Hierzu brauchen wir die Teilchenströme $$j$$. Die Anzahl der
-  Teilchen, welche durch eine Oberfläche fließen ist dann gegeben durch
-  $$j\,A\tau$$, wobei $$A$$ die Fläche der Seitenwand ist.}
-  </figcaption>
-</figure>
 
 Hier bezeichnet der skalare Strom $$j$$ den Strom, der aus der Fläche heraus
 fließt. Für eine allgemeine vektorielle Stromdichte $$\v{j}$$, welche die Stärke
@@ -203,25 +193,25 @@ Alternativ können wir auch die Änderung der Teilchenzahl Gl.~\eqref{eq:dotN} f
 
 $$
 \begin{aligned}
-    \dot{N}
-    =
-    &
-    -
-    (j_{\text{rechts}}
-    +
-    j_{\text{links}}) A_{\text{rechts/links}}
-    \\
-    &
-    -
-    (j_{\text{oben}}
-    +
-    j_{\text{unten}}) A_{\text{oben/unten}}
-    \\
-    &
-    -
-    (j_{\text{vorne}}
-    +
-    j_{\text{hinten}}) A_{\text{vorne/hinten}}
+  \dot{N}
+  =
+  &
+  -
+  (j_{\text{rechts}}
+  +
+  j_{\text{links}}) A_{\text{rechts/links}}
+  \\
+  &
+  -
+  (j_{\text{oben}}
+  +
+  j_{\text{unten}}) A_{\text{oben/unten}}
+  \\
+  &
+  -
+  (j_{\text{vorne}}
+  +
+  j_{\text{hinten}}) A_{\text{vorne/hinten}}
 \end{aligned}
 $$
 
@@ -229,9 +219,9 @@ Hierbei haben wir die Tatsache genutzt, dass $$A_{\text{rechts}}=A_{\text{links}
 
 $$
 \begin{aligned}
-    j_{\text{rechts}} &= \hat{x} \cdot \v{j}(x+\Delta x/2,y,z) = j_x(x+\Delta x/2,y,z)
-    \quad\text{und} \\
-    j_{\text{links}} &= -\hat{x} \cdot \v{j}(x-\Delta x/2,y,z) = -j_x(x-\Delta x/2,y,z)
+  j_{\text{rechts}} &= \hat{x} \cdot \v{j}(x+\Delta x/2,y,z) = j_x(x+\Delta x/2,y,z)
+  \quad\text{und} \\
+  j_{\text{links}} &= -\hat{x} \cdot \v{j}(x-\Delta x/2,y,z) = -j_x(x-\Delta x/2,y,z)
 \end{aligned}
 $$
 
@@ -244,25 +234,25 @@ vorne/hinten. Wir können diese Gleichung weiterhin umschreiben als
 
 $$
 \begin{aligned}
-    \dot{N}
-    =
-    &
-    -
-    \frac{j_x(x+\Delta x/2,y,z)
-    -
-    j_x(x-\Delta x/2,y,z)}{\Delta x} \Delta V
-    \\
-    &
-    -
-    \frac{j_y(x,y+\Delta y/2,z)
-    -
-    j_y(x,y-\Delta y/2,z)}{\Delta y} \Delta V
-    \\
-    &
-    -
-    \frac{j_z(x,y,z+\Delta z/2)
-    -
-    j_z(x,y,z-\Delta z/2)}{\Delta z} \Delta V,
+  \dot{N}
+  =
+  &
+  -
+  \frac{j_x(x+\Delta x/2,y,z)
+  -
+  j_x(x-\Delta x/2,y,z)}{\Delta x} \Delta V
+  \\
+  &
+  -
+  \frac{j_y(x,y+\Delta y/2,z)
+  -
+  j_y(x,y-\Delta y/2,z)}{\Delta y} \Delta V
+  \\
+  &
+  -
+  \frac{j_z(x,y,z+\Delta z/2)
+  -
+  j_z(x,y,z-\Delta z/2)}{\Delta z} \Delta V,
 \end{aligned}
 \label{eq:dotNdiscr}
 $$
@@ -274,7 +264,7 @@ y=A_{\text{vorne/hinten}}\Delta z$$.  Wir entwickeln die rechte Seite von
 $$\Delta x$$, $$\Delta y$$ und $$\Delta z$$  und erhalten
 
 $$
-    \dot{N} = (-\nabla\cdot\v{j}(\v{r}) + R)\Delta V,
+  \dot{N} = (-\nabla\cdot\v{j}(\v{r}) + R)\Delta V,
 $$
 
 wobei das Restglied $$R$$ mit quadratischen Termen in den  $$\Delta x$$,
@@ -335,8 +325,8 @@ Gl.~\eqref{eq:flux} als Volumenintegral auszudrücken.
 Gleichung~\eqref{eq:nchange} und \eqref{eq:flux2} zusammen ergeben
 
 $$
-    \int_V \dif^3r \, \left\{\frac{\partial c}{\partial t}+\nabla\cdot\v{j}\right\} = 0.
-    \label{eq:continuityweak}
+  \int_V \dif^3r \, \left\{\frac{\partial c}{\partial t}+\nabla\cdot\v{j}\right\} = 0.
+  \label{eq:continuityweak}
 $$
 
 Da dies für jedes beliebige Volumen $V$ gilt, muss auch
@@ -378,7 +368,8 @@ $$
   \label{eq:continuitywithsource}
 $$
 
-erweitert werden. Die Kontinuitätsgleichung mit Quellterm wird auch manchmal als \emph{Bilanzgleichung} bezeichnet.
+erweitert werden. Die Kontinuitätsgleichung mit Quellterm wird auch manchmal
+als \emph{Bilanzgleichung} bezeichnet.
 
     Gleichung~\eqref{eq:continuitywithsource} beschreibt die zeitliche
     Veränderung der Konzentration $c$. Eine verwandte Frage ist die nach der Lösung
@@ -392,25 +383,32 @@ erweitert werden. Die Kontinuitätsgleichung mit Quellterm wird auch manchmal al
 
 ### Drift###
 
-Kommen wir zurück zu Transportprozessen, zunächst zu Drift. Wenn sich alle Teilchen in unserem Probevolumen in mit der Geschwindigkeit $\v{v}$ bewegen, dann führt das zu einem Teilchenstrom
+Kommen wir zurück zu Transportprozessen, zunächst zu Drift. Wenn sich alle
+Teilchen in unserem Probevolumen in mit der Geschwindigkeit $\v{v}$ bewegen,
+dann führt das zu einem Teilchenstrom
 
 $$
   \v{j}_{\text{Drift}} = c \v{v}.
   \label{eq:drift}
 $$
 
-Eingesetzt in die Kontinuitätsgleichung~\eqref{eq:continuity} ergibt dies den Drift-Beitrag zur Drift-Diffusions-Gleichung~\eqref{eq:driftdiffusion}.
+Eingesetzt in die Kontinuitätsgleichung~\eqref{eq:continuity} ergibt dies den
+Drift-Beitrag zur Drift-Diffusions-Gleichung~\eqref{eq:driftdiffusion}.
 
 ### Diffusion###
 
-Aus unserem obigen Gedankenexperiment wird klar, dass der Diffusionstrom immer in Richtung der niedrigen Konzentration, also in entgegengesetzte Richtung des Gradienten $\nabla c$ der Konzentration, gehen muss. Der entsprechende Strom ist gegeben durch
+Aus unserem obigen Gedankenexperiment wird klar, dass der Diffusionstrom immer
+in Richtung der niedrigen Konzentration, also in entgegengesetzte Richtung des
+Gradienten $\nabla c$ der Konzentration, gehen muss. Der entsprechende Strom
+ist gegeben durch
 
 $$
  \v{j}_{\text{Diffusion}} = - D \nabla c.
  \label{eq:stationary}
 $$
 
-Eingesetzt in die Kontinuitätsgleichung~\eqref{eq:continuity} ergibt dies die Diffusionsgleichung~\eqref{eq:diffusion}.
+Eingesetzt in die Kontinuitätsgleichung~\eqref{eq:continuity} ergibt dies die
+Diffusionsgleichung~\eqref{eq:diffusion}.
 
 Die gesamte Drift-Diffusionsgleichung hat daher die Form
 
@@ -419,12 +417,16 @@ $$
  \label{eq:drift-diffusion-full}
 $$
 
-Im Gegensatz zu Gleichungen~\eqref{eq:diffusion} und \eqref{eq:driftdiffusion} gilt diese Gleichung auch wenn die Diffusionskonstante $D$ oder Drift-Geschwindigkeit $\v{v}$ räumlich variiert.
+Im Gegensatz zu Gleichungen~\eqref{eq:diffusion} und \eqref{eq:driftdiffusion}
+gilt diese Gleichung auch wenn die Diffusionskonstante $D$ oder
+Drift-Geschwindigkeit $\v{v}$ räumlich variiert.
 
-\begin{note}
-    Wir haben hier die Transporttheorie im Sinne einer Teilchenkonzentration $c$ eingeführt. Die Kontinuitätsgleichung beschreibt jedoch allgemein die \emph{Erhaltung} einer bestimmten Größe, in unserem Fall der Teilchenzahl (oder äquivalent der Masse). Andere physikalisch erhaltene Größen sind der Impuls und die Energie. Die Kontinuitätsgleichung für den Impuls führt zur Navier-Stokes Gleichung. Die Kontinuitätsgleichung für die Energie führt zur Wärmeleitungsgleichung. Für das Beispiel dieser Veranstaltung ist nur die Erhaltung der Masse relevant. 
-\end{note}
+    Wir haben hier die Transporttheorie im Sinne einer Teilchenkonzentration
+    $c$ eingeführt. Die Kontinuitätsgleichung beschreibt jedoch allgemein die
+    \emph{Erhaltung} einer bestimmten Größe, in unserem Fall der Teilchenzahl (oder
+    äquivalent der Masse). Andere physikalisch erhaltene Größen sind der Impuls und
+    die Energie. Die Kontinuitätsgleichung für den Impuls führt zur Navier-Stokes
+    Gleichung. Die Kontinuitätsgleichung für die Energie führt zur
+    Wärmeleitungsgleichung. Für das Beispiel dieser Veranstaltung ist nur die
+    Erhaltung der Masse relevant. 
 
-%%%
-
-%\input{footer.tex}
