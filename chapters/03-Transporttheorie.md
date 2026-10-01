@@ -4,6 +4,11 @@ title: Transporththeorie
 nav_order: 3
 parent: Vorlesung
 ---
+
+<script type="text/javascript" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
 # Transporttheorie
 
 Diffusiver Transport ist einfach zugänglich über das Bild des "Random Walk",
