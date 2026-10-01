@@ -128,10 +128,10 @@ Nichts vernichten können. Wir wissen also, wenn wir eine gewissen Anzahl
 Teilchen $$N_{\text{tot}}$$ in unserem Gesamtsystem haben, dass diese Anzahl
 
 $$
-    N_{\text{tot}} = \int \dif^3r \, c(\v{r})
+    N_{\text{tot}} = \int \text{d}^3r \, c(\mathbf{r})
 $$
 
-sich nicht über die Zeit ändern kann: $$\dif N_{\text{tot}}/\dif t=0$$.
+sich nicht über die Zeit ändern kann: $$\text{d} N_{\text{tot}}/\text{d} t=0$$.
 
 Für einen kleinen Ausschnitt mit Volumen $$V$$ aus diesem Gesamtvolumen kann sich
 die Teilchenzahl ändern, weil diese über die Wände des Probevolumens fließen
@@ -141,9 +141,9 @@ zum einen gegeben durch
 $$
   \dot{N}
   =
-  \frac{\partial}{\partial t} \int_V \dif^3r \, c(\v{r}, t)
+  \frac{\partial}{\partial t} \int_V \text{d}^3r \, c(\mathbf{r}, t)
   =
-  \int_V \dif^3r \, \frac{\partial c}{\partial t}.
+  \int_V \text{d}^3r \, \frac{\partial c}{\partial t}.
   \label{eq:nchange}
 $$
 
@@ -180,22 +180,22 @@ wenn die Wände klein genug sind, so dass $$j$$ nahezu konstant über $$A$$ ist.
 Stromdichte $$j$$ hat die Einheit Anzahl Partikel/Zeit/Fläche.)
 
 Hier bezeichnet der skalare Strom $$j$$ den Strom, der aus der Fläche heraus
-fließt. Für eine allgemeine vektorielle Stromdichte $$\v{j}$$, welche die Stärke
-und Richtung des Teilchenstroms angibt, ist $$j_i = \v{j}_i \cdot\hat{n}_i$$
+fließt. Für eine allgemeine vektorielle Stromdichte $$\mathbf{j}$$, welche die Stärke
+und Richtung des Teilchenstroms angibt, ist $$j_i = \mathbf{j}_i \cdot\hat{n}_i$$
 wobei $$\hat{n}_i$$ der Normalenvektor auf die Wand $$i$$ ist. Der Strom durch die
-Wand ist also nur die Komponente von $$\v{j}$$, die parallel zur
+Wand ist also nur die Komponente von $$\mathbf{j}$$, die parallel zur
 Oberflächennormale steht. Mit diesem Argument können wir die Änderung der
 Teilchenzahl allgemein als
 
 $$
-  \dot{N} = -\int_{\partial V} \dif^2r \, \v{j}(\v{r})\cdot\hat{n}(\v{r})
+  \dot{N} = -\int_{\partial V} \text{d}^2r \, \mathbf{j}(\mathbf{r})\cdot\hat{n}(\mathbf{r})
   \label{eq:flux}
 $$
 
 ausdrücken, wobei $$\partial V$$ die Oberfläche des Volumens $$V$$ bezeichnet. In
 dieser Gleichung ist explizit angezeigt, dass selbstverständlich sowohl der
-Fluss $$\v{j}$$ als auch die Oberflächennormale $$\hat{n}$$ von der Position
-$$\v{r}$$ auf der Oberfläche abhängen.
+Fluss $$\mathbf{j}$$ als auch die Oberflächennormale $$\hat{n}$$ von der Position
+$$\mathbf{r}$$ auf der Oberfläche abhängen.
 
 Alternativ können wir auch die Änderung der Teilchenzahl Gl.~\eqref{eq:dotN} folgendermaßen gruppieren:
 
@@ -227,9 +227,9 @@ Hierbei haben wir die Tatsache genutzt, dass $$A_{\text{rechts}}=A_{\text{links}
 
 $$
 \begin{aligned}
-  j_{\text{rechts}} &= \hat{x} \cdot \v{j}(x+\Delta x/2,y,z) = j_x(x+\Delta x/2,y,z)
+  j_{\text{rechts}} &= \hat{x} \cdot \mathbf{j}(x+\Delta x/2,y,z) = j_x(x+\Delta x/2,y,z)
   \quad\text{und} \\
-  j_{\text{links}} &= -\hat{x} \cdot \v{j}(x-\Delta x/2,y,z) = -j_x(x-\Delta x/2,y,z)
+  j_{\text{links}} &= -\hat{x} \cdot \mathbf{j}(x-\Delta x/2,y,z) = -j_x(x-\Delta x/2,y,z)
 \end{aligned}
 $$
 
@@ -272,7 +272,7 @@ y=A_{\text{vorne/hinten}}\Delta z$$.  Wir entwickeln die rechte Seite von
 $$\Delta x$$, $$\Delta y$$ und $$\Delta z$$  und erhalten
 
 $$
-  \dot{N} = (-\nabla\cdot\v{j}(\v{r}) + R)\Delta V,
+  \dot{N} = (-\nabla\cdot\mathbf{j}(\mathbf{r}) + R)\Delta V,
 $$
 
 wobei das Restglied $$R$$ mit quadratischen Termen in den  $$\Delta x$$,
@@ -299,8 +299,8 @@ aber umgekehrtem Vorzeichen.
 Wenn wir den Grenzübergang für kleine $$\Delta x$$, $$\Delta y$$ und $$\Delta z$$ machen, erhalten wir
 
 $$
-  \dot{N} = -\lim_{\Delta V\rightarrow 0\choose n\rightarrow\infty}\sum_i^n \nabla\cdot\v{j}(\v{r_i})\Delta V
-  =-\int_{V} \dif^3r \, \nabla\cdot\v{j}(\v{r}).
+  \dot{N} = -\lim_{\Delta V\rightarrow 0\choose n\rightarrow\infty}\sum_i^n \nabla\cdot\mathbf{j}(\mathbf{r_i})\Delta V
+  =-\int_{V} \text{d}^3r \, \nabla\cdot\mathbf{j}(\mathbf{r}).
   \label{eq:flux2}
 $$
 
@@ -310,23 +310,23 @@ Gl.~\eqref{eq:flux} als Volumenintegral auszudrücken.
 
     Der Gausssche Satz ist ein wichtiges Ergebnis der Vektoranalysis. Er
     wandelt ein Integral über ein Volumen $$V$$ in ein Integral über die Oberfläche
-    $$\partial V$$ dieses Volumens um. Für ein Vektorfeld $$\v{f}(\v{r})$$ gilt:
+    $$\partial V$$ dieses Volumens um. Für ein Vektorfeld $$\mathbf{f}(\mathbf{r})$$ gilt:
     $$
-    \int_V \dif^3 r\, \nabla\cdot \v{f}(\v{r})
+    \int_V \text{d}^3 r\, \nabla\cdot \mathbf{f}(\mathbf{r})
      =
-    \int_{\partial V} \dif^2 r\, \v{f}(\v{r}) \cdot \hat{n}(\v{r})
+    \int_{\partial V} \text{d}^2 r\, \mathbf{f}(\mathbf{r}) \cdot \hat{n}(\mathbf{r})
     \label{eq:divergencetheorem}
     $$
-    Hier ist $$\hat{n}(\v{r})$$ der Normalenvektor, welcher auf dem Rand
+    Hier ist $$\hat{n}(\mathbf{r})$$ der Normalenvektor, welcher auf dem Rand
     $$\partial V$$ des Volumens $$V$$ nach außen zeigt.
  
-    Setzen wir speziell $$\v{f}(\v{r})=\v{a}\phi(\mathbf{r})$$, wobei $$\v{a}$$ ein konstanter Vektor ist, dann erhalten wir
+    Setzen wir speziell $$\mathbf{f}(\mathbf{r})=\mathbf{a}\phi(\mathbf{r})$$, wobei $$\mathbf{a}$$ ein konstanter Vektor ist, dann erhalten wir
     $$
     \begin{aligned}
-      \int_V \dif^3 r\, \nabla\cdot \v{a}\phi(\v{r})&=
-      \int_{\partial V} \dif^2 r\, \v{a}\phi(\v{r}) \cdot \hat{n}(\v{r})\nonumber\\
-      \int_V \dif^3 r\, \nabla\phi(\v{r})&=
-      \int_{\partial V} \dif^2 r\, \phi(\v{r}) \hat{n}(\v{r})
+      \int_V \text{d}^3 r\, \nabla\cdot \mathbf{a}\phi(\mathbf{r})&=
+      \int_{\partial V} \text{d}^2 r\, \mathbf{a}\phi(\mathbf{r}) \cdot \hat{n}(\mathbf{r})\nonumber\\
+      \int_V \text{d}^3 r\, \nabla\phi(\mathbf{r})&=
+      \int_{\partial V} \text{d}^2 r\, \phi(\mathbf{r}) \hat{n}(\mathbf{r})
       \label{eq:divergencetheorem2}
     \end{aligned}
     $$
@@ -334,14 +334,14 @@ Gl.~\eqref{eq:flux} als Volumenintegral auszudrücken.
 Gleichung~\eqref{eq:nchange} und \eqref{eq:flux2} zusammen ergeben
 
 $$
-  \int_V \dif^3r \, \left\{\frac{\partial c}{\partial t}+\nabla\cdot\v{j}\right\} = 0.
+  \int_V \text{d}^3r \, \left\{\frac{\partial c}{\partial t}+\nabla\cdot\mathbf{j}\right\} = 0.
   \label{eq:continuityweak}
 $$
 
 Da dies für jedes beliebige Volumen $$V$$ gilt, muss auch
 
 $$
-  \frac{\partial c}{\partial t}+\nabla\cdot\v{j} = 0
+  \frac{\partial c}{\partial t}+\nabla\cdot\mathbf{j} = 0
   \label{eq:continuity}
 $$
 
@@ -354,7 +354,7 @@ In der hier dargestellten Herleitung haben wir implizit bereits die
 formulation'' einer Differentialgleichung kennengelernt.
 Gleichung~\eqref{eq:continuity} ist die starke Formulierung der
 Kontinuitätsgleichung. Diese verlangt, dass die Differentialgleichung für jeden
-räumlichen Punkt $$\v{r}$$ erfüllt ist. Die entsprechende schwache Formulierung
+räumlichen Punkt $$\mathbf{r}$$ erfüllt ist. Die entsprechende schwache Formulierung
 ist Gl.~\eqref{eq:continuityweak}. Hier wird nur verlangt, dass die Gleichung
 in einer Art Mittelwert, hier als Integral über ein Probevolumen $$V$$, erfüllt
 ist. Innerhalb des Volumens muss die starke Form nicht erfüllt sein, aber das
@@ -375,7 +375,7 @@ Quellenstrom $$Q$$ (mit Einheit Anzahl Partikel/Zeit/Volumen), kann die
 Kontinuitätsgleichung auf 
 
 $$
-  \frac{\partial c}{\partial t}+\nabla\cdot\v{j} = Q
+  \frac{\partial c}{\partial t}+\nabla\cdot\mathbf{j} = Q
   \label{eq:continuitywithsource}
 $$
 
@@ -389,7 +389,7 @@ als \emph{Bilanzgleichung} bezeichnet.
     Gleichgewicht eingestellt hat. Dieses Gleichgewicht ist dadurch gekennzeichnet,
     dass $$\partial c/\partial t=0$$. Die Gleichung
     $$
-       \nabla\cdot\v{j} = Q
+       \nabla\cdot\mathbf{j} = Q
     $$
     ist die \emph{stationäre} Variante der Kontinuitätsgleichung.
 </div>
@@ -397,11 +397,11 @@ als \emph{Bilanzgleichung} bezeichnet.
 ### Drift
 
 Kommen wir zurück zu Transportprozessen, zunächst zu Drift. Wenn sich alle
-Teilchen in unserem Probevolumen in mit der Geschwindigkeit $$\v{v}$$ bewegen,
+Teilchen in unserem Probevolumen in mit der Geschwindigkeit $$\mathbf{v}$$ bewegen,
 dann führt das zu einem Teilchenstrom
 
 $$
-  \v{j}_{\text{Drift}} = c \v{v}.
+  \mathbf{j}_{\text{Drift}} = c \mathbf{v}.
   \label{eq:drift}
 $$
 
@@ -416,7 +416,7 @@ Gradienten $$\nabla c$$ der Konzentration, gehen muss. Der entsprechende Strom
 ist gegeben durch
 
 $$
- \v{j}_{\text{Diffusion}} = - D \nabla c.
+ \mathbf{j}_{\text{Diffusion}} = - D \nabla c.
  \label{eq:stationary}
 $$
 
@@ -426,13 +426,13 @@ Diffusionsgleichung~\eqref{eq:diffusion}.
 Die gesamte Drift-Diffusionsgleichung hat daher die Form
 
 $$
- \frac{\partial c}{\partial t} + \nabla\cdot\left\{-D\nabla c + c\v{v}\right\}=0.
+ \frac{\partial c}{\partial t} + \nabla\cdot\left\{-D\nabla c + c\mathbf{v}\right\}=0.
  \label{eq:drift-diffusion-full}
 $$
 
 Im Gegensatz zu Gleichungen~\eqref{eq:diffusion} und \eqref{eq:driftdiffusion}
 gilt diese Gleichung auch wenn die Diffusionskonstante $$D$$ oder
-Drift-Geschwindigkeit $$\v{v}$$ räumlich variiert.
+Drift-Geschwindigkeit $$\mathbf{v}$$ räumlich variiert.
 
     Wir haben hier die Transporttheorie im Sinne einer Teilchenkonzentration
     $$c$$ eingeführt. Die Kontinuitätsgleichung beschreibt jedoch allgemein die
