@@ -8,6 +8,14 @@ parent: Vorlesung
 <script type="text/javascript" async
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
 </script>
+<style>
+  .graybox {
+    background:#f6f6f6;          /* sehr helles Grau */
+    padding:0.9em;
+    border-radius:4px;
+    margin:1em 0;                /* Abstand zu anderen Elementen */
+  }
+</style>
 
 # Transporttheorie
 
@@ -98,7 +106,7 @@ $$
 
 die wohlbekannte Diffusionsgleichung resultiert.
 
-## Teilchenbetrachtung oder Kontinuum
+## Teilchen oder Kontinuum
 
 <figure>
   <img src="{{ site.baseurl }}/figs/continuity.png" alt="Kontinuitaet">
