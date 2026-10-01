@@ -106,7 +106,325 @@ durch die Seitenwände verlassen. Die Änderung der Teilchenzahl N über ein
 Zeitintervall $$\tau$$ ist daher durch die Anzahl der Teilchen gegeben, die durch
 die Wände fließen. Hierzu brauchen wir die Teilchenströme j. Die Anzahl der
 Teilchen, welche durch eine Oberfläche fließen ist dann gegeben durch j Aτ ,
-wobei A die Fläche der Seitenwand ist. </figcaption>
+wobei A die Fläche der Seitenwand ist. 
+</figcaption>
 </figure>
  
+Die Gleichungen~\eqref{eq:diffusion} und \eqref{eq:driftdiffusion} vermischen
+zwei Konzepte, die wir hier jetzt getrennt behandeln wollen: Die Erhaltung der
+Anzahl der Teilchen (Kontinuität) und der Prozess, welcher zu einem
+Teilchenstrom führt (Diffusion oder Drift). Die Teilchenzahl ist einfach
+deshalb erhalten, weil wir keine Atome aus dem Nichts erzeugen oder in das
+Nichts vernichten können. Wir wissen also, wenn wir eine gewissen Anzahl
+Teilchen $N_{\text{tot}}$ in unserem Gesamtsystem haben, dass diese Anzahl
 
+$$
+    N_{\text{tot}} = \int \dif^3r \, c(\v{r})
+$$
+
+sich nicht über die Zeit ändern kann: $\dif N_{\text{tot}}/\dif t=0$.
+
+Für einen kleinen Ausschnitt mit Volumen $V$ aus diesem Gesamtvolumen kann sich
+die Teilchenzahl ändern, weil diese über die Wände des Probevolumens fließen
+können (siehe Abb.~\ref{fig:continuity}). Die Änderung dieser Teilchenzahl ist
+zum einen gegeben durch
+
+$$
+    \dot{N}
+    =
+    \frac{\partial}{\partial t} \int_V \dif^3r \, c(\v{r}, t)
+    =
+    \int_V \dif^3r \, \frac{\partial c}{\partial t}.
+    \label{eq:nchange}
+$$
+
+Die Änderung $\dot{N}$ muss aber auch durch die Anzahl der Partikel, die über
+die Seitenwände abfließen, gegeben sein. Für einen Würfel
+(Abb.~\ref{fig:continuity}) mit sechs Wänden gilt
+
+$$
+\begin{aligned}
+    \dot{N}
+    =
+    &
+    -
+    j_{\text{rechts}} A_{\text{rechts}}
+    -
+    j_{\text{links}} A_{\text{links}}
+    \\
+    &
+    -
+    j_{\text{oben}} A_{\text{oben}}
+    -
+    j_{\text{unten}} A_{\text{unten}}
+    \\
+    &
+    -
+    j_{\text{vorne}} A_{\text{vorne}}
+    -
+    j_{\text{hinten}} A_{\text{hinten}}
+\end{aligned}
+    \label{eq:dotN}
+$$
+
+wenn die Wände klein genug sind, so dass $j$ nahezu konstant über $A$ ist. (Die
+Stromdichte $j$ hat die Einheit Anzahl Partikel/Zeit/Fläche.)
+
+<figure>
+  <img src="{{ site.baseurl }}/figs/Continuity.png" alt="Continuity">
+  <figcaption align="center">Abbildung 3.4 Teilchen können das Volumen $$V$$ nur
+  durch die Seitenwände verlassen. Die Änderung der Teilchenzahl $$N$$ über ein
+  Zeitintervall $$\tau$$ ist daher durch die Anzahl der Teilchen gegeben, die durch
+  die Wände fließen. Hierzu brauchen wir die Teilchenströme $$j$$. Die Anzahl der
+  Teilchen, welche durch eine Oberfläche fließen ist dann gegeben durch
+  $$j\,A\tau$$, wobei $$A$$ die Fläche der Seitenwand ist.}
+  </figcaption>
+</figure>
+
+Hier bezeichnet der skalare Strom $$j$$ den Strom, der aus der Fläche heraus
+fließt. Für eine allgemeine vektorielle Stromdichte $$\v{j}$$, welche die Stärke
+und Richtung des Teilchenstroms angibt, ist $$j_i = \v{j}_i \cdot\hat{n}_i$$
+wobei $$\hat{n}_i$$ der Normalenvektor auf die Wand $$i$$ ist. Der Strom durch die
+Wand ist also nur die Komponente von $$\v{j}$$, die parallel zur
+Oberflächennormale steht. Mit diesem Argument können wir die Änderung der
+Teilchenzahl allgemein als
+
+$$
+  \dot{N} = -\int_{\partial V} \dif^2r \, \v{j}(\v{r})\cdot\hat{n}(\v{r})
+  \label{eq:flux}
+$$
+
+ausdrücken, wobei $$\partial V$$ die Oberfläche des Volumens $$V$$ bezeichnet. In
+dieser Gleichung ist explizit angezeigt, dass selbstverständlich sowohl der
+Fluss $$\v{j}$$ als auch die Oberflächennormale $$\hat{n}$$ von der Position
+$$\v{r}$$ auf der Oberfläche abhängen.
+
+Alternativ können wir auch die Änderung der Teilchenzahl Gl.~\eqref{eq:dotN} folgendermaßen gruppieren:
+
+$$
+\begin{aligned}
+    \dot{N}
+    =
+    &
+    -
+    (j_{\text{rechts}}
+    +
+    j_{\text{links}}) A_{\text{rechts/links}}
+    \\
+    &
+    -
+    (j_{\text{oben}}
+    +
+    j_{\text{unten}}) A_{\text{oben/unten}}
+    \\
+    &
+    -
+    (j_{\text{vorne}}
+    +
+    j_{\text{hinten}}) A_{\text{vorne/hinten}}
+\end{aligned}
+$$
+
+Hierbei haben wir die Tatsache genutzt, dass $$A_{\text{rechts}}=A_{\text{links}}\equiv A_{\text{rechts/links}}$$. Nun ist aber
+
+$$
+\begin{aligned}
+    j_{\text{rechts}} &= \hat{x} \cdot \v{j}(x+\Delta x/2,y,z) = j_x(x+\Delta x/2,y,z)
+    \quad\text{und} \\
+    j_{\text{links}} &= -\hat{x} \cdot \v{j}(x-\Delta x/2,y,z) = -j_x(x-\Delta x/2,y,z)
+\end{aligned}
+$$
+
+da $$\hat{n}=\hat{x}$$ für die rechte Wand aber $$\hat{n}=-\hat{x}$$ für die linke
+Wand. Hierbei ist $$\hat{x}$$ der Normalenvektor entlang der $$x$$-Achse des
+Koordinatensystems.
+Es dreht sich also zwischen der rechten und linken Fläche das Vorzeichen der
+Oberflächennormale um. Das gleiche gilt für die Wände oben/unten und
+vorne/hinten. Wir können diese Gleichung weiterhin umschreiben als
+
+$$
+\begin{aligned}
+    \dot{N}
+    =
+    &
+    -
+    \frac{j_x(x+\Delta x/2,y,z)
+    -
+    j_x(x-\Delta x/2,y,z)}{\Delta x} \Delta V
+    \\
+    &
+    -
+    \frac{j_y(x,y+\Delta y/2,z)
+    -
+    j_y(x,y-\Delta y/2,z)}{\Delta y} \Delta V
+    \\
+    &
+    -
+    \frac{j_z(x,y,z+\Delta z/2)
+    -
+    j_z(x,y,z-\Delta z/2)}{\Delta z} \Delta V,
+\end{aligned}
+\label{eq:dotNdiscr}
+$$
+
+da $$\Delta V = \Delta x \Delta y \Delta z$$, ist ebenfalls $$\Delta
+V=A_{\text{rechts/links}}\Delta x=A_{\text{oben/unten}}\Delta
+y=A_{\text{vorne/hinten}}\Delta z$$.  Wir entwickeln die rechte Seite von
+\eqref{eq:dotNdiscr} nach Taylor bis zu Gliedern erster Ordnung in den
+$$\Delta x$$, $$\Delta y$$ und $$\Delta z$$  und erhalten
+
+$$
+    \dot{N} = (-\nabla\cdot\v{j}(\v{r}) + R)\Delta V,
+$$
+
+wobei das Restglied $$R$$ mit quadratischen Termen in den  $$\Delta x$$,
+$$\Delta y$$ und $$\Delta z$$ startet.
+
+Durch Aneinanderreihung vieler kleiner Volumina $$\Delta V_i$$ können wir auch
+ein makroskopisches Volumenintegral berechnen. An den  aneinander angrenzenden
+Flächen der infinitesimal kleinen Würfel im inneren des Volumens, heben sich
+die Flüsse im Grenzübergang auf. Auf der Grenzfläche ist der Stromdichtevektor
+eindeutig definiert (siehe Abb. \ref{fig:gaussbox}) und da über beide Volumina
+integriert wird, gibt es an der Grenzfläche zwei Beiträge mit gleichem Betrag,
+aber umgekehrtem Vorzeichen. 
+
+
+<figure>
+  <img src="{{ site.baseurl }}/figs/gaussbox.png" alt="Gaussbox">
+  <figcaption align="center">Abbildung 3.4: Zwei aneinandergrenzende
+  infinitesimale Würfel. An der gemeinsamen Grenzfläche ist der Fluss in jedem
+  Volumenelement dem Betrag nach gleich, hat aber ein umgekehrtes Vorzeichen, da
+  die Oberflächennormalenvektoren jeweils in entgegengesetzte Richtung weisen.
+  </figcaption>
+</figure>
+
+Wenn wir den Grenzübergang für kleine $$\Delta x$$, $$\Delta y$$ und $$\Delta z$$ machen, erhalten wir
+
+$$
+  \dot{N} = -\lim_{\Delta V\rightarrow 0\choose n\rightarrow\infty}\sum_i^n \nabla\cdot\v{j}(\v{r_i})\Delta V
+  =-\int_{V} \dif^3r \, \nabla\cdot\v{j}(\v{r}).
+  \label{eq:flux2}
+$$
+
+Wir haben hier gerade heuristisch den Gaussschen Satz (engl. "Divergence
+Theorem" - siehe auch Gl.~\eqref{eq:divergencetheorem}) hergeleitet, um
+Gl.~\eqref{eq:flux} als Volumenintegral auszudrücken. 
+
+    Der Gausssche Satz ist ein wichtiges Ergebnis der Vektoranalysis. Er
+    wandelt ein Integral über ein Volumen $V$ in ein Integral über die Oberfläche
+    $\partial V$ dieses Volumens um. Für ein Vektorfeld $\v{f}(\v{r})$ gilt:
+    $$
+    \int_V \dif^3 r\, \nabla\cdot \v{f}(\v{r})
+     =
+    \int_{\partial V} \dif^2 r\, \v{f}(\v{r}) \cdot \hat{n}(\v{r})
+    \label{eq:divergencetheorem}
+    $$
+    Hier ist $\hat{n}(\v{r})$ der Normalenvektor, welcher auf dem Rand $\partial V$ des Volumens $V$ nach außen zeigt.
+ 
+    Setzen wir speziell $\v{f}(\v{r})=\v{a}\phi(\mathbf{r})$, wobei $\v{a}$ ein konstanter Vektor ist, dann erhalten wir
+    $$
+    \begin{aligned}
+      \int_V \dif^3 r\, \nabla\cdot \v{a}\phi(\v{r})&=
+      \int_{\partial V} \dif^2 r\, \v{a}\phi(\v{r}) \cdot \hat{n}(\v{r})\nonumber\\
+      \int_V \dif^3 r\, \nabla\phi(\v{r})&=
+      \int_{\partial V} \dif^2 r\, \phi(\v{r}) \hat{n}(\v{r})
+      \label{eq:divergencetheorem2}
+    \end{aligned}
+    $$
+
+Gleichung~\eqref{eq:nchange} und \eqref{eq:flux2} zusammen ergeben
+
+$$
+    \int_V \dif^3r \, \left\{\frac{\partial c}{\partial t}+\nabla\cdot\v{j}\right\} = 0.
+    \label{eq:continuityweak}
+$$
+
+Da dies für jedes beliebige Volumen $V$ gilt, muss auch
+
+$$
+  \frac{\partial c}{\partial t}+\nabla\cdot\v{j} = 0
+  \label{eq:continuity}
+$$
+
+erfüllt sein. Diese Gleichung trägt den Namen \emph{Kontinuitätsgleichung}. Sie
+beschreibt die Erhaltung der Teilchenzahl bzw. der Masse des Systems.
+
+    In der hier dargestellten Herleitung haben wir implizit bereits die
+    *starke* Formulierung und eine \emph{schwache} Formulierung (engl. ``weak
+    formulation'' einer Differentialgleichung kennengelernt.
+    Gleichung~\eqref{eq:continuity} ist die starke Formulierung der
+    Kontinuitätsgleichung. Diese verlangt, dass die Differentialgleichung für jeden
+    räumlichen Punkt $\v{r}$ erfüllt ist. Die entsprechende schwache Formulierung
+    ist Gl.~\eqref{eq:continuityweak}. Hier wird nur verlangt, dass die Gleichung
+    in einer Art Mittelwert, hier als Integral über ein Probevolumen $V$, erfüllt
+    ist. Innerhalb des Volumens muss die starke Form nicht erfüllt sein, aber das
+    Integral über diese Abweichungen (die wir später als ``Residuum'' bezeichnen
+    werden) muss verschwinden. Die schwache Formulierung ist für endliche
+    Probevolumina $V$ damit eine Näherung. In der Methode der finiten Elemente löst
+    man eine schwache Gleichung für eine gewissen (approximative) Ansatzfunktion
+    exakt. Die schwache Formulierung wird daher im Verlauf dieser Veranstaltung
+    wichtig werden. 
+
+Wir können weiterhin noch verlangen, dass innerhalb unseres Probevolumens
+"Teilchen" produziert werden. In der aktuellen Interpretation der Gleichung
+wären dies z.B. chemische Reaktionen, die einen Teilchentyp in einen anderen
+umwandeln. Eine identische Gleichung gilt für den Wärmetransport. Hier wäre ein
+Quellterm die Produktion von Wärme, z.B. durch ein Heizelement. Gegeben ein
+Quellenstrom $Q$ (mit Einheit Anzahl Partikel/Zeit/Volumen), kann die
+Kontinuitätsgleichung auf 
+
+$$
+  \frac{\partial c}{\partial t}+\nabla\cdot\v{j} = Q
+  \label{eq:continuitywithsource}
+$$
+
+erweitert werden. Die Kontinuitätsgleichung mit Quellterm wird auch manchmal als \emph{Bilanzgleichung} bezeichnet.
+
+    Gleichung~\eqref{eq:continuitywithsource} beschreibt die zeitliche
+    Veränderung der Konzentration $c$. Eine verwandte Frage ist die nach der Lösung
+    dieser Gleichung nach sehr langer Zeit - wenn sich ein dynamisches
+    Gleichgewicht eingestellt hat. Dieses Gleichgewicht ist dadurch gekennzeichnet,
+    dass $\partial c/\partial t=0$. Die Gleichung
+    $$
+       \nabla\cdot\v{j} = Q
+    $$
+    ist die \emph{stationäre} Variante der Kontinuitätsgleichung.
+
+### Drift###
+
+Kommen wir zurück zu Transportprozessen, zunächst zu Drift. Wenn sich alle Teilchen in unserem Probevolumen in mit der Geschwindigkeit $\v{v}$ bewegen, dann führt das zu einem Teilchenstrom
+
+$$
+  \v{j}_{\text{Drift}} = c \v{v}.
+  \label{eq:drift}
+$$
+
+Eingesetzt in die Kontinuitätsgleichung~\eqref{eq:continuity} ergibt dies den Drift-Beitrag zur Drift-Diffusions-Gleichung~\eqref{eq:driftdiffusion}.
+
+### Diffusion###
+
+Aus unserem obigen Gedankenexperiment wird klar, dass der Diffusionstrom immer in Richtung der niedrigen Konzentration, also in entgegengesetzte Richtung des Gradienten $\nabla c$ der Konzentration, gehen muss. Der entsprechende Strom ist gegeben durch
+
+$$
+ \v{j}_{\text{Diffusion}} = - D \nabla c.
+ \label{eq:stationary}
+$$
+
+Eingesetzt in die Kontinuitätsgleichung~\eqref{eq:continuity} ergibt dies die Diffusionsgleichung~\eqref{eq:diffusion}.
+
+Die gesamte Drift-Diffusionsgleichung hat daher die Form
+
+$$
+ \frac{\partial c}{\partial t} + \nabla\cdot\left\{-D\nabla c + c\v{v}\right\}=0.
+ \label{eq:drift-diffusion-full}
+$$
+
+Im Gegensatz zu Gleichungen~\eqref{eq:diffusion} und \eqref{eq:driftdiffusion} gilt diese Gleichung auch wenn die Diffusionskonstante $D$ oder Drift-Geschwindigkeit $\v{v}$ räumlich variiert.
+
+\begin{note}
+    Wir haben hier die Transporttheorie im Sinne einer Teilchenkonzentration $c$ eingeführt. Die Kontinuitätsgleichung beschreibt jedoch allgemein die \emph{Erhaltung} einer bestimmten Größe, in unserem Fall der Teilchenzahl (oder äquivalent der Masse). Andere physikalisch erhaltene Größen sind der Impuls und die Energie. Die Kontinuitätsgleichung für den Impuls führt zur Navier-Stokes Gleichung. Die Kontinuitätsgleichung für die Energie führt zur Wärmeleitungsgleichung. Für das Beispiel dieser Veranstaltung ist nur die Erhaltung der Masse relevant. 
+\end{note}
+
+%%%
+
+%\input{footer.tex}
