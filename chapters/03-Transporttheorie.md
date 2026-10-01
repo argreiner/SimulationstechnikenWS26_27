@@ -46,10 +46,10 @@ der in Abb.~\ref{fig:brownian}a gezeigt ist, ist diese Symmetrie gebrochen.
 ### ***Beispiel***: Random walk 
 
 <figure>
-  <img src="{{ site.baseurl }}/figs/Brownian1D.png" alt="Brownian1D">
+  <img src="{{ site.baseurl }}/figs/Brown1D.png" alt="Brownian1D">
   <figcaption align="center">Abbildung 3.2: Zufallsbewegung in einer Dimension
-  ist gegeben durch Übergangswahrscheinlichkeiten $p$ (für eine Bewegung nach
-  links) und $q$ für eine Bewegung nach rechts.  
+  ist gegeben durch Übergangswahrscheinlichkeiten $$p$$ (für eine Bewegung nach
+  links) und $$q$$ für eine Bewegung nach rechts.  
   </figcaption>
 </figure>
 
