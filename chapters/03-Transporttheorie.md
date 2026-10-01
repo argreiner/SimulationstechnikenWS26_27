@@ -310,19 +310,19 @@ Gl.~\eqref{eq:flux} als Volumenintegral auszudrücken.
 
 <div class="graybox">
 Der Gausssche Satz ist ein wichtiges Ergebnis der Vektoranalysis. Er
-wandelt ein Integral über ein Volumen $$V$$ in ein Integral über die Oberfläche
-$$\partial V$$ dieses Volumens um. Für ein Vektorfeld $$\mathbf{f}(\mathbf{r})$$ gilt:
+wandelt ein Integral über ein Volumen \(V\) in ein Integral über die Oberfläche
+\(\partial V\) dieses Volumens um. Für ein Vektorfeld \(\mathbf{f}(\mathbf{r})\) gilt:
 $$
 \int_V \text{d}^3 r\, \nabla\cdot \mathbf{f}(\mathbf{r})
  =
 \int_{\partial V} \text{d}^2 r\, \mathbf{f}(\mathbf{r}) \cdot \hat{n}(\mathbf{r})
 \label{eq:divergencetheorem}
 $$
-Hier ist $$\hat{n}(\mathbf{r})$$ der Normalenvektor, welcher auf dem Rand
-$$\partial V$$ des Volumens $$V$$ nach außen zeigt.
+Hier ist \(\hat{n}(\mathbf{r})\) der Normalenvektor, welcher auf dem Rand
+$$\partial V$$ des Volumens \(V\) nach außen zeigt.
  
-Setzen wir speziell $$\mathbf{f}(\mathbf{r})=\mathbf{a}\phi(\mathbf{r})$$,
-wobei $$\mathbf{a}$$ ein konstanter Vektor ist, dann erhalten wir
+Setzen wir speziell \(\mathbf{f}(\mathbf{r})=\mathbf{a}\phi(\mathbf{r})\),
+wobei \(\mathbf{a}\) ein konstanter Vektor ist, dann erhalten wir
 $$
 \begin{aligned}
   \int_V \text{d}^3 r\, \nabla\cdot \mathbf{a}\phi(\mathbf{r})&=
@@ -353,17 +353,17 @@ beschreibt die Erhaltung der Teilchenzahl bzw. der Masse des Systems.
 
 <div class="graybox">
 In der hier dargestellten Herleitung haben wir implizit bereits die
-*starke* Formulierung und eine \emph{schwache} Formulierung (engl. ``weak
-formulation'' einer Differentialgleichung kennengelernt.
+*starke* Formulierung und eine *schwache* Formulierung (engl. "weak
+formulation" einer Differentialgleichung kennengelernt.
 Gleichung~\eqref{eq:continuity} ist die starke Formulierung der
 Kontinuitätsgleichung. Diese verlangt, dass die Differentialgleichung für jeden
-räumlichen Punkt $$\mathbf{r}$$ erfüllt ist. Die entsprechende schwache Formulierung
+räumlichen Punkt \(\mathbf{r}\) erfüllt ist. Die entsprechende schwache Formulierung
 ist Gl.~\eqref{eq:continuityweak}. Hier wird nur verlangt, dass die Gleichung
-in einer Art Mittelwert, hier als Integral über ein Probevolumen $$V$$, erfüllt
+in einer Art Mittelwert, hier als Integral über ein Probevolumen \(V\), erfüllt
 ist. Innerhalb des Volumens muss die starke Form nicht erfüllt sein, aber das
 Integral über diese Abweichungen (die wir später als "Residuum" bezeichnen
 werden) muss verschwinden. Die schwache Formulierung ist für endliche
-Probevolumina $$V$$ damit eine Näherung. In der Methode der finiten Elemente löst
+Probevolumina \(V\) damit eine Näherung. In der Methode der finiten Elemente löst
 man eine schwache Gleichung für eine gewissen (approximative) Ansatzfunktion
 exakt. Die schwache Formulierung wird daher im Verlauf dieser Veranstaltung
 wichtig werden. 
@@ -387,14 +387,14 @@ als \emph{Bilanzgleichung} bezeichnet.
 
 <div class="graybox">
     Gleichung~\eqref{eq:continuitywithsource} beschreibt die zeitliche
-    Veränderung der Konzentration $$c$$. Eine verwandte Frage ist die nach der Lösung
+    Veränderung der Konzentration \(c\). Eine verwandte Frage ist die nach der Lösung
     dieser Gleichung nach sehr langer Zeit - wenn sich ein dynamisches
     Gleichgewicht eingestellt hat. Dieses Gleichgewicht ist dadurch gekennzeichnet,
-    dass $$\partial c/\partial t=0$$. Die Gleichung
+    dass \(\partial c/\partial t=0\). Die Gleichung
     $$
        \nabla\cdot\mathbf{j} = Q
     $$
-    ist die \emph{stationäre} Variante der Kontinuitätsgleichung.
+    ist die *stationäre* Variante der Kontinuitätsgleichung.
 </div>
 
 ### Drift
@@ -435,11 +435,11 @@ $$
 
 Im Gegensatz zu Gleichungen~\eqref{eq:diffusion} und \eqref{eq:driftdiffusion}
 gilt diese Gleichung auch wenn die Diffusionskonstante $$D$$ oder
-Drift-Geschwindigkeit $$\mathbf{v}$$ räumlich variiert.
+Drift-Geschwindigkeit \(\mathbf{v}\) räumlich variiert.
 
 <div class="graybox">
 Wir haben hier die Transporttheorie im Sinne einer Teilchenkonzentration
-$$c$$ eingeführt. Die Kontinuitätsgleichung beschreibt jedoch allgemein die
+\(c\) eingeführt. Die Kontinuitätsgleichung beschreibt jedoch allgemein die
 \emph{Erhaltung} einer bestimmten Größe, in unserem Fall der Teilchenzahl (oder
 äquivalent der Masse). Andere physikalisch erhaltene Größen sind der Impuls und
 die Energie. Die Kontinuitätsgleichung für den Impuls führt zur Navier-Stokes
