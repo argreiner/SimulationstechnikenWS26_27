@@ -348,7 +348,7 @@ $$
   \label{eq:continuity}
 $$
 
-erfüllt sein. Diese Gleichung trägt den Namen \emph{Kontinuitätsgleichung}. Sie
+erfüllt sein. Diese Gleichung trägt den Namen *Kontinuitätsgleichung*. Sie
 beschreibt die Erhaltung der Teilchenzahl bzw. der Masse des Systems.
 
 <div class="graybox">
@@ -383,7 +383,7 @@ $$
 $$
 
 erweitert werden. Die Kontinuitätsgleichung mit Quellterm wird auch manchmal
-als \emph{Bilanzgleichung} bezeichnet.
+als *Bilanzgleichung* bezeichnet.
 
 <div class="graybox">
     Gleichung~\eqref{eq:continuitywithsource} beschreibt die zeitliche
@@ -435,12 +435,12 @@ $$
 
 Im Gegensatz zu Gleichungen~\eqref{eq:diffusion} und \eqref{eq:driftdiffusion}
 gilt diese Gleichung auch wenn die Diffusionskonstante $$D$$ oder
-Drift-Geschwindigkeit \(\mathbf{v}\) räumlich variiert.
+Drift-Geschwindigkeit $$\mathbf{v}$$ räumlich variiert.
 
 <div class="graybox">
-Wir haben hier die Transporttheorie im Sinne einer Teilchenkonzentration
-\(c\) eingeführt. Die Kontinuitätsgleichung beschreibt jedoch allgemein die
-\emph{Erhaltung} einer bestimmten Größe, in unserem Fall der Teilchenzahl (oder
+Wir haben hier die Transporttheorie im Sinne einer Teilchenkonzentration \(c\)
+eingeführt. Die Kontinuitätsgleichung beschreibt jedoch allgemein die
+*Erhaltung* einer bestimmten Größe, in unserem Fall der Teilchenzahl (oder
 äquivalent der Masse). Andere physikalisch erhaltene Größen sind der Impuls und
 die Energie. Die Kontinuitätsgleichung für den Impuls führt zur Navier-Stokes
 Gleichung. Die Kontinuitätsgleichung für die Energie führt zur
