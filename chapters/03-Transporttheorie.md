@@ -308,28 +308,31 @@ Wir haben hier gerade heuristisch den Gaussschen Satz (engl. "Divergence
 Theorem" - siehe auch Gl.~\eqref{eq:divergencetheorem}) hergeleitet, um
 Gl.~\eqref{eq:flux} als Volumenintegral auszudrücken. 
 
-    Der Gausssche Satz ist ein wichtiges Ergebnis der Vektoranalysis. Er
-    wandelt ein Integral über ein Volumen $$V$$ in ein Integral über die Oberfläche
-    $$\partial V$$ dieses Volumens um. Für ein Vektorfeld $$\mathbf{f}(\mathbf{r})$$ gilt:
-    $$
-    \int_V \text{d}^3 r\, \nabla\cdot \mathbf{f}(\mathbf{r})
-     =
-    \int_{\partial V} \text{d}^2 r\, \mathbf{f}(\mathbf{r}) \cdot \hat{n}(\mathbf{r})
-    \label{eq:divergencetheorem}
-    $$
-    Hier ist $$\hat{n}(\mathbf{r})$$ der Normalenvektor, welcher auf dem Rand
-    $$\partial V$$ des Volumens $$V$$ nach außen zeigt.
+<div class="graybox">
+Der Gausssche Satz ist ein wichtiges Ergebnis der Vektoranalysis. Er
+wandelt ein Integral über ein Volumen $$V$$ in ein Integral über die Oberfläche
+$$\partial V$$ dieses Volumens um. Für ein Vektorfeld $$\mathbf{f}(\mathbf{r})$$ gilt:
+$$
+\int_V \text{d}^3 r\, \nabla\cdot \mathbf{f}(\mathbf{r})
+ =
+\int_{\partial V} \text{d}^2 r\, \mathbf{f}(\mathbf{r}) \cdot \hat{n}(\mathbf{r})
+\label{eq:divergencetheorem}
+$$
+Hier ist $$\hat{n}(\mathbf{r})$$ der Normalenvektor, welcher auf dem Rand
+$$\partial V$$ des Volumens $$V$$ nach außen zeigt.
  
-    Setzen wir speziell $$\mathbf{f}(\mathbf{r})=\mathbf{a}\phi(\mathbf{r})$$, wobei $$\mathbf{a}$$ ein konstanter Vektor ist, dann erhalten wir
-    $$
-    \begin{aligned}
-      \int_V \text{d}^3 r\, \nabla\cdot \mathbf{a}\phi(\mathbf{r})&=
-      \int_{\partial V} \text{d}^2 r\, \mathbf{a}\phi(\mathbf{r}) \cdot \hat{n}(\mathbf{r})\nonumber\\
-      \int_V \text{d}^3 r\, \nabla\phi(\mathbf{r})&=
-      \int_{\partial V} \text{d}^2 r\, \phi(\mathbf{r}) \hat{n}(\mathbf{r})
-      \label{eq:divergencetheorem2}
-    \end{aligned}
-    $$
+Setzen wir speziell $$\mathbf{f}(\mathbf{r})=\mathbf{a}\phi(\mathbf{r})$$,
+wobei $$\mathbf{a}$$ ein konstanter Vektor ist, dann erhalten wir
+$$
+\begin{aligned}
+  \int_V \text{d}^3 r\, \nabla\cdot \mathbf{a}\phi(\mathbf{r})&=
+  \int_{\partial V} \text{d}^2 r\, \mathbf{a}\phi(\mathbf{r}) \cdot \hat{n}(\mathbf{r})\nonumber\\
+  \int_V \text{d}^3 r\, \nabla\phi(\mathbf{r})&=
+  \int_{\partial V} \text{d}^2 r\, \phi(\mathbf{r}) \hat{n}(\mathbf{r})
+  \label{eq:divergencetheorem2}
+\end{aligned}
+$$
+</div>
 
 Gleichung~\eqref{eq:nchange} und \eqref{eq:flux2} zusammen ergeben
 
@@ -434,12 +437,13 @@ Im Gegensatz zu Gleichungen~\eqref{eq:diffusion} und \eqref{eq:driftdiffusion}
 gilt diese Gleichung auch wenn die Diffusionskonstante $$D$$ oder
 Drift-Geschwindigkeit $$\mathbf{v}$$ räumlich variiert.
 
-    Wir haben hier die Transporttheorie im Sinne einer Teilchenkonzentration
-    $$c$$ eingeführt. Die Kontinuitätsgleichung beschreibt jedoch allgemein die
-    \emph{Erhaltung} einer bestimmten Größe, in unserem Fall der Teilchenzahl (oder
-    äquivalent der Masse). Andere physikalisch erhaltene Größen sind der Impuls und
-    die Energie. Die Kontinuitätsgleichung für den Impuls führt zur Navier-Stokes
-    Gleichung. Die Kontinuitätsgleichung für die Energie führt zur
-    Wärmeleitungsgleichung. Für das Beispiel dieser Veranstaltung ist nur die
-    Erhaltung der Masse relevant. 
-
+<div class="graybox">
+Wir haben hier die Transporttheorie im Sinne einer Teilchenkonzentration
+$$c$$ eingeführt. Die Kontinuitätsgleichung beschreibt jedoch allgemein die
+\emph{Erhaltung} einer bestimmten Größe, in unserem Fall der Teilchenzahl (oder
+äquivalent der Masse). Andere physikalisch erhaltene Größen sind der Impuls und
+die Energie. Die Kontinuitätsgleichung für den Impuls führt zur Navier-Stokes
+Gleichung. Die Kontinuitätsgleichung für die Energie führt zur
+Wärmeleitungsgleichung. Für das Beispiel dieser Veranstaltung ist nur die
+Erhaltung der Masse relevant. 
+</div>
