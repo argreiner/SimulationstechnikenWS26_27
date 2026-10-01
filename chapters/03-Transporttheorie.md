@@ -41,7 +41,7 @@ der in Abb.~\ref{fig:brownian}a gezeigt ist, ist diese Symmetrie gebrochen.
 <figure>
   <img src="{{ site.baseurl }}/figs/Brownian_Motion.png" alt="BrownianMotion">
   <figcaption align="center">Abbildung 3.1: Illustration eines
-  Diffusionsprozesses. Die ``Pollen'' in (a) bewegen sich zufällig in der
+  Diffusionsprozesses. Die "Pollen" in (a) bewegen sich zufällig in der
   gezeigten Domäne. Nach einer gewissen Zeit (b) ist der anfängliche
   Konzentrationsunterschied zwischen dem linken und rechten Teil der Domäne
   ausgeglichen. 
@@ -53,8 +53,8 @@ der in Abb.~\ref{fig:brownian}a gezeigt ist, ist diese Symmetrie gebrochen.
 <figure>
   <img src="{{ site.baseurl }}/figs/Brown1D.png" alt="Brownian1D">
   <figcaption align="center">Abbildung 3.2: Zufallsbewegung in einer Dimension
-  ist gegeben durch Übergangswahrscheinlichkeiten $$p$$ (für eine Bewegung nach
-  links) und $$q$$ für eine Bewegung nach rechts.  
+  ist gegeben durch Übergangswahrscheinlichkeiten $p$ (für eine Bewegung nach
+  links) und $q$ für eine Bewegung nach rechts.  
   </figcaption>
 </figure>
 
@@ -340,21 +340,23 @@ $$
 erfüllt sein. Diese Gleichung trägt den Namen \emph{Kontinuitätsgleichung}. Sie
 beschreibt die Erhaltung der Teilchenzahl bzw. der Masse des Systems.
 
-    In der hier dargestellten Herleitung haben wir implizit bereits die
-    *starke* Formulierung und eine \emph{schwache} Formulierung (engl. ``weak
-    formulation'' einer Differentialgleichung kennengelernt.
-    Gleichung~\eqref{eq:continuity} ist die starke Formulierung der
-    Kontinuitätsgleichung. Diese verlangt, dass die Differentialgleichung für jeden
-    räumlichen Punkt $$\v{r}$$ erfüllt ist. Die entsprechende schwache Formulierung
-    ist Gl.~\eqref{eq:continuityweak}. Hier wird nur verlangt, dass die Gleichung
-    in einer Art Mittelwert, hier als Integral über ein Probevolumen $$V$$, erfüllt
-    ist. Innerhalb des Volumens muss die starke Form nicht erfüllt sein, aber das
-    Integral über diese Abweichungen (die wir später als "Residuum" bezeichnen
-    werden) muss verschwinden. Die schwache Formulierung ist für endliche
-    Probevolumina $$V$$ damit eine Näherung. In der Methode der finiten Elemente löst
-    man eine schwache Gleichung für eine gewissen (approximative) Ansatzfunktion
-    exakt. Die schwache Formulierung wird daher im Verlauf dieser Veranstaltung
-    wichtig werden. 
+<div class="graybox">
+In der hier dargestellten Herleitung haben wir implizit bereits die
+*starke* Formulierung und eine \emph{schwache} Formulierung (engl. ``weak
+formulation'' einer Differentialgleichung kennengelernt.
+Gleichung~\eqref{eq:continuity} ist die starke Formulierung der
+Kontinuitätsgleichung. Diese verlangt, dass die Differentialgleichung für jeden
+räumlichen Punkt $$\v{r}$$ erfüllt ist. Die entsprechende schwache Formulierung
+ist Gl.~\eqref{eq:continuityweak}. Hier wird nur verlangt, dass die Gleichung
+in einer Art Mittelwert, hier als Integral über ein Probevolumen $$V$$, erfüllt
+ist. Innerhalb des Volumens muss die starke Form nicht erfüllt sein, aber das
+Integral über diese Abweichungen (die wir später als "Residuum" bezeichnen
+werden) muss verschwinden. Die schwache Formulierung ist für endliche
+Probevolumina $$V$$ damit eine Näherung. In der Methode der finiten Elemente löst
+man eine schwache Gleichung für eine gewissen (approximative) Ansatzfunktion
+exakt. Die schwache Formulierung wird daher im Verlauf dieser Veranstaltung
+wichtig werden. 
+</div>
 
 Wir können weiterhin noch verlangen, dass innerhalb unseres Probevolumens
 "Teilchen" produziert werden. In der aktuellen Interpretation der Gleichung
@@ -372,6 +374,7 @@ $$
 erweitert werden. Die Kontinuitätsgleichung mit Quellterm wird auch manchmal
 als \emph{Bilanzgleichung} bezeichnet.
 
+<div class="graybox">
     Gleichung~\eqref{eq:continuitywithsource} beschreibt die zeitliche
     Veränderung der Konzentration $$c$$. Eine verwandte Frage ist die nach der Lösung
     dieser Gleichung nach sehr langer Zeit - wenn sich ein dynamisches
@@ -381,8 +384,9 @@ als \emph{Bilanzgleichung} bezeichnet.
        \nabla\cdot\v{j} = Q
     $$
     ist die \emph{stationäre} Variante der Kontinuitätsgleichung.
+</div>
 
-### Drift###
+### Drift
 
 Kommen wir zurück zu Transportprozessen, zunächst zu Drift. Wenn sich alle
 Teilchen in unserem Probevolumen in mit der Geschwindigkeit $$\v{v}$$ bewegen,
@@ -396,7 +400,7 @@ $$
 Eingesetzt in die Kontinuitätsgleichung~\eqref{eq:continuity} ergibt dies den
 Drift-Beitrag zur Drift-Diffusions-Gleichung~\eqref{eq:driftdiffusion}.
 
-### Diffusion###
+### Diffusion
 
 Aus unserem obigen Gedankenexperiment wird klar, dass der Diffusionstrom immer
 in Richtung der niedrigen Konzentration, also in entgegengesetzte Richtung des
