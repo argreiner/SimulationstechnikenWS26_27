@@ -117,15 +117,15 @@ Anzahl der Teilchen (Kontinuität) und der Prozess, welcher zu einem
 Teilchenstrom führt (Diffusion oder Drift). Die Teilchenzahl ist einfach
 deshalb erhalten, weil wir keine Atome aus dem Nichts erzeugen oder in das
 Nichts vernichten können. Wir wissen also, wenn wir eine gewissen Anzahl
-Teilchen $N_{\text{tot}}$ in unserem Gesamtsystem haben, dass diese Anzahl
+Teilchen $$N_{\text{tot}}$$ in unserem Gesamtsystem haben, dass diese Anzahl
 
 $$
     N_{\text{tot}} = \int \dif^3r \, c(\v{r})
 $$
 
-sich nicht über die Zeit ändern kann: $\dif N_{\text{tot}}/\dif t=0$.
+sich nicht über die Zeit ändern kann: $$\dif N_{\text{tot}}/\dif t=0$$.
 
-Für einen kleinen Ausschnitt mit Volumen $V$ aus diesem Gesamtvolumen kann sich
+Für einen kleinen Ausschnitt mit Volumen $$V$$ aus diesem Gesamtvolumen kann sich
 die Teilchenzahl ändern, weil diese über die Wände des Probevolumens fließen
 können (siehe Abb.~\ref{fig:continuity}). Die Änderung dieser Teilchenzahl ist
 zum einen gegeben durch
@@ -139,7 +139,7 @@ $$
   \label{eq:nchange}
 $$
 
-Die Änderung $\dot{N}$ muss aber auch durch die Anzahl der Partikel, die über
+Die Änderung $$\dot{N}$$ muss aber auch durch die Anzahl der Partikel, die über
 die Seitenwände abfließen, gegeben sein. Für einen Würfel
 (Abb.~\ref{fig:continuity}) mit sechs Wänden gilt
 
@@ -168,8 +168,8 @@ $$
     \label{eq:dotN}
 $$
 
-wenn die Wände klein genug sind, so dass $j$ nahezu konstant über $A$ ist. (Die
-Stromdichte $j$ hat die Einheit Anzahl Partikel/Zeit/Fläche.)
+wenn die Wände klein genug sind, so dass $$j$$ nahezu konstant über $$A$$ ist. (Die
+Stromdichte $$j$$ hat die Einheit Anzahl Partikel/Zeit/Fläche.)
 
 Hier bezeichnet der skalare Strom $$j$$ den Strom, der aus der Fläche heraus
 fließt. Für eine allgemeine vektorielle Stromdichte $$\v{j}$$, welche die Stärke
@@ -301,17 +301,18 @@ Theorem" - siehe auch Gl.~\eqref{eq:divergencetheorem}) hergeleitet, um
 Gl.~\eqref{eq:flux} als Volumenintegral auszudrücken. 
 
     Der Gausssche Satz ist ein wichtiges Ergebnis der Vektoranalysis. Er
-    wandelt ein Integral über ein Volumen $V$ in ein Integral über die Oberfläche
-    $\partial V$ dieses Volumens um. Für ein Vektorfeld $\v{f}(\v{r})$ gilt:
+    wandelt ein Integral über ein Volumen $$V$$ in ein Integral über die Oberfläche
+    $$\partial V$$ dieses Volumens um. Für ein Vektorfeld $$\v{f}(\v{r})$$ gilt:
     $$
     \int_V \dif^3 r\, \nabla\cdot \v{f}(\v{r})
      =
     \int_{\partial V} \dif^2 r\, \v{f}(\v{r}) \cdot \hat{n}(\v{r})
     \label{eq:divergencetheorem}
     $$
-    Hier ist $\hat{n}(\v{r})$ der Normalenvektor, welcher auf dem Rand $\partial V$ des Volumens $V$ nach außen zeigt.
+    Hier ist $$\hat{n}(\v{r})$$ der Normalenvektor, welcher auf dem Rand
+    $$\partial V$$ des Volumens $$V$$ nach außen zeigt.
  
-    Setzen wir speziell $\v{f}(\v{r})=\v{a}\phi(\mathbf{r})$, wobei $\v{a}$ ein konstanter Vektor ist, dann erhalten wir
+    Setzen wir speziell $$\v{f}(\v{r})=\v{a}\phi(\mathbf{r})$$, wobei $$\v{a}$$ ein konstanter Vektor ist, dann erhalten wir
     $$
     \begin{aligned}
       \int_V \dif^3 r\, \nabla\cdot \v{a}\phi(\v{r})&=
@@ -329,7 +330,7 @@ $$
   \label{eq:continuityweak}
 $$
 
-Da dies für jedes beliebige Volumen $V$ gilt, muss auch
+Da dies für jedes beliebige Volumen $$V$$ gilt, muss auch
 
 $$
   \frac{\partial c}{\partial t}+\nabla\cdot\v{j} = 0
@@ -344,13 +345,13 @@ beschreibt die Erhaltung der Teilchenzahl bzw. der Masse des Systems.
     formulation'' einer Differentialgleichung kennengelernt.
     Gleichung~\eqref{eq:continuity} ist die starke Formulierung der
     Kontinuitätsgleichung. Diese verlangt, dass die Differentialgleichung für jeden
-    räumlichen Punkt $\v{r}$ erfüllt ist. Die entsprechende schwache Formulierung
+    räumlichen Punkt $$\v{r}$$ erfüllt ist. Die entsprechende schwache Formulierung
     ist Gl.~\eqref{eq:continuityweak}. Hier wird nur verlangt, dass die Gleichung
-    in einer Art Mittelwert, hier als Integral über ein Probevolumen $V$, erfüllt
+    in einer Art Mittelwert, hier als Integral über ein Probevolumen $$V$$, erfüllt
     ist. Innerhalb des Volumens muss die starke Form nicht erfüllt sein, aber das
-    Integral über diese Abweichungen (die wir später als ``Residuum'' bezeichnen
+    Integral über diese Abweichungen (die wir später als "Residuum" bezeichnen
     werden) muss verschwinden. Die schwache Formulierung ist für endliche
-    Probevolumina $V$ damit eine Näherung. In der Methode der finiten Elemente löst
+    Probevolumina $$V$$ damit eine Näherung. In der Methode der finiten Elemente löst
     man eine schwache Gleichung für eine gewissen (approximative) Ansatzfunktion
     exakt. Die schwache Formulierung wird daher im Verlauf dieser Veranstaltung
     wichtig werden. 
@@ -360,7 +361,7 @@ Wir können weiterhin noch verlangen, dass innerhalb unseres Probevolumens
 wären dies z.B. chemische Reaktionen, die einen Teilchentyp in einen anderen
 umwandeln. Eine identische Gleichung gilt für den Wärmetransport. Hier wäre ein
 Quellterm die Produktion von Wärme, z.B. durch ein Heizelement. Gegeben ein
-Quellenstrom $Q$ (mit Einheit Anzahl Partikel/Zeit/Volumen), kann die
+Quellenstrom $$Q$$ (mit Einheit Anzahl Partikel/Zeit/Volumen), kann die
 Kontinuitätsgleichung auf 
 
 $$
@@ -372,10 +373,10 @@ erweitert werden. Die Kontinuitätsgleichung mit Quellterm wird auch manchmal
 als \emph{Bilanzgleichung} bezeichnet.
 
     Gleichung~\eqref{eq:continuitywithsource} beschreibt die zeitliche
-    Veränderung der Konzentration $c$. Eine verwandte Frage ist die nach der Lösung
+    Veränderung der Konzentration $$c$$. Eine verwandte Frage ist die nach der Lösung
     dieser Gleichung nach sehr langer Zeit - wenn sich ein dynamisches
     Gleichgewicht eingestellt hat. Dieses Gleichgewicht ist dadurch gekennzeichnet,
-    dass $\partial c/\partial t=0$. Die Gleichung
+    dass $$\partial c/\partial t=0$$. Die Gleichung
     $$
        \nabla\cdot\v{j} = Q
     $$
@@ -384,7 +385,7 @@ als \emph{Bilanzgleichung} bezeichnet.
 ### Drift###
 
 Kommen wir zurück zu Transportprozessen, zunächst zu Drift. Wenn sich alle
-Teilchen in unserem Probevolumen in mit der Geschwindigkeit $\v{v}$ bewegen,
+Teilchen in unserem Probevolumen in mit der Geschwindigkeit $$\v{v}$$ bewegen,
 dann führt das zu einem Teilchenstrom
 
 $$
@@ -399,7 +400,7 @@ Drift-Beitrag zur Drift-Diffusions-Gleichung~\eqref{eq:driftdiffusion}.
 
 Aus unserem obigen Gedankenexperiment wird klar, dass der Diffusionstrom immer
 in Richtung der niedrigen Konzentration, also in entgegengesetzte Richtung des
-Gradienten $\nabla c$ der Konzentration, gehen muss. Der entsprechende Strom
+Gradienten $$\nabla c$$ der Konzentration, gehen muss. Der entsprechende Strom
 ist gegeben durch
 
 $$
@@ -418,11 +419,11 @@ $$
 $$
 
 Im Gegensatz zu Gleichungen~\eqref{eq:diffusion} und \eqref{eq:driftdiffusion}
-gilt diese Gleichung auch wenn die Diffusionskonstante $D$ oder
-Drift-Geschwindigkeit $\v{v}$ räumlich variiert.
+gilt diese Gleichung auch wenn die Diffusionskonstante $$D$$ oder
+Drift-Geschwindigkeit $$\v{v}$$ räumlich variiert.
 
     Wir haben hier die Transporttheorie im Sinne einer Teilchenkonzentration
-    $c$ eingeführt. Die Kontinuitätsgleichung beschreibt jedoch allgemein die
+    $$c$$ eingeführt. Die Kontinuitätsgleichung beschreibt jedoch allgemein die
     \emph{Erhaltung} einer bestimmten Größe, in unserem Fall der Teilchenzahl (oder
     äquivalent der Masse). Andere physikalisch erhaltene Größen sind der Impuls und
     die Energie. Die Kontinuitätsgleichung für den Impuls führt zur Navier-Stokes
