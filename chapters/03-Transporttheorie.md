@@ -61,8 +61,8 @@ der in Abb.~\ref{fig:brownian}a gezeigt ist, ist diese Symmetrie gebrochen.
 <figure>
   <img src="{{ site.baseurl }}/figs/Brown1D.png" alt="Brownian1D">
   <figcaption align="center">Abbildung 3.2: Zufallsbewegung in einer Dimension
-  ist gegeben durch Übergangswahrscheinlichkeiten $p$ (für eine Bewegung nach
-  links) und $q$ für eine Bewegung nach rechts.  
+  ist gegeben durch Übergangswahrscheinlichkeiten \(p\) (für eine Bewegung nach
+  links) und \(q\) für eine Bewegung nach rechts.  
   </figcaption>
 </figure>
 
@@ -112,10 +112,10 @@ die wohlbekannte Diffusionsgleichung resultiert.
   <img src="{{ site.baseurl }}/figs/continuity.png" alt="Kontinuitaet">
   <figcaption align="center">Abbildung 3.3:  Teilchen können das Volumen V nur
   durch die Seitenwände verlassen. Die Änderung der Teilchenzahl N über ein
-  Zeitintervall $$\tau$$ ist daher durch die Anzahl der Teilchen gegeben, die durch
-  die Wände fließen. Hierzu brauchen wir die Teilchenströme j. Die Anzahl der
-  Teilchen, welche durch eine Oberfläche fließen ist dann gegeben durch j Aτ ,
-  wobei A die Fläche der Seitenwand ist. 
+  Zeitintervall \(\tau\) ist daher durch die Anzahl der Teilchen gegeben, die durch
+  die Wände fließen. Hierzu brauchen wir die Teilchenströme \(\mathbf{j}\). Die Anzahl der
+  Teilchen, welche durch eine Oberfläche fließen ist dann gegeben durch \(j\cdot A\cdot\tau\) ,
+  wobei \(A\) die Fläche der Seitenwand ist. 
 </figcaption>
 </figure>
  
