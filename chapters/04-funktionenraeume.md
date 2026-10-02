@@ -571,7 +571,7 @@ Um die Koeffizienten $a_n$ zu finden, muss also ein (dünnbesetztes) lineares
 Gleichungssystem gelöst werden. Wir werden $\mathbf{M}$ später unter dem Namen
 *Massematrix} wieder treffen.
 
-<div class=§graybox">
+<div class="graybox">
 Basissätze, die nur an individuellen Punkten von Null verschieden sind, nennt
 man *spektrale} Basissätze. Insbesondere ist die Fourier-Basis ein
 spektraler Basissatz für periodische Funktionen. Grundsätzlich bilden die
@@ -579,4 +579,4 @@ spektraler Basissatz für periodische Funktionen. Grundsätzlich bilden die
 Numerik Anwendung finden. So sind beispielsweise die Tschebyschow-Polynome gute
 Basissätze für auf abgeschlossenen Intervallen definierte nicht-periodische
 Funktionen. Die Basis der finiten Elemente ist keine spektrale Basis.
-
+<div>
