@@ -372,7 +372,7 @@ Distributivgesetzen, definiert sind. Ist dieser Raum auf Funktionen definiert,
 dann spricht man auch von einem *Funktionenraum}. Existiert zusätzlich ein
 Skalarprodukt wie Gl.~\eqref{eq:funcscalar}, dann spricht man von einem
 *Hilbertraum}.
-<div>
+</div>
 
 Besonders nützliche Basisfunktionen sind orthogonal. Mit Hilfe des
 Skalarprodukts können wir nun Orthogonalität für diese Funktionen definieren.
