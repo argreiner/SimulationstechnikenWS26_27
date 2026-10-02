@@ -38,73 +38,99 @@ window.MathJax = {
 </style>
 
 
+# Approximation und Interpolation
 
+<div class="graybox">
+Wir wenden nun die Idee der Basisfunktionen an, um Funktionen zu
+approximieren. Hierfür kommen wir zu dem Konzept des Residuums zurück. Ziel der
+Funktionsapproximation ist es, dass die approximierte Funktion das Residuum
+minimiert. Aufbauend auf diesen Ideen besprechen wir dann im nächsten Kapitel
+die Approximation von Differentialgleichungen.
+<div>
 
-%\input{header.tex}
-%\setcounter{chapter}{6}
+## Residuum
 
-\chapter{Approximation und Interpolation}
-
-\begin{context}
-    Wir wenden nun die Idee der Basisfunktionen an, um Funktionen zu approximieren. Hierfür kommen wir zu dem Konzept des Residuums zurück. Ziel der Funktionsapproximation ist es, dass die approximierte Funktion das Residuum minimiert. Aufbauend auf diesen Ideen besprechen wir dann im nächsten Kapitel die Approximation von Differentialgleichungen.
-\end{context}
-
-\section{Residuum}
-
-Im vorherigen Abschnitt haben wir beschrieben, wie mit Basisfunktionen eine Reihenentwicklung aufgebaut werden kann. Eine typische Reihenentwicklung enthält eine endliche Zahl an Elementen $N+1$ und hat die Form
-\begin{equation}
+Im vorherigen Abschnitt haben wir beschrieben, wie mit Basisfunktionen eine
+Reihenentwicklung aufgebaut werden kann. Eine typische Reihenentwicklung
+enthält eine endliche Zahl an Elementen $N+1$ und hat die Form
+$$
     f_N(x) = \sum_{n=0}^N a_n \varphi_n(x),
-\end{equation}
-wobei die $\varphi_n(x)$ die im vorherigen Kapitel eingeführten Basisfunktionen sind.
+$$
+wobei die $\varphi_n(x)$ die im vorherigen Kapitel eingeführten Basisfunktionen
+sind.
 
-Wir wollen uns nun der Frage nähern, wie wir ein beliebige Funktion $f(x)$ über eine solche Basisfunktionsentwicklung annähern können. Hierzu definieren wir das Residuum
-\begin{equation}
+Wir wollen uns nun der Frage nähern, wie wir ein beliebige Funktion $f(x)$ über
+eine solche Basisfunktionsentwicklung annähern können. Hierzu definieren wir
+das Residuum
+$$
     R(x) = f_N(x) - f(x),
-\end{equation}
-welches an jedem Punkt $x$ verschwindet wenn $f_N(x)\equiv f(x)$. Für eine Approximation wollen wir dieses Residuum ``minimieren''. (Mit minimieren ist hier gemeint, es möglichst nah an Null zu bringen.) Wir suchen also die Koeffizienten $a_n$ der Reihenentwicklung, welche die Funktion $f(x)$ im Sinne einer Minimierung des Residuums approximiert.
+$$
+welches an jedem Punkt $x$ verschwindet wenn $f_N(x)\equiv f(x)$. Für eine
+Approximation wollen wir dieses Residuum ``minimieren''. (Mit minimieren ist
+hier gemeint, es möglichst nah an Null zu bringen.) Wir suchen also die
+Koeffizienten $a_n$ der Reihenentwicklung, welche die Funktion $f(x)$ im Sinne
+einer Minimierung des Residuums approximiert.
 
-An dieser Stelle sei noch bemerkt, dass die Basisfunktionen auf dem gleichen Raum für die Zielfunktion $f(x)$ definiert sein müssen. Für die Approximation einer periodischen Funktion $f(x)$ sollte auch ein periodischer Basissatz verwandt werden.
+An dieser Stelle sei noch bemerkt, dass die Basisfunktionen auf dem gleichen
+Raum für die Zielfunktion $f(x)$ definiert sein müssen. Für die Approximation
+einer periodischen Funktion $f(x)$ sollte auch ein periodischer Basissatz
+verwandt werden.
 
-\section{Kollokation}
+## Kollokation
 
 \video{https://uni-freiburg.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=0a7985a2-0753-4d29-83fe-aca8010a16f2}
 
-Als erste Minimierungsstrategie wird hier die \emph{Kollokation} eingeführt. In diese Methode wird verlangt, dass das Residuum an ausgewählten Kollokationspunkten $y_n$ verschwindet,
-\begin{equation}
+Als erste Minimierungsstrategie wird hier die \emph{Kollokation} eingeführt. In
+diese Methode wird verlangt, dass das Residuum an ausgewählten
+Kollokationspunkten $y_n$ verschwindet,
+$$
     R(y_n) = 0 \quad\text{bzw.}\quad f_N(y_n) = f(y_n).
-\end{equation}
-Die Anzahl der Kollokationspunkte muss hier der Anzahl der Koeffizienten in der Reihenentwicklung entsprechen. Die Wahl der idealen Kollokationspunkte $y_n$ selbst ist nicht-trivial, und wir werden hier nur spezifische Fälle besprechen.
+$$
+Die Anzahl der Kollokationspunkte muss hier der Anzahl der Koeffizienten in der
+Reihenentwicklung entsprechen. Die Wahl der idealen Kollokationspunkte $y_n$
+selbst ist nicht-trivial, und wir werden hier nur spezifische Fälle besprechen.
 
-Als erstes Beispiel diskutieren wir hier eine Entwicklung mit $N$ finiten Elementen. Als Kollokationspunkte wählen wir die Stützstellen der Basis, $y_n=x_n$. An diesen Stützstellen ist nur eine der Basisfunktionen ungleich Null, $\varphi_n(y_n)=1$ und $\varphi_n(y_k)=0$ falls $n\not=k$. Damit führt die Bedingung
-\begin{equation}
+Als erstes Beispiel diskutieren wir hier eine Entwicklung mit $N$ finiten
+Elementen. Als Kollokationspunkte wählen wir die Stützstellen der Basis,
+$y_n=x_n$. An diesen Stützstellen ist nur eine der Basisfunktionen ungleich
+Null, $\varphi_n(y_n)=1$ und $\varphi_n(y_k)=0$ falls $n\not=k$. Damit führt
+die Bedingung
+$$
     R(y_n) = 0
-\end{equation}
+$$
 trivial zu
-\begin{equation}
+$$
     a_n = f(y_n).
-\end{equation}
-Die Koeffizienten $a_n$ sind also durch den Funktionswert der zu approximierenden Funktion am Kollokationspunkt gegeben. Die Approximation ist damit eine stückweise lineare Funktion zwischen den Funktionswerten von $f(x)$.
+$$
+Die Koeffizienten $a_n$ sind also durch den Funktionswert der zu
+approximierenden Funktion am Kollokationspunkt gegeben. Die Approximation ist
+damit eine stückweise lineare Funktion zwischen den Funktionswerten von $f(x)$.
 
-Als zweites Beispiel diskutieren wir hier eine Fourier-Reihe mit entsprechenden $2N+1$ Fourier-Basisfunktionen, 
-\begin{equation}
+Als zweites Beispiel diskutieren wir hier eine Fourier-Reihe mit entsprechenden
+$2N+1$ Fourier-Basisfunktionen, 
+$$
     \varphi_n(x) = \exp\left( i q_n x \right).
-\end{equation}
+$$
 Im Rahmen einer Kollokationsmethode, verlangen wir, dass das Residuum auf $2N+1$ äquidistanten Punkten verschwindet, $R(y_n)=0$ mit
-\begin{equation}
+$$
     y_n = n L / (2N+1).
-\end{equation}
+$$
 Die Bedingung dafür lautet dann
-\begin{equation}
+$$
     \sum_{k=-N}^{N} a_k \exp\left(i q_k y_n\right)
     =
     \sum_{k=-N}^{N} a_k \exp\left(i 2\pi \frac{k n}{2N+1}\right)
     =
     f(y_n).
     \label{eq:fourier-collocation}
-\end{equation}
-Gleichungen~\eqref{eq:fourier-collocation} können nun nach $a_k$ aufgelöst werden. Wir nutzen dazu, dass für äquidistanter Kollokationspunkte die Fourier-Matrix $W_{kn}=\exp(i2\pi kn/(2N+1))$ (bis auf einen Faktor) unitär ist, d.h. ihr Inverses ist durch die Adjungierte gegeben: $\sum_n W_{kn} W_{nl}^* = (2N+1)\delta_{kl}$.
+$$
+Gleichungen~\eqref{eq:fourier-collocation} können nun nach $a_k$ aufgelöst
+werden. Wir nutzen dazu, dass für äquidistanter Kollokationspunkte die
+Fourier-Matrix $W_{kn}=\exp(i2\pi kn/(2N+1))$ (bis auf einen Faktor) unitär
+ist, d.h. ihr Inverses ist durch die Adjungierte gegeben: $\sum_n W_{kn}
+W_{nl}^* = (2N+1)\delta_{kl}$.
 Wir können also Gl.~\eqref{eq:fourier-collocation} mit $W_{nl}^*$ multiplizieren und über $n$ summieren. Dies ergibt
-\begin{equation}
+$$
     \sum_{n=-N}^{N}
     \sum_{k=-N}^{N}
     a_k \exp\left[i 2\pi \frac{(k - l) n}{2N+1}\right]
@@ -115,30 +141,35 @@ Wir können also Gl.~\eqref{eq:fourier-collocation} mit $W_{nl}^*$ multipliziere
     \delta_{kl}
     =
     N a_l
-\end{equation}
+$$
 %    =
 %    \sum_{n=-N}^{N}
 %    f(y_n)
 %    \exp\left(-i 2\pi \frac{l n}{2N+1}\right),
 wobei
-\begin{equation}
+$$
     \sum_{n=-N}^{N}
     \exp\left[i 2\pi \frac{(k - l) n}{2N+1}\right]
     =
     (2N+1)\delta_{kl}
-\end{equation}
+$$
 genutzt wurde. Damit können die Koeffizienten als
-\begin{equation}
+$$
     a_l
     =
     \frac{1}{2N+1}
     \sum_{n=-N}^{N}
     f\left(\frac{nL}{2N+1}\right)
     \exp\left(-i 2\pi \frac{l n}{2N+1}\right),
-\end{equation}
-bestimmt werden. Dies ist die \emph{diskrete Fourier-Transformation} der auf den Kollokationspunkten diskretisierten Funktion $f(y_n)$.
+$$
+bestimmt werden. Dies ist die \emph{diskrete Fourier-Transformation} der auf
+den Kollokationspunkten diskretisierten Funktion $f(y_n)$.
 
-Als einfaches Beispiel zeigen wir hier Approximation der Beispielfunktion $f(x)=\sin(2\pi x)^3 + \cos(6\pi(x^2-1/2))$ mit Hilfe der Fourier-Basis und der finiten Elemente. Abbildung~\ref{fig:example-collocation} zeigt diese Approximation für $2N+1=5$ und $2N+1=11$ Basisfunktionen mit äquidistanten Kollokationspunkten.
+Als einfaches Beispiel zeigen wir hier Approximation der Beispielfunktion
+$f(x)=\sin(2\pi x)^3 + \cos(6\pi(x^2-1/2))$ mit Hilfe der Fourier-Basis und der
+finiten Elemente. Abbildung~\ref{fig:example-collocation} zeigt diese
+Approximation für $2N+1=5$ und $2N+1=11$ Basisfunktionen mit äquidistanten
+Kollokationspunkten.
 
 \begin{figure}
 \ifpdf
@@ -156,69 +187,108 @@ Als einfaches Beispiel zeigen wir hier Approximation der Beispielfunktion $f(x)=
         \includegraphics[width=1.5\textwidth,natwidth=509,natheight=223]{Figures/coll11}
     \end{subfigure}
 \fi
-    \caption{Approximation der auf dem Interval $[0,1]$ periodischen Funktion $f(x)=\sin(2\pi x)^3 + \cos(6\pi(x^2-1/2))$ mit einer Fourier-Basis und finiten Elementen. Es wurde jeweils $5$ (oben) und $11$ (unten) Basisfunktionen genutzt. Die Koeffizienten wurden mit der Kollokationsmethode bestimmt. Die runden Punkte zeigen die Kollokationspunkte. Beide Approximationen laufen exakt durch diese Kollokationspunkte. (Der rechte Kollokationspunkt ist auf Grund der Periodizität identisch zum linken.) Die Approximation mit $N=5$ Basisfunktionen kann die beiden rechten Oszillationen der Zielfunktion $f(x)$ in beiden Fällen nicht abbilden.}
+    \caption{Approximation der auf dem Interval $[0,1]$ periodischen Funktion
+$f(x)=\sin(2\pi x)^3 + \cos(6\pi(x^2-1/2))$ mit einer Fourier-Basis und finiten
+Elementen. Es wurde jeweils $5$ (oben) und $11$ (unten) Basisfunktionen
+genutzt. Die Koeffizienten wurden mit der Kollokationsmethode bestimmt. Die
+runden Punkte zeigen die Kollokationspunkte. Beide Approximationen laufen exakt
+durch diese Kollokationspunkte. (Der rechte Kollokationspunkt ist auf Grund der
+Periodizität identisch zum linken.) Die Approximation mit $N=5$ Basisfunktionen
+kann die beiden rechten Oszillationen der Zielfunktion $f(x)$ in beiden Fällen
+nicht abbilden.}
     \label{fig:example-collocation}
 \end{figure}
 
-Die Abbildung zeigt, dass alle Approximationen, wie von der Kollokationsbedingung verlangt, exakt durch die Kollokationspunkte laufen. Zwischen den Kollokationspunkten \emph{interpolieren} die beiden Ansätze unterschiedlich. Die finiten Elementen führen zu einer linearen Interpolation zwischen den Punkten. Die Fourier-Basis ist komplizierter. Der Kurvenverlauf zwischen den Kollokationspunkten wird \emph{Fourier-Interpolation} genannt.
+Die Abbildung zeigt, dass alle Approximationen, wie von der
+Kollokationsbedingung verlangt, exakt durch die Kollokationspunkte laufen.
+Zwischen den Kollokationspunkten \emph{interpolieren} die beiden Ansätze
+unterschiedlich. Die finiten Elementen führen zu einer linearen Interpolation
+zwischen den Punkten. Die Fourier-Basis ist komplizierter. Der Kurvenverlauf
+zwischen den Kollokationspunkten wird \emph{Fourier-Interpolation} genannt.
 
-\section{Gewichtete Residuen}
+## Gewichtete Residuen
 \label{sec:weighted-residuals}
 
-Wir möchten nun die Kollokationsmethode verallgemeinern. Hierzu führen wir das Konzept der \emph{Testfunktion} ein. Anstelle zu verlangen, dass das Residuum an individuellen Punkten verschwindet, verlangen wir, dass das Skalarprodukt
-\begin{equation}
+Wir möchten nun die Kollokationsmethode verallgemeinern. Hierzu führen wir das
+Konzept der \emph{Testfunktion} ein. Anstelle zu verlangen, dass das Residuum
+an individuellen Punkten verschwindet, verlangen wir, dass das Skalarprodukt
+$$
     (v, R) = 0
     \label{eq:test-function}
-\end{equation}
-mit einer Funktion $v(x)$ verschwindet. Wenn Gl.~\eqref{eq:test-function} für jede beliebigen Testfunktion $v(x)$ verschwindet, dann ist die ``schwache'' Formulierung Gl.~\eqref{eq:test-function} identisch zur starken Formulierung $R(x)=0$. Gleichung~\eqref{eq:test-function} heißt ``schwache'' Formulierung, weil die Bedingung nur im integralen Sinne erfüllt ist. Insbesondere wird in Kapitel~9 gezeigt, dass diese schwache Formulierung zu einer schwachen \emph{Lösung} (engl. ``weak solution'') führt, die die ursprüngliche (starke) PDGL nicht in jedem Punkt erfüllen kann. Die Bedingung~\eqref{eq:test-function} wird oft unter dem Begriff der \emph{gewichteten Residuen} subsumiert.
+$$
+mit einer Funktion $v(x)$ verschwindet. Wenn Gl.~\eqref{eq:test-function} für
+jede beliebigen Testfunktion $v(x)$ verschwindet, dann ist die ``schwache''
+Formulierung Gl.~\eqref{eq:test-function} identisch zur starken Formulierung
+$R(x)=0$. Gleichung~\eqref{eq:test-function} heißt ``schwache'' Formulierung,
+weil die Bedingung nur im integralen Sinne erfüllt ist. Insbesondere wird in
+Kapitel~9 gezeigt, dass diese schwache Formulierung zu einer schwachen
+\emph{Lösung} (engl. ``weak solution'') führt, die die ursprüngliche (starke)
+PDGL nicht in jedem Punkt erfüllen kann. Die Bedingung~\eqref{eq:test-function}
+wird oft unter dem Begriff der \emph{gewichteten Residuen} subsumiert.
 
 Ein spezieller Satz an Testfunktion führt direkt zur Kollokationsmethode. Wir wählen den Satz von $N$ Testfunktionen
-\begin{equation}
-    v_n(x) = \delta(x-y_n)
-    \label{eq:colloctest}
-\end{equation}
-wobei $\delta(x)$ die Diracsche $\delta$-Funktion ist und $y_n$ die Kollokationspunkte. Die Bedingung $(v_n,R)=0$ für alle $n\in[0,N-1]$ führt direkt zur Kollokationsbedingung $R(y_x)=0$.
+$$
+  v_n(x) = \delta(x-y_n)
+  \label{eq:colloctest}
+$$
+wobei $\delta(x)$ die Diracsche $\delta$-Funktion ist und $y_n$ die
+Kollokationspunkte. Die Bedingung $(v_n,R)=0$ für alle $n\in[0,N-1]$ führt
+direkt zur Kollokationsbedingung $R(y_x)=0$.
 
-\begin{note}
-    Die Diracsche $\delta$-Funktion sollte aus Vorlesungen zur Signalverarbeitung bekannt sein. Die wichtigste Eigenschaft dieser Funktion ist die Filtereigenschaft,
-    \begin{equation}
-        \int_{-\infty}^{\infty} \dif x\, f(x) \delta(x-x_0) = f(x_0),
-    \end{equation}
-    also das Integral über das Produkt der $\delta$-Funktion ergibt den Funktionswert, bei dem das Argument der $\delta$-Funktion verschwindet. Hieraus folgen alle weiteren Eingenschaften, z.B.
-    \begin{equation}
-        \int\dif x\, \delta(x) = \Theta(x),
-    \end{equation}
-    wobei $\theta(x)$ die (Heaviside-)Stufenfunktion ist.
-\end{note}
+<div class="graybox">
+Die Diracsche $\delta$-Funktion sollte aus Vorlesungen zur Signalverarbeitung
+bekannt sein. Die wichtigste Eigenschaft dieser Funktion ist die
+Filtereigenschaft,
+$$
+  \int_{-\infty}^{\infty} \dif x\, f(x) \delta(x-x_0) = f(x_0),
+$$
+also das Integral über das Produkt der $\delta$-Funktion ergibt den
+Funktionswert, bei dem das Argument der $\delta$-Funktion verschwindet. Hieraus
+folgen alle weiteren Eingenschaften, z.B.
+$$
+  \int\dif x\, \delta(x) = \Theta(x),
+$$
+wobei $\theta(x)$ die (Heaviside-)Stufenfunktion ist.
+<div>
 
-\section{Galerkin-Methode}
+## Galerkin-Methode
 
 \video{https://uni-freiburg.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=697b4e0d-37c0-45e6-a958-aca8010a16c3}
 
-Die Galerkin-Methode basiert auf der Idee, als Testfunktionen die Basisfunktionen $\varphi_n$ der Reihenentwicklung zu verwenden. Dies führt zu den $N$ Bedingungen
-\begin{equation}
+Die Galerkin-Methode basiert auf der Idee, als Testfunktionen die
+Basisfunktionen $\varphi_n$ der Reihenentwicklung zu verwenden. Dies führt zu
+den $N$ Bedingungen
+$$
     (\varphi_n, R) = 0,
     \label{eq:galerkinortho}
-\end{equation}
+$$
 bzw.
-\begin{equation}
+$$
     (\varphi_n, f_N) = (\varphi_n, f).
-\end{equation}
+$$
 
 Für einen orthogonalen Satz von Basisfunktionen erhält man direkt
-\begin{equation}
+$$
     a_n = \frac{(\varphi_n, f)}{(\varphi_n, \varphi_n)}.
-\end{equation}
+$$
 Dieser Ansatz wurde bereits in Abschnitt~\ref{sec:basis-functions} diskutiert.
 
-Für einen nicht-orthogonalen Basissatz, z.B. der Basis der finiten Elemente, erhält man ein lineares Gleichungssystem,
-\begin{equation}
+Für einen nicht-orthogonalen Basissatz, z.B. der Basis der finiten Elemente,
+erhält man ein lineares Gleichungssystem,
+$$
     \sum_{m=0}^N (\varphi_n,\varphi_m) a_m = (\varphi_n, f),
     \label{eq:galerkin-coefficients}
-\end{equation}
-wobei die Matrix $A_{nm}=(\varphi_n,\varphi_m)$ für die finiten Elemente dünnbesetzt ist.
+$$
+wobei die Matrix $A_{nm}=(\varphi_n,\varphi_m)$ für die finiten Elemente
+dünnbesetzt ist.
 
-Wir wollen nun wieder zu unserer Beispielfunktion $f(x)=\sin(2\pi x)^3 + \cos(6\pi(x^2-1/2))$ zurückkommen. Abbildung~\ref{fig:example-collocation} zeigt die Approximation dieser Funktion mit Fourier und finite Elemente Basissätzen und der Galerkin-Methode. Es gibt keine Kollokationspunkte und die Approximation mit Hilfe der finiten Elemente stimmt auch nicht an den Stützstellen exakt mit der zu approximierenden Funktion überein. Die Funktion wird nur im integralen Sinne approximiert.
+Wir wollen nun wieder zu unserer Beispielfunktion $f(x)=\sin(2\pi x)^3 +
+\cos(6\pi(x^2-1/2))$ zurückkommen. Abbildung~\ref{fig:example-collocation}
+zeigt die Approximation dieser Funktion mit Fourier und finite Elemente
+Basissätzen und der Galerkin-Methode. Es gibt keine Kollokationspunkte und die
+Approximation mit Hilfe der finiten Elemente stimmt auch nicht an den
+Stützstellen exakt mit der zu approximierenden Funktion überein. Die Funktion
+wird nur im integralen Sinne approximiert.
 
 \begin{figure}
 \ifpdf
@@ -236,22 +306,33 @@ Wir wollen nun wieder zu unserer Beispielfunktion $f(x)=\sin(2\pi x)^3 + \cos(6\
         \includegraphics[width=1.5\textwidth,natwidth=509,natheight=215]{Figures/gal11}
     \end{subfigure}
 \fi
-    \caption{Approximation der auf dem Interval $[0,1]$ periodischen Funktion $f(x)=\sin(2\pi x)^3 + \cos(6\pi(x^2-1/2))$ mit einer Fourier-Basis und finiten Elementen. Es wurde jeweils $5$ (oben) und $11$ (unten) Basisfunktionen genutzt. Die Koeffizienten wurde mit Hilfe der Galerkinmethode bestimmt. Die Approximation mit $5$ Basisfunktionen kann die beiden rechten Oszillationen der Zielfunktion $f(x)$ in beiden Fällen nicht abbilden.}
+    \caption{Approximation der auf dem Interval $[0,1]$ periodischen Funktion
+$f(x)=\sin(2\pi x)^3 + \cos(6\pi(x^2-1/2))$ mit einer Fourier-Basis und finiten
+Elementen. Es wurde jeweils $5$ (oben) und $11$ (unten) Basisfunktionen
+genutzt. Die Koeffizienten wurde mit Hilfe der Galerkinmethode bestimmt. Die
+Approximation mit $5$ Basisfunktionen kann die beiden rechten Oszillationen der
+Zielfunktion $f(x)$ in beiden Fällen nicht abbilden.}
     \label{fig:example-collocation}
 \end{figure}
 
-\begin{note}
-    Die Galerkin-Bedingung (siehe auch Gl.~\eqref{eq:galerkinortho})
-    \begin{equation}
-        (\varphi_n, R) = 0,
-    \end{equation}
-    bedeutet, dass das Residuum \emph{orthogonal} zu allen Basisfunktionen ist. Anders ausgedrückt, im Residuum können nur noch Beiträge zur Funktion vorkommen, die nicht mit dem gegeben Basissatz abgebildet werden können. Das heißt aber auch, dass wir durch Erweiterung des Basissatzes unsere Lösung systematisch verbessern können.
-\end{note}
+<div class="graybox">
+Die Galerkin-Bedingung (siehe auch Gl.~\eqref{eq:galerkinortho})
+$$
+    (\varphi_n, R) = 0,
+$$
+bedeutet, dass das Residuum \emph{orthogonal} zu allen Basisfunktionen ist.
+Anders ausgedrückt, im Residuum können nur noch Beiträge zur Funktion
+vorkommen, die nicht mit dem gegeben Basissatz abgebildet werden können. Das
+heißt aber auch, dass wir durch Erweiterung des Basissatzes unsere Lösung
+systematisch verbessern können.
+<div>
 
-\section{Minimales Fehlerquadrat}
+## Minimales Fehlerquadrat
 
-Ein alternativer Ansatz zur Approximation ist es, das Fehlerquadrat des Residuums, $(R, R)$, zu minimieren. Für eine allgemeine Reihenentwicklung mit $N$ Basisfunktionen erhält man
-\begin{equation}
+Ein alternativer Ansatz zur Approximation ist es, das Fehlerquadrat des
+Residuums, $(R, R)$, zu minimieren. Für eine allgemeine Reihenentwicklung mit
+$N$ Basisfunktionen erhält man
+$$
     \begin{split}
         (R, R)
         &=
@@ -259,15 +340,13 @@ Ein alternativer Ansatz zur Approximation ist es, das Fehlerquadrat des Residuum
         &=
         (f, f) + \sum_{n=0}^N \sum_{m=0}^N a_n^* a_m (\varphi_n, \varphi_m) - \sum_{n=0}^N a_n^* (\varphi_n, f) - \sum_{n=0}^N a_n (f, \varphi_n).
     \end{split}
-\end{equation}
+$$
 Diese Fehlerquadrat ist dann minimiert, wenn
-\begin{equation}
+$$
     \frac{\partial (R,R)}{\partial a_k} = \sum_{n=0}^N a_n^* (\varphi_n, \varphi_k) - (f, \varphi_k) = 0
-\end{equation}
+$$
 und
-\begin{equation}
+$$
     \frac{\partial (R,R)}{\partial a^*_k} = \sum_{n=0}^N a_n (\varphi_k, \varphi_n) - (\varphi_k, f) = 0.
-\end{equation}
+$$
 Dieser Ausdruck ist identisch zu Gl.~\eqref{eq:galerkin-coefficients} der Galerkin-Methode.
-
-%\input{footer.tex}
