@@ -177,9 +177,11 @@ Kollokationspunkten.
 
 <figure>
   <img src="{{ site.baseurl }}/figs/col5.png" alt="Collocation5">
+</figure>
+<figure>
   <img src="{{ site.baseurl }}/figs/col11.png" alt="Collocation11">
-  <figcaption align="center">Abbildung 5.1: Approximation der auf dem Interval
-   $$0,1]$$ periodischen Funktion $$f(x)=\sin(2\pi x)^3 + \cos(6\pi(x^2-1/2))$$ mit
+  <figcaption align="center"> Abbildung 5.1: Approximation der auf dem Interval
+   \([0,1]\) periodischen Funktion $$f(x)=\sin(2\pi x)^3 + \cos(6\pi(x^2-1/2))$$ mit
    einer Fourier-Basis und finiten Elementen. Es wurde jeweils $$5$$ (oben) und $$11$$
    (unten) Basisfunktionen genutzt. Die Koeffizienten wurden mit der
    Kollokationsmethode bestimmt. Die runden Punkte zeigen die Kollokationspunkte.
@@ -283,6 +285,8 @@ wird nur im integralen Sinne approximiert.
 
 <figure>
   <img src="{{ site.baseurl }}/figs/gal5.png" alt="Galerkin5">
+</figure>
+<figure>
   <img src="{{ site.baseurl }}/figs/gal11.png" alt="Galerkin11">
   <figcaption align="center">Abbildung 5.2: Approximation der auf dem Interval
    $$[0,1]$$ periodischen Funktion $$f(x)=\sin(2\pi x)^3 + \cos(6\pi(x^2-1/2))$$ mit
