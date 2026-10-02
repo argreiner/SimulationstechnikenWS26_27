@@ -58,7 +58,7 @@ $$
     f_N(x) = \sum_{n=0}^N a_n \varphi_n(x),
 $$
 
-wobei die $$varphi_n(x)$$ die im vorherigen Kapitel eingeführten Basisfunktionen
+wobei die $$\varphi_n(x)$$ die im vorherigen Kapitel eingeführten Basisfunktionen
 sind.
 
 Wir wollen uns nun der Frage nähern, wie wir ein beliebige Funktion $$f(x)$$ über
@@ -70,7 +70,7 @@ $$
 $$
 
 welches an jedem Punkt $$x$$ verschwindet wenn $$f_N(x)\equiv f(x)$$ Für eine
-Approximation wollen wir dieses Residuum ``minimieren''. (Mit minimieren ist
+Approximation wollen wir dieses Residuum "minimieren". (Mit minimieren ist
 hier gemeint, es möglichst nah an Null zu bringen.) Wir suchen also die
 Koeffizienten $$a_n$$ der Reihenentwicklung, welche die Funktion $$f(x)$$ im Sinne
 einer Minimierung des Residuums approximiert.
@@ -84,7 +84,7 @@ verwandt werden.
 
 \video{https://uni-freiburg.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=0a7985a2-0753-4d29-83fe-aca8010a16f2}
 
-Als erste Minimierungsstrategie wird hier die \emph{Kollokation} eingeführt. In
+Als erste Minimierungsstrategie wird hier die *Kollokation* eingeführt. In
 diese Methode wird verlangt, dass das Residuum an ausgewählten
 Kollokationspunkten $$y_n$$ verschwindet,
 $$
@@ -97,7 +97,7 @@ selbst ist nicht-trivial, und wir werden hier nur spezifische Fälle besprechen.
 Als erstes Beispiel diskutieren wir hier eine Entwicklung mit $$N$$ finiten
 Elementen. Als Kollokationspunkte wählen wir die Stützstellen der Basis,
 $$y_n=x_n$$ An diesen Stützstellen ist nur eine der Basisfunktionen ungleich
-Null, $$varphi_n(y_n)=1$$ und $$varphi_n(y_k)=0$$ falls $$n\not=k$$ Damit führt
+Null, $$\varphi_n(y_n)=1$$ und $$\varphi_n(y_k)=0$$ falls $$n\not=k$$ Damit führt
 die Bedingung
 $$
     R(y_n) = 0
@@ -166,7 +166,7 @@ $$
     f\left(\frac{nL}{2N+1}\right)
     \exp\left(-i 2\pi \frac{l n}{2N+1}\right),
 $$
-bestimmt werden. Dies ist die \emph{diskrete Fourier-Transformation} der auf
+bestimmt werden. Dies ist die *diskrete Fourier-Transformation* der auf
 den Kollokationspunkten diskretisierten Funktion $$f(y_n)$$
 
 Als einfaches Beispiel zeigen wir hier Approximation der Beispielfunktion
@@ -181,43 +181,43 @@ Kollokationspunkten.
 <figure>
   <img src="{{ site.baseurl }}/figs/col11.png" alt="Collocation11">
   <figcaption align="center"> Abbildung 5.1: Approximation der auf dem Interval
-   \([0,1]\) periodischen Funktion $$f(x)=\sin(2\pi x)^3 + \cos(6\pi(x^2-1/2))$$ mit
-   einer Fourier-Basis und finiten Elementen. Es wurde jeweils $$5$$ (oben) und $$11$$
+   \([0,1]\) periodischen Funktion \(f(x)=\sin(2\pi x)^3 + \cos(6\pi(x^2-1/2))\) mit
+   einer Fourier-Basis und finiten Elementen. Es wurde jeweils \(5\) (oben) und \(11\)
    (unten) Basisfunktionen genutzt. Die Koeffizienten wurden mit der
    Kollokationsmethode bestimmt. Die runden Punkte zeigen die Kollokationspunkte.
    Beide Approximationen laufen exakt durch diese Kollokationspunkte. (Der rechte
    Kollokationspunkt ist auf Grund der Periodizität identisch zum linken.) Die
-   Approximation mit $$N=5$$ Basisfunktionen kann die beiden rechten Oszillationen
-   der Zielfunktion $$f(x)$$ in beiden Fällen nicht abbilden.
-  <figcaption>
+   Approximation mit \(N=5\) Basisfunktionen kann die beiden rechten Oszillationen
+   der Zielfunktion \(f(x)\) in beiden Fällen nicht abbilden.
+  </figcaption>
 </figure>
 
 Die Abbildung zeigt, dass alle Approximationen, wie von der
 Kollokationsbedingung verlangt, exakt durch die Kollokationspunkte laufen.
-Zwischen den Kollokationspunkten \emph{interpolieren} die beiden Ansätze
+Zwischen den Kollokationspunkten *interpolieren* die beiden Ansätze
 unterschiedlich. Die finiten Elementen führen zu einer linearen Interpolation
 zwischen den Punkten. Die Fourier-Basis ist komplizierter. Der Kurvenverlauf
-zwischen den Kollokationspunkten wird \emph{Fourier-Interpolation} genannt.
+zwischen den Kollokationspunkten wird *Fourier-Interpolation* genannt.
 
 ## Gewichtete Residuen
 \label{sec:weighted-residuals}
 
 Wir möchten nun die Kollokationsmethode verallgemeinern. Hierzu führen wir das
-Konzept der \emph{Testfunktion} ein. Anstelle zu verlangen, dass das Residuum
+Konzept der *Testfunktion* ein. Anstelle zu verlangen, dass das Residuum
 an individuellen Punkten verschwindet, verlangen wir, dass das Skalarprodukt
 $$
     (v, R) = 0
     \label{eq:test-function}
 $$
 mit einer Funktion $$v(x)$$ verschwindet. Wenn Gl.~\eqref{eq:test-function} für
-jede beliebigen Testfunktion $$v(x)$$ verschwindet, dann ist die ``schwache''
+jede beliebigen Testfunktion $$v(x)$$ verschwindet, dann ist die "schwache"
 Formulierung Gl.~\eqref{eq:test-function} identisch zur starken Formulierung
-$$R(x)=0$$ Gleichung~\eqref{eq:test-function} heißt ``schwache'' Formulierung,
+$$R(x)=0$$ Gleichung~\eqref{eq:test-function} heißt "schwache" Formulierung,
 weil die Bedingung nur im integralen Sinne erfüllt ist. Insbesondere wird in
 Kapitel~9 gezeigt, dass diese schwache Formulierung zu einer schwachen
-\emph{Lösung} (engl. ``weak solution'') führt, die die ursprüngliche (starke)
+*Lösung* (engl. "weak solution") führt, die die ursprüngliche (starke)
 PDGL nicht in jedem Punkt erfüllen kann. Die Bedingung~\eqref{eq:test-function}
-wird oft unter dem Begriff der \emph{gewichteten Residuen} subsumiert.
+wird oft unter dem Begriff der *gewichteten Residuen* subsumiert.
 
 Ein spezieller Satz an Testfunktion führt direkt zur Kollokationsmethode. Wir wählen den Satz von $$N$$ Testfunktionen
 $$
@@ -295,7 +295,7 @@ wird nur im integralen Sinne approximiert.
    Galerkinmethode bestimmt. Die Approximation mit $$5$$ Basisfunktionen kann die
    beiden rechten Oszillationen der Zielfunktion $$f(x)$$ in beiden Fällen nicht
    abbilden.
-  <figcaption>
+  </figcaption>
 </figure>
 
 <div class="graybox">
@@ -303,7 +303,7 @@ Die Galerkin-Bedingung (siehe auch Gl.~\eqref{eq:galerkinortho})
 $$
     (\varphi_n, R) = 0,
 $$
-bedeutet, dass das Residuum \emph{orthogonal} zu allen Basisfunktionen ist.
+bedeutet, dass das Residuum *orthogonal* zu allen Basisfunktionen ist.
 Anders ausgedrückt, im Residuum können nur noch Beiträge zur Funktion
 vorkommen, die nicht mit dem gegeben Basissatz abgebildet werden können. Das
 heißt aber auch, dass wir durch Erweiterung des Basissatzes unsere Lösung
