@@ -227,19 +227,19 @@ Kollokationspunkte. Die Bedingung $$v_n,R)=0$$ für alle $$n\in[0,N-1]$$ führt
 direkt zur Kollokationsbedingung $$R(y_x)=0$$
 
 <div class="graybox">
-Die Diracsche $$delta$$Funktion sollte aus Vorlesungen zur Signalverarbeitung
+Die Diracsche \(delta\) Funktion sollte aus Vorlesungen zur Signalverarbeitung
 bekannt sein. Die wichtigste Eigenschaft dieser Funktion ist die
 Filtereigenschaft,
 $$
-  \int_{-\infty}^{\infty} \dif x\, f(x) \delta(x-x_0) = f(x_0),
+  \int_{-\infty}^{\infty} \dif x\, f(x) \delta(x-x_0) = f/(x_0),
 $$
-also das Integral über das Produkt der $$delta$$-Funktion ergibt den
-Funktionswert, bei dem das Argument der $$\delta$$-Funktion verschwindet. Hieraus
+also das Integral über das Produkt der \(\delta\)-Funktion ergibt den
+Funktionswert, bei dem das Argument der \(\delta\)-Funktion verschwindet. Hieraus
 folgen alle weiteren Eingenschaften, z.B.
 $$
   \int\dif x\, \delta(x) = \Theta(x),
 $$
-wobei $$\theta(x)$$ die (Heaviside-)Stufenfunktion ist.
+wobei \(\theta(x)\) die (Heaviside-)Stufenfunktion ist.
 </div>
 
 ## Galerkin-Methode
