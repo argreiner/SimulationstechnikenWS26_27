@@ -171,33 +171,20 @@ finiten Elemente. Abbildung~\ref{fig:example-collocation} zeigt diese
 Approximation für $2N+1=5$ und $2N+1=11$ Basisfunktionen mit äquidistanten
 Kollokationspunkten.
 
-\begin{figure}
-\ifpdf
-    \begin{subfigure}[b]{\textwidth}
-        \includegraphics[width=\textwidth]{Figures/coll5}
-    \end{subfigure}
-    \begin{subfigure}[b]{\textwidth}
-        \includegraphics[width=\textwidth]{Figures/coll11}
-    \end{subfigure}
-\else
-    \begin{subfigure}[b]{\textwidth}
-        \includegraphics[width=1.5\textwidth,natwidth=509,natheight=217]{Figures/coll5}
-    \end{subfigure}
-    \begin{subfigure}[b]{\textwidth}
-        \includegraphics[width=1.5\textwidth,natwidth=509,natheight=223]{Figures/coll11}
-    \end{subfigure}
-\fi
-    \caption{Approximation der auf dem Interval $[0,1]$ periodischen Funktion
-$f(x)=\sin(2\pi x)^3 + \cos(6\pi(x^2-1/2))$ mit einer Fourier-Basis und finiten
-Elementen. Es wurde jeweils $5$ (oben) und $11$ (unten) Basisfunktionen
-genutzt. Die Koeffizienten wurden mit der Kollokationsmethode bestimmt. Die
-runden Punkte zeigen die Kollokationspunkte. Beide Approximationen laufen exakt
-durch diese Kollokationspunkte. (Der rechte Kollokationspunkt ist auf Grund der
-Periodizität identisch zum linken.) Die Approximation mit $N=5$ Basisfunktionen
-kann die beiden rechten Oszillationen der Zielfunktion $f(x)$ in beiden Fällen
-nicht abbilden.}
-    \label{fig:example-collocation}
-\end{figure}
+<figure>
+  <img src="{{ site.baseurl }}/figs/col5.png" alt="Collocation5">
+  <img src="{{ site.baseurl }}/figs/col11.png" alt="Collocation11">
+  <figcaption align="center">Abbildung 5.1: Approximation der auf dem Interval
+   $[0,1]$ periodischen Funktion $f(x)=\sin(2\pi x)^3 + \cos(6\pi(x^2-1/2))$ mit
+   einer Fourier-Basis und finiten Elementen. Es wurde jeweils $5$ (oben) und $11$
+   (unten) Basisfunktionen genutzt. Die Koeffizienten wurden mit der
+   Kollokationsmethode bestimmt. Die runden Punkte zeigen die Kollokationspunkte.
+   Beide Approximationen laufen exakt durch diese Kollokationspunkte. (Der rechte
+   Kollokationspunkt ist auf Grund der Periodizität identisch zum linken.) Die
+   Approximation mit $N=5$ Basisfunktionen kann die beiden rechten Oszillationen
+   der Zielfunktion $f(x)$ in beiden Fällen nicht abbilden.
+  <figcaption>
+</figure>
 
 Die Abbildung zeigt, dass alle Approximationen, wie von der
 Kollokationsbedingung verlangt, exakt durch die Kollokationspunkte laufen.
@@ -290,30 +277,18 @@ Approximation mit Hilfe der finiten Elemente stimmt auch nicht an den
 Stützstellen exakt mit der zu approximierenden Funktion überein. Die Funktion
 wird nur im integralen Sinne approximiert.
 
-\begin{figure}
-\ifpdf
-    \begin{subfigure}[b]{\textwidth}
-        \includegraphics[width=\textwidth]{Figures/gal5}
-    \end{subfigure}
-    \begin{subfigure}[b]{\textwidth}
-        \includegraphics[width=\textwidth]{Figures/gal11}
-    \end{subfigure}
-\else
-    \begin{subfigure}[b]{\textwidth}
-        \includegraphics[width=1.5\textwidth,natwidth=509,natheight=217]{Figures/gal5}
-    \end{subfigure}
-    \begin{subfigure}[b]{\textwidth}
-        \includegraphics[width=1.5\textwidth,natwidth=509,natheight=215]{Figures/gal11}
-    \end{subfigure}
-\fi
-    \caption{Approximation der auf dem Interval $[0,1]$ periodischen Funktion
-$f(x)=\sin(2\pi x)^3 + \cos(6\pi(x^2-1/2))$ mit einer Fourier-Basis und finiten
-Elementen. Es wurde jeweils $5$ (oben) und $11$ (unten) Basisfunktionen
-genutzt. Die Koeffizienten wurde mit Hilfe der Galerkinmethode bestimmt. Die
-Approximation mit $5$ Basisfunktionen kann die beiden rechten Oszillationen der
-Zielfunktion $f(x)$ in beiden Fällen nicht abbilden.}
-    \label{fig:example-collocation}
-\end{figure}
+<figure>
+  <img src="{{ site.baseurl }}/figs/gal5.png" alt="Galerkin5">
+  <img src="{{ site.baseurl }}/figs/gal11.png" alt="Galerkin11">
+  <figcaption align="center">Abbildung 5.2: Approximation der auf dem Interval
+   $[0,1]$ periodischen Funktion $f(x)=\sin(2\pi x)^3 + \cos(6\pi(x^2-1/2))$ mit
+   einer Fourier-Basis und finiten Elementen. Es wurde jeweils $5$ (oben) und $11$
+   (unten) Basisfunktionen genutzt. Die Koeffizienten wurde mit Hilfe der
+   Galerkinmethode bestimmt. Die Approximation mit $5$ Basisfunktionen kann die
+   beiden rechten Oszillationen der Zielfunktion $f(x)$ in beiden Fällen nicht
+   abbilden.
+  <figcaption>
+</figure>
 
 <div class="graybox">
 Die Galerkin-Bedingung (siehe auch Gl.~\eqref{eq:galerkinortho})
