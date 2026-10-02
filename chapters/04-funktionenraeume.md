@@ -256,11 +256,11 @@ einfachen Zugang zu den Koeffizienten einer Reihenentwicklung liefern.
 ### Vektoren
 
 Zur Einführung erinnern wir an die üblichen kartesischen Vektoren. Einen Vektor
-$\v{a}=(a_0, a_1, a_2)$ können wir als Linearkombination aus Basisvektoren
+$\mathbf{a}=(a_0, a_1, a_2)$ können wir als Linearkombination aus Basisvektoren
 $\hat{e}_0$, $\hat{e}_1$ und $\hat{e}_2$,
 
 $$
-    \v{a} = a_0 \hat{e}_0 + a_1 \hat{e}_1 + a_2 \hat{e}_2,
+    \mathbf{a} = a_0 \hat{e}_0 + a_1 \hat{e}_1 + a_2 \hat{e}_2,
 $$
 
 schreiben. Die Einheitsvektoren $\hat{e}_0$, $\hat{e}_1$ und $\hat{e}_2$ sind
@@ -277,17 +277,17 @@ $$
 $$
 
 wobei $\delta_{ij}$ das Kronecker-$\delta$ ist. Zwei kartesische Vektoren
-$\v{a}$ und $\v{b}$ sind orthogonal, wenn das Skalarprodukt zwischen ihnen
+$\mathbf{a}$ und $\mathbf{b}$ sind orthogonal, wenn das Skalarprodukt zwischen ihnen
 verschwindet:
 
 $$
-    \v{a}\cdot\v{b} = \sum_i a_i b_i = 0
+    \mathbf{a}\cdot\mathbf{b} = \sum_i a_i b_i = 0
     \label{eq:vecscalar}
 $$
 
 
 Mit Hilfe der Basisvektoren und dem Skalarprodukt können wir direkt die
-Komponenten erhalten: $a_i = \v{a}\cdot\hat{e}_i$. Dies ist eine direkte
+Komponenten erhalten: $a_i = \mathbf{a}\cdot\hat{e}_i$. Dies ist eine direkte
 Konsequenz der Orthogonalität der Basisvektoren $\hat{e}_i$.
 
 ### Funktionen
@@ -409,7 +409,7 @@ $$
 
 D.h. die Koordinaten sind gegeben durch die Projektion (das Skalarprodukt) der
 Funktion auf die Basisvektoren. Wir erinnern uns daran, dass auch für
-kartesische Vektoren gilt: $a_n = \v{a}\cdot\hat{e}_n$. (Der Normierungsfaktor
+kartesische Vektoren gilt: $a_n = \mathbf{a}\cdot\hat{e}_n$. (Der Normierungsfaktor
 entfällt hier, weil $\hat{e}_n\cdot\hat{e}_n=1$.) Die Koordinaten, die durch
 Gl.~\eqref{eq:coordinates} gegeben sind, sind in genau dem gleichen Kontext zu
 sehen.
@@ -544,19 +544,19 @@ $$
 Dies können wir als
 
 $$
-    (\varphi_n, f_N(x)) = \left[ \t{M}\cdot \v{a} \right]_n 
+    (\varphi_n, f_N(x)) = \left[ \mathbf{M}\cdot \mathbf{a} \right]_n 
 $$
 
-schreiben, wobei $[\v{v}]_n=v_n$ die $n$te Komponente des Vektors, welcher
+schreiben, wobei $[\mathbf{v}]_n=v_n$ die $n$te Komponente des Vektors, welcher
 durch die beiden eckigen Klammer $[\cdot]_n$ eingeschlossen wird, bezeichnet.
-Die Matrix $\t{M}$ ist *dünnbesetzt} (engl. "sparse"). Für eine
+Die Matrix $\mathbf{M}$ ist *dünnbesetzt} (engl. "sparse"). Für eine
 orthogonale Basis, wie beispielsweise die Fourier-Basis in
 Abschnitt~\ref{sec:fouirer-basis}, ist diese Matrix diagonal. Für eine Basis
 mit identischen Abständen $x_{n+1}-x_n=1$ der Stützstellen $x_n$ hat die Matrix
 die folgende Form
 
 $$
-    \t{M} = \begin{pmatrix}
+    \mathbf{M} = \begin{pmatrix}
         2/3 & 1/6 & 0 & 0 & 0 & 0 & \cdots \\
         1/6 & 2/3 & 1/6 & 0 & 0 & 0 & \cdots \\
         0 & 1/6 & 2/3 & 1/6 & 0 & 0 & \cdots \\
@@ -568,7 +568,7 @@ $$
 $$
 
 Um die Koeffizienten $a_n$ zu finden, muss also ein (dünnbesetztes) lineares
-Gleichungssystem gelöst werden. Wir werden $\t{M}$ später unter dem Namen
+Gleichungssystem gelöst werden. Wir werden $\mathbf{M}$ später unter dem Namen
 *Massematrix} wieder treffen.
 
 <div class=§graybox">
