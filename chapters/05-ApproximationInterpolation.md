@@ -187,10 +187,10 @@ Approximation für $$2N+1=5$$ und $$2N+1=11$$ Basisfunktionen mit äquidistanten
 Kollokationspunkten.
 
 <figure>
-  <img src="{{ site.baseurl }}/figs/col5.png" alt="Collocation5">
+  <img src="{{ site.baseurl }}/figs/coll5.png" alt="Collocation5">
 </figure>
 <figure>
-  <img src="{{ site.baseurl }}/figs/col11.png" alt="Collocation11">
+  <img src="{{ site.baseurl }}/figs/coll11.png" alt="Collocation11">
   <figcaption align="center">Abbildung 5.1: Approximation der auf dem Interval
   \([0,1]\) periodischen Funktion \(f(x)=\sin(2\pi x)^3 + \cos(6\pi(x^2-1/2))\) mit
   einer Fourier-Basis und finiten Elementen. Es wurde jeweils \(5\) (oben) und \(11\)
