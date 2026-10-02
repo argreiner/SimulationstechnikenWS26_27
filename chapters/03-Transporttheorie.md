@@ -429,7 +429,8 @@ Diffusionsgleichung~\eqref{eq:diffusion}.
 Die gesamte Drift-Diffusionsgleichung hat daher die Form
 
 $$
- \frac{\partial c}{\partial t} + \nabla\cdot\left\{-D\nabla c + c\mathbf{v}\right\}=0.
+ \frac{\partial c}{\partial t} 
+ + \nabla\cdot\left(-D\nabla c + c\mathbf{v}\right)=0.
  \label{eq:drift-diffusion-full}
 $$
 
