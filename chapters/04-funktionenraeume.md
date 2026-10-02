@@ -107,7 +107,7 @@ Numerische Verfahren für die \emph{Optimierung} sind ein zentraler Kern der
 numerischen Lösung von Differentialgleichungen und damit der
 Simulationstechniken. Es gibt unzählige Optimierungsverfahren, die in
 unterschiedlichen Situationen besser oder schlechter funktionieren. Wir werden
-hier zunächst solche Optimierer als ``Black Box'' behandeln. Zum Ende der
+hier zunächst solche Optimierer als "Black Box" behandeln. Zum Ende der
 Lehrveranstaltung werden wir zur Frage der Optimierung zurückkehren und einige
 bekannte Optimierungsverfahren diskutieren. Der Begriff
 \emph{Minimierungsverfahren} wird oft synonym zu Optimierungsverfahren
