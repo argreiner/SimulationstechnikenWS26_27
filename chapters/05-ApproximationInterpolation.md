@@ -99,27 +99,36 @@ Elementen. Als Kollokationspunkte wählen wir die Stützstellen der Basis,
 $$y_n=x_n$$ An diesen Stützstellen ist nur eine der Basisfunktionen ungleich
 Null, $$\varphi_n(y_n)=1$$ und $$\varphi_n(y_k)=0$$ falls $$n\not=k$$ Damit führt
 die Bedingung
+
 $$
     R(y_n) = 0
 $$
+
 trivial zu
+
 $$
     a_n = f(y_n).
 $$
+
 Die Koeffizienten $$a_n$$ sind also durch den Funktionswert der zu
 approximierenden Funktion am Kollokationspunkt gegeben. Die Approximation ist
 damit eine stückweise lineare Funktion zwischen den Funktionswerten von $$f(x)$$
 
 Als zweites Beispiel diskutieren wir hier eine Fourier-Reihe mit entsprechenden
 $$2N+1$$ Fourier-Basisfunktionen, 
+
 $$
     \varphi_n(x) = \exp\left( i q_n x \right).
 $$
+
 Im Rahmen einer Kollokationsmethode, verlangen wir, dass das Residuum auf $$2N+1$$ äquidistanten Punkten verschwindet, $$R(y_n)=0$$ mit
+
 $$
     y_n = n L / (2N+1).
 $$
+
 Die Bedingung dafür lautet dann
+
 $$
     \sum_{k=-N}^{N} a_k \exp\left(i q_k y_n\right)
     =
@@ -128,12 +137,15 @@ $$
     f(y_n).
     \label{eq:fourier-collocation}
 $$
+
 Gleichungen~\eqref{eq:fourier-collocation} können nun nach $$a_k$$ aufgelöst
 werden. Wir nutzen dazu, dass für äquidistanter Kollokationspunkte die
 Fourier-Matrix $$W_{kn}=\exp(i2\pi kn/(2N+1))$$ (bis auf einen Faktor) unitär
 ist, d.h. ihr Inverses ist durch die Adjungierte gegeben: $$sum_n W_{kn}
-W_{nl}^* = (2N+1)\delta_{kl}$$
-Wir können also Gl.~\eqref{eq:fourier-collocation} mit $$W_{nl}^*$$ multiplizieren und über $$n$$ summieren. Dies ergibt
+W_{nl}^* = (2N+1)\delta_{kl}$$ Wir können also
+Gl.~\eqref{eq:fourier-collocation} mit $$W_{nl}^*$$ multiplizieren und über
+$$n$$ summieren. Dies ergibt
+
 $$
     \sum_{n=-N}^{N}
     \sum_{k=-N}^{N}
@@ -146,17 +158,16 @@ $$
     =
     N a_l
 $$
-%    =
-%    \sum_{n=-N}^{N}
-%    f(y_n)
-%    \exp\left(-i 2\pi \frac{l n}{2N+1}\right),
+
 wobei
+
 $$
     \sum_{n=-N}^{N}
     \exp\left[i 2\pi \frac{(k - l) n}{2N+1}\right]
     =
     (2N+1)\delta_{kl}
 $$
+
 genutzt wurde. Damit können die Koeffizienten als
 $$
     a_l
@@ -217,7 +228,8 @@ Kapitel~9 gezeigt, dass diese schwache Formulierung zu einer schwachen
 PDGL nicht in jedem Punkt erfüllen kann. Die Bedingung~\eqref{eq:test-function}
 wird oft unter dem Begriff der *gewichteten Residuen* subsumiert.
 
-Ein spezieller Satz an Testfunktion führt direkt zur Kollokationsmethode. Wir wählen den Satz von $$N$$ Testfunktionen
+Ein spezieller Satz an Testfunktion führt direkt zur Kollokationsmethode. Wir
+wählen den Satz von $$N$$ Testfunktionen
 $$
   v_n(x) = \delta(x-y_n)
   \label{eq:colloctest}
@@ -230,15 +242,19 @@ direkt zur Kollokationsbedingung $$R(y_x)=0$$
 Die Diracsche \(delta\) Funktion sollte aus Vorlesungen zur Signalverarbeitung
 bekannt sein. Die wichtigste Eigenschaft dieser Funktion ist die
 Filtereigenschaft,
+
 $$
-  \int_{-\infty}^{\infty} \dif x\, f(x) \delta(x-x_0) = f/(x_0),
+  \int_{-\infty}^{\infty} \text{d} x\, f(x) \delta(x-x_0) = f/(x_0),
 $$
+
 also das Integral über das Produkt der \(\delta\)-Funktion ergibt den
 Funktionswert, bei dem das Argument der \(\delta\)-Funktion verschwindet. Hieraus
 folgen alle weiteren Eingenschaften, z.B.
+
 $$
-  \int\dif x\, \delta(x) = \Theta(x),
+  \int\text{d} x\, \delta(x) = \Theta(x),
 $$
+
 wobei \(\theta(x)\) die (Heaviside-)Stufenfunktion ist.
 </div>
 
