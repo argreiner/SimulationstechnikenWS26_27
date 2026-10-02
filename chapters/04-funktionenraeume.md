@@ -67,17 +67,20 @@ Was verbleibt ist die Bestimmung der Koeffizienten $$a_n$$.
 Diese Koeffizienten sind Zahlen, und diese Zahlen können von einem Computer
 berechnet werden. Gleichung~\eqref{eq:seriesexpansion} ist selbstverständlich
 eine Näherung. Für gewisse Basisfunktionen kann gezeigt werden, dass diese
-``vollständig'' sind und damit bestimmte Klassen von Funktionen exakt abbilden
+"vollständig" sind und damit bestimmte Klassen von Funktionen exakt abbilden
 können. Dies stimmt aber nur unter der Bedingung, dass die Reihe
 Gl.~\eqref{eq:seriesexpansion} bis $$N\to\infty$$ geführt wird. Für alle
 praktischen Anwendungsfälle (so wie Implementierungen in Computercode), muss
-diese Reihenentwicklung jedoch abgebrochen werden. Eine ``gute''
+diese Reihenentwicklung jedoch abgebrochen werden. Eine "gute"
 Reihenentwicklung approximiert die exakte Lösung bereits bei niedrigem $$N$$ mit
 kleinem Fehler. Wir müssten bei dieser Aussage natürlich noch spezifizieren,
 wie wir Fehler quantifizieren möchten. Numerisch suchen wir dann genau nach den
 Koeffizienten $$a_n$$, die den Fehler minimieren.
 
-Die Wahl guter Basisfunktion ist nichttrivial. Wir werden hier hauptsächlich ``finite Elemente'' als Basisfunktionen nutzen und andere Arten kurz ansprechen. Bevor wir tiefer in dieses Thema einsteigen, brauchen wir noch weitere Konzepte für das Verständnis der numerischen Analyse.
+Die Wahl guter Basisfunktion ist nichttrivial. Wir werden hier hauptsächlich
+"finite Elemente" als Basisfunktionen nutzen und andere Arten kurz ansprechen.
+Bevor wir tiefer in dieses Thema einsteigen, brauchen wir noch weitere Konzepte
+für das Verständnis der numerischen Analyse.
 
 \section{Residuum}
 
@@ -120,14 +123,14 @@ verwendet. Eine gute Übersicht über Optimierungsverfahren bietet das Buch von
 Wir wollen nun diese abstrakten Ideen an einem Beispiel konkretisieren und ein paar wichtige Begriffe einführen. Wir schauen uns das eindimensionale Randwertproblem,
 
 $$
-    \frac{\dif^2 u}{\dif x^2} - (x^6 + 3x^2)u = 0,
+    \frac{\text{d}^2 u}{\text{d} x^2} - (x^6 + 3x^2)u = 0,
     \label{eq:odeexample}
 $$
 
 mit den Randbedingungen $$u(-1)=u(1)=1$$ an. (D.h. $$x\in[-1,1]$$ ist die Domäne auf der wir die Lösung suchen.) Der abstrakte Differentialoperator $$\mathcal{L}$$ nimmt in diesem Fall die konkrete Form
 
 $$
-    \mathcal{L} = \frac{\dif^2 }{\dif x^2} - (x^6 + 3x^2)
+    \mathcal{L} = \frac{\text{d}^2 }{\text{d} x^2} - (x^6 + 3x^2)
 $$
 
 an.
@@ -156,7 +159,7 @@ umschreiben, um die Basisfunktionen $$\varphi_i(x)$$ zu exponieren. Hier $$\varp
 Im nächsten Schritt müssen wir das Residuum
 
 $$
-    R(x; a_0, a_1, a_2) = \frac{\dif^2 u_2}{\dif x^2} - (x^6 + 3x^2)u_2
+    R(x; a_0, a_1, a_2) = \frac{\text{d}^2 u_2}{\text{d} x^2} - (x^6 + 3x^2)u_2
 $$
 
 minimieren. Hierfür wählen wir eine Strategie, die als \emph{Kollokation} bezeichnet wird: Wir verlangen, dass an drei ausgewählten Punkten das Residuum exakt verschwindet:
@@ -169,8 +172,8 @@ $$
 
 
 <div class="graybox">
-Das Verschwinden des Residuums bei $$x_i$$ bedeutet nicht, dass auch
-$$u_2(x_i)\equiv u(x_i)$$, also dass bei $$x_i$$ unsere approximative Lösung
+Das Verschwinden des Residuums bei \(x_i\) bedeutet nicht, dass auch
+\(u_2(x_i)\equiv u(x_i)\), also dass bei \(x_i\) unsere approximative Lösung
 der exakten Lösung entspricht. Wir sind immer noch auf einen begrenzten Satz
 von Funktionen, nämlich die Funktionen die durch Gl.~\eqref{eq:approxexample}
 erfasst werden, beschränkt.
@@ -213,6 +216,6 @@ Basisfunktionen diskutieren.
 
 <div class="graybox">
 Das hier dargestellte Beispiel ist ein einfacher Fall einer
-\emph{Diskretisierung}. Wir sind von einer kontinuierlichen Funktion auf die
-diskreten Koeffizienten $$a_0$$, $$a_1$$, $$a_2$$ übergegangen.
+*Diskretisierung*. Wir sind von einer kontinuierlichen Funktion auf die
+diskreten Koeffizienten \(a_0\), \(a_1\), \(a_2\) übergegangen.
 </div>
