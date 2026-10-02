@@ -21,14 +21,14 @@ parent: Vorlesung
 
 Diffusiver Transport ist einfach zugänglich über das Bild des "Random Walk",
 einer zufälligen stochastischen Bewegung von Teilchen. Solche zufälligen
-Bewegungsprozesse wurden zuerst von dem Botaniker *Robert Brown*
-(1773-1858) beschrieben und tragen den Namen *Brownsche Bewegung* oder
-*Brownsche Molekularbewegung*. Robert Brown wusste damals allerdings nicht
-von Molekülen und dachte zu seinen Lebzeiten, dass diese Bewegung auf aktive
-Prozesse (der "Lebenskraft" der Pollen) zurückzuführen sei. Heute wissen wir,
-dass diese Bewegung durch thermische Fluktuationen verursacht wird, also
-Moleküle die zufällig auf die Pollen treffen und diese in eine Richtung stoßen.
-Diese Erklärung benötigt die Existenz von Atomen und wurde erst 1905 von Albert
+Bewegungsprozesse wurden zuerst von dem Botaniker *Robert Brown* (1773-1858)
+beschrieben und tragen den Namen *Brownsche Bewegung* oder *Brownsche
+Molekularbewegung*. Robert Brown wusste damals allerdings nicht von Molekülen
+und dachte zu seinen Lebzeiten, dass diese Bewegung auf aktive Prozesse (der
+"Lebenskraft" der Pollen) zurückzuführen sei. Heute wissen wir, dass diese
+Bewegung durch thermische Fluktuationen verursacht wird, also Moleküle die
+zufällig auf die Pollen treffen und diese in eine Richtung stoßen.  Diese
+Erklärung benötigt die Existenz von Atomen und wurde erst 1905 von Albert
 Einstein hoffähig gemacht (siehe hierzu A. Einstein, Über die von der
 molekularkinetischen Theorie der Wärme geforderte Bewegung von in ruhenden
 Flüssigkeiten suspendierten Teilchen. Ann. Phys., 17:549, 1905).
