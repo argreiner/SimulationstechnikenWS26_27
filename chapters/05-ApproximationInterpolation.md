@@ -46,7 +46,7 @@ approximieren. Hierfür kommen wir zu dem Konzept des Residuums zurück. Ziel de
 Funktionsapproximation ist es, dass die approximierte Funktion das Residuum
 minimiert. Aufbauend auf diesen Ideen besprechen wir dann im nächsten Kapitel
 die Approximation von Differentialgleichungen.
-<div>
+</div>
 
 ## Residuum
 
@@ -249,7 +249,7 @@ $$
   \int\dif x\, \delta(x) = \Theta(x),
 $$
 wobei $\theta(x)$ die (Heaviside-)Stufenfunktion ist.
-<div>
+</div>
 
 ## Galerkin-Methode
 
@@ -325,7 +325,7 @@ Anders ausgedrückt, im Residuum können nur noch Beiträge zur Funktion
 vorkommen, die nicht mit dem gegeben Basissatz abgebildet werden können. Das
 heißt aber auch, dass wir durch Erweiterung des Basissatzes unsere Lösung
 systematisch verbessern können.
-<div>
+</div>
 
 ## Minimales Fehlerquadrat
 
