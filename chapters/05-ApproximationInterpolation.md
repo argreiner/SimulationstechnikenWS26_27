@@ -1,141 +1,141 @@
-	---
-	layout: default
-	title: Approximation und Interpolation
-	nav_order: 5
-	parent: Vorlesung
-	---
+---
+layout: default
+title: Approximation und Interpolation
+nav_order: 5
+parent: Vorlesung
+---
 
-	<!-- <script type="text/javascript" async
-	  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-	</script> -->
+<!-- <script type="text/javascript" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script> -->
 
-	<!-- 1️⃣ MathJax‑Bibliothek laden -->
-	<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
-		id="MathJax-script"
-		async></script>
+<!-- 1️⃣ MathJax‑Bibliothek laden -->
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+	id="MathJax-script"
+	async></script>
 
-	<!-- 2️⃣ (optional) Konfiguration – hier definieren wir $…$ als Inline‑Delimiter>
-	<script>
-	window.MathJax = {
-	  tex: {
-	    inlineMath: [['$', '$'], ['\\(', '\\)']],   // <-- wichtig!
-	    displayMath: [['$$','$$'], ['\\[','\\]']],
-	    tags: 'ams'                                 // \label, \eqref, \tag … funktionieren
-	  },
-	  loader: {load: ['[tex]/autoload']},
-	  startup: {ready: () => MathJax.startup.defaultReady()}
-	};
-	</script> -->
-
-
-	<style>
-	  .graybox {
-	    background:#f6f6f6;          /* sehr helles Grau */
-	    padding:0.9em;
-	    border-radius:4px;
-	    margin:1em 0;                /* Abstand zu anderen Elementen */
-	  }
-	</style>
+<!-- 2️⃣ (optional) Konfiguration – hier definieren wir $…$ als Inline‑Delimiter>
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],   // <-- wichtig!
+    displayMath: [['$$','$$'], ['\\[','\\]']],
+    tags: 'ams'                                 // \label, \eqref, \tag … funktionieren
+  },
+  loader: {load: ['[tex]/autoload']},
+  startup: {ready: () => MathJax.startup.defaultReady()}
+};
+</script> -->
 
 
-	# Approximation und Interpolation
+<style>
+  .graybox {
+    background:#f6f6f6;          /* sehr helles Grau */
+    padding:0.9em;
+    border-radius:4px;
+    margin:1em 0;                /* Abstand zu anderen Elementen */
+  }
+</style>
 
-	<div class="graybox">
-	Wir wenden nun die Idee der Basisfunktionen an, um Funktionen zu
-	approximieren. Hierfür kommen wir zu dem Konzept des Residuums zurück. Ziel der
-	Funktionsapproximation ist es, dass die approximierte Funktion das Residuum
-	minimiert. Aufbauend auf diesen Ideen besprechen wir dann im nächsten Kapitel
-	die Approximation von Differentialgleichungen.
-	</div>
 
-	## Residuum
+# Approximation und Interpolation
 
-	Im vorherigen Abschnitt haben wir beschrieben, wie mit Basisfunktionen eine
-	Reihenentwicklung aufgebaut werden kann. Eine typische Reihenentwicklung
-	enthält eine endliche Zahl an Elementen $$N+1$$ und hat die Form
+<div class="graybox">
+Wir wenden nun die Idee der Basisfunktionen an, um Funktionen zu
+approximieren. Hierfür kommen wir zu dem Konzept des Residuums zurück. Ziel der
+Funktionsapproximation ist es, dass die approximierte Funktion das Residuum
+minimiert. Aufbauend auf diesen Ideen besprechen wir dann im nächsten Kapitel
+die Approximation von Differentialgleichungen.
+</div>
 
-	$$
-	    f_N(x) = \sum_{n=0}^N a_n \varphi_n(x),
-	$$
+## Residuum
 
-	wobei die $$\varphi_n(x)$$ die im vorherigen Kapitel eingeführten Basisfunktionen
-	sind.
+Im vorherigen Abschnitt haben wir beschrieben, wie mit Basisfunktionen eine
+Reihenentwicklung aufgebaut werden kann. Eine typische Reihenentwicklung
+enthält eine endliche Zahl an Elementen $$N+1$$ und hat die Form
 
-	Wir wollen uns nun der Frage nähern, wie wir ein beliebige Funktion $$f(x)$$ über
-	eine solche Basisfunktionsentwicklung annähern können. Hierzu definieren wir
-	das Residuum
+$$
+    f_N(x) = \sum_{n=0}^N a_n \varphi_n(x),
+$$
 
-	$$
-	    R(x) = f_N(x) - f(x),
-	$$
+wobei die $$\varphi_n(x)$$ die im vorherigen Kapitel eingeführten Basisfunktionen
+sind.
 
-	welches an jedem Punkt $$x$$ verschwindet wenn $$f_N(x)\equiv f(x)$$ Für eine
-	Approximation wollen wir dieses Residuum "minimieren". (Mit minimieren ist
-	hier gemeint, es möglichst nah an Null zu bringen.) Wir suchen also die
-	Koeffizienten $$a_n$$ der Reihenentwicklung, welche die Funktion $$f(x)$$ im Sinne
-	einer Minimierung des Residuums approximiert.
+Wir wollen uns nun der Frage nähern, wie wir ein beliebige Funktion $$f(x)$$ über
+eine solche Basisfunktionsentwicklung annähern können. Hierzu definieren wir
+das Residuum
 
-	An dieser Stelle sei noch bemerkt, dass die Basisfunktionen auf dem gleichen
-	Raum für die Zielfunktion $$f(x)$$ definiert sein müssen. Für die Approximation
-	einer periodischen Funktion $$f(x)$$ sollte auch ein periodischer Basissatz
-	verwandt werden.
+$$
+    R(x) = f_N(x) - f(x),
+$$
 
-	## Kollokation
+welches an jedem Punkt $$x$$ verschwindet wenn $$f_N(x)\equiv f(x)$$ Für eine
+Approximation wollen wir dieses Residuum "minimieren". (Mit minimieren ist
+hier gemeint, es möglichst nah an Null zu bringen.) Wir suchen also die
+Koeffizienten $$a_n$$ der Reihenentwicklung, welche die Funktion $$f(x)$$ im Sinne
+einer Minimierung des Residuums approximiert.
 
-	\video{https://uni-freiburg.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=0a7985a2-0753-4d29-83fe-aca8010a16f2}
+An dieser Stelle sei noch bemerkt, dass die Basisfunktionen auf dem gleichen
+Raum für die Zielfunktion $$f(x)$$ definiert sein müssen. Für die Approximation
+einer periodischen Funktion $$f(x)$$ sollte auch ein periodischer Basissatz
+verwandt werden.
 
-	Als erste Minimierungsstrategie wird hier die *Kollokation* eingeführt. In
-	diese Methode wird verlangt, dass das Residuum an ausgewählten
-	Kollokationspunkten $$y_n$$ verschwindet,
-	$$
-	    R(y_n) = 0 \quad\text{bzw.}\quad f_N(y_n) = f(y_n).
-	$$
-	Die Anzahl der Kollokationspunkte muss hier der Anzahl der Koeffizienten in der
-	Reihenentwicklung entsprechen. Die Wahl der idealen Kollokationspunkte $$y_n$$
-	selbst ist nicht-trivial, und wir werden hier nur spezifische Fälle besprechen.
+## Kollokation
 
-	Als erstes Beispiel diskutieren wir hier eine Entwicklung mit $$N$$ finiten
-	Elementen. Als Kollokationspunkte wählen wir die Stützstellen der Basis,
-	$$y_n=x_n$$ An diesen Stützstellen ist nur eine der Basisfunktionen ungleich
-	Null, $$\varphi_n(y_n)=1$$ und $$\varphi_n(y_k)=0$$ falls $$n\not=k$$ Damit führt
-	die Bedingung
+\video{https://uni-freiburg.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=0a7985a2-0753-4d29-83fe-aca8010a16f2}
 
-	$$
-	    R(y_n) = 0
-	$$
+Als erste Minimierungsstrategie wird hier die *Kollokation* eingeführt. In
+diese Methode wird verlangt, dass das Residuum an ausgewählten
+Kollokationspunkten $$y_n$$ verschwindet,
+$$
+    R(y_n) = 0 \quad\text{bzw.}\quad f_N(y_n) = f(y_n).
+$$
+Die Anzahl der Kollokationspunkte muss hier der Anzahl der Koeffizienten in der
+Reihenentwicklung entsprechen. Die Wahl der idealen Kollokationspunkte $$y_n$$
+selbst ist nicht-trivial, und wir werden hier nur spezifische Fälle besprechen.
 
-	trivial zu
+Als erstes Beispiel diskutieren wir hier eine Entwicklung mit $$N$$ finiten
+Elementen. Als Kollokationspunkte wählen wir die Stützstellen der Basis,
+$$y_n=x_n$$ An diesen Stützstellen ist nur eine der Basisfunktionen ungleich
+Null, $$\varphi_n(y_n)=1$$ und $$\varphi_n(y_k)=0$$ falls $$n\not=k$$ Damit führt
+die Bedingung
 
-	$$
-	    a_n = f(y_n).
-	$$
+$$
+    R(y_n) = 0
+$$
 
-	Die Koeffizienten $$a_n$$ sind also durch den Funktionswert der zu
-	approximierenden Funktion am Kollokationspunkt gegeben. Die Approximation ist
-	damit eine stückweise lineare Funktion zwischen den Funktionswerten von $$f(x)$$
+trivial zu
 
-	Als zweites Beispiel diskutieren wir hier eine Fourier-Reihe mit entsprechenden
-	$$2N+1$$ Fourier-Basisfunktionen, 
+$$
+    a_n = f(y_n).
+$$
 
-	$$
-	    \varphi_n(x) = \exp\left( i q_n x \right).
-	$$
+Die Koeffizienten $$a_n$$ sind also durch den Funktionswert der zu
+approximierenden Funktion am Kollokationspunkt gegeben. Die Approximation ist
+damit eine stückweise lineare Funktion zwischen den Funktionswerten von $$f(x)$$
 
-	Im Rahmen einer Kollokationsmethode, verlangen wir, dass das Residuum auf $$2N+1$$ äquidistanten Punkten verschwindet, $$R(y_n)=0$$ mit
+Als zweites Beispiel diskutieren wir hier eine Fourier-Reihe mit entsprechenden
+$$2N+1$$ Fourier-Basisfunktionen, 
 
-	$$
-	    y_n = n L / (2N+1).
-	$$
+$$
+    \varphi_n(x) = \exp\left( i q_n x \right).
+$$
 
-	Die Bedingung dafür lautet dann
+Im Rahmen einer Kollokationsmethode, verlangen wir, dass das Residuum auf $$2N+1$$ äquidistanten Punkten verschwindet, $$R(y_n)=0$$ mit
 
-	$$
-	    \sum_{k=-N}^{N} a_k \exp\left(i q_k y_n\right)
-	    =
-	    \sum_{k=-N}^{N} a_k \exp\left(i 2\pi \frac{k n}{2N+1}\right)
-	    =
-	    f(y_n).
-	    \tag{5.1}
+$$
+    y_n = n L / (2N+1).
+$$
+
+Die Bedingung dafür lautet dann
+
+$$
+    \sum_{k=-N}^{N} a_k \exp\left(i q_k y_n\right)
+    =
+    \sum_{k=-N}^{N} a_k \exp\left(i 2\pi \frac{k n}{2N+1}\right)
+    =
+    f(y_n).
+    \tag{5.1}
 $$
 
 Gleichungen (5.1) können nun nach $$a_k$$ aufgelöst
@@ -337,7 +337,8 @@ $$
         &=
         (f, f) + (f_N, f_N) - (f_N, f) - (f, f_N) \\
         &=
-        (f, f) + \sum_{n=0}^N \sum_{m=0}^N a_n^* a_m (\varphi_n, \varphi_m) - \sum_{n=0}^N a_n^* (\varphi_n, f) - \sum_{n=0}^N a_n (f, \varphi_n).
+	(f, f) + \sum_{n=0}^N \sum_{m=0}^N a_n^* a_m (\varphi_n, \varphi_m) -
+                 \sum_{n=0}^N a_n^* (\varphi_n, f) - \sum_{n=0}^N a_n (f, \varphi_n).
     \end{split}
 $$
 Diese Fehlerquadrat ist dann minimiert, wenn
