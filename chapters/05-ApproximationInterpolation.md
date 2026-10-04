@@ -532,12 +532,12 @@ der Fourier-Transformation. Die Fourier-Transformation ist nützlich, um
 analytische Lösungen für partielle Differentialgleichungen auf unendlichen
 Gebieten zu erhalten.
 
-\begin{note}
+<div class="graybox">
 Eine Tilde $$\tilde{f}(q)$$ bezeichnet die Fourier-Transformierte einer Funktion
 $$f(x)$$. Die Fourier-Transformierte ist eine Funktion des Wellenvektors $$q$$. Im
 Gegensatz dazu erhalten wir bei der Fourier-Reihe abzählbare Koeffizienten
 $$a_n$$. Der Grund hierfür ist die Periodizität des betrachteten Gebiets.
-\end{note}
+</div>
 
 ### Poisson-Gleichung in mehreren Dimensionen
 
@@ -623,7 +623,7 @@ $$
 $$
 
 
-\begin{note}
+<div class="graybox">
 Ein alternatives Argument erhält man, wenn man die Fourier-Transformation von
 $$R(x,y,z)$$ hinschreibt:
 
@@ -643,7 +643,7 @@ welche Ausdruck der Orthogonalität der Basisfunktionen sind. Da die
 Basisfunktionen nun mit einem Kontinuierlichen $$q_x$$ (anstelle eines diskreten
 $$n$$) "parameterisiert" sind, erhält man eine Diracsche $$\delta$$-Funktion
 anstelle des Kronecker-$$\delta$$ in der Orthogonalitätsrelation.
-\end{note}
+</div>
 
 Gleichung~\eqref{eq:fourierpoisson2d} kann einfach analytisch gelöst werden.
 Man erhält
@@ -727,7 +727,6 @@ Lösung für das elektrostatische Potential einer Punktladung. Man nennt sie auc
 die Fundamentallösung oder *Greensche Funktion* der (dreidimensionalen)
 Poisson-Gleichung.
 \end{example}
-%\input{footer.tex}
 
 \begin{figure}
 \ifpdf
