@@ -141,7 +141,7 @@ $$
 Gleichungen (5.1) können nun nach $$a_k$$ aufgelöst
 werden. Wir nutzen dazu, dass für äquidistanter Kollokationspunkte die
 Fourier-Matrix $$W_{kn}=\exp(i2\pi kn/(2N+1))$$ (bis auf einen Faktor) unitär
-ist, d.h. ihr Inverses ist durch die Adjungierte gegeben: $$sum_n W_{kn}
+ist, d.h. ihr Inverses ist durch die Adjungierte gegeben: $$\sum_n W_{kn}
 W_{nl}^* = (2N+1)\delta_{kl}$$ Wir können also
 Gl. (5.1) mit $$W_{nl}^*$$ multiplizieren und über
 $$n$$ summieren. Dies ergibt
@@ -225,12 +225,12 @@ $$
 mit einer Funktion $$v(x)$$ verschwindet. Wenn Gl. (5.2) für
 jede beliebigen Testfunktion $$v(x)$$ verschwindet, dann ist die "schwache"
 Formulierung Gl. (5.2) identisch zur starken Formulierung
-$$R(x)=0$$ Gleichung (5.2) heißt "schwache" Formulierung,
+$$R(x)=0$$. Gleichung (5.2) heißt "schwache" Formulierung,
 weil die Bedingung nur im integralen Sinne erfüllt ist. Insbesondere wird in
-Kapitel~9 gezeigt, dass diese schwache Formulierung zu einer schwachen
-*Lösung* (engl. "weak solution") führt, die die ursprüngliche (starke)
-PDGL nicht in jedem Punkt erfüllen kann. Die Bedingung (5.2)
-wird oft unter dem Begriff der *gewichteten Residuen* subsumiert.
+Kapitel über die Finite Elemente Methode gezeigt, dass diese schwache
+Formulierung zu einer schwachen *Lösung* (engl. "weak solution") führt, die die
+ursprüngliche (starke) PDGL nicht in jedem Punkt erfüllen kann. Die Bedingung
+(5.2) wird oft unter dem Begriff der *gewichteten Residuen* subsumiert.
 
 Ein spezieller Satz an Testfunktion führt direkt zur Kollokationsmethode. Wir
 wählen den Satz von $$N$$ Testfunktionen
@@ -375,7 +375,6 @@ Die in den vorherigen Abschnitten entwickelten Ideen wenden wir auf die Lösung
 von Differentialgleichungen an. In diesem Abschnitt bepsrechen wir lediglich
 die Fourier-Basis. Neben der Anwendung dieses Verfahrens, erweitern wir hier
 die Lösungsansätze auch auf mehrdimensionale Räume.
-\end{context}
 
 ### Differentialoperatoren
 
@@ -390,24 +389,24 @@ $$
   \mathcal{L} u_N(x,y,z,\ldots) - f(x,y,z,\ldots),
 $$
 
-wobei die unbekannte Funktion $u_N$ hier als eine Reihenentwicklung in eine
-bestimme Basis $\varphi_n(x,y,z)$ dargestellt ist. In der Galerkin-Methode
+wobei die unbekannte Funktion $$u_N$$ hier als eine Reihenentwicklung in eine
+bestimme Basis $$\varphi_n(x,y,z)$$ dargestellt ist. In der Galerkin-Methode
 verlangt man
 
 $$
   (\varphi_n, R) = 0
 $$
 
-für jedes $n$.
+für jedes $$n$$.
 
-Wir diskutieren zunächst die Fourier-Basis für periodische Funktionen auf $x\in[0,L]$ in einer Dimension,
+Wir diskutieren zunächst die Fourier-Basis für periodische Funktionen auf $$x\in[0,L]$$ in einer Dimension,
 
 $$
   \varphi_n(x) = \exp(i q_n x)
   \tag{5.6}
 $$
 
-mit $q_n = 2\pi n/L$. Der Operator $\mathcal{L}$ kann beliebige Differentialoperationen enthalten, die auf die Basisfunktionen wirken, beispielsweise
+mit $$q_n = 2\pi n/L$$. Der Operator $$\mathcal{L}$$ kann beliebige Differentialoperationen enthalten, die auf die Basisfunktionen wirken, beispielsweise
 
 $$
 \begin{aligned}
@@ -433,7 +432,7 @@ $$
   \tag{eq:poisson-1d}
 $$
 
-Hier ist $\rho$ eine Ladungsdichte und $\Phi$ das elektrostatische Potential.
+Hier ist $$\rho$$ eine Ladungsdichte und $$\Phi$$ das elektrostatische Potential.
 Das Residuum ist daher
 
 $$
@@ -441,7 +440,7 @@ $$
   \tag{eq:poisson-1d-res}
 $$
 
-und die Lösung von Gl.~\eqref{eq:poisson-1d} ist gegeben durch $R(x)=0$.
+und die Lösung von Gl.~\eqref{eq:poisson-1d} ist gegeben durch $$R(x)=0$$.
 
 Formal schreiben wir nun das Potential als die Reihenentwicklung
 
@@ -463,13 +462,13 @@ $$
   R_N(x) = - \sum_n a_n q_n^2 \varphi_n(x) + \frac{1}{\varepsilon} \sum_n b_n \varphi_n(x). 
 $$
 
-Wir multiplizieren dies nun von links mit den Basisfunktionen, $(\varphi_k, R_N)$ (Galerkinmethode) und erhalten auf Grund der Orthogonalität der Basisfunktionen die Gleichungen
+Wir multiplizieren dies nun von links mit den Basisfunktionen, $$(\varphi_k, R_N)$$ (Galerkinmethode) und erhalten auf Grund der Orthogonalität der Basisfunktionen die Gleichungen
 
 $$
  (\varphi_k, R_N) = - L q_k^2 a_k + L b_k/\varepsilon.
 $$
 
-(Der Faktor $L$ erscheint, weil die Basisfunktionen nicht normalisiert sind.) Die Bedingung $(\varphi_k, R_N)=0$ führt zu $a_k = b_k/(q_k^2 \varepsilon)$. Die approximative Lösung der Poisson-Gleichung ist damit gegeben durch
+(Der Faktor $$L$$ erscheint, weil die Basisfunktionen nicht normalisiert sind.) Die Bedingung $$(\varphi_k, R_N)=0$$ führt zu $$a_k = b_k/(q_k^2 \varepsilon)$$. Die approximative Lösung der Poisson-Gleichung ist damit gegeben durch
 
 $$
   \Phi_N(x) = \sum_n \frac{b_n}{q_n^2 \varepsilon} \varphi_n(x).
@@ -480,8 +479,8 @@ Dies ist die Fourier-Reihe der Lösung.
 
 ### Übergang zur Fourier-Transformation
 
-Die Fourier-Basis Gl.~\eqref{5.6} ist auf einem finiten Gebiet der Länge $L$
-periodisch. Wenn wir die Länge $L$ gegen unendlich gehen lassen, bekommen wir
+Die Fourier-Basis Gl.~\eqref{5.6} ist auf einem finiten Gebiet der Länge $$L$$
+periodisch. Wenn wir die Länge $$L$$ gegen unendlich gehen lassen, bekommen wir
 eine Formulierung für nicht-periodische Funktionen. Dies führt direkt zur
 *Fourier-Transformation*.
 
@@ -493,11 +492,11 @@ $$
     \tag{eq:fouriertrafo1}
 $$
 
-mit $\Delta q = q_{n+1}-q_n = 2\pi/L$ und umskalierten Koeffizienten
-$\tilde{\Phi}(q_n)=L a_n$. Hier wurde auf der rechten Seite von
-Gl.~\eqref{eq:fouriertrafo1} lediglich der Faktor $1=L \Delta q/2\pi$
-eingefügt. Dies hilft nun, den Limes $L\to\infty$ und $N\to\infty$ zu bilden.
-In diesem Fall wird $\Delta q \to dq$ und die Summe zum Integral. Man erhält
+mit $$\Delta q = q_{n+1}-q_n = 2\pi/L$$ und umskalierten Koeffizienten
+$$\tilde{\Phi}(q_n)=L a_n$$. Hier wurde auf der rechten Seite von
+Gl.~\eqref{eq:fouriertrafo1} lediglich der Faktor $$1=L \Delta q/2\pi$$
+eingefügt. Dies hilft nun, den Limes $$L\to\infty$$ und $$N\to\infty$$ zu bilden.
+In diesem Fall wird $$\Delta q \to dq$$ und die Summe zum Integral. Man erhält
 
 $$
     \Phi(x) = \int_{-\infty}^\infty \frac{\text{d} q}{2\pi}\,\tilde{\Phi}(q) \exp\left( i q x \right),
@@ -520,7 +519,7 @@ $$
     \int_0^L \text{d} x \, \Phi_N(x) \exp\left( -i q_n x \right).
 $$
 
-Im Grenzfall $L\to\infty$ und $N\to\infty$ wird dies zu
+Im Grenzfall $$L\to\infty$$ und $$N\to\infty$$ wird dies zu
 
 $$
     \tilde{\Phi}(q)
@@ -534,10 +533,10 @@ analytische Lösungen für partielle Differentialgleichungen auf unendlichen
 Gebieten zu erhalten.
 
 \begin{note}
-Eine Tilde $\tilde{f}(q)$ bezeichnet die Fourier-Transformierte einer Funktion
-$f(x)$. Die Fourier-Transformierte ist eine Funktion des Wellenvektors $q$. Im
+Eine Tilde $$\tilde{f}(q)$$ bezeichnet die Fourier-Transformierte einer Funktion
+$$f(x)$$. Die Fourier-Transformierte ist eine Funktion des Wellenvektors $$q$$. Im
 Gegensatz dazu erhalten wir bei der Fourier-Reihe abzählbare Koeffizienten
-$a_n$. Der Grund hierfür ist die Periodizität des betrachteten Gebiets.
+$$a_n$$. Der Grund hierfür ist die Periodizität des betrachteten Gebiets.
 \end{note}
 
 ### Poisson-Gleichung in mehreren Dimensionen
@@ -560,14 +559,14 @@ $$
 $$
 
 Im Gegensatz zu Gl.~\eqref{eq:poisson-1d} taucht hier nun die partielle
-Ableitung $\partial$ auf, weil $\Phi(x,y,z)$ nun von drei Variablen (den
+Ableitung $$\partial$$ auf, weil $$\Phi(x,y,z)$$ nun von drei Variablen (den
 kartesischen Koordinaten) abhängt.
 
 Die Verallgemeinerung der Fourier-Basis und damit auch der
 Fourier-Transformation auf drei Dimensionen ist trivial. Man erhält eine Basis,
-in dem man Basisfunktionen in die kartesischen Richtungen ($x$, $y$ und $z$)
+in dem man Basisfunktionen in die kartesischen Richtungen ($$x$$, $$y$$ und $$z$$)
 multipliziert. Üblicherweise braucht man nun drei Indices für die
-Koeffizienten, die jeweils die Basis in $x$, $y$ und $z$ bezeichnen. Man erhält
+Koeffizienten, die jeweils die Basis in $$x$$, $$y$$ und $$z$$ bezeichnen. Man erhält
 als Reihenentwicklung
 
 $$
@@ -577,11 +576,11 @@ $$
 \end{split}
 $$
 
-mit (möglicherweise unterschiedlicher) Entwicklungsordnung $N$, $M$ und $O$.
+mit (möglicherweise unterschiedlicher) Entwicklungsordnung $$N$$, $$M$$ und $$O$$.
 Der Basissatz ist hier gegeben durch die Menge der Funktionen
-$\varphi_{nmo}(x,y,z)=\varphi_n(x)\varphi_m(y)\varphi_o(z)$. Orthogonalität
+$$\varphi_{nmo}(x,y,z)=\varphi_n(x)\varphi_m(y)\varphi_o(z)$$. Orthogonalität
 dieses Basissatzes geht trivialerweise aus der Orthogonalität der
-eindimensionalen Basisfunktionen $\varphi_n(x)$ hervor. Die Verallgemeinerung
+eindimensionalen Basisfunktionen $$\varphi_n(x)$$ hervor. Die Verallgemeinerung
 der Fourier-Transformation folgt hieraus direkt. Die Fourier-Rücktransformation
 schreibt sich als
 
@@ -591,9 +590,9 @@ $$
   \tag{eq:fouriertrafo3d}
 $$
 
-wobei die Fouriertransformierte $\tilde{\Phi}$ jetzt natürlich von drei
-Wellenvektoren $q_x$, $q_y$ und $q_z$ abhängt. Der Differentialoperator
-$\text{d}^3 q=\text{d} q_x \text{d} q_y \text{d} q_z$ ist eine Kurznotation für
+wobei die Fouriertransformierte $$\tilde{\Phi}$$ jetzt natürlich von drei
+Wellenvektoren $$q_x$$, $$q_y$$ und $$q_z$$ abhängt. Der Differentialoperator
+$$\text{d}^3 q=\text{d} q_x \text{d} q_y \text{d} q_z$$ ist eine Kurznotation für
 die dreidimensionale Integration.
 
 Wir können nun Gl.~\eqref{eq:fouriertrafo3d} in die PDGL
@@ -612,8 +611,8 @@ $$
    = 0
 $$
 
-mit $\v{r}=(x,y,z)$ und $\v{q}=(q_x,q_y,q_z)$.  Diese Gleichung muss für jedes
-$x,y,z$ erfüllt sein und damit muss das Argument der Integration verschwinden,
+mit $$\v{r}=(x,y,z)$$ und $$\v{q}=(q_x,q_y,q_z)$$.  Diese Gleichung muss für jedes
+$$x,y,z$$ erfüllt sein und damit muss das Argument der Integration verschwinden,
 also
 
 $$
@@ -626,7 +625,7 @@ $$
 
 \begin{note}
 Ein alternatives Argument erhält man, wenn man die Fourier-Transformation von
-$R(x,y,z)$ hinschreibt:
+$$R(x,y,z)$$ hinschreibt:
 
 $$
   R(q_x', q_y', q_z')
@@ -641,9 +640,9 @@ $$
 $$
 
 welche Ausdruck der Orthogonalität der Basisfunktionen sind. Da die
-Basisfunktionen nun mit einem Kontinuierlichen $q_x$ (anstelle eines diskreten
-$n$) "parameterisiert" sind, erhält man eine Diracsche $\delta$-Funktion
-anstelle des Kronecker-$\delta$ in der Orthogonalitätsrelation.
+Basisfunktionen nun mit einem Kontinuierlichen $$q_x$$ (anstelle eines diskreten
+$$n$$) "parameterisiert" sind, erhält man eine Diracsche $$\delta$$-Funktion
+anstelle des Kronecker-$$\delta$$ in der Orthogonalitätsrelation.
 \end{note}
 
 Gleichung~\eqref{eq:fourierpoisson2d} kann einfach analytisch gelöst werden.
@@ -656,20 +655,20 @@ $$
    \tag{eq:fourierpoissonsol}
 $$
 
-mit $q=|\v{q}|$. Dies ist äquivalent zur Lösung
+mit $$q=|\v{q}|$$. Dies ist äquivalent zur Lösung
 Gl.~\eqref{eq:discrpoissonfouriersol} für die Poisson-Gleichung auf einem
 periodischen Gebiet. Die Schwierigkeit besteht nun da drin, für ein gegebenes
-$\rho(x,y,z)$ die Hin- und Rücktransformation auszuwerten.
+$$\rho(x,y,z)$$ die Hin- und Rücktransformation auszuwerten.
 
 \begin{example}
-Als Beispiel betrachten wir nun die Lösung für eine Punktladung $Q$ am
+Als Beispiel betrachten wir nun die Lösung für eine Punktladung $$Q$$ am
 Ursprung,
 
 $$
   \rho(x,y,z) = Q \delta(x) \delta(y) \delta(z).
 $$
 
-Die Fourier-Transformierte der Ladungsdichte $\rho$ erhält man aus
+Die Fourier-Transformierte der Ladungsdichte $$\rho$$ erhält man aus
 Gl.~\eqref{eq:fouriertrafo3},
 
 $$
@@ -698,10 +697,10 @@ $$
 \end{split}
 $$
 
-wobei $\text{d}^3 q = q^2 \text{d} q \text{d}\phi \text{d}(\cos\theta)$ mit
-Azimutwinkel $\phi$ und Elevationswinkel $\theta$, genutzt wurde (siehe auch
+wobei $$\text{d}^3 q = q^2 \text{d} q \text{d}\phi \text{d}(\cos\theta)$$ mit
+Azimutwinkel $$\phi$$ und Elevationswinkel $$\theta$$, genutzt wurde (siehe auch
 Abb.~\ref{fig:volume-spherical}). Wir verlangen hier (ohne Beschränkung der
-Allgemeinheit), dass $\v{r}$ in Richtung Zenit zeigt.
+Allgemeinheit), dass $$\v{r}$$ in Richtung Zenit zeigt.
 
 Man erhält
 
@@ -723,7 +722,7 @@ $$
 \end{split}
 $$
 
-wobei $\int \text{d} x\,\sin x/x=\pi$ genutzt wurde. Dies ist die bekannte
+wobei $$\int \text{d} x\,\sin x/x=\pi$$ genutzt wurde. Dies ist die bekannte
 Lösung für das elektrostatische Potential einer Punktladung. Man nennt sie auch
 die Fundamentallösung oder *Greensche Funktion* der (dreidimensionalen)
 Poisson-Gleichung.
