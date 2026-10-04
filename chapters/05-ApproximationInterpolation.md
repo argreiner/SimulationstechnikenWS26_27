@@ -533,10 +533,10 @@ analytische Lösungen für partielle Differentialgleichungen auf unendlichen
 Gebieten zu erhalten.
 
 <div class="graybox">
-Eine Tilde $$\tilde{f}(q)$$ bezeichnet die Fourier-Transformierte einer Funktion
-$$f(x)$$. Die Fourier-Transformierte ist eine Funktion des Wellenvektors $$q$$. Im
+Eine Tilde \(\tilde{f}(q)\) bezeichnet die Fourier-Transformierte einer Funktion
+\(f(x)\). Die Fourier-Transformierte ist eine Funktion des Wellenvektors \(q\). Im
 Gegensatz dazu erhalten wir bei der Fourier-Reihe abzählbare Koeffizienten
-$$a_n$$. Der Grund hierfür ist die Periodizität des betrachteten Gebiets.
+\(a_n\). Der Grund hierfür ist die Periodizität des betrachteten Gebiets.
 </div>
 
 ### Poisson-Gleichung in mehreren Dimensionen
