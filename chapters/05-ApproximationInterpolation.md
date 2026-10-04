@@ -625,7 +625,7 @@ $$
 
 <div class="graybox">
 Ein alternatives Argument erhält man, wenn man die Fourier-Transformation von
-$$R(x,y,z)$$ hinschreibt:
+\(R(x,y,z)\) hinschreibt:
 
 $$
   R(q_x', q_y', q_z')
@@ -640,9 +640,9 @@ $$
 $$
 
 welche Ausdruck der Orthogonalität der Basisfunktionen sind. Da die
-Basisfunktionen nun mit einem Kontinuierlichen $$q_x$$ (anstelle eines diskreten
-$$n$$) "parameterisiert" sind, erhält man eine Diracsche $$\delta$$-Funktion
-anstelle des Kronecker-$$\delta$$ in der Orthogonalitätsrelation.
+Basisfunktionen nun mit einem Kontinuierlichen \(q_x\) (anstelle eines diskreten
+\(n\)) "parameterisiert" sind, erhält man eine Diracsche \(\delta\)-Funktion
+anstelle des Kronecker-\(\delta\) in der Orthogonalitätsrelation.
 </div>
 
 Gleichung (5.16) kann einfach analytisch gelöst werden.
