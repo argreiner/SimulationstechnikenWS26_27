@@ -429,7 +429,7 @@ $$
   \frac{\text{d}^2 \Phi}{\text{d} x^2}
   =
   - \frac{\rho}{\varepsilon}.
-  \tag{eq:poisson-1d}
+  \tag{5.7}
 $$
 
 Hier ist $$\rho$$ eine Ladungsdichte und $$\Phi$$ das elektrostatische Potential.
@@ -437,10 +437,10 @@ Das Residuum ist daher
 
 $$
   R(x)=\frac{\text{d}^2 \Phi}{\text{d} x^2} + \frac{\rho}{\varepsilon},
-  \tag{eq:poisson-1d-res}
+  \tag{5.8}
 $$
 
-und die Lösung von Gl.~\eqref{eq:poisson-1d} ist gegeben durch $$R(x)=0$$.
+und die Lösung von Gl. (5.7) ist gegeben durch $$R(x)=0$$.
 
 Formal schreiben wir nun das Potential als die Reihenentwicklung
 
@@ -449,14 +449,14 @@ $$
 $$
 
 wobei wir die Summationsgrenzen im folgenden nicht weiter explizit angeben werden.
-Wir entwickeln auch die rechte Seite der Gl.~\eqref{eq:poisson-1d} in eine Reihe mit den gleichen Basisfunktionen,
+Wir entwickeln auch die rechte Seite der Gl. (5.7) in eine Reihe mit den gleichen Basisfunktionen,
 
 $$
   \rho_N(x) = \sum_{n=-N}^N b_n \varphi_n(x).
-  \tag{eq:seriesphi}
+  \tag{5.9}
 $$
 
-Eingesetzt in Gl.~\eqref{eq:poisson-1d-res} erhalten wir
+Eingesetzt in Gl. (5.8) erhalten wir
 
 $$
   R_N(x) = - \sum_n a_n q_n^2 \varphi_n(x) + \frac{1}{\varepsilon} \sum_n b_n \varphi_n(x). 
@@ -472,14 +472,14 @@ $$
 
 $$
   \Phi_N(x) = \sum_n \frac{b_n}{q_n^2 \varepsilon} \varphi_n(x).
-  \tag{eq:discrpoissonfouriersol}
+  \tag{5.10}
 $$
 
 Dies ist die Fourier-Reihe der Lösung.
 
 ### Übergang zur Fourier-Transformation
 
-Die Fourier-Basis Gl.~\eqref{5.6} ist auf einem finiten Gebiet der Länge $$L$$
+Die Fourier-Basis Gl. (5.6) ist auf einem finiten Gebiet der Länge $$L$$
 periodisch. Wenn wir die Länge $$L$$ gegen unendlich gehen lassen, bekommen wir
 eine Formulierung für nicht-periodische Funktionen. Dies führt direkt zur
 *Fourier-Transformation*.
@@ -489,18 +489,18 @@ Wir schreiben die Reihenentwicklung als
 $$
   \Phi_N(x) = \sum_{n=-N}^N a_n \varphi_n(x) = \sum_{n=-N}^N a_n \exp\left( i q_n x \right) = 
               \sum_{n=-N}^N \frac{\Delta q}{2\pi}\,\tilde{\Phi}(q_n) \exp\left( i q_n x \right)
-    \tag{eq:fouriertrafo1}
+    \tag{5.11}
 $$
 
 mit $$\Delta q = q_{n+1}-q_n = 2\pi/L$$ und umskalierten Koeffizienten
 $$\tilde{\Phi}(q_n)=L a_n$$. Hier wurde auf der rechten Seite von
-Gl.~\eqref{eq:fouriertrafo1} lediglich der Faktor $$1=L \Delta q/2\pi$$
+Gl. (5.11) lediglich der Faktor $$1=L \Delta q/2\pi$$
 eingefügt. Dies hilft nun, den Limes $$L\to\infty$$ und $$N\to\infty$$ zu bilden.
 In diesem Fall wird $$\Delta q \to dq$$ und die Summe zum Integral. Man erhält
 
 $$
     \Phi(x) = \int_{-\infty}^\infty \frac{\text{d} q}{2\pi}\,\tilde{\Phi}(q) \exp\left( i q x \right),
-    \tag{eq:fouriertrafo2}
+    \tag{5.12}
 $$
 
 die Fourier-Rück*transformation*.
@@ -525,7 +525,7 @@ $$
     \tilde{\Phi}(q)
     =
     \int_{-\infty}^\infty \text{d} x \, \Phi(x) \exp\left( -i q x \right),
-    \tag{eq:fouriertrafo3}
+    \tag{5.13}
 $$
 
 der Fourier-Transformation. Die Fourier-Transformation ist nützlich, um
@@ -543,7 +543,7 @@ $$a_n$$. Der Grund hierfür ist die Periodizität des betrachteten Gebiets.
 
 Ähnlich wie wir eine approximierte Lösung für eine Differentialgleichung mit
 Hilfe einer Reihenentwicklung konstruiert haben, können wir nun den Ansatz
-Gl.~\eqref{eq:fouriertrafo2} nutzen, um analytische Lösungen zu erhalten. In
+Gl. (5.12) nutzen, um analytische Lösungen zu erhalten. In
 diesem Abschnitt wird dies mit Hilfe der Poisson-Gleichung in drei Dimensionen
 demonstriert.
 
@@ -555,10 +555,10 @@ $$
   \frac{\partial^2 \Phi}{\partial x^2} + \frac{\partial^2 \Phi}{\partial y^2} + \frac{\partial^2 \Phi}{\partial z^2}
   =
   - \frac{\rho}{\varepsilon}.
-  \tag{eq:poisson-3d}
+  \tag{5.14}
 $$
 
-Im Gegensatz zu Gl.~\eqref{eq:poisson-1d} taucht hier nun die partielle
+Im Gegensatz zu Gl. (5.7) taucht hier nun die partielle
 Ableitung $$\partial$$ auf, weil $$\Phi(x,y,z)$$ nun von drei Variablen (den
 kartesischen Koordinaten) abhängt.
 
@@ -587,7 +587,7 @@ schreibt sich als
 $$
   \Phi(x,y,z) = \int_{-\infty}^\infty \frac{\text{d}^3 q}{(2\pi)^3}\,
                 \tilde{\Phi}(q_x, q_y, q_z) \exp\left( i q_x x + i q_y y + i q_z z\right),
-  \tag{eq:fouriertrafo3d}
+  \tag{5.15}
 $$
 
 wobei die Fouriertransformierte $$\tilde{\Phi}$$ jetzt natürlich von drei
@@ -595,31 +595,31 @@ Wellenvektoren $$q_x$$, $$q_y$$ und $$q_z$$ abhängt. Der Differentialoperator
 $$\text{d}^3 q=\text{d} q_x \text{d} q_y \text{d} q_z$$ ist eine Kurznotation für
 die dreidimensionale Integration.
 
-Wir können nun Gl.~\eqref{eq:fouriertrafo3d} in die PDGL
-Gl.~\eqref{eq:poisson-3d} einsetzen und erhalten
+Wir können nun Gl. (5.15) in die PDGL
+Gl. (5.14) einsetzen und erhalten
 
 $$
-   R(\v{r})
+   R(\mathbf{r})
    =
    \int_{-\infty}^\infty \frac{\text{d}^3 q}{(2\pi)^3}\,
    \left[
-   \left(-q_x^2 - q_y^2 - q_z^2\right) \tilde{\Phi}(\v{q}) 
+   \left(-q_x^2 - q_y^2 - q_z^2\right) \tilde{\Phi}(\mathbf{q}) 
    +
-   \frac{\tilde{\rho}(\v{q})}{\varepsilon}
+   \frac{\tilde{\rho}(\mathbf{q})}{\varepsilon}
    \right]
-   \exp\left( i \v{q}\cdot\v{r} \right)
+   \exp\left( i \mathbf{q}\cdot\mathbf{r} \right)
    = 0
 $$
 
-mit $$\v{r}=(x,y,z)$$ und $$\v{q}=(q_x,q_y,q_z)$$.  Diese Gleichung muss für jedes
+mit $$\mathbf{r}=(x,y,z)$$ und $$\mathbf{q}=(q_x,q_y,q_z)$$.  Diese Gleichung muss für jedes
 $$x,y,z$$ erfüllt sein und damit muss das Argument der Integration verschwinden,
 also
 
 $$
-   -q^2 \tilde{\Phi}(\v{q}) 
+   -q^2 \tilde{\Phi}(\mathbf{q}) 
    +
-   \frac{\tilde{\rho}(\v{q})}{\varepsilon} = 0.
-   \tag{eq:fourierpoisson2d}
+   \frac{\tilde{\rho}(\mathbf{q})}{\varepsilon} = 0.
+   \tag{5.16}
 $$
 
 
@@ -630,7 +630,7 @@ $$R(x,y,z)$$ hinschreibt:
 $$
   R(q_x', q_y', q_z')
   =
-  \int \text{d}^3 r \, R(\v{r}) \exp\left( -i q_x x - i q_y y - i q_z z \right).
+  \int \text{d}^3 r \, R(\mathbf{r}) \exp\left( -i q_x x - i q_y y - i q_z z \right).
 $$
 
 Diese enthält Terme der Form
@@ -645,18 +645,18 @@ $$n$$) "parameterisiert" sind, erhält man eine Diracsche $$\delta$$-Funktion
 anstelle des Kronecker-$$\delta$$ in der Orthogonalitätsrelation.
 </div>
 
-Gleichung~\eqref{eq:fourierpoisson2d} kann einfach analytisch gelöst werden.
+Gleichung (5.16) kann einfach analytisch gelöst werden.
 Man erhält
 
 $$
-   \tilde{\Phi}(\v{q}) 
+   \tilde{\Phi}(\mathbf{q}) 
    =
-   \frac{\tilde{\rho}(\v{q})}{\varepsilon q^2}
-   \tag{eq:fourierpoissonsol}
+   \frac{\tilde{\rho}(\mathbf{q})}{\varepsilon q^2}
+   \tag{5.17}
 $$
 
-mit $$q=|\v{q}|$$. Dies ist äquivalent zur Lösung
-Gl.~\eqref{eq:discrpoissonfouriersol} für die Poisson-Gleichung auf einem
+mit $$q=|\mathbf{q}|$$. Dies ist äquivalent zur Lösung
+Gl. (5.10) für die Poisson-Gleichung auf einem
 periodischen Gebiet. Die Schwierigkeit besteht nun da drin, für ein gegebenes
 $$\rho(x,y,z)$$ die Hin- und Rücktransformation auszuwerten.
 
@@ -669,17 +669,17 @@ $$
 $$
 
 Die Fourier-Transformierte der Ladungsdichte $$\rho$$ erhält man aus
-Gl.~\eqref{eq:fouriertrafo3},
+Gl. (5.13),
 
 $$
   \tilde{\rho}(q_x,q_y,q_z) = Q.
 $$
 
 D.h. die Fourier-Transformierte des elektrostatischen Potentials ist gegeben
-durch (siehe Gl.~\eqref{eq:fourierpoissonsol})
+durch (siehe Gl. (5.17))
 
 $$
-  \tilde{\Phi}(\v{q}) 
+  \tilde{\Phi}(\mathbf{q}) 
   =
   \frac{Q}{\varepsilon q^2},
 $$
@@ -688,10 +688,10 @@ und damit lautet die Darstellung im Realraum
 
 $$
 \begin{split}
-  \Phi(\v{r})
+  \Phi(\mathbf{r})
   =&
   \int_{-\infty}^\infty \frac{\text{d}^3 q}{(2\pi)^3}\, \frac{Q}{\varepsilon q^2}
-  \exp\left( i \v{q}\cdot \v{r} \right) \\
+  \exp\left( i \mathbf{q}\cdot \mathbf{r} \right) \\
   =&
   \frac{Q}{(2\pi)^3 \varepsilon} \int_0^\infty \text{d} q \int_0^{2\pi} \text{d} \phi \int_{-1}^1 \text{d}(\cos \theta) \,  \exp\left( i q r \cos \theta \right)
 \end{split}
@@ -700,13 +700,13 @@ $$
 wobei $$\text{d}^3 q = q^2 \text{d} q \text{d}\phi \text{d}(\cos\theta)$$ mit
 Azimutwinkel $$\phi$$ und Elevationswinkel $$\theta$$, genutzt wurde (siehe auch
 Abb.~\ref{fig:volume-spherical}). Wir verlangen hier (ohne Beschränkung der
-Allgemeinheit), dass $$\v{r}$$ in Richtung Zenit zeigt.
+Allgemeinheit), dass $$\mathbf{r}$$ in Richtung Zenit zeigt.
 
 Man erhält
 
 $$
 \begin{split}
-  \Phi(\v{r})
+  \Phi(\mathbf{r})
   =&
   \frac{Q}{(2\pi)^2 \varepsilon} \int_0^\infty \text{d} q 
   \int_{-1}^1 \text{d} (\cos\theta) \,  \exp\left( i q r \cos\theta \right)
