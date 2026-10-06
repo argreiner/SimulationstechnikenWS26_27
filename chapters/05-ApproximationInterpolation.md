@@ -769,49 +769,80 @@ Um das Residuum zu berechnen benötigen wir die beiden Ableitungen $$\partial^2
 in unserem Fall 
 
 $$
-    \frac{\partial^2 \tilde{u}}{\partial x^2} &= - \sum_{mn} B_{mn} \pi^2 n^2 \sin(n \pi x) \cos(m \pi y) \\
-    \frac{\partial^2 \tilde{u}}{\partial y^2} &= - \sum_{mn} B_{mn} \pi^2 m^2 \sin(n \pi x) \cos(m \pi y) 
+\begin{aligned}
+  \frac{\partial^2 \tilde{u}}{\partial x^2} &= - \sum_{mn} B_{mn} \pi^2 n^2 \sin(n \pi x) \cos(m \pi y) \\
+  \frac{\partial^2 \tilde{u}}{\partial y^2} &= - \sum_{mn} B_{mn} \pi^2 m^2 \sin(n \pi x) \cos(m \pi y) 
+\end{aligned}
 $$
 
 Damit lautet das Residuum 
-\begin{align}
+
+$$
+\begin{aligned}
     R(\tilde{u}(x, y)) &= \frac{\partial^2 \tilde u}{\partial x^2} + \frac{\partial^2 \tilde u}{\partial y^2}
     \\
     &= -\sum_{mn}  B_{mn} \sin(n \pi x) \cos(m \pi y)  \pi^2 (m^2 + n^2)
-\end{align}
-Die Gewichtsfunktionen nach Galerkin lassen sich nach $W_{mn} = \frac{\partial \tile{u}}{\partial B_{mn}}$ bestimmen. Damit ergeben sich folgende Gewichtsfunktionen 
-\begin{equation}
+\end{aligned}
+$$
+
+Die Gewichtsfunktionen nach Galerkin lassen sich nach $$W_{mn} = \frac{\partial
+\tile{u}}{\partial B_{mn}}$$ bestimmen. Damit ergeben sich folgende
+Gewichtsfunktionen 
+
+$$
     W_{mn} = \sin(n \pi x) \cos(m \pi y)
-\end{equation}
-Die Gleichung für das gewichtete Residuum $G_{mn}$ lautet damit  
-\begin{equation}
-    G_{mn}=\int_0^1\int_0^1 dx dy \sin(n \pi x) \cos(m\pi y) \left[- \sum_{kl} B_{kl} \sin(k \pi x) \cos(l \pi y)  \pi^2 (k^2 + l^2) \right]
-\end{equation}
+$$
+
+Die Gleichung für das gewichtete Residuum $$G_{mn}$$ lautet damit  
+
+$$
+  G_{mn}=\int_0^1\int_0^1 dx dy \sin(n \pi x) \cos(m\pi y) 
+         \left[- \sum_{kl} B_{kl} \sin(k \pi x) \cos(l \pi y)  \pi^2 (k^2 + l^2) \right]
+$$
+
 Wir separieren die Integrale voneinander 
-\begin{equation}
-    G_{mn} = - \sum_{kl} B_{kl}\pi^2 (k^2 + l^2) \left(\int_0^1 \sin(n\pi x)\sin(k\pi x) dx\right) \left( \int_0^1 \cos(m\pi y) \cos(l \pi y) dy \right)
-\end{equation}
-Um dieses Integral zu l\"osen verwenden wir den trigonometrischen Zusammenhang $\sin(k\pi y)\sin(n\pi y) = \frac{1}{2}\cos((k-n)\pi y) - \frac{1}{2} \cos((k+n) \pi y)$.
-\begin{align}
+
+$$
+  G_{mn} = - \sum_{kl} B_{kl}\pi^2 (k^2 + l^2) 
+     \left(\int_0^1 \sin(n\pi x)\sin(k\pi x) dx\right) 
+     \left( \int_0^1 \cos(m\pi y) \cos(l \pi y) dy \right)
+$$
+
+Um dieses Integral zu l\"osen verwenden wir den trigonometrischen Zusammenhang
+$$\sin(k\pi y)\sin(n\pi y) = \frac{1}{2}\cos((k-n)\pi y) - \frac{1}{2}
+\cos((k+n) \pi y)$$.
+
+$$
+\begin{aligned}
     \int_0^1 dx\sin(k\pi x ) \sin(n\pi x )  &= \frac{1}{2} \int_{0}^{1} dx \cos((k-n) \pi x ) - \cos((k+n) \pi x)  \\
                                             &= \frac{1}{2} \int_0^1 \cos((k-n) \pi x ) dx - \frac{1}{2} \int_0^1 \cos((k+n) \pi x) dx \\
                                             &= \frac{1}{2} \frac{\sin((k-n)\pi)}{(k-n)\pi} - \frac{1}{2} \frac{\sin((k+n)\pi)}{(k+n)\pi}
-\end{align}
-Mithilfe der Regel vonl'Hopital (siehe Aufgabenteil 2) und unter dem Wissen, dass $k,n > 0$ ist bekommen wir 
-\begin{align}
-    \int_0^1 dx\sin(k\pi x ) \sin(n\pi x )  &= \frac{1}{2} \delta(k-n)  \\
-    \int_0^1 \cos(m\pi y) \cos(l \pi y) &=  \frac{1}{2} \delta(l-m)
-\end{align}
+\end{aligned}
+$$
+
+Mithilfe der Regel vonl'Hopital (siehe Aufgabenteil 2) und unter dem Wissen,
+dass $$k,n > 0$$ ist bekommen wir 
+
+$$
+\begin{aligned}
+  \int_0^1 dx\sin(k\pi x ) \sin(n\pi x )  &= \frac{1}{2} \delta(k-n)  \\
+  \int_0^1 \cos(m\pi y) \cos(l \pi y) &=  \frac{1}{2} \delta(l-m)
+\end{aligned}
+$$
+
 Damit ist 
-\begin{align}
-    G_{mn} &= -\sum_{kl} B_{kl} \pi^2 (k^2 + l^2) \frac{1}{4} \delta(k-n) \delta(l-m) \\
-           &= \frac{B_{mn}}{4}  \pi^2 (n^2 + m^2)
-\end{align}
-Wir fordern, dass das Residuum Null ergibt $G_{mn}=0$. Daraus folgt, dass die Koeffizienten $B_{mn}$ genau Null sind. 
+
+$$
+\begin{aligned}
+  G_{mn} &= -\sum_{kl} B_{kl} \pi^2 (k^2 + l^2) \frac{1}{4} \delta(k-n) \delta(l-m) \\
+         &= \frac{B_{mn}}{4}  \pi^2 (n^2 + m^2)
+\end{aligned}
+$$
+
+Wir fordern, dass das Residuum Null ergibt $$G_{mn}=0$$. Daraus folgt, dass die
+Koeffizienten $$B_{mn}$$ genau Null sind. 
 Die Lösung lautet also 
-\begin{equation}
+
+$$
     \tilde{u}(x, y) = x
-\end{equation}
-
-
-
+$$
