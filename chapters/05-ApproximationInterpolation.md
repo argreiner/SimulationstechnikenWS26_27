@@ -727,9 +727,6 @@ die Fundamentallösung oder *Greensche Funktion* der (dreidimensionalen)
 Poisson-Gleichung.
 
 <figure>
-  <img src="{{ site.baseurl }}/figs/coll5.png" alt="Collocation5">
-</figure>
-<figure>
   <img src="{{ site.baseurl }}/figs/illustr_angles_1" alt="Illustr_Angles" 
    width="600" height="600">
   <figcaption align="center">Abbildung 5.3: 
