@@ -698,7 +698,7 @@ $$
 
 wobei $$\text{d}^3 q = q^2 \text{d} q \text{d}\phi \text{d}(\cos\theta)$$ mit
 Azimutwinkel $$\phi$$ und Elevationswinkel $$\theta$$, genutzt wurde (siehe auch
-Abb.~\ref{fig:volume-spherical}). Wir verlangen hier (ohne Beschränkung der
+Abb. 5.3). Wir verlangen hier (ohne Beschränkung der
 Allgemeinheit), dass $$\mathbf{r}$$ in Richtung Zenit zeigt.
 
 Man erhält
