@@ -640,9 +640,10 @@ $$
 $$
 
 welche Ausdruck der Orthogonalität der Basisfunktionen sind. Da die
-Basisfunktionen nun mit einem Kontinuierlichen \(q_x\) (anstelle eines diskreten
-\(n\)) "parameterisiert" sind, erhält man eine Diracsche \(\delta\)-Funktion
-anstelle des Kronecker-\(\delta\) in der Orthogonalitätsrelation.
+Basisfunktionen nun mit einem Kontinuierlichen \(q_x\) (anstelle eines
+diskreten \(n\)) "parameterisiert" sind, erhält man eine Diracsche
+\(\delta\)-Funktion anstelle des Kronecker-\(\delta\) in der
+Orthogonalitätsrelation.
 </div>
 
 Gleichung (5.16) kann einfach analytisch gelöst werden.
@@ -655,17 +656,12 @@ $$
    \tag{5.17}
 $$
 
-mit $$q=|\mathbf{q}|$$. Dies ist äquivalent zur Lösung
-Gl. (5.10) für die Poisson-Gleichung auf einem
-periodischen Gebiet. Die Schwierigkeit besteht nun da drin, für ein gegebenes
-$$\rho(x,y,z)$$ die Hin- und Rücktransformation auszuwerten.
+mit $$q=|\mathbf{q}|$$. Dies ist äquivalent zur Lösung Gl. (5.10) für die
+Poisson-Gleichung auf einem periodischen Gebiet. Die Schwierigkeit besteht nun
+da drin, für ein gegebenes $$\rho(x,y,z)$$ die Hin- und Rücktransformation
+auszuwerten.
 
-***Beispiel:***
-
-*Hier Laplacegleichung 2D aus Spiegel*
-
-Als Beispiel betrachten wir nun die Lösung für eine Punktladung $$Q$$ am
-Ursprung,
+Wir betrachten nun die Lösung für eine Punktladung $$Q$$ am Ursprung,
 
 $$
   \rho(x,y,z) = Q \delta(x) \delta(y) \delta(z).
@@ -730,13 +726,19 @@ Lösung für das elektrostatische Potential einer Punktladung. Man nennt sie auc
 die Fundamentallösung oder *Greensche Funktion* der (dreidimensionalen)
 Poisson-Gleichung.
 
-\begin{figure}
-\ifpdf
-    \includegraphics[width=0.5\textwidth]{Figures/illustr_angles_1}
-\else
-    \includegraphics[width=1.0\textwidth,natwidth=141,natheight=141]{Figures/illustr_angles_1}
-\fi
-    \caption{Volumenelement für die Integration in Kugelkoordination}
-    \label{fig:volume-spherical}
-\end{figure}
+<figure>
+  <img src="{{ site.baseurl }}/figs/coll5.png" alt="Collocation5">
+</figure>
+<figure>
+  <img src="{{ site.baseurl }}/figs/illustr_angles_1" alt="Illustr_Angles" 
+   width="600" height="600">
+  <figcaption align="center">Abbildung 5.3: 
+   Volumenelement für die Integration in Kugelkoordination.
+  </figcaption>
+</figure>
+
+***Beispiel:***
+
+*Hier Laplacegleichung 2D aus Spiegel*
+
 
