@@ -812,13 +812,10 @@ $$
 \end{aligned}
 $$
 
-Damit ist 
+Und damit 
 
 $$
-\begin{aligned}
-  G_{mn} &= -\sum_{kl} B_{kl} \pi^2 (k^2 + l^2) \frac{1}{4} \delta(k-n) \delta(l-m) \\
-         &= \frac{B_{mn}}{4}  \pi^2 (n^2 + m^2)
-\end{aligned}
+  G_{mn} = \frac{B_{mn}}{4}  \pi^2 (n^2 + m^2)
 $$
 
 Wir fordern, dass das Residuum Null ergibt $$G_{mn}=0$$. Daraus folgt, dass die
@@ -837,6 +834,6 @@ Skalarprodukt des Residuums mit den Ansatzfunktionen. Im vorliegenden Fall
 können wir das Residuum exakt zu null machen, indem wir sämtliche Koeffizienten
 $$B_{mn}$$ zu null wählen. D.h. aber wiederum, dass das Residuum "senkrecht"
 ist zu allen Basisfunktionen und im Schluss auch, dass $$\tilde{u}(x, y) = x$$
-die exakte Lösung. Im vorliegenden Besipiel hätten wir das auch gleich erraten
-können.
+die exakte Lösung darstellt. Im vorliegenden Besipiel hätten wir das auch
+gleich erraten können.
 
