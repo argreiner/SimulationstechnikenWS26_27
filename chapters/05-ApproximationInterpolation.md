@@ -727,8 +727,8 @@ die Fundamentallösung oder *Greensche Funktion* der (dreidimensionalen)
 Poisson-Gleichung.
 
 <figure>
-  <img src="{{ site.baseurl }}/figs/illustr_angles_1" alt="Illustr_Angles" 
-   width="600" height="600">
+  <img src="{{ site.baseurl }}/figs/illustr_angles_1.png" alt="Illustr_Angles"
+   width="500" height="500" > 
   <figcaption align="center">Abbildung 5.3: 
    Volumenelement für die Integration in Kugelkoordination.
   </figcaption>
