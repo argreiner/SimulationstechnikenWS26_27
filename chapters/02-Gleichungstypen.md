@@ -54,7 +54,9 @@ U_n[y]&=\alpha_{n0}y(a)+\alpha_{n1}y^\prime(a)+\dots+\alpha_{nn-1}y^{n-1}(a)
        +\beta_{n0}y(b)+\beta_{n1}y^\prime(b)+\dots+\beta_{nn-1}y^{n-1}(b)=\gamma_n
 \end{aligned} $$
 
-Wobei die Frage nach der Lösbarkeit komplexer ist.
+Wobei die Frage nach der Lösbarkeit komplexer ist. Eine spezielle Art von
+Randwertproblemen wird durch die Sturm'schen Randbedingungen gegeben. Hierbei
+kommt in jeder Randbedingung jeweils nur eine Intervallgrenze vor.
 
 **Beispiel:** Randwertproblem 2. Ordnung
 
@@ -73,8 +75,10 @@ Wir betrachten drei unterschiedliche Fälle:
 - Nehmen wir an, $$y_0(x)$$ sei eine spezielle Lösung der inhomogenen
   Differentialgleichung $$L[y]=g(x)$$. Dann kann das Randwertproblem:
   $$L[y]=g(x), \quad U_1[y]=\gamma_1, \dots, U_n[y]=\gamma_n$$
-  mit der Transformation $$\tilde{y}(x)=y(x)-y_0(x)$$ in das äquivalente Problem überführt werden:
-  $$L[\tilde{y}]=0, \quad U_1[\tilde{y}]=\gamma_1-U_1[y_0], \dots, U_n[\tilde{y}]=\gamma_n-U_n[y_0]$$ (homogene DGL).
+  mit der Transformation $$\tilde{y}(x)=y(x)-y_0(x)$$ in das äquivalente
+  Problem überführt werden: $$L[\tilde{y}]=0, \quad
+  U_1[\tilde{y}]=\gamma_1-U_1[y_0], \dots, U_n[\tilde{y}]=\gamma_n-U_n[y_0]$$
+  (homogene DGL).
 - Ist $$u(x)$$ eine Funktion, die nur die Randbedingungen erfüllt
   ($$U_i[u]=\gamma_i$$), dann kann durch $$\tilde{y}(x)=y(x)-u(x)$$ überführt
   werden in:

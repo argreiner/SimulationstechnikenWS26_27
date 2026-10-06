@@ -124,9 +124,6 @@ verwendet. Eine gute Übersicht über Optimierungsverfahren bietet das Buch von
 </div>
 
 ### Ein erstes Beispiel
-\label{sec:first_example}
-
-\video{https://uni-freiburg.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=025ad4dc-b395-4980-8fdc-ac84016870c8}
 
 Wir wollen nun diese abstrakten Ideen an einem Beispiel konkretisieren und ein
 paar wichtige Begriffe einführen. Wir schauen uns das eindimensionale
