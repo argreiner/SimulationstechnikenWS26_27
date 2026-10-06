@@ -34,17 +34,17 @@ molekularkinetischen Theorie der Wärme geforderte Bewegung von in ruhenden
 Flüssigkeiten suspendierten Teilchen. Ann. Phys., 17:549, 1905).
 
 Brownsche Molekularbewegung führt zu diffusivem Transport.
-Abbildung~\ref{fig:brownian} zeigt ein einfaches qualitatives
-Gedankenexperiment. Die Konfiguration in Abb.~\ref{fig:brownian}a zeigt eine
+Abbildung 3.1 zeigt ein einfaches qualitatives
+Gedankenexperiment. Die Konfiguration in Abb. 3.1 zeigt eine
 Lokalisierung der ``Pollen'' in der linken Hälfte der gezeigten Domäne. Durch
 deren zufällige Bewegung (als Beispiel gezeigt an der roten Linie in
-Abb.~\ref{fig:brownian}a) werden einige der Pollen die gestrichelte Grenzlinie
+Abb. 3.1a werden einige der Pollen die gestrichelte Grenzlinie
 in die rechte Hälfte überschreiten und auch wieder zurück kommen. Nach einer
 gewissen Zeit lässt sich der Anfangszustand nicht mehr identifizieren und die
-Pollen verteilen sich in der gesamten Domäne (Abb.~\ref{fig:brownian}b). Die
+Pollen verteilen sich in der gesamten Domäne (Abb. 3.1b) Die
 Konzentration ist nun konstant. Die Pollen bewegen sich zwar weiter, aber in
 Mittel bewegt sich die gleiche Zahl Pollen nach links wie nach rechts. Im Fall
-der in Abb.~\ref{fig:brownian}a gezeigt ist, ist diese Symmetrie gebrochen.
+der in Abb. 3.1a gezeigt ist, ist diese Symmetrie gebrochen.
 
 <figure>
   <img src="{{ site.baseurl }}/figs/Brownian_Motion.png" alt="BrownianMotion">
