@@ -737,6 +737,7 @@ Poisson-Gleichung.
 </figure>
 
 ***Beispiel:***
+
 Die Laplacegleichung
 
 $$
@@ -785,14 +786,8 @@ $$
 \end{aligned}
 $$
 
-Die Gewichtsfunktionen nach Galerkin lassen sich nach $$W_{mn} = \frac{\partial
-\tile{u}}{\partial B_{mn}}$$ bestimmen. Damit ergeben sich folgende
-Gewichtsfunktionen 
-
-$$
-    W_{mn} = \sin(n \pi x) \cos(m \pi y)
-$$
-
+Die Gewichtsfunktionen nach Galerkin sind die Ansatzfunktionen
+$$W_{mn}=\phi_{nm}(x,y) = \sin(n \pi x) \cos(m \pi y)$$.  
 Die Gleichung für das gewichtete Residuum $$G_{mn}$$ lautet damit  
 
 $$
@@ -808,25 +803,12 @@ $$
      \left( \int_0^1 \cos(m\pi y) \cos(l \pi y) dy \right)
 $$
 
-Um dieses Integral zu l\"osen verwenden wir den trigonometrischen Zusammenhang
-$$\sin(k\pi y)\sin(n\pi y) = \frac{1}{2}\cos((k-n)\pi y) - \frac{1}{2}
-\cos((k+n) \pi y)$$.
+Es ist
 
 $$
 \begin{aligned}
-    \int_0^1 dx\sin(k\pi x ) \sin(n\pi x )  &= \frac{1}{2} \int_{0}^{1} dx \cos((k-n) \pi x ) - \cos((k+n) \pi x)  \\
-                                            &= \frac{1}{2} \int_0^1 \cos((k-n) \pi x ) dx - \frac{1}{2} \int_0^1 \cos((k+n) \pi x) dx \\
-                                            &= \frac{1}{2} \frac{\sin((k-n)\pi)}{(k-n)\pi} - \frac{1}{2} \frac{\sin((k+n)\pi)}{(k+n)\pi}
-\end{aligned}
-$$
-
-Mithilfe der Regel vonl'Hopital (siehe Aufgabenteil 2) und unter dem Wissen,
-dass $$k,n > 0$$ ist bekommen wir 
-
-$$
-\begin{aligned}
-  \int_0^1 dx\sin(k\pi x ) \sin(n\pi x )  &= \frac{1}{2} \delta(k-n)  \\
-  \int_0^1 \cos(m\pi y) \cos(l \pi y) &=  \frac{1}{2} \delta(l-m)
+  \int_0^1 dx\sin(k\pi x ) \sin(n\pi x )  &= \frac{1}{2} \delta_{kn}  \\
+  \int_0^1 \cos(m\pi y) \cos(l \pi y) &=  \frac{1}{2} \delta_{lm}
 \end{aligned}
 $$
 
@@ -840,9 +822,21 @@ $$
 $$
 
 Wir fordern, dass das Residuum Null ergibt $$G_{mn}=0$$. Daraus folgt, dass die
-Koeffizienten $$B_{mn}$$ genau Null sind. 
-Die Lösung lautet also 
+Koeffizienten $$B_{mn}$$ genau Null sind. Die Lösung lautet also 
 
 $$
-    \tilde{u}(x, y) = x
+  \tilde{u}(x, y) = x
 $$
+
+***Interpretation:***
+
+Die Ansatzfunktionen spannen ein vollständiges orthogonales Funktionensystem
+auf. Die Gewichtsfunktionen ebenfalls, denn sie werden aus dem Raum der
+Ansatzfunktionen gewählt (Galerkinmehtode). Das gewichtete Residuum ist ein
+Skalarprodukt des Residuums mit den Ansatzfunktionen. Im vorliegenden Fall
+können wir das Residuum exakt zu null machen, indem wir sämtliche Koeffizienten
+$$B_{mn}$$ zu null wählen. D.h. aber wiederum, dass das Residuum "senkrecht"
+ist zu allen Basisfunktionen und im Schluss auch, dass $$\tilde{u}(x, y) = x$$
+die exakte Lösung. Im vorliegenden Besipiel hätten wir das auch gleich erraten
+können.
+
