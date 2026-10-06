@@ -660,7 +660,10 @@ Gl. (5.10) für die Poisson-Gleichung auf einem
 periodischen Gebiet. Die Schwierigkeit besteht nun da drin, für ein gegebenes
 $$\rho(x,y,z)$$ die Hin- und Rücktransformation auszuwerten.
 
-\begin{example}
+***Beispiel:***
+
+*Hier Laplacegleichung 2D aus Spiegel*
+
 Als Beispiel betrachten wir nun die Lösung für eine Punktladung $$Q$$ am
 Ursprung,
 
@@ -726,7 +729,6 @@ wobei $$\int \text{d} x\,\sin x/x=\pi$$ genutzt wurde. Dies ist die bekannte
 Lösung für das elektrostatische Potential einer Punktladung. Man nennt sie auch
 die Fundamentallösung oder *Greensche Funktion* der (dreidimensionalen)
 Poisson-Gleichung.
-\end{example}
 
 \begin{figure}
 \ifpdf
