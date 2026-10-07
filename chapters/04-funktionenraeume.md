@@ -18,6 +18,11 @@ parent: Vorlesung
   }
 </style>
 
+### Lernziele dieses Kapitels:
+- [ ] Funktionenräume zur Lösung von Differentialgleichungen
+- [ ] Basisfunktionen: Fourierbasis, Finite Elemente Basis
+
+
 # Funktionenräume
 
 ## Numerische Lösungsstrategien

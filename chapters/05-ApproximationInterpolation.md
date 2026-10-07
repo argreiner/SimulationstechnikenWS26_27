@@ -37,8 +37,12 @@ window.MathJax = {
   }
 </style>
 
-
 # Approximation und Interpolation
+
+### Lernziele dieses Kapitels:
+- [ ] Anwendung der Funktionenräume 
+- [ ] Interpolation
+- [ ] Gewichtete Residuen
 
 <div class="graybox">
 Wir wenden nun die Idee der Basisfunktionen an, um Funktionen zu

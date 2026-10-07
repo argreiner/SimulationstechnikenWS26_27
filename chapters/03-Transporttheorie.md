@@ -17,6 +17,11 @@ parent: Vorlesung
   }
 </style>
 
+
+### Lernziele dieses Kapitels:
+- [ ] Grundlagen der Transporttheorie
+- [ ] Bilanzgleichungen
+
 # Transporttheorie
 
 Diffusiver Transport ist einfach zugänglich über das Bild des "Random Walk",
