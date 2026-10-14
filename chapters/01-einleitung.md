@@ -31,14 +31,14 @@ Wie ordnen zunächst die Modelle nach Längeskale und mathematischer Beschreibun
   <img src="{{ site.baseurl }}/figs/ExtendedScheme.png" alt="Simulationsschema">
   <figcaption align="center">Abbildung 1.1: Die vertikale Anordnung der Kästen
 repräsentiert die Längenskale, welche auf der rechten Seite gezeigt ist. In den
-Kästen selbst stehen Simulationsmethode welche auf diesen Skalen Anwendung
+Kästen selbst stehen Simulationsmethoden, welche auf diesen Skalen Anwendung
 finden. In dieser Lehrveranstaltung beschäftigen wir uns mit der
 Diskretisierung von Feldern und wählen einen spezifischen Anwendungsfall, der
 in die lokale Bilanz hineinfällt.
   </figcaption>
 </figure>
 
-Die Abbildung 1.1 zeigt in der vertikalen Anordnung von
+Die Abbildung 1.1 zeigt in der Vertikalen die Anordnung von
 *Längenskalen* und deren Zuordnung zu verschiedenen Beschreibungsebenen.
 Auf der kürzesten Längenskala ist meist eine quantenmechanische Beschreibung
 notwendig. Dies bedeutet, wenn wir die Phänomene in \r{A} auflösen wollen,
@@ -49,7 +49,7 @@ ist in verschiedenen Methoden implementiert, wie z.B. der
 *Dichtefunktionaltheorie*, einer Vielteilchenbeschreibung des
 quantenmechanischen elektronischen Systems. Bei dieser Art der
 Vielteilchenbeschreibung handelt es sich, im Gegensatz zur
-*Molekulardynamik* als Methode auf einer grö{ß}eren Längenskala, nicht um
+*Molekulardynamik* als Methode auf einer größeren Längenskala, nicht um
 eine Beschreibung von Punktteilchen, sondern um gekoppelte Felder, was den
 Aufwand im Vergleich zu einer reinen Punktmechanik wesentlich erhöht. In der
 Punktmechanik haben wir es mit drei Orts- und drei Geschwindigkeitsvariablen
@@ -60,7 +60,7 @@ Ortsvariablen zu tun haben, nämlich $$\Psi(\vec{r}_1,\vec{r}_2,\dots,\vec{r}_n;
 Auf der Ebene der semiklassischen und klassischen Mechanik, auch als kinetische
 Ebene bezeichnet, werden die Modelle entweder durch die Molekulardynamik
 beschrieben oder durch die Bewegungsgleichung der
-Einteilchen-Wahrscheinlichkeits\-dichte im Phasenraum $$f(\vec{r},\vec{p})$$ - mit
+Einteilchen-Wahrscheinlichkeitsdichte im Phasenraum $$f(\vec{r},\vec{p})$$ - mit
 den unabhängigen Variablen Ort $$\vec{r}$$ und Impuls $$\vec{p}$$. Im zweiten Fall
 haben wir eine Funktion $$f(\vec{r}(t),\vec{p}(t),t)$$ die von Ort, Impuls und der
 Zeit sowohl explizit, als auch implizit über $$\vec{r}(t)$$ und $$\vec{p}(t)$$ abhängt.
@@ -70,6 +70,6 @@ Variabler schon bereits 10.000.000 Interpolationspunkte. Dies ist vielleicht
 handhabbar, die Auflösung ist aber nicht besonders gut. Und daher ist dieses
 Unterfangen eher unnütz.  Wir wollen nicht verschweigen, dass es durchaus
 Methoden zur numerischen Lösung der beiden oben beschriebenen Probleme gibt,
-auf diese werden aber in dieser Veranstaltung nicht näher eingegangen.
+auf diese wird aber in dieser Veranstaltung nicht näher eingegangen.
 
 
