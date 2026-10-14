@@ -51,7 +51,7 @@ $$T_w=20^\circ$$C$$=293.15K$$.
 Das Fenster sei ein modernes Mehrscheibenfenster mit einem K-Wert von
 $$K=1.0W/m^2/K$$. Nehmen Sie an das Fenster habe eine Fläche von $$A=1m^2$$. 
 Wieviel Wärmeleistung geht durch die konvektive Randbedingung verloren?
-a. Berechnen Sie die Lösung analytisch!
-b. Berechnen Sie die Lösung mittels scipy.integrate.solve_bvp!
-c. Berechnen Sie die Lösung mittels eines Finiten Differenzen Verfahrens!
-d. Stellen Sie die Lösungen mit matplotlib.pyplot in einem Graph dar.
+1. Berechnen Sie die Lösung analytisch!
+1. Berechnen Sie die Lösung mittels scipy.integrate.solve_bvp!
+1. Berechnen Sie die Lösung mittels eines Finiten Differenzen Verfahrens!
+1. Stellen Sie die Lösungen mit matplotlib.pyplot in einem Graph dar.
