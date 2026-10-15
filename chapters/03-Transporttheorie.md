@@ -116,7 +116,9 @@ Den Fall $$p\ne q$$ behandeln wir in einer Übungsaufgabe und gebe hier
 lediglich das Ergebnis an
 
 $$ 
-\frac{\partial P(x,t)}{\partial t}=D\frac{\partial^2 P(x,t)}{\partial x^2},
+\frac{\partial P(x,t)}{\partial t}=
+\left(D\frac{\partial^2}{\partial x^2}
+-v\frac{\partial}{\partial x}\right)P(x,t),
 \tag{3.2}
 $$ 
 
@@ -448,7 +450,7 @@ $$
  \tag{3.14}
 $$
 
-Im Gegensatz zu Gleichungen~\eqref{eq:diffusion} und \eqref{eq:driftdiffusion}
+Im Gegensatz zu Gleichungen (3.1) und  (3.2)
 gilt diese Gleichung auch wenn die Diffusionskonstante $$D$$ oder
 Drift-Geschwindigkeit $$\mathbf{v}$$ räumlich variiert.
 
