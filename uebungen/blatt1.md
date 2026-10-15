@@ -17,8 +17,9 @@ Gegeben sei die Diffusionsgleichung
 
 $$ \frac{\partial P(x,t)}{\partial\text{t}}=\kappa\frac{\partial^2P(x,t)}{\partial x^2}$$
 
-auf einem räumliche Intervall $$[0,1]$$ und der Anfangsbedingung
+auf einem räumliche Intervall $$[0,1]$$m und der Anfangsbedingung
 $$P(x,0)=1\text{, für }x\in[0.25, 0.75]\text{ und }P(x,0)=0$$ sonst.
+Wählen Sie $$\kappa=1\text{m}^2\text{s}^{-1}$$.
 
 ## Aufgaben
 1. Zerlegen Sie den räumlichen Anteil der Diffusionsgleichung in eine
