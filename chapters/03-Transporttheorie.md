@@ -107,30 +107,39 @@ Dies beudeutet, daß nach dem Grenzübergang
 
 $$ 
 \frac{\partial P(x,t)}{\partial t}=D\frac{\partial^2 P(x,t)}{\partial x^2},
+\tag{3.1}
 $$ 
 
 die wohlbekannte Diffusionsgleichung resultiert.
 
+Den Fall $$p\ne q$$ behandeln wir in einer Übungsaufgabe und gebe hier
+lediglich das Ergebnis an
+
+$$ 
+\frac{\partial P(x,t)}{\partial t}=D\frac{\partial^2 P(x,t)}{\partial x^2},
+\tag{3.2}
+$$ 
+
 ## Teilchen oder Kontinuum
 
 <figure>
-  <img src="{{ site.baseurl }}/figs/continuity.png" alt="Kontinuitaet">
-  <figcaption align="center">Abbildung 3.3:  Teilchen können das Volumen V nur
+ <img src="{{ site.baseurl }}/figs/continuity.png" alt="Kontinuitaet">
+ <figcaption align="center">Abbildung 3.3:  Teilchen können das Volumen V nur
   durch die Seitenwände verlassen. Die Änderung der Teilchenzahl N über ein
-  Zeitintervall \(\tau\) ist daher durch die Anzahl der Teilchen gegeben, die durch
-  die Wände fließen. Hierzu brauchen wir die Teilchenströme \(\mathbf{j}\). Die Anzahl der
-  Teilchen, welche durch eine Oberfläche fließen ist dann gegeben durch \(j\cdot A\cdot\tau\) ,
-  wobei \(A\) die Fläche der Seitenwand ist. 
-</figcaption>
+  Zeitintervall \(\tau\) ist daher durch die Anzahl der Teilchen gegeben, die
+  durch die Wände fließen. Hierzu brauchen wir die Teilchenströme \(\mathbf{j}\).
+  Die Anzahl der Teilchen, welche durch eine Oberfläche fließen ist dann gegeben
+  durch \(j\cdot A\cdot\tau\) , wobei \(A\) die Fläche der Seitenwand ist. 
+ </figcaption>
 </figure>
  
-Die Gleichungen~\eqref{eq:diffusion} und \eqref{eq:driftdiffusion} vermischen
-zwei Konzepte, die wir hier jetzt getrennt behandeln wollen: Die Erhaltung der
-Anzahl der Teilchen (Kontinuität) und der Prozess, welcher zu einem
-Teilchenstrom führt (Diffusion oder Drift). Die Teilchenzahl ist einfach
-deshalb erhalten, weil wir keine Atome aus dem Nichts erzeugen oder in das
-Nichts vernichten können. Wir wissen also, wenn wir eine gewissen Anzahl
-Teilchen $$N_{\text{tot}}$$ in unserem Gesamtsystem haben, dass diese Anzahl
+Die Gleichungen (3.1) und (3.2) vermischen zwei Konzepte, die wir hier jetzt
+getrennt behandeln wollen: Die Erhaltung der Anzahl der Teilchen (Kontinuität)
+und der Prozess, welcher zu einem Teilchenstrom führt (Diffusion oder Drift).
+Die Teilchenzahl ist einfach deshalb erhalten, weil wir keine Atome aus dem
+Nichts erzeugen oder in das Nichts vernichten können. Wir wissen also, wenn wir
+eine gewissen Anzahl Teilchen $$N_{\text{tot}}$$ in unserem Gesamtsystem haben,
+dass diese Anzahl
 
 $$
     N_{\text{tot}} = \int \text{d}^3r \, c(\mathbf{r})
@@ -138,10 +147,10 @@ $$
 
 sich nicht über die Zeit ändern kann: $$\text{d} N_{\text{tot}}/\text{d} t=0$$.
 
-Für einen kleinen Ausschnitt mit Volumen $$V$$ aus diesem Gesamtvolumen kann sich
-die Teilchenzahl ändern, weil diese über die Wände des Probevolumens fließen
-können (siehe Abb.~\ref{fig:continuity}). Die Änderung dieser Teilchenzahl ist
-zum einen gegeben durch
+Für einen kleinen Ausschnitt mit Volumen $$V$$ aus diesem Gesamtvolumen kann
+sich die Teilchenzahl ändern, weil diese über die Wände des Probevolumens
+fließen können (siehe Abb. 3.3). Die Änderung dieser Teilchenzahl ist zum einen
+gegeben durch
 
 $$
   \dot{N}
@@ -154,7 +163,7 @@ $$
 
 Die Änderung $$\dot{N}$$ muss aber auch durch die Anzahl der Partikel, die über
 die Seitenwände abfließen, gegeben sein. Für einen Würfel
-(Abb.~\ref{fig:continuity}) mit sechs Wänden gilt
+(Abb. 3.3) mit sechs Wänden gilt
 
 $$
 \begin{aligned}
@@ -178,7 +187,7 @@ $$
   -
   j_{\text{hinten}} A_{\text{hinten}}
 \end{aligned}
-    \label{eq:dotN}
+    \tag{3.3}
 $$
 
 wenn die Wände klein genug sind, so dass $$j$$ nahezu konstant über $$A$$ ist. (Die
@@ -193,8 +202,9 @@ Oberflächennormale steht. Mit diesem Argument können wir die Änderung der
 Teilchenzahl allgemein als
 
 $$
-  \dot{N} = -\int_{\partial V} \text{d}^2r \, \mathbf{j}(\mathbf{r})\cdot\hat{n}(\mathbf{r})
-  \label{eq:flux}
+  \dot{N} = -\int_{\partial V} \text{d}^2r \, 
+  \mathbf{j}(\mathbf{r})\cdot\hat{n}(\mathbf{r})
+  \tag{3.4}
 $$
 
 ausdrücken, wobei $$\partial V$$ die Oberfläche des Volumens $$V$$ bezeichnet. In
@@ -202,7 +212,8 @@ dieser Gleichung ist explizit angezeigt, dass selbstverständlich sowohl der
 Fluss $$\mathbf{j}$$ als auch die Oberflächennormale $$\hat{n}$$ von der Position
 $$\mathbf{r}$$ auf der Oberfläche abhängen.
 
-Alternativ können wir auch die Änderung der Teilchenzahl Gl.~\eqref{eq:dotN} folgendermaßen gruppieren:
+Alternativ können wir auch die Änderung der Teilchenzahl Gl. (3.3)
+folgendermaßen gruppieren:
 
 $$
 \begin{aligned}
@@ -228,7 +239,8 @@ $$
 \end{aligned}
 $$
 
-Hierbei haben wir die Tatsache genutzt, dass $$A_{\text{rechts}}=A_{\text{links}}\equiv A_{\text{rechts/links}}$$. Nun ist aber
+Hierbei haben wir die Tatsache genutzt, dass $$A_{\text{rechts}} =
+A_{\text{links}}\equiv A_{\text{rechts/links}}$$. Nun ist aber
 
 $$
 \begin{aligned}
@@ -267,13 +279,13 @@ $$
   -
   j_z(x,y,z-\Delta z/2)}{\Delta z} \Delta V,
 \end{aligned}
-\label{eq:dotNdiscr}
+\tag{3.5}
 $$
 
 da $$\Delta V = \Delta x \Delta y \Delta z$$, ist ebenfalls $$\Delta
 V=A_{\text{rechts/links}}\Delta x=A_{\text{oben/unten}}\Delta
 y=A_{\text{vorne/hinten}}\Delta z$$.  Wir entwickeln die rechte Seite von
-\eqref{eq:dotNdiscr} nach Taylor bis zu Gliedern erster Ordnung in den
+(3.5) nach Taylor bis zu Gliedern erster Ordnung in den
 $$\Delta x$$, $$\Delta y$$ und $$\Delta z$$  und erhalten
 
 $$
@@ -287,9 +299,9 @@ Durch Aneinanderreihung vieler kleiner Volumina $$\Delta V_i$$ können wir auch
 ein makroskopisches Volumenintegral berechnen. An den  aneinander angrenzenden
 Flächen der infinitesimal kleinen Würfel im inneren des Volumens, heben sich
 die Flüsse im Grenzübergang auf. Auf der Grenzfläche ist der Stromdichtevektor
-eindeutig definiert (siehe Abb. \ref{fig:gaussbox}) und da über beide Volumina
-integriert wird, gibt es an der Grenzfläche zwei Beiträge mit gleichem Betrag,
-aber umgekehrtem Vorzeichen. 
+eindeutig definiert (siehe Abb. 3.4) und da über beide Volumina integriert
+wird, gibt es an der Grenzfläche zwei Beiträge mit gleichem Betrag, aber
+umgekehrtem Vorzeichen. 
 
 
 <figure>
