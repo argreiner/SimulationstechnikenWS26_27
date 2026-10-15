@@ -20,7 +20,7 @@ weiterhin Gedanken über partielle Differentialgleichungen.
 - [ ] Typen partieller Differentialgleichungen
 
 
-## Lineare Randwertprobleme bei gwöhnlichen Differentialgleichungen
+## Lineare Randwertprobleme bei gewöhnlichen Differentialgleichungen
 ### Anfangswertproblem 
 
 Wir betrachten eine lineare Differentialgleichung $$n$$-ter Ordnung:
