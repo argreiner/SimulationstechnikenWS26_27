@@ -158,7 +158,7 @@ $$
   \frac{\partial}{\partial t} \int_V \text{d}^3r \, c(\mathbf{r}, t)
   =
   \int_V \text{d}^3r \, \frac{\partial c}{\partial t}.
-  \label{eq:nchange}
+  \tag{3.3}
 $$
 
 Die Änderung $$\dot{N}$$ muss aber auch durch die Anzahl der Partikel, die über
@@ -187,7 +187,7 @@ $$
   -
   j_{\text{hinten}} A_{\text{hinten}}
 \end{aligned}
-    \tag{3.3}
+    \tag{3.4}
 $$
 
 wenn die Wände klein genug sind, so dass $$j$$ nahezu konstant über $$A$$ ist. (Die
@@ -204,7 +204,7 @@ Teilchenzahl allgemein als
 $$
   \dot{N} = -\int_{\partial V} \text{d}^2r \, 
   \mathbf{j}(\mathbf{r})\cdot\hat{n}(\mathbf{r})
-  \tag{3.4}
+  \tag{3.5}
 $$
 
 ausdrücken, wobei $$\partial V$$ die Oberfläche des Volumens $$V$$ bezeichnet. In
@@ -212,7 +212,7 @@ dieser Gleichung ist explizit angezeigt, dass selbstverständlich sowohl der
 Fluss $$\mathbf{j}$$ als auch die Oberflächennormale $$\hat{n}$$ von der Position
 $$\mathbf{r}$$ auf der Oberfläche abhängen.
 
-Alternativ können wir auch die Änderung der Teilchenzahl Gl. (3.3)
+Alternativ können wir auch die Änderung der Teilchenzahl Gl. (3.4)
 folgendermaßen gruppieren:
 
 $$
@@ -279,13 +279,13 @@ $$
   -
   j_z(x,y,z-\Delta z/2)}{\Delta z} \Delta V,
 \end{aligned}
-\tag{3.5}
+\tag{3.6}
 $$
 
 da $$\Delta V = \Delta x \Delta y \Delta z$$, ist ebenfalls $$\Delta
 V=A_{\text{rechts/links}}\Delta x=A_{\text{oben/unten}}\Delta
 y=A_{\text{vorne/hinten}}\Delta z$$.  Wir entwickeln die rechte Seite von
-(3.5) nach Taylor bis zu Gliedern erster Ordnung in den
+(3.6) nach Taylor bis zu Gliedern erster Ordnung in den
 $$\Delta x$$, $$\Delta y$$ und $$\Delta z$$  und erhalten
 
 $$
@@ -318,25 +318,25 @@ Wenn wir den Grenzübergang für kleine $$\Delta x$$, $$\Delta y$$ und $$\Delta 
 $$
   \dot{N} = -\lim_{\Delta V\rightarrow 0\choose n\rightarrow\infty}\sum_i^n \nabla\cdot\mathbf{j}(\mathbf{r_i})\Delta V
   =-\int_{V} \text{d}^3r \, \nabla\cdot\mathbf{j}(\mathbf{r}).
-  \label{eq:flux2}
+  \tag{3.7}
 $$
 
 Wir haben hier gerade heuristisch den Gaussschen Satz (engl. "Divergence
-Theorem" - siehe auch Gl.~\eqref{eq:divergencetheorem}) hergeleitet, um
-Gl.~\eqref{eq:flux} als Volumenintegral auszudrücken. 
+Theorem") hergeleitet, um Gl. (3.5) als Volumenintegral auszudrücken. 
 
 <div class="graybox">
-Der Gausssche Satz ist ein wichtiges Ergebnis der Vektoranalysis. Er
-wandelt ein Integral über ein Volumen \(V\) in ein Integral über die Oberfläche
-\(\partial V\) dieses Volumens um. Für ein Vektorfeld \(\mathbf{f}(\mathbf{r})\) gilt:
+Der Gausssche Satz ist ein wichtiges Ergebnis der Vektoranalysis. Er wandelt
+ein Integral über ein Volumen \(V\) in ein Integral über die Oberfläche
+\(\partial V\) dieses Volumens um. Für ein Vektorfeld
+\(\mathbf{f}(\mathbf{r})\) gilt:
 $$
 \int_V \text{d}^3 r\, \nabla\cdot \mathbf{f}(\mathbf{r})
  =
 \int_{\partial V} \text{d}^2 r\, \mathbf{f}(\mathbf{r}) \cdot \hat{n}(\mathbf{r})
-\label{eq:divergencetheorem}
+\tag{3.8}
 $$
 Hier ist \(\hat{n}(\mathbf{r})\) der Normalenvektor, welcher auf dem Rand
-$$\partial V$$ des Volumens \(V\) nach außen zeigt.
+$\partial V$ des Volumens \(V\) nach außen zeigt.
  
 Setzen wir speziell \(\mathbf{f}(\mathbf{r})=\mathbf{a}\phi(\mathbf{r})\),
 wobei \(\mathbf{a}\) ein konstanter Vektor ist, dann erhalten wir
@@ -346,7 +346,7 @@ $$
   \int_{\partial V} \text{d}^2 r\, \mathbf{a}\phi(\mathbf{r}) \cdot \hat{n}(\mathbf{r})\nonumber\\
   \int_V \text{d}^3 r\, \nabla\phi(\mathbf{r})&=
   \int_{\partial V} \text{d}^2 r\, \phi(\mathbf{r}) \hat{n}(\mathbf{r})
-  \label{eq:divergencetheorem2}
+  \tag{3.9}
 \end{aligned}
 $$
 </div>
