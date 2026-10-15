@@ -55,3 +55,5 @@ Wieviel Wärmeleistung geht durch die konvektive Randbedingung verloren?
 1. Berechnen Sie die Lösung mittels scipy.integrate.solve_bvp!
 1. Berechnen Sie die Lösung mittels eines Finiten Differenzen Verfahrens!
 1. Stellen Sie die Lösungen mit matplotlib.pyplot in einem Graph dar.
+2. Wie realistisch ist dieses Modell? Diskutieren welche Vereinfachungen
+   gemacht wurden.
