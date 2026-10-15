@@ -346,8 +346,8 @@ $$
   \int_{\partial V} \text{d}^2 r\, \mathbf{a}\phi(\mathbf{r}) \cdot \hat{n}(\mathbf{r})\nonumber\\
   \int_V \text{d}^3 r\, \nabla\phi(\mathbf{r})&=
   \int_{\partial V} \text{d}^2 r\, \phi(\mathbf{r}) \hat{n}(\mathbf{r})
-  \tag{3.9}
 \end{aligned}
+\tag{3.9}
 $$
 </div>
 
