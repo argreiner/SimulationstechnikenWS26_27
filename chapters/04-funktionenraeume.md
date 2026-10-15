@@ -41,7 +41,7 @@ $$u(x,y,z,...)$$ die einen Satz von Differentialgleichungen
 
 $$
     \mathcal{L} u(x,y,z,\ldots) = f(x,y,z,\ldots)
-    \label{eq:gendgl}
+    \tag{4.1}
 $$
 
 erfüllen. Hierbei ist $$\mathcal{L}$$ ein (nicht zwingend linearer) Operator,
@@ -53,7 +53,7 @@ $$
     u_N(x, y, z, \ldots)
     =
     \sum_{n=0}^N a_n \varphi_n(x,y,z,\ldots)
-    \label{eq:seriesexpansion}
+    \tag{4.2}
 $$
 
 wobei die $$\varphi_n$$ als "Basisfunktionen" bezeichnet werden. Wir werden die
@@ -74,11 +74,11 @@ können wir analytisch berechnen.
 
 Was verbleibt ist die Bestimmung der Koeffizienten $$a_n$$.
 Diese Koeffizienten sind Zahlen, und diese Zahlen können von einem Computer
-berechnet werden. Gleichung~\eqref{eq:seriesexpansion} ist selbstverständlich
+berechnet werden. Gleichung (4.2) ist selbstverständlich
 eine Näherung. Für gewisse Basisfunktionen kann gezeigt werden, dass diese
 "vollständig" sind und damit bestimmte Klassen von Funktionen exakt abbilden
 können. Dies stimmt aber nur unter der Bedingung, dass die Reihe
-Gl.~\eqref{eq:seriesexpansion} bis $$N\to\infty$$ geführt wird. Für alle
+Gl. (4.2) bis $$N\to\infty$$ geführt wird. Für alle
 praktischen Anwendungsfälle (so wie Implementierungen in Computercode), muss
 diese Reihenentwicklung jedoch abgebrochen werden. Eine "gute"
 Reihenentwicklung approximiert die exakte Lösung bereits bei niedrigem $$N$$ mit
@@ -94,7 +94,7 @@ für das Verständnis der numerischen Analyse.
 ### Residuum
 
 Ein wichtiges Konzept ist das des *Residuums*. Unser Ziel ist es,
-Gl.~\eqref{eq:gendgl} zu lösen. Für die exakte Lösung wäre $$\mathcal{L} u -
+Gl. (4.1) zu lösen. Für die exakte Lösung wäre $$\mathcal{L} u -
 f\equiv 0$$. Da wir aber nur eine Näherungslösung konstruieren können, wird
 diese Bedingung nicht exakt erfüllt sein. Wir definieren das Residuum als genau
 diese Abweichung von der exakten Lösung, nämlich
@@ -103,13 +103,13 @@ $$
     R(x,y,z,\ldots; a_0, a_1, \ldots, a_N)
     =
     \mathcal{L} u_N(x,y,z,\ldots) - f(x,y,z,\ldots).
-    \label{eq:residual}
+    \tag{4.3}
 $$
 
 Das Residuum ist damit eine Art Maß für den Fehler den wir machen. Die
 Strategie zur numerischen Lösung der Differentialgleichung
-Gl.~\eqref{eq:gendgl}, ist es nun, die Koeffizienten $$a_n$$ so zu bestimmen,
-dass das Residuum Gl.~\eqref{eq:residual} minimal wird. Wir haben damit die
+Gl. (4.1), ist es nun, die Koeffizienten $$a_n$$ so zu bestimmen,
+dass das Residuum Gl. (4.3) minimal wird. Wir haben damit die
 Lösung der Differentialgleichung auf ein Optimierungsproblem abgebildet. Die
 unterschiedlichen numerischen Verfahren, die wir in den nächsten Kapiteln
 diskutieren werden, entscheiden sich hier hauptsächlich in der spezifischen
@@ -136,7 +136,7 @@ Randwertproblem,
 
 $$
     \frac{\text{d}^2 u}{\text{d} x^2} - (x^6 + 3x^2)u = 0,
-    \label{eq:odeexample}
+    \tag{4.4}
 $$
 
 mit den Randbedingungen $$u(-1)=u(1)=1$$ an. (D.h. $$x\in[-1,1]$$ ist die
@@ -161,7 +161,7 @@ Gleichung
 
 $$
     u_2(x) = 1 + (1-x^2)(a_0 + a_1 x + a_2 x^2)
-    \label{eq:approxexample}
+    \tag{4.5}
 $$
 
 ist so konstruiert, dass die Randbedingungen erfüllt sind. Wir können diese als
@@ -197,7 +197,7 @@ $$
 Das Verschwinden des Residuums bei \(x_i\) bedeutet nicht, dass auch
 \(u_2(x_i)\equiv u(x_i)\), also dass bei \(x_i\) unsere approximative Lösung
 der exakten Lösung entspricht. Wir sind immer noch auf einen begrenzten Satz
-von Funktionen, nämlich die Funktionen die durch Gl.~\eqref{eq:approxexample}
+von Funktionen, nämlich die Funktionen die durch Gl. (4.5)
 erfasst werden, beschränkt.
 </div>
 
@@ -218,7 +218,7 @@ $$
     a_0 = -\frac{784}{3807}, \quad a_1 = 0 \quad \text{und} \quad a_2 = a_0.
 $$
 
-Abbildung~\ref{fig:first_example} zeigt die "numerische" Lösung $$u_2(x)$$ im
+Abbildung 4.1 zeigt die "numerische" Lösung $$u_2(x)$$ im
 Vergleich mit der exakten Lösung $$u(x)$$.
 
 
@@ -227,7 +227,7 @@ Vergleich mit der exakten Lösung $$u(x)$$.
            alt="NumericalExample">
   <figcaption align="center">Abbildung 4.1: Analytische Lösung 
     \(u(x)\) und "numerische" approximative Lösung \(u_2(x)\) 
-    der GDGL~\eqref{eq:odeexample}.
+    der GDGL (4.4).
   </figcaption>
 </figure>
 
@@ -284,7 +284,7 @@ verschwindet:
 
 $$
     \mathbf{a}\cdot\mathbf{b} = \sum_i a_i b_i = 0
-    \label{eq:vecscalar}
+    \tag{4.6}
 $$
 
 
@@ -306,7 +306,7 @@ $x\in[a,b]$, *definieren} wir das Skalarprodukt als
 
 $$
     (f,g) = \int_a^b \text{d} x\, f^*(x) g(x),
-    \label{eq:funcscalar}
+    \tag{4.7}
 $$
 
 wobei $f^*(x)$ die komplex-konjugierte von $f(x)$ ist. 
@@ -316,7 +316,7 @@ Dieses inneres Produkt oder Skalarprodukt ist eine Abbildung mit den Eigenschaft
 - Sesquilinear: $(\alpha f+\beta g,h)=\alpha^*(f,h)+\beta^*(g,h)$
 - Hermitesch: $(f,g)=(g,f)^*$
 
-Die Skalarprodukte Gl.~\eqref{eq:vecscalar} und \eqref{eq:funcscalar} erfüllen
+Die Skalarprodukte Gl. (4.6) und \eqref{4.7} erfüllen
 beide diese Eigenschaften.
 
 <div class="graybox">
@@ -335,20 +335,20 @@ benötigen.
 </div>
 
 ### Basisfunktionen
-\label{sec:basis-functions}
+\tag{sec:basis-functions}
 
 Kommen wir nun zurück zur Reihenentwicklung,
 
 $$
     f_N(x) = \sum_{n=0}^N a_n \varphi_n(x).
-    \label{eq:series2}
+    \tag{4.8}
 $$
 
 Die Funktionen $\varphi_i(x)$ heißen *Basisfunktionen}. Eine notwendige
 Eigenschaft der Basisfunktionen ist deren lineare Unabhängigkeit. Die
 Funktionen sind linear unabhängig, wenn keine der Basisfunktionen selbst als
 Linearkombination, also in der Form der Reiheentwicklung
-Gl.~\eqref{eq:series2}, der anderen Basisfunktionen geschrieben werden kann.
+Gl. (4.8), der anderen Basisfunktionen geschrieben werden kann.
 D.h. es muss erfüllt sein, dass
 
 $$
@@ -360,7 +360,7 @@ Linear unabhängige Elemente bilden eine Basis.
 
 Diese Basis heißt vollständig, wenn alle relevanten Funktionen (= Elemente des
 zu Grunde liegenden Vektorraums) sich durch die
-Reihenentwicklung~\eqref{eq:series2} abbilden lassen. (Beweise der
+Reihenentwicklung (4.8) abbilden lassen. (Beweise der
 Vollständigkeit von Basisfunktionen sind komplex und außerhalb des Fokus dieser
 Lehrveranstaltung.) Die Koeffizienten $a_n$ heißen Koordinaten oder
 Koeffizienten. Die Anzahl der Basisfunktionen bzw. der Koordinaten $N$ nennt
@@ -372,7 +372,7 @@ und Skalarmultiplikation mit den üblichen Eigenschaften, wie der Existenz von
 neutralen und inversen Elementen und Assoziativ-, Kommutativ- und
 Distributivgesetzen, definiert sind. Ist dieser Raum auf Funktionen definiert,
 dann spricht man auch von einem *Funktionenraum}. Existiert zusätzlich ein
-Skalarprodukt wie Gl.~\eqref{eq:funcscalar}, dann spricht man von einem
+Skalarprodukt wie Gl. (4.7), dann spricht man von einem
 *Hilbertraum}.
 </div>
 
@@ -390,7 +390,7 @@ wobei $\delta_{nm}$ das Kronecker-$\delta$ ist. Für $\nu_n\equiv(\varphi_n,
 \varphi_n)=1$ heißt die Basis *orthonormal}.
 
 Die Orthogonalität ist nützlich, weil sie uns einen Weg aufzeigt, mit dem wir
-die Koeffizienten der Reihenentwicklung~\eqref{eq:series2} bekommen können:
+die Koeffizienten der Reihenentwicklung (4.8) bekommen können:
 
 $$
  (\varphi_n, f_N)
@@ -406,18 +406,18 @@ bzw.
 
 $$
  a_n = \frac{(\varphi_n, f_N)}{(\varphi_n, \varphi_n)}.
- \label{eq:coordinates}
+ \tag{4.9}
 $$
 
 D.h. die Koordinaten sind gegeben durch die Projektion (das Skalarprodukt) der
 Funktion auf die Basisvektoren. Wir erinnern uns daran, dass auch für
 kartesische Vektoren gilt: $a_n = \mathbf{a}\cdot\hat{e}_n$. (Der Normierungsfaktor
 entfällt hier, weil $\hat{e}_n\cdot\hat{e}_n=1$.) Die Koordinaten, die durch
-Gl.~\eqref{eq:coordinates} gegeben sind, sind in genau dem gleichen Kontext zu
+Gl. (4.9) gegeben sind, sind in genau dem gleichen Kontext zu
 sehen.
 
 ### Fourier-Basis
-\label{sec:fouirer-basis}
+\tag{sec:fouirer-basis}
 
 \video{https://uni-freiburg.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=6e2bcafd-24b2-4ee5-b58c-ac840157f7bc}
 
@@ -426,12 +426,12 @@ Ein berühmter und wichtiger Satz von Basisfunktionen ist die
 
 $$
  \varphi_n(x) = \exp\left( i q_n x \right),
- \label{eq:fourier-basis}
+ \tag{4.10}
 $$
 
 auf dem Interval $x\in[0,L]$ mit $q_n = 2\pi n/L$ und $n\in\mathbb{Z}$. Die
 Fourier-Basis ist periodisch auf diesem Interval und in
-Abb.~\ref{fig:fourierbasis} gezeigt. Es kann einfach gezeigt werden, dass
+Abb. 4.2 gezeigt. Es kann einfach gezeigt werden, dass
 
 $$
  (\varphi_n, \varphi_m) = L \delta_{nm},
@@ -442,7 +442,7 @@ Fourier-Reihe,
 
 $$
  f_N(x) = \sum_{n=-N}^N a_n \varphi_n(x),
- \label{eq:fourierseries}
+ \tag{4.11}
 $$
 
 können damit für eine Reihe $f_N(x)$ direkt als
@@ -452,13 +452,13 @@ $$
 $$
 
 bestimmt werden. Dies ist die bekannte Formel für die Koeffizienten der
-Fourier-Reihe. Man beachte, dass die Summe in Gl.~\eqref{eq:fourierseries} von
+Fourier-Reihe. Man beachte, dass die Summe in Gl. (4.11) von
 $-N$ bis $N$ läuft und man $2N+1$ Koeffizienten erhält.
 
 <figure>
   <img src="{{ site.baseurl }}/figs/fourierbasis.png" alt="FourierBasis">
   <figcaption align="center">Abbildung 4.2: Realteil der
-  Fourier-Basisfunktionen, Gl.~\eqref{eq:fourier-basis}, für $n=1,2,3,4$. Die
+  Fourier-Basisfunktionen, Gl. (4.10), für $n=1,2,3,4$. Die
   Basisfunktionen höherer Ordnung oszillieren mit einer kleineren Periode und
   repräsentieren höhere Frequenzen.
   </figcaption>
@@ -471,7 +471,7 @@ finiten Elemente unterschiedliche Raumbereiche beschreibt.
 </div>
 
 ### Finite Elemente
-\label{sec:finite-element-basis}
+\tag{sec:finite-element-basis}
 
 \video{https://uni-freiburg.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=ec080e9a-ff09-4366-8784-ac840166145c}
 
@@ -492,14 +492,14 @@ $$
        0 & \text{sonst}
     \end{array}
     \right.
-    \label{eq:finite-element-basis}
+    \tag{4.12}
 $$
 
 Hierbei sind die $x_n$ die Stützstellen (auch Gitterpunkte oder Knoten - engl.
 "node"), zwischen denen die Zelte aufgespannt sind. Die Funktionen sind so
 konstruiert, dass $\int_0^L \text{d} x\,\varphi_n(x)=(x_{n+1}-x_{n-1})/2$.
 Diese Basis ist die einfachste Form der finite Elemente-Basis und in
-Abb.~\ref{fig:febasis} gezeigt. Für höhere Genauigkeit werden auch Polynome
+Abb. 4.3 gezeigt. Für höhere Genauigkeit werden auch Polynome
 höherer Ordnung eingesetzt.
 
 <figure>
@@ -508,7 +508,7 @@ höherer Ordnung eingesetzt.
   <figcaption align="center">Abbildung 4.3: Die Basis der finiten Elemente in
   ihrer einfachsten, linearen Inkarnation. Jede Basisfunktion ist ein "Zelt",
   dass über ein gewisses Interval zwischen $0$ und $1$ und wieder zurück
-  verläuft, siehe auch Gl.~\eqref{eq:finite-element-basis}.} \label{fig:febasis}
+  verläuft, siehe auch Gl. (4.12).
   </figcaption>
 </figure>
 
