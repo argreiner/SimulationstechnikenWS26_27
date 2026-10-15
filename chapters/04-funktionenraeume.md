@@ -335,7 +335,6 @@ $$w(x)=1$$ benötigen.
 </div>
 
 ### Basisfunktionen
-\tag{sec:basis-functions}
 
 Kommen wir nun zurück zur Reihenentwicklung,
 
@@ -416,9 +415,6 @@ Gl. (4.9) gegeben sind, sind in genau dem gleichen Kontext zu
 sehen.
 
 ### Fourier-Basis
-\tag{sec:fouirer-basis}
-
-\video{https://uni-freiburg.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=6e2bcafd-24b2-4ee5-b58c-ac840157f7bc}
 
 Ein berühmter und wichtiger Satz von Basisfunktionen ist die
 *Fourier-Basis},
@@ -470,9 +466,6 @@ finiten Elemente unterschiedliche Raumbereiche beschreibt.
 </div>
 
 ### Finite Elemente
-\tag{sec:finite-element-basis}
-
-\video{https://uni-freiburg.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=ec080e9a-ff09-4366-8784-ac840166145c}
 
 Wir werden hier hauptsächlich mit der Basis der finiten Elemente arbeiten. Im
 Gegensatz zur Fourier-Basis, die auf der gesamten Domäne nur an isolierten
@@ -548,13 +541,12 @@ $$
     (\varphi_n, f_N(x)) = \left[ \mathbf{M}\cdot \mathbf{a} \right]_n 
 $$
 
-schreiben, wobei $$[\mathbf{v}]_n=v_n$$ die $$n$$te Komponente des Vektors, welcher
-durch die beiden eckigen Klammer $$[\cdot]_n$$ eingeschlossen wird, bezeichnet.
-Die Matrix $$\mathbf{M}$$ ist *dünnbesetzt} (engl. "sparse"). Für eine
-orthogonale Basis, wie beispielsweise die Fourier-Basis in
-Abschnitt~\ref{sec:fouirer-basis}, ist diese Matrix diagonal. Für eine Basis
-mit identischen Abständen $$x_{n+1}-x_n=1$$ der Stützstellen $$x_n$$ hat die Matrix
-die folgende Form
+schreiben, wobei $$[\mathbf{v}]_n=v_n$$ die $$n$$te Komponente des Vektors,
+welcher durch die beiden eckigen Klammer $$[\cdot]_n$$ eingeschlossen wird,
+bezeichnet.  Die Matrix $$\mathbf{M}$$ ist *dünnbesetzt} (engl. "sparse"). Für
+eine orthogonale Basis, wie beispielsweise die Fourier-Basis, ist diese Matrix
+diagonal. Für eine Basis mit identischen Abständen $$x_{n+1}-x_n=1$$ der
+Stützstellen $$x_n$$ hat die Matrix die folgende Form
 
 $$
     \mathbf{M} = \begin{pmatrix}
