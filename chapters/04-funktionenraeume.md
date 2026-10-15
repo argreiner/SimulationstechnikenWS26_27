@@ -258,28 +258,28 @@ einfachen Zugang zu den Koeffizienten einer Reihenentwicklung liefern.
 ### Vektoren
 
 Zur Einführung erinnern wir an die üblichen kartesischen Vektoren. Einen Vektor
-$\mathbf{a}=(a_0, a_1, a_2)$ können wir als Linearkombination aus Basisvektoren
-$\hat{e}_0$, $\hat{e}_1$ und $\hat{e}_2$,
+$$\mathbf{a}=(a_0, a_1, a_2)$$ können wir als Linearkombination aus Basisvektoren
+$$\hat{e}_0$$, $$\hat{e}_1$$ und $$\hat{e}_2$$,
 
 $$
     \mathbf{a} = a_0 \hat{e}_0 + a_1 \hat{e}_1 + a_2 \hat{e}_2,
 $$
 
-schreiben. Die Einheitsvektoren $\hat{e}_0$, $\hat{e}_1$ und $\hat{e}_2$ sind
+schreiben. Die Einheitsvektoren $$\hat{e}_0$$, $$\hat{e}_1$$ und $$\hat{e}_2$$ sind
 natürlich die Vektoren, welche das kartesische Koordinatensystem aufspannen.
-(In vorherigen Kapiteln wurde auch die Notation $\hat{x}\equiv\hat{e}_0$,
-$\hat{y}\equiv\hat{e}_1$ und $\hat{z}\equiv\hat{e}_2$ genutzt.) Die Zahlen
-$a_0$, $a_1$ und $a_2$ sind die Komponenten oder *Koordinaten} des
+(In vorherigen Kapiteln wurde auch die Notation $$\hat{x}\equiv\hat{e}_0$$,
+$$\hat{y}\equiv\hat{e}_1$$ und $$\hat{z}\equiv\hat{e}_2$$ genutzt.) Die Zahlen
+$$a_0$$, $$a_1$$ und $$a_2$$ sind die Komponenten oder *Koordinaten} des
 Vektors, aber auch die Koeffizienten der Einheitsvektoren. In diesem Sinne sind
 sie identisch zu den Entwicklungskoeffizienten der Reihenentwicklung, mit dem
-Unterschied, dass die $\hat{e}_i$ orthogonal sind, also
+Unterschied, dass die $$\hat{e}_i$$ orthogonal sind, also
 
 $$
     \hat{e}_i\cdot\hat{e}_j = \delta_{ij}
 $$
 
-wobei $\delta_{ij}$ das Kronecker-$\delta$ ist. Zwei kartesische Vektoren
-$\mathbf{a}$ und $\mathbf{b}$ sind orthogonal, wenn das Skalarprodukt zwischen ihnen
+wobei $$\delta_{ij}$$ das Kronecker-$$\delta$$ ist. Zwei kartesische Vektoren
+$$\mathbf{a}$$ und $$\mathbf{b}$$ sind orthogonal, wenn das Skalarprodukt zwischen ihnen
 verschwindet:
 
 $$
@@ -289,8 +289,8 @@ $$
 
 
 Mit Hilfe der Basisvektoren und dem Skalarprodukt können wir direkt die
-Komponenten erhalten: $a_i = \mathbf{a}\cdot\hat{e}_i$. Dies ist eine direkte
-Konsequenz der Orthogonalität der Basisvektoren $\hat{e}_i$.
+Komponenten erhalten: $$a_i = \mathbf{a}\cdot\hat{e}_i$$. Dies ist eine direkte
+Konsequenz der Orthogonalität der Basisvektoren $$\hat{e}_i$$.
 
 ### Funktionen
 
@@ -301,27 +301,27 @@ zwischen zwei *Funktionen} könnten wir dann Orthogonalität als
 Verschwinden dieses Skalarprodukts definieren.
 
 Wir führen nun Skalarprodukt auf Funktionen(räume) ein, das diese Eigenschaften
-auch erfüllt. Gegeben zwei Funktionen $g(x)$ und $f(x)$ auf dem Interval
-$x\in[a,b]$, *definieren} wir das Skalarprodukt als
+auch erfüllt. Gegeben zwei Funktionen $$g(x)$$ und $$f(x)$$ auf dem Interval
+$$x\in[a,b]$$, *definieren} wir das Skalarprodukt als
 
 $$
     (f,g) = \int_a^b \text{d} x\, f^*(x) g(x),
     \tag{4.7}
 $$
 
-wobei $f^*(x)$ die komplex-konjugierte von $f(x)$ ist. 
+wobei $$f^*(x)$$ die komplex-konjugierte von $$f(x)$$ ist. 
 Dieses inneres Produkt oder Skalarprodukt ist eine Abbildung mit den Eigenschaften
 
-- Positiv definit: $(f,f)\ge 0$ und $(f,f)=0\Leftrightarrow f=0$
-- Sesquilinear: $(\alpha f+\beta g,h)=\alpha^*(f,h)+\beta^*(g,h)$
-- Hermitesch: $(f,g)=(g,f)^*$
+- Positiv definit: $$(f,f)\ge 0$$ und $$(f,f)=0\Leftrightarrow f=0$$
+- Sesquilinear: $$(\alpha f+\beta g,h)=\alpha^*(f,h)+\beta^*(g,h)$$
+- Hermitesch: $$(f,g)=(g,f)^*$$
 
 Die Skalarprodukte Gl. (4.6) und \eqref{4.7} erfüllen
 beide diese Eigenschaften.
 
 <div class="graybox">
 Das Skalarprodukt zwischen zwei Funktionen wird oft allgemeiner mit einer
-Gewichtsfunktion $w(x)$ definiert,
+Gewichtsfunktion $$w(x)$$ definiert,
 
 $$
   (f,g) = \int_a^b \text{d} x\, f^*(x) g(x) w(x).
@@ -329,9 +329,9 @@ $$
 
 Die Frage nach Orthogonalität zwischen Funktionen kann damit nur respektive
 einer bestimmten Definition des Skalarprodukts geklärt werden. So sind z.B. die
-Tschebyschow-Polynome respektive der Gewichtsfunktion $w(x)=(1-x^2)^{-1/2}$
-orthogonal. Innerhalb dieser Lehrveranstaltung werden wir nur den Fall $w(x)=1$
-benötigen.
+Tschebyschow-Polynome respektive der Gewichtsfunktion $$w(x)=(1-x^2)^{-1/2}$$
+orthogonal. Innerhalb dieser Lehrveranstaltung werden wir nur den Fall
+$$w(x)=1$$ benötigen.
 </div>
 
 ### Basisfunktionen
@@ -344,7 +344,7 @@ $$
     \tag{4.8}
 $$
 
-Die Funktionen $\varphi_i(x)$ heißen *Basisfunktionen}. Eine notwendige
+Die Funktionen $$\varphi_i(x)$$ heißen *Basisfunktionen}. Eine notwendige
 Eigenschaft der Basisfunktionen ist deren lineare Unabhängigkeit. Die
 Funktionen sind linear unabhängig, wenn keine der Basisfunktionen selbst als
 Linearkombination, also in der Form der Reiheentwicklung
@@ -355,16 +355,15 @@ $$
     \sum_{n=0}^{N}a_n \varphi_n(x) = 0
 $$
 
-dann und nur dann wenn alle $a_n=0$.
+dann und nur dann wenn alle $$a_n=0$$.
 Linear unabhängige Elemente bilden eine Basis.
 
 Diese Basis heißt vollständig, wenn alle relevanten Funktionen (= Elemente des
-zu Grunde liegenden Vektorraums) sich durch die
-Reihenentwicklung (4.8) abbilden lassen. (Beweise der
-Vollständigkeit von Basisfunktionen sind komplex und außerhalb des Fokus dieser
-Lehrveranstaltung.) Die Koeffizienten $a_n$ heißen Koordinaten oder
-Koeffizienten. Die Anzahl der Basisfunktionen bzw. der Koordinaten $N$ nennt
-man die *Dimension} des Vektorraums.
+zu Grunde liegenden Vektorraums) sich durch die Reihenentwicklung (4.8)
+abbilden lassen. (Beweise der Vollständigkeit von Basisfunktionen sind komplex
+und außerhalb des Fokus dieser Lehrveranstaltung.) Die Koeffizienten $a_n$
+heißen Koordinaten oder Koeffizienten. Die Anzahl der Basisfunktionen bzw. der
+Koordinaten $$N$$ nennt man die *Dimension} des Vektorraums.
 
 <div class="graybox">
 Ein *Vektorraum} ist eine Menge, auf der die Operationen der Addition
@@ -378,16 +377,16 @@ Skalarprodukt wie Gl. (4.7), dann spricht man von einem
 
 Besonders nützliche Basisfunktionen sind orthogonal. Mit Hilfe des
 Skalarprodukts können wir nun Orthogonalität für diese Funktionen definieren.
-Zwei Funktionen $f$ und $g$ sind orthogonal wenn das Skalarprodukt
-verschwindet, $(f, g) = 0$. Ein Satz gegenseitig orthogonaler Basisfunktionen
+Zwei Funktionen $$f$$ und $$g$$ sind orthogonal wenn das Skalarprodukt
+verschwindet, $$(f, g) = 0$$. Ein Satz gegenseitig orthogonaler Basisfunktionen
 erfüllt
 
 $$
     (\varphi_n, \varphi_m) = \nu_{n} \delta_{nm},
 $$
 
-wobei $\delta_{nm}$ das Kronecker-$\delta$ ist. Für $\nu_n\equiv(\varphi_n,
-\varphi_n)=1$ heißt die Basis *orthonormal}.
+wobei $$\delta_{nm}$$ das Kronecker-$$\delta$$ ist. Für $$\nu_n\equiv(\varphi_n,
+\varphi_n)=1$$ heißt die Basis *orthonormal}.
 
 Die Orthogonalität ist nützlich, weil sie uns einen Weg aufzeigt, mit dem wir
 die Koeffizienten der Reihenentwicklung (4.8) bekommen können:
@@ -411,8 +410,8 @@ $$
 
 D.h. die Koordinaten sind gegeben durch die Projektion (das Skalarprodukt) der
 Funktion auf die Basisvektoren. Wir erinnern uns daran, dass auch für
-kartesische Vektoren gilt: $a_n = \mathbf{a}\cdot\hat{e}_n$. (Der Normierungsfaktor
-entfällt hier, weil $\hat{e}_n\cdot\hat{e}_n=1$.) Die Koordinaten, die durch
+kartesische Vektoren gilt: $$a_n = \mathbf{a}\cdot\hat{e}_n$$. (Der Normierungsfaktor
+entfällt hier, weil $$\hat{e}_n\cdot\hat{e}_n=1$$.) Die Koordinaten, die durch
 Gl. (4.9) gegeben sind, sind in genau dem gleichen Kontext zu
 sehen.
 
@@ -429,7 +428,7 @@ $$
  \tag{4.10}
 $$
 
-auf dem Interval $x\in[0,L]$ mit $q_n = 2\pi n/L$ und $n\in\mathbb{Z}$. Die
+auf dem Interval $$x\in[0,L]$$ mit $$q_n = 2\pi n/L$$ und $$n\in\mathbb{Z}$$. Die
 Fourier-Basis ist periodisch auf diesem Interval und in
 Abb. 4.2 gezeigt. Es kann einfach gezeigt werden, dass
 
@@ -437,7 +436,7 @@ $$
  (\varphi_n, \varphi_m) = L \delta_{nm},
 $$
 
-also dass die Fourier-Basis orthogonal ist. Die Koeffizienten $a_n$ der
+also dass die Fourier-Basis orthogonal ist. Die Koeffizienten $$a_n$$ der
 Fourier-Reihe,
 
 $$
@@ -445,7 +444,7 @@ $$
  \tag{4.11}
 $$
 
-können damit für eine Reihe $f_N(x)$ direkt als
+können damit für eine Reihe $$f_N(x)$$ direkt als
 
 $$
  a_n=\frac{1}{L}(\varphi_n, f_N)=\frac{1}{L}\int_0^L \text{d} x\, f_N(x) \exp\left(-i q_n x\right)
@@ -453,12 +452,12 @@ $$
 
 bestimmt werden. Dies ist die bekannte Formel für die Koeffizienten der
 Fourier-Reihe. Man beachte, dass die Summe in Gl. (4.11) von
-$-N$ bis $N$ läuft und man $2N+1$ Koeffizienten erhält.
+$$-N$$ bis $$N$$ läuft und man $$2N+1$$ Koeffizienten erhält.
 
 <figure>
   <img src="{{ site.baseurl }}/figs/fourierbasis.png" alt="FourierBasis">
   <figcaption align="center">Abbildung 4.2: Realteil der
-  Fourier-Basisfunktionen, Gl. (4.10), für $n=1,2,3,4$. Die
+  Fourier-Basisfunktionen, Gl. (4.10), für $$n=1,2,3,4$$. Die
   Basisfunktionen höherer Ordnung oszillieren mit einer kleineren Periode und
   repräsentieren höhere Frequenzen.
   </figcaption>
@@ -495,9 +494,9 @@ $$
     \tag{4.12}
 $$
 
-Hierbei sind die $x_n$ die Stützstellen (auch Gitterpunkte oder Knoten - engl.
+Hierbei sind die $$x_n$$ die Stützstellen (auch Gitterpunkte oder Knoten - engl.
 "node"), zwischen denen die Zelte aufgespannt sind. Die Funktionen sind so
-konstruiert, dass $\int_0^L \text{d} x\,\varphi_n(x)=(x_{n+1}-x_{n-1})/2$.
+konstruiert, dass $$\int_0^L \text{d} x\,\varphi_n(x)=(x_{n+1}-x_{n-1})/2$$.
 Diese Basis ist die einfachste Form der finite Elemente-Basis und in
 Abb. 4.3 gezeigt. Für höhere Genauigkeit werden auch Polynome
 höherer Ordnung eingesetzt.
@@ -507,7 +506,7 @@ höherer Ordnung eingesetzt.
            alt="FEBasis">
   <figcaption align="center">Abbildung 4.3: Die Basis der finiten Elemente in
   ihrer einfachsten, linearen Inkarnation. Jede Basisfunktion ist ein "Zelt",
-  dass über ein gewisses Interval zwischen $0$ und $1$ und wieder zurück
+  dass über ein gewisses Interval zwischen $$0$$ und $$1$$ und wieder zurück
   verläuft, siehe auch Gl. (4.12).
   </figcaption>
 </figure>
@@ -549,12 +548,12 @@ $$
     (\varphi_n, f_N(x)) = \left[ \mathbf{M}\cdot \mathbf{a} \right]_n 
 $$
 
-schreiben, wobei $[\mathbf{v}]_n=v_n$ die $n$te Komponente des Vektors, welcher
-durch die beiden eckigen Klammer $[\cdot]_n$ eingeschlossen wird, bezeichnet.
-Die Matrix $\mathbf{M}$ ist *dünnbesetzt} (engl. "sparse"). Für eine
+schreiben, wobei $$[\mathbf{v}]_n=v_n$$ die $$n$$te Komponente des Vektors, welcher
+durch die beiden eckigen Klammer $$[\cdot]_n$$ eingeschlossen wird, bezeichnet.
+Die Matrix $$\mathbf{M}$$ ist *dünnbesetzt} (engl. "sparse"). Für eine
 orthogonale Basis, wie beispielsweise die Fourier-Basis in
 Abschnitt~\ref{sec:fouirer-basis}, ist diese Matrix diagonal. Für eine Basis
-mit identischen Abständen $x_{n+1}-x_n=1$ der Stützstellen $x_n$ hat die Matrix
+mit identischen Abständen $$x_{n+1}-x_n=1$$ der Stützstellen $$x_n$$ hat die Matrix
 die folgende Form
 
 $$
@@ -569,8 +568,8 @@ $$
     \end{pmatrix}.
 $$
 
-Um die Koeffizienten $a_n$ zu finden, muss also ein (dünnbesetztes) lineares
-Gleichungssystem gelöst werden. Wir werden $\mathbf{M}$ später unter dem Namen
+Um die Koeffizienten $$a_n$$ zu finden, muss also ein (dünnbesetztes) lineares
+Gleichungssystem gelöst werden. Wir werden $$\mathbf{M}$$ später unter dem Namen
 *Massematrix} wieder treffen.
 
 <div class="graybox">
