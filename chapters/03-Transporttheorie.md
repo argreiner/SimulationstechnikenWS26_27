@@ -351,39 +351,38 @@ $$
 $$
 </div>
 
-Gleichung~\eqref{eq:nchange} und \eqref{eq:flux2} zusammen ergeben
+Gleichung (3.3) und (3.7) zusammen ergeben
 
 $$
   \int_V \text{d}^3r \, \left\{\frac{\partial c}{\partial t}+\nabla\cdot\mathbf{j}\right\} = 0.
-  \label{eq:continuityweak}
+  \tag{3.10}
 $$
 
 Da dies für jedes beliebige Volumen $$V$$ gilt, muss auch
 
 $$
   \frac{\partial c}{\partial t}+\nabla\cdot\mathbf{j} = 0
-  \label{eq:continuity}
+  \tag{3.11}
 $$
 
 erfüllt sein. Diese Gleichung trägt den Namen *Kontinuitätsgleichung*. Sie
 beschreibt die Erhaltung der Teilchenzahl bzw. der Masse des Systems.
 
 <div class="graybox">
-In der hier dargestellten Herleitung haben wir implizit bereits die
-*starke* Formulierung und eine *schwache* Formulierung (engl. "weak
-formulation" einer Differentialgleichung kennengelernt.
-Gleichung~\eqref{eq:continuity} ist die starke Formulierung der
-Kontinuitätsgleichung. Diese verlangt, dass die Differentialgleichung für jeden
-räumlichen Punkt \(\mathbf{r}\) erfüllt ist. Die entsprechende schwache Formulierung
-ist Gl.~\eqref{eq:continuityweak}. Hier wird nur verlangt, dass die Gleichung
-in einer Art Mittelwert, hier als Integral über ein Probevolumen \(V\), erfüllt
-ist. Innerhalb des Volumens muss die starke Form nicht erfüllt sein, aber das
-Integral über diese Abweichungen (die wir später als "Residuum" bezeichnen
-werden) muss verschwinden. Die schwache Formulierung ist für endliche
-Probevolumina \(V\) damit eine Näherung. In der Methode der finiten Elemente löst
-man eine schwache Gleichung für eine gewissen (approximative) Ansatzfunktion
-exakt. Die schwache Formulierung wird daher im Verlauf dieser Veranstaltung
-wichtig werden. 
+In der hier dargestellten Herleitung haben wir implizit bereits die *starke*
+Formulierung und eine *schwache* Formulierung (engl. "weak formulation") einer
+Differentialgleichung kennengelernt.  Gleichung (3.11) ist die
+starke Formulierung der Kontinuitätsgleichung. Diese verlangt, dass die
+Differentialgleichung für jeden räumlichen Punkt \(\mathbf{r}\) erfüllt ist.
+Die entsprechende schwache Formulierung ist Gl. (3.10) Hier
+wird nur verlangt, dass die Gleichung in einer Art Mittelwert, hier als
+Integral über ein Probevolumen \(V\), erfüllt ist. Innerhalb des Volumens muss
+die starke Form nicht erfüllt sein, aber das Integral über diese Abweichungen
+(die wir später als "Residuum" bezeichnen werden) muss verschwinden. Die
+schwache Formulierung ist für endliche Probevolumina \(V\) damit eine Näherung.
+In der Methode der finiten Elemente löst man eine schwache Gleichung für eine
+gewissen (approximative) Ansatzfunktion exakt. Die schwache Formulierung wird
+daher im Verlauf dieser Veranstaltung wichtig werden. 
 </div>
 
 Wir können weiterhin noch verlangen, dass innerhalb unseres Probevolumens
@@ -396,20 +395,20 @@ Kontinuitätsgleichung auf
 
 $$
   \frac{\partial c}{\partial t}+\nabla\cdot\mathbf{j} = Q
-  \label{eq:continuitywithsource}
+  \tag{3.12}
 $$
 
 erweitert werden. Die Kontinuitätsgleichung mit Quellterm wird auch manchmal
 als *Bilanzgleichung* bezeichnet.
 
 <div class="graybox">
-    Gleichung~\eqref{eq:continuitywithsource} beschreibt die zeitliche
+    Gleichung (3.12) beschreibt die zeitliche
     Veränderung der Konzentration \(c\). Eine verwandte Frage ist die nach der Lösung
     dieser Gleichung nach sehr langer Zeit - wenn sich ein dynamisches
     Gleichgewicht eingestellt hat. Dieses Gleichgewicht ist dadurch gekennzeichnet,
     dass \(\partial c/\partial t=0\). Die Gleichung
     $$
-       \nabla\cdot\mathbf{j} = Q
+       \nabla\cdot\mathbf{j} = Q \tag{3.13}
     $$
     ist die *stationäre* Variante der Kontinuitätsgleichung.
 </div>
@@ -417,16 +416,15 @@ als *Bilanzgleichung* bezeichnet.
 ### Drift
 
 Kommen wir zurück zu Transportprozessen, zunächst zu Drift. Wenn sich alle
-Teilchen in unserem Probevolumen in mit der Geschwindigkeit $$\mathbf{v}$$ bewegen,
-dann führt das zu einem Teilchenstrom
+Teilchen in unserem Probevolumen in mit der Geschwindigkeit $$\mathbf{v}$$
+bewegen, dann führt das zu einem Teilchenstrom
 
 $$
   \mathbf{j}_{\text{Drift}} = c \mathbf{v}.
-  \label{eq:drift}
 $$
 
-Eingesetzt in die Kontinuitätsgleichung~\eqref{eq:continuity} ergibt dies den
-Drift-Beitrag zur Drift-Diffusions-Gleichung~\eqref{eq:driftdiffusion}.
+Eingesetzt in die Kontinuitätsgleichung (3.12) ergibt dies den Drift-Beitrag
+zur Drift-Diffusions-Gleichung.
 
 ### Diffusion
 
@@ -437,18 +435,17 @@ ist gegeben durch
 
 $$
  \mathbf{j}_{\text{Diffusion}} = - D \nabla c.
- \label{eq:stationary}
 $$
 
-Eingesetzt in die Kontinuitätsgleichung~\eqref{eq:continuity} ergibt dies die
-Diffusionsgleichung~\eqref{eq:diffusion}.
+Eingesetzt in die Kontinuitätsgleichung (3.12) ergibt dies die
+Diffusionsgleichung.
 
 Die gesamte Drift-Diffusionsgleichung hat daher die Form
 
 $$
  \frac{\partial c}{\partial t} 
  + \nabla\cdot\left(-D\nabla c + c\mathbf{v}\right)=0.
- \label{eq:drift-diffusion-full}
+ \tag{3.14}
 $$
 
 Im Gegensatz zu Gleichungen~\eqref{eq:diffusion} und \eqref{eq:driftdiffusion}
