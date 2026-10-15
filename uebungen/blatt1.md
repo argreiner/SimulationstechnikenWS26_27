@@ -25,8 +25,8 @@ Wählen Sie $$\kappa=1\text{m}^2\text{s}^{-1}$$.
 1. Zerlegen Sie den räumlichen Anteil der Diffusionsgleichung in eine
    Fourierreihe mit *numpy.fft*. Wählen Sie dazu ein Gitter mit 100 Interallen,
    also $$N=101$$ Diskretisierungspunkte und repräsentieren Sie die
-   Anfangsbedingung im Raum der Wellenzahlen einzelnen $$k_i$$.
-1. Lösen Sie das so erhalten System von nicht gekoppelten
+   Anfangsbedingung im Raum der einzelnen Wellenzahlen $$k_i$$.
+1. Lösen Sie das so erhaltene System von nicht gekoppelten
    Differentialgleichungen 1. Ordnung
 1. Stellen Sie den zeitlichen Verlauf von $$P(x,t)$$ graphisch dar.
 1. Stellen Sie den Verlauf der Partialwellenamplituden der Fourierreihe
