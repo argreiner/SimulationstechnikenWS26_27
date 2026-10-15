@@ -354,6 +354,12 @@ kann.
 Wir nehmen zunächst an, dass $$F=0$$ und $$a$$, $$b$$, $$c$$ konstant seien.
 Dann erhalten wir:
 
+$$
+	a \frac{\partial^2 u}{\partial x^2}+
+	b \frac{\partial^2 u}{\partial x\partial y}+
+	c \frac{\partial^2 u}{\partial y^2}=0
+$$
+
 Wir schreiben diese Gleichung um als die quadratische Form
 
 $$
