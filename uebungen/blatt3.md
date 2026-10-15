@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Übung 1: Random Walk"
-nav_order: 21
+title: "Übung 3: Random Walk und die Diffusionsgleichung"
+nav_order: 23
 parent: Übungen
 ---
 
@@ -10,6 +10,9 @@ parent: Übungen
 </script>
 
 # Random walk
+
+## Mathematische Fomulierung
+
 Wir nehmen an $$p\ne q$$. In Fall haben wir $$P(x,t+\tau)=pP(x+h,t)+qP(x-h,t)$$
 und somit folgt
 
@@ -27,4 +30,6 @@ $$
 }\lim_{h\rightarrow 0\atop \tau\rightarrow 0}\frac{h(p-q)}{\tau}=v
 $$ 
 
-Welche partielle Differentialgleichung erhalten wir nach dem Grenzübergang?
+## Aufgaben
+1. Welche partielle Differentialgleichung erhalten wir nach dem Grenzübergang?
+1. Für $$p=q$$ erhalten 
