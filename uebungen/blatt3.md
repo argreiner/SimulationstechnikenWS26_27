@@ -32,4 +32,9 @@ $$
 
 ## Aufgaben
 1. Welche partielle Differentialgleichung erhalten wir nach dem Grenzübergang?
-1. Für $$p=q$$ erhalten 
+1. Für $$p=q$$ erhalten wir die Diffusionsgleichung, wie bereits in Aufgabe 1.
+   Nehmen Sie dieselben Parameterwerte und dieselbe Anfangsbedingung wie in 1.
+   Nehmen Sie als Randbedingung $$P(0,t)=P(1,t)=0$$ und diskretisieren Sie den
+   räumlichen Anteil mit einer Finiten Differenzen Methode. Sie erhalten ein
+   System gekoppelter gewöhnlicher Differentialgleichungen 1. Ordnung. Lösen Sie
+   dieses und stellen Sie die Lösung graphish dar.
