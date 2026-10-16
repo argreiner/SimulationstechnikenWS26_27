@@ -338,7 +338,7 @@ $$
 \tag{3.8}
 $$
 Hier ist \(\hat{n}(\mathbf{r})\) der Normalenvektor, welcher auf dem Rand
-$\partial V$ des Volumens \(V\) nach außen zeigt.
+\(\partial V\) des Volumens \(V\) nach außen zeigt.
  
 Setzen wir speziell \(\mathbf{f}(\mathbf{r})=\mathbf{a}\phi(\mathbf{r})\),
 wobei \(\mathbf{a}\) ein konstanter Vektor ist, dann erhalten wir
@@ -371,8 +371,8 @@ erfüllt sein. Diese Gleichung trägt den Namen *Kontinuitätsgleichung*. Sie
 beschreibt die Erhaltung der Teilchenzahl bzw. der Masse des Systems.
 
 <div class="graybox">
-In der hier dargestellten Herleitung haben wir implizit bereits die *starke*
-Formulierung und eine *schwache* Formulierung (engl. "weak formulation") einer
+In der hier dargestellten Herleitung haben wir implizit bereits die <em>starke</em>
+Formulierung und eine <em>schwache</em> Formulierung (engl. "weak formulation") einer
 Differentialgleichung kennengelernt.  Gleichung (3.11) ist die
 starke Formulierung der Kontinuitätsgleichung. Diese verlangt, dass die
 Differentialgleichung für jeden räumlichen Punkt \(\mathbf{r}\) erfüllt ist.
@@ -412,7 +412,7 @@ als *Bilanzgleichung* bezeichnet.
     $$
        \nabla\cdot\mathbf{j} = Q \tag{3.13}
     $$
-    ist die *stationäre* Variante der Kontinuitätsgleichung.
+    ist die <em>stationäre</em> Variante der Kontinuitätsgleichung.
 </div>
 
 ### Drift
@@ -457,7 +457,7 @@ Drift-Geschwindigkeit $$\mathbf{v}$$ räumlich variiert.
 <div class="graybox">
 Wir haben hier die Transporttheorie im Sinne einer Teilchenkonzentration \(c\)
 eingeführt. Die Kontinuitätsgleichung beschreibt jedoch allgemein die
-*Erhaltung* einer bestimmten Größe, in unserem Fall der Teilchenzahl (oder
+<em>Erhaltung</em> einer bestimmten Größe, in unserem Fall der Teilchenzahl (oder
 äquivalent der Masse). Andere physikalisch erhaltene Größen sind der Impuls und
 die Energie. Die Kontinuitätsgleichung für den Impuls führt zur Navier-Stokes
 Gleichung. Die Kontinuitätsgleichung für die Energie führt zur
