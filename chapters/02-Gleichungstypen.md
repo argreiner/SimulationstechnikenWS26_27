@@ -403,19 +403,20 @@ hierzu.
 <b>Beispiel: Die eindimensionale Wellengleichung</b>
 
 $$
- \frac{\partial^2 u}{\partial x^2}-\frac{1}{c^2}\frac{\partial^2 u}{\partial t^2}=0
+ \frac{\partial^2 u}{\partial x^2}
+-\frac{1}{c^2}\frac{\partial^2 u}{\partial t^2}=0
 $$
 
 durch Separation der Variablen. Dafür machen wir den Ansatz
-\(u(x,t)=X(x)T(t)\), was zu
+\( u(x,t)=X(x)T(t) \), was zu
 
 $$
  \frac{1}{X}\frac{\partial^2 X}{\partial x^2}=
-           \frac{1}{c^2}\frac{1}{T}\frac{\partial^2 T}{\partial t^2}
- \tag{2.43}
+ \frac{1}{c^2}\frac{1}{T}
+ \frac{\partial^2 T}{\partial t^2}
 $$
 
-führt. In (2.43) hängt die linke Seite nur von der Variablen \(x\) ab, während
+führt. Dabei hängt die linke Seite nur von der Variablen \(x\) ab, während
 die rechte Seite nur von \(t\) abhängt. Für beliebige \(x\) und \(t\) kann diese
 Gleichung nur erfüllt werden, wenn beide Seiten gleich einer Konstanten sind
 und wir erhalten somit
@@ -442,7 +443,7 @@ Im folgenden Beispiel motivieren wir die Fundamentallösung oder Greensche
 Funktion mit Hilfe der Laplace- und Fouriertransformation.
 
 <div class="graybox">
-**Beispiel: Fundamentallösung der Diffusionsgleichung**
+<b>Beispiel: Fundamentallösung der Diffusionsgleichung</b>
 
 Wir wenden uns in diesem Beispiel der Untersuchung der eindimensionalen
 Diffusionsgleichung zu. Wir wollen die Herleitung ihrer Fundamentallösung
