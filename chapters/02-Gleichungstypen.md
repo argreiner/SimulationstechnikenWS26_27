@@ -10,15 +10,14 @@ parent: Vorlesung
 </script>
 
 # Partielle Differentialgleichungen
-In diesem Kapitel knüpfen wir an die Veranstaltung Differentialgleichungen an.
-und gehen über zu Anfangs- und Randwertproblemen partieller Differentialgleichungen.
+In diesem Kapitel knüpfen wir an die Veranstaltung Differentialgleichungen an
+und gehen über zu Anfangs- und Randwertproblemen partieller
+Differentialgleichungen. Partielle Differentialgleichungen (PDGLs) sind
+Differentialgleichungen mit mehr als einer unabhängigen Variablen.  
 
 ### Lernziele dieses Kapitels:
 - [ ] Typen partieller Differentialgleichungen
 
-## Partielle Differentialgleichungen
-Partielle Differentialgleichungen (PDGLs) sind Differentialgleichungen mit mehr
-als einer unabhängigen Variablen.  
 
 **Beispiel:** Zeitabhängiges Wärmetransportproblem in einer Raumdimension  
 
