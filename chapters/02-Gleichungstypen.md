@@ -396,7 +396,7 @@ $$
 	\frac{\partial^2 u}{\partial x^2}-\frac{1}{c^2}\frac{\partial^2 u}{\partial t^2}=0
 $$
 
-durch Separation der Variablen. Dafür machen wir den Ansatz $u(x,t)=X(x)T(t)$, was zu
+durch Separation der Variablen. Dafür machen wir den Ansatz $$u(x,t)=X(x)T(t)$$, was zu
 
 $$
 	\frac{1}{X}\frac{\partial^2 X}{\partial x^2}=
