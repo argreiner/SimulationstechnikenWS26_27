@@ -17,6 +17,7 @@ Differentialgleichungen mit mehr als einer unabhängigen Variablen.
 
 ### Lernziele dieses Kapitels:
 - [ ] Typen partieller Differentialgleichungen
+- [ ] Analytische Lösung partieller Differentialgleichungen
 
 
 **Beispiel:** Zeitabhängiges Wärmetransportproblem in einer Raumdimension  
