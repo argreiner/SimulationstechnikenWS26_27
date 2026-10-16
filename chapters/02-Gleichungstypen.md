@@ -9,6 +9,15 @@ parent: Vorlesung
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
 </script>
 
+<style>
+  .graybox {
+    background:#f6f6f6;          /* sehr helles Grau */
+    padding:0.9em;
+    border-radius:4px;
+    margin:1em 0;                /* Abstand zu anderen Elementen */
+  }
+</style>
+
 # Partielle Differentialgleichungen
 In diesem Kapitel knüpfen wir an die Veranstaltung Differentialgleichungen an
 und gehen über zu Anfangs- und Randwertproblemen partieller
@@ -390,38 +399,115 @@ Diese drei Typen linearer PDEs 2. Ordnung lassen sich für manche
 Problemstellungen auch analytisch lösen. Wir geben im Folgenden ein Beispiel
 hierzu.
 
-*Beispiel:* Die eindimensionale Wellengleichung
+<div class="graybox">
+*Beispiel: Die eindimensionale Wellengleichung*
 
 $$
-	\frac{\partial^2 u}{\partial x^2}-\frac{1}{c^2}\frac{\partial^2 u}{\partial t^2}=0
+ \frac{\partial^2 u}{\partial x^2}-\frac{1}{c^2}\frac{\partial^2 u}{\partial t^2}=0
 $$
 
-durch Separation der Variablen. Dafür machen wir den Ansatz $$u(x,t)=X(x)T(t)$$, was zu
+durch Separation der Variablen. Dafür machen wir den Ansatz $$u(x,t)=X(x)T(t)\), was zu
 
 $$
-	\frac{1}{X}\frac{\partial^2 X}{\partial x^2}=
+ \frac{1}{X}\frac{\partial^2 X}{\partial x^2}=
            \frac{1}{c^2}\frac{1}{T}\frac{\partial^2 T}{\partial t^2}
-  \tag{2.43}
+ \tag{2.43}
 $$
 
-führt. In (2.43) hängt die linke Seite nur von der Variablen $$x$$ ab, während
-die rechte Seite nur von $$t$$ abhängt. Für beliebige $$x$$ und $$t$$ kann diese
+führt. In (2.43) hängt die linke Seite nur von der Variablen \(x\) ab, während
+die rechte Seite nur von \(t\) abhängt. Für beliebige \(x\) und \(t\) kann diese
 Gleichung nur erfüllt werden, wenn beide Seiten gleich einer Konstanten sind
 und wir erhalten somit
 
 $$
-        \frac{1}{X}\frac{\partial^2 X}{\partial x^2}=
-           -k^2=\frac{1}{c^2}\frac{1}{T}\frac{\partial^2 T}{\partial t^2}\,\mathrm{.}
+ \frac{1}{X}\frac{\partial^2 X}{\partial x^2}=
+   -k^2=\frac{1}{c^2}\frac{1}{T}\frac{\partial^2 T}{\partial t^2}\,\mathrm{.}
 $$
 
 Dies ergibt die folgenden zwei Gleichungen
 
 $$\frac{\partial^2 X}{\partial x^2}+k^2X=0$$
 
-mit der Lösung $$X(x)=e^{\pm ikx}$$ und
+mit der Lösung \(X(x)=e^{\pm ikx}\) und
 
 $$\frac{\partial^2 T}{\partial t^2}+\omega^2T=0$$
 
-mit der Lösung $$T(t)=e^{\pm i\omega t}$$, wobei wir $$\omega^2=c^2k^2$$ gesetzt
+mit der Lösung \(T(t)=e^{\pm i\omega t}\), wobei wir \(\omega^2=c^2k^2\) gesetzt
 haben.  Dieses Beispiel braucht zur Ergänzung Anfangsbedingungen, damit wir
 eine Lösung finden können.
+</div>
+
+Im folgenden Beispiel motivieren wir die Fundamentallösung oder Greensche
+Funktion mit Hilfe der Laplace- und Fouriertransformation.
+
+<div class="graybox">
+**Beispiel: Fundamentallösung der Diffusionsgleichung**
+
+Wir wenden uns in diesem Beispiel der Untersuchung der eindimensionalen
+Diffusionsgleichung zu. Wir wollen die Herleitung ihrer Fundamentallösung
+etwas genauer betrachten und uns einige Anwendung anschauen.
+Gegeben die Diffusionsgleichung in der Form
+
+$$ 
+  \frac{\partial u}{\partial t}-D\frac{\partial^2 u}{\partial x^2}=h(x,t)
+  \label{eqndiffusion}
+$$
+
+wobei \(D\) die Diffusionskonstante bezeichne und die Inhomogenität \(h(x,t)\)
+eine bekannte Funktion sei. Man denke sich diese als raumzeitliche Quelle für
+\(u(x,t)\).
+
+Zunächst wollen wir \(h(x,t)=0\) annehmen und die Anfangsbedingungen
+\(u(x,0)=f(x)\) festlegen. Nun wenden wir eine Fouriertransformation bezüglich
+der Varaiablen \(x\) an, der Raum sei unbegrenzt.  Bezüglich der Zeit \(t\)
+wenden wir eine Laplacetransformation an, da wir ein Anfangswertproblem
+vorliegen haben. Wir erhalten
+
+$$
+  sU(k,s)-F(k)+k^2U(k,s)=0
+\label{eqntransfdiff}
+$$
+
+In transformierten Variablen erhalten wir die Lösung 
+
+$$ U(k,s)=\frac{F(k)}{s+k^2} $$
+
+Die Funktion \(G(k,s)=(s+k^2)^{-1}\) ist die Antwortfunktion des Systems im
+Wellenzahlraum und im Frequenzbereich.
+Die inverse Laplacetransformation ergibt
+
+$$ U(k,t)=e^{-k^2t}F(k) $$
+
+Wir nennen \(G(k,t)=e^{-k^2t}\) die Antwortfunktion im Raum der Wellenzahlen und
+im Zeitbereich.  Um die Antwortfunktion zu bekommen, haben wir \(F(k)=1\)
+gewählt, was äquivalent dazu ist, dass wir \(f(x)=\delta(x)\) setzen. Der
+letzte Schritt verlangt eine inverse Fouriertransformation und führt zu
+
+$$
+  u(x,t)=\frac{1}{2\pi}\int_{-\infty}^\infty e^{-k^2t}e^{ikx}dk
+\label{eqninvfourierdiff}
+$$
+
+Quadratische Ergänzung im Exponenten führt zu
+
+$$
+	-k^2t+ikx=-\left(k\sqrt{t}-\frac{ix}{2\sqrt{t}}\right)^2-\frac{x^2}{4t}
+	\label{eqncomplsquare}
+$$
+
+Daher erhalten wir
+
+$$
+u(x,t)=\frac{e^{-\frac{x^2}{4t}}}{2\pi}\int_{-\infty}^\infty 
+        e^{-\left(k\sqrt{t}+\frac{ix}{2\sqrt{t}}\right)^2}dk
+      =\frac{e^{-\frac{x^2}{4t}}}{\sqrt{4\pi t}}
+$$
+
+Die Antwortfunktion oder Greensche Funktion oder Fundamentallösung der
+Diffusionsgleichung ist daher
+
+$$
+	g(x,t)=\frac{1}{\sqrt{4\pi t}}e^{-\frac{x^2}{4t}}
+	\label{eqngreendiff}
+$$
+</div>
