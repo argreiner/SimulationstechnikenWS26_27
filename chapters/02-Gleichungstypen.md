@@ -400,7 +400,7 @@ Problemstellungen auch analytisch lösen. Wir geben im Folgenden ein Beispiel
 hierzu.
 
 <div class="graybox">
-*Beispiel: Die eindimensionale Wellengleichung*
+<b>Beispiel: Die eindimensionale Wellengleichung</b>
 
 $$
  \frac{\partial^2 u}{\partial x^2}-\frac{1}{c^2}\frac{\partial^2 u}{\partial t^2}=0
