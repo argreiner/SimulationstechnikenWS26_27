@@ -116,14 +116,14 @@ diskutieren werden, entscheiden sich hier hauptsächlich in der spezifischen
 Optimierungsstrategie.
 
 <div class="graybox">
-Numerische Verfahren für die *Optimierung* sind ein zentraler Kern der
+Numerische Verfahren für die \(Optimierung\) sind ein zentraler Kern der
 numerischen Lösung von Differentialgleichungen und damit der
 Simulationstechniken. Es gibt unzählige Optimierungsverfahren, die in
 unterschiedlichen Situationen besser oder schlechter funktionieren. Wir werden
 hier zunächst solche Optimierer als "Black Box" behandeln. Zum Ende der
 Lehrveranstaltung werden wir zur Frage der Optimierung zurückkehren und einige
 bekannte Optimierungsverfahren diskutieren. Der Begriff
-*Minimierungsverfahren* wird oft synonym zu Optimierungsverfahren
+\(Minimierungsverfahren\) wird oft synonym zu Optimierungsverfahren
 verwendet. Eine gute Übersicht über Optimierungsverfahren bietet das Buch von
 \cite{nocedal_numerical_2006}.
 </div>
@@ -240,7 +240,7 @@ Basisfunktionen diskutieren.
 
 <div class="graybox">
 Das hier dargestellte Beispiel ist ein einfacher Fall einer
-*Diskretisierung*. Wir sind von einer kontinuierlichen Funktion auf die
+\(Diskretisierung\). Wir sind von einer kontinuierlichen Funktion auf die
 diskreten Koeffizienten \(a_0\), \(a_1\), \(a_2\) übergegangen.
 </div>
 
@@ -249,8 +249,8 @@ diskreten Koeffizienten \(a_0\), \(a_1\), \(a_2\) übergegangen.
 <div class="graybox">
 Bevor wir tiefer in die numerische Lösung von partiellen
 Differentialgleichungen einsteigen, müssen wir hier ein leicht abstraktes
-Konzept einführen: Das Konzept der *Funktionenräume*, bzw. konkreter des
-*Hilbertraums}. Funktionenräume sind nützlich, weil sie die
+Konzept einführen: Das Konzept der \(Funktionenräume\), bzw. konkreter des
+\(Hilbertraums\). Funktionenräume sind nützlich, weil sie die
 Reihenentwicklung formalisieren und durch das Konzept der Basisfunktionen einen
 einfachen Zugang zu den Koeffizienten einer Reihenentwicklung liefern.
 </div>
@@ -269,7 +269,7 @@ schreiben. Die Einheitsvektoren $$\hat{e}_0$$, $$\hat{e}_1$$ und $$\hat{e}_2$$ s
 natürlich die Vektoren, welche das kartesische Koordinatensystem aufspannen.
 (In vorherigen Kapiteln wurde auch die Notation $$\hat{x}\equiv\hat{e}_0$$,
 $$\hat{y}\equiv\hat{e}_1$$ und $$\hat{z}\equiv\hat{e}_2$$ genutzt.) Die Zahlen
-$$a_0$$, $$a_1$$ und $$a_2$$ sind die Komponenten oder *Koordinaten} des
+$$a_0$$, $$a_1$$ und $$a_2$$ sind die Komponenten oder *Koordinaten* des
 Vektors, aber auch die Koeffizienten der Einheitsvektoren. In diesem Sinne sind
 sie identisch zu den Entwicklungskoeffizienten der Reihenentwicklung, mit dem
 Unterschied, dass die $$\hat{e}_i$$ orthogonal sind, also
@@ -297,12 +297,12 @@ Konsequenz der Orthogonalität der Basisvektoren $$\hat{e}_i$$.
 Im vorhergegangen Abschnitt steht die Behauptung, dass die Basisfunktionen aus
 Kapitel 5 nicht orthogonal sind. Hierzu brauchen wir eine Idee für
 Orthogonalität von Funktionen. Mit einer Definition eines Skalarprodukts
-zwischen zwei *Funktionen} könnten wir dann Orthogonalität als
+zwischen zwei *Funktionen* könnten wir dann Orthogonalität als
 Verschwinden dieses Skalarprodukts definieren.
 
 Wir führen nun Skalarprodukt auf Funktionen(räume) ein, das diese Eigenschaften
 auch erfüllt. Gegeben zwei Funktionen $$g(x)$$ und $$f(x)$$ auf dem Interval
-$$x\in[a,b]$$, *definieren} wir das Skalarprodukt als
+$$x\in[a,b]$$, *definieren* wir das Skalarprodukt als
 
 $$
     (f,g) = \int_a^b \text{d} x\, f^*(x) g(x),
@@ -316,7 +316,7 @@ Dieses inneres Produkt oder Skalarprodukt ist eine Abbildung mit den Eigenschaft
 - Sesquilinear: $$(\alpha f+\beta g,h)=\alpha^*(f,h)+\beta^*(g,h)$$
 - Hermitesch: $$(f,g)=(g,f)^*$$
 
-Die Skalarprodukte Gl. (4.6) und \eqref{4.7} erfüllen
+Die Skalarprodukte Gl. (4.6) und (4.7) erfüllen
 beide diese Eigenschaften.
 
 <div class="graybox">
@@ -343,7 +343,7 @@ $$
     \tag{4.8}
 $$
 
-Die Funktionen $$\varphi_i(x)$$ heißen *Basisfunktionen}. Eine notwendige
+Die Funktionen $$\varphi_i(x)$$ heißen *Basisfunktionen*. Eine notwendige
 Eigenschaft der Basisfunktionen ist deren lineare Unabhängigkeit. Die
 Funktionen sind linear unabhängig, wenn keine der Basisfunktionen selbst als
 Linearkombination, also in der Form der Reiheentwicklung
@@ -360,18 +360,18 @@ Linear unabhängige Elemente bilden eine Basis.
 Diese Basis heißt vollständig, wenn alle relevanten Funktionen (= Elemente des
 zu Grunde liegenden Vektorraums) sich durch die Reihenentwicklung (4.8)
 abbilden lassen. (Beweise der Vollständigkeit von Basisfunktionen sind komplex
-und außerhalb des Fokus dieser Lehrveranstaltung.) Die Koeffizienten $a_n$
+und außerhalb des Fokus dieser Lehrveranstaltung.) Die Koeffizienten $$a_n$$
 heißen Koordinaten oder Koeffizienten. Die Anzahl der Basisfunktionen bzw. der
-Koordinaten $$N$$ nennt man die *Dimension} des Vektorraums.
+Koordinaten $$N$$ nennt man die *Dimension* des Vektorraums.
 
 <div class="graybox">
-Ein *Vektorraum} ist eine Menge, auf der die Operationen der Addition
+Ein <em>Vektorraum</em> ist eine Menge, auf der die Operationen der Addition
 und Skalarmultiplikation mit den üblichen Eigenschaften, wie der Existenz von
 neutralen und inversen Elementen und Assoziativ-, Kommutativ- und
 Distributivgesetzen, definiert sind. Ist dieser Raum auf Funktionen definiert,
-dann spricht man auch von einem *Funktionenraum}. Existiert zusätzlich ein
+dann spricht man auch von einem <em>Funktionenraum</em>. Existiert zusätzlich ein
 Skalarprodukt wie Gl. (4.7), dann spricht man von einem
-*Hilbertraum}.
+<em>Hilbertraum</em>.
 </div>
 
 Besonders nützliche Basisfunktionen sind orthogonal. Mit Hilfe des
@@ -417,7 +417,7 @@ sehen.
 ### Fourier-Basis
 
 Ein berühmter und wichtiger Satz von Basisfunktionen ist die
-*Fourier-Basis},
+*Fourier-Basis*,
 
 $$
  \varphi_n(x) = \exp\left( i q_n x \right),
@@ -453,7 +453,7 @@ $$-N$$ bis $$N$$ läuft und man $$2N+1$$ Koeffizienten erhält.
 <figure>
   <img src="{{ site.baseurl }}/figs/fourierbasis.png" alt="FourierBasis">
   <figcaption align="center">Abbildung 4.2: Realteil der
-  Fourier-Basisfunktionen, Gl. (4.10), für $$n=1,2,3,4$$. Die
+  Fourier-Basisfunktionen, Gl. (4.10), für $n=1,2,3,4.$ Die
   Basisfunktionen höherer Ordnung oszillieren mit einer kleineren Periode und
   repräsentieren höhere Frequenzen.
   </figcaption>
@@ -499,13 +499,13 @@ höherer Ordnung eingesetzt.
            alt="FEBasis">
   <figcaption align="center">Abbildung 4.3: Die Basis der finiten Elemente in
   ihrer einfachsten, linearen Inkarnation. Jede Basisfunktion ist ein "Zelt",
-  dass über ein gewisses Interval zwischen $$0$$ und $$1$$ und wieder zurück
+  dass über ein gewisses Interval zwischen $0$ und $1$ und wieder zurück
   verläuft, siehe auch Gl. (4.12).
   </figcaption>
 </figure>
 
 Ein wichtiger Hinweis an dieser Stelle ist, dass die Basis der finiten Elemente
-*nicht} orthogonal ist. In unserem eindimensionalen Fall verschwindet das
+*nicht* orthogonal ist. In unserem eindimensionalen Fall verschwindet das
 Skalarprodukt nicht für die nächsten Nachbarn. Dies ist deshalb der Fall, weil
 bei zwei Nachbarn jeweils eine steigende und eine fallende Flanke überlappt.
 Man erhält
@@ -522,6 +522,7 @@ für die Skalarprodukte.
 
 Trotzdem können wir diese Relationen nutzen, um die Koeffizienten einer
 Reihenentwicklung, 
+
 $$
     f_N(x) = \sum_{n=0}^N a_n \varphi_n(x)
 $$
@@ -530,7 +531,8 @@ zu berechnen. Man erhält
 
 $$
     \begin{split}
-        (\varphi_n, f_N(x)) &= a_{n-1} (\varphi_n, \varphi_{n-1}) + a_n (\varphi_n, \varphi_n) + a_{n+1} (\varphi_n, \varphi_{n+1}) \\
+        (\varphi_n, f_N(x)) &= a_{n-1} (\varphi_n, \varphi_{n-1}) 
+        + a_n (\varphi_n, \varphi_n) + a_{n+1} (\varphi_n, \varphi_{n+1}) \\
         &= M_{n,n-1} a_{n-1} + M_{nn} a_n + M_{n,n+1} a_{n+1}.
     \end{split}
 $$
@@ -543,7 +545,7 @@ $$
 
 schreiben, wobei $$[\mathbf{v}]_n=v_n$$ die $$n$$te Komponente des Vektors,
 welcher durch die beiden eckigen Klammer $$[\cdot]_n$$ eingeschlossen wird,
-bezeichnet.  Die Matrix $$\mathbf{M}$$ ist *dünnbesetzt} (engl. "sparse"). Für
+bezeichnet.  Die Matrix $$\mathbf{M}$$ ist *dünnbesetzt* (engl. "sparse"). Für
 eine orthogonale Basis, wie beispielsweise die Fourier-Basis, ist diese Matrix
 diagonal. Für eine Basis mit identischen Abständen $$x_{n+1}-x_n=1$$ der
 Stützstellen $$x_n$$ hat die Matrix die folgende Form
@@ -562,13 +564,13 @@ $$
 
 Um die Koeffizienten $$a_n$$ zu finden, muss also ein (dünnbesetztes) lineares
 Gleichungssystem gelöst werden. Wir werden $$\mathbf{M}$$ später unter dem Namen
-*Massematrix} wieder treffen.
+*Massematrix* wieder treffen.
 
 <div class="graybox">
 Basissätze, die nur an individuellen Punkten von Null verschieden sind, nennt
-man *spektrale} Basissätze. Insbesondere ist die Fourier-Basis ein
+man <em>spektrale</em> Basissätze. Insbesondere ist die Fourier-Basis ein
 spektraler Basissatz für periodische Funktionen. Grundsätzlich bilden die
-*orthogonalen Polynome} wichtige spektrale Basissätze die auch in der
+<em>orthogonalen Polynom</em> wichtige spektrale Basissätze die auch in der
 Numerik Anwendung finden. So sind beispielsweise die Tschebyschow-Polynome gute
 Basissätze für auf abgeschlossenen Intervallen definierte nicht-periodische
 Funktionen. Die Basis der finiten Elemente ist keine spektrale Basis.
