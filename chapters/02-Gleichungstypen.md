@@ -35,19 +35,28 @@ Dieses modellieren wir mit einer Diffusionsgleichung für die lokale Temperatur
 des Systems. Die Temperatur wird daher als Funktion zweier unabhängiger
 Variablen, der Zeit $$t$$ und der räumlichen Position $$x$$, dargestellt:
 $$T(x, t)$$. Die Zeitentwicklung der Temperatur ist gegeben durch
+
 $$
 \frac{\partial T(x,t)}{\partial t}=\kappa\frac{\partial^2 T(x,t)}{\partial x^2},
 \label{eq:heateq}
 $$
+
 wobei $$\kappa$$ den Wärmeleitungskoeffizienten bezeichnet. Diese Gleichung wurde
 von Joseph Fourier (*1768, $$\dagger$$1830) entwickelt, der wir im Laufe dieser
 Veranstaltung wieder begegnen werden.
 
 Die unabhängigen Veränderlichen sind $$x$$ und $$t$$. 
-Mit der Definition eines Wärmestroms $$j(x,t)=-\kappa \frac{\partial T}{\partial
-x}$$ erhalten wir eine Kontinuitätsgleichung $$\frac{\partial T}{\partial t} +
+Mit der Definition eines Wärmestroms 
+
+$$j(x,t)=-\kappa \frac{\partial T}{\partialx}$$ 
+
+erhalten wir eine Kontinuitätsgleichung 
+
+$$
+\frac{\partial T}{\partial t} +
 \frac{\partial j}{\partial x} = 0 \Rightarrow \frac{\partial T}{\partial
-t} = \kappa \frac{\partial^2 T}{\partial x^2}$$.
+t} = \kappa \frac{\partial^2 T}{\partial x^2}.
+$$
 
 Um diese Gleichung lösen zu können benötigen wir Anfangsbedingungen
 $$T(0,x)=T_0(x)$$, die $$T$$ zu einem Startzeitpunkt auf dem ganzen
@@ -56,12 +65,18 @@ auf dem Rand $$\Gamma(\Omega)$$ festlegen und in unserem Beispiel in einer
 Raumdimension bei $$x=\{0,L\}$$.
 
 Die allgemeine Form der Randbedingungen (Robin-Randbedingung) lautet:
-$$\kappa \frac{\partial T}{\partial x} + \sigma(T - T_a) = 0$$
+
+$$
+\kappa \frac{\partial T}{\partial x} + \sigma(T - T_a) = 0.
+$$
+
 $$\sigma$$ bezeichne den Wärmeübergangskoeffizienten nach außen.
 
 **Grenzfälle:**
-- $$\sigma=0$$: System vollständig isoliert $$\Rightarrow \frac{\partial \theta}{\partial x} = 0$$ (**Neumann-Randbedingung**).
-- $$\sigma \gg \kappa$$: Temperatur am Rand ist fix $$\Rightarrow \theta = \theta_a$$ (**Dirichlet-Randbedingung**).
+- $$\sigma=0$$: System vollständig isoliert $$\Rightarrow \frac{\partial
+  \theta}{\partial x} = 0$$ (**Neumann-Randbedingung**).
+- $$\sigma \gg \kappa$$: Temperatur am Rand ist fix $$\Rightarrow \theta =
+  \theta_a$$ (**Dirichlet-Randbedingung**).
 
 ## Partielle Differentialgleichungen erster Ordnung
 Quasilineare PDGLs erster Ordnung, also Gleichungen der Form
@@ -78,18 +93,20 @@ $$u(x,t=0)=u_0(x)$$ können systematisch auf ein System gekoppelter GDGLs erster
 Ordnung zurückgeführt werden. Diese wichtige Eigenschaft wollen wir
 untersuchen.
 
-*N.B.:*
+<div class="graybox">
+<b>N.B.:</b>
 
 In (2.13) wurde zur Illustration eine Darstellung mit zwei
-Variablen $$x$$ und $$t$$ gewählt. Allgemein können wir schreiben:
+Variablen \(x\) und \(t\) gewählt. Allgemein können wir schreiben:
 
 $$
 \sum\limits_i P_i(\{x_i\};u)\frac{\partial u(\{x_i\})}{\partial x_i}=
 R(\{x_i\};u)
 $$
 
-Hier wurde als Notation $$u(\{x_i\})=u(x_0, x_1, x_2, \ldots)$$ genutzt, also die
-geschweiften Klammern bezeichnen alle Variablen $$x_i$$.
+Hier wurde als Notation \(u(\{x_i\})=u(x_0, x_1, x_2, \ldots)\) genutzt, also die
+geschweiften Klammern bezeichnen alle Variablen \(x_i\).
+</div>
 
 (2.13) können wir auf ein System von GDGLs transformieren. Dies wird die
 Methode der Charakteristiken genannt.  Wir können dann die Formalismen
