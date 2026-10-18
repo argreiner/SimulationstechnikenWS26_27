@@ -16,7 +16,7 @@ Die Poissongleichung (inhomogene Laplacegleichung) sei gegeben als
 $$
 \frac{\partial^2 u(x,y)}{\partial x^2}
 +\frac{\partial^2 u(x,y)}{\partial y^2}=h(x,y)
-\tag{eq:LaplaceInh}
+\tag{4.1}
 $$
 
 sei gegeben auf einem quadratischen Gebiet $$\Omega=[0,1]\times [0,1]$$.
