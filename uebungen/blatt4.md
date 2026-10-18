@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Übung 4: Galerkin-Methode"
-nav_order: 21
+nav_order: 24
 parent: Übungen
 ---
 
