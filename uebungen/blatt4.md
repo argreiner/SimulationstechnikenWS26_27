@@ -45,7 +45,8 @@ Allgemein setzen wir immer an: $$u(x,y)=u_0(x,y)+\sum\limits_i u_i\phi_i(x,y)$$
       Randbedingungen vorliegen, also z.B. $$\phi_i(x,y)=\sin(m_i\pi x)\cos(n_i\pi
       y)$$. Dann ergibt sich sofort die triviale Lösung für alle $$u_i=0$$, wenn $$u_0$$
       auch die Differentialgleichung erfüllt.
-- [ ] In diesem Fall kann die Randbedingung als geschlossene Funktion angegeben
+- [ ] Im Fall 2 kann die Randbedingung als geschlossene Funktion angegeben
       werden: $$u_0(x,y)=x^2y$$.
-- [ ] Was ist der Unterschied zum homogenen Randwertproblem?
+- [ ] Diskutieren Sie in allen drei Fällen, welche Systeme die Gleichungen modellieren.
+      Was ist der Unterschied zwischen homogenem und inhomogenem Randwertproblem?
 
