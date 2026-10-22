@@ -30,7 +30,7 @@ In den Grenzfällen $$\tau\rightarrow 0$$ und $$h\rightarrow 0$$ fordern wir
 '''
 ## Aufgaben
 '''latex
-\begin{enumerate}
+\begin{itemize}
 \item Welche partielle Differentialgleichung erhalten wir nach dem Grenzübergang?
 \item Für $p=q$ erhalten wir die Diffusionsgleichung, wie bereits in Aufgabe 1.
    Nehmen Sie dieselben Parameterwerte, dieselbe Anfangsbedingung und dieselbe
@@ -40,5 +40,5 @@ In den Grenzfällen $$\tau\rightarrow 0$$ und $$h\rightarrow 0$$ fordern wir
    Differentialgleichungen 1. Ordnung. Lösen Sie dieses und 
 \item Stellen Sie die Lösung graphish dar.
 \item Diskutieren Sie den Unterschied zur Lösung in der ersten Aufgabe!
-\end{enumerate}
+\end{itemize}
 '''
