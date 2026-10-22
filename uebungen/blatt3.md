@@ -12,9 +12,9 @@ parent: Übungen
 # Random walk
 
 ## Mathematische Fomulierung
+'''latex
 Wir nehmen an $p\ne q$. In Fall haben wir $P(x,t+\tau)=pP(x+h,t)+qP(x-h,t)$
 und somit folgt
-'''latex
 \[ \frac{P(x,t+\tau)-P(x,t)}{\tau}=\frac{h^2}{\tau}\frac{pP(x+h,t)-P(x,t)+qP(x-h,t)}{h^2}\]
 Wir schreiben
 \[
