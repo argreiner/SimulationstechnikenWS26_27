@@ -13,7 +13,7 @@ parent: Übungen
 
 ## Mathematische Fomulierung
 
-Wir nehmen an $$p\ne q$$. In Fall haben wir $$P(x,t+\tau)=pP(x+h,t)+qP(x-h,t)$$
+Wir nehmen an \(p\ne q\). In diesem Fall haben wir $$P(x,t+\tau)=pP(x+h,t)+qP(x-h,t)$$
 und somit folgt
 
 $$
