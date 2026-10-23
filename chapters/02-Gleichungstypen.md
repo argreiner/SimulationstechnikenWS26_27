@@ -48,7 +48,7 @@ Veranstaltung wieder begegnen werden.
 Die unabhängigen Veränderlichen sind $$x$$ und $$t$$. 
 Mit der Definition eines Wärmestroms 
 
-$$j(x,t)=-\kappa \frac{\partial T}{\partialx}$$ 
+$$j(x,t)=-\kappa \frac{\partial T}{\partial x}$$ 
 
 erhalten wir eine Kontinuitätsgleichung 
 
