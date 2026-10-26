@@ -1,7 +1,8 @@
 ---
 layout: default
+parent: Technische Dokumentation
 title: Installing FEniCSx
-nav_order: 40
+nav_order: 41
 ---
 
 # Installing FEniCSx (DOLFINx) with conda
