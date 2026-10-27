@@ -56,3 +56,5 @@ Wieviel Wärmeleistung geht durch die konvektive Randbedingung verloren?
 1. Berechnen Sie die Lösung mittels eines Finiten Differenzen Verfahrens!
 1. Stellen Sie die Lösungen mit matplotlib.pyplot in einem Graph dar.
 2. Wie realistisch ist dieses Modell?
+
+## Abgabe bis 9.11.26 um 0000h auf ILIAS

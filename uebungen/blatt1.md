@@ -31,3 +31,5 @@ Wählen Sie $$\kappa=1\text{m}^2\text{s}^{-1}$$.
 1. Stellen Sie den zeitlichen Verlauf von $$P(x,t)$$ graphisch dar.
 1. Stellen Sie den Verlauf der Partialwellenamplituden der Fourierreihe
    graphisch dar.
+
+## Abgabe bis 2.11.26 um 0000h auf ILIAS
