@@ -55,8 +55,10 @@ $$
  - Dirichlet'sche und Neumann'sche Randbedingungen: $$P(0,t)=0$$, $$P'(1,t)=0$$
  - Robin'sche Randbedingungen: $$P(0,t)=0$$, $$P'(1,t)+P(1,t)=P_1$$
 1. Dasselbe wie in der vorigen Teilaufgabe nur mit dem Unterschied, dass Sie den
-   räumlichen Anteil zum neuen Zeitpunkt auswerten:
-1. Stellen Sie die Lösung graphish dar.
+   räumlichen Anteil zum neuen Zeitpunkt auswerten: implizite Zeitintegration.
+1. Stellen Sie die Lösungen graphish in zwei Grafiken nebeneinander dar. Links
+   die Lösungen der expliziten und rechts der impliziten Zeitintegration mit den
+   jeweiligen Randbedingungen.
 1. Diskutieren Sie den Unterschied zur Lösung in der ersten Aufgabe und
    zwischen der impliziten und expliziten Zeitintegration!
 
