@@ -12,9 +12,9 @@ parent: Übungen
 # Random walk
 Diese Auafgabe bearbeiten wir über 2 Wochen hinweg. Ziel ist es die Anwendung der 
 
-a. Finiten Differenzen Methode zu üben,
-a. die explizite mit der impliziten Zeitintegration zu vergleichen und
-a. verschiedene Randbedingungen anzuwenden.
+- Finiten Differenzen Methode zu üben,
+- die explizite mit der impliziten Zeitintegration zu vergleichen und
+- verschiedene Randbedingungen anzuwenden.
 
 ## Mathematische Fomulierung
 
